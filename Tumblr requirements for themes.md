@@ -13,19 +13,20 @@ Requirements
 	* Chat
 	* Audio
 	* Video blocks.
+
 * Must support standard tags. Include:
 	* {RSS} (never use "/rss")
 	* {Favicon}
 	* {CustomCSS}
 	* {LinkOpenTag} (for Photo posts)
 	* {MetaDescription}
-	* {PhotoAlt}.
-	
-Try to include:
+	* {PhotoAlt}
+
+* Try to include:
 	* {PostNotes}
 	* {NoteCount}
 	* {Description}
 	* search
 	* custom colors where aesthetically acceptable.
 
-* Must be under 64KB.  Host CSS and JavaScript using our static file uploader if necessary.
+* Must be under 64KB. Host CSS and JavaScript using our static file uploader if necessary.

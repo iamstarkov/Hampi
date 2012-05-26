@@ -1,54 +1,53 @@
 <!-- #MAIN -->
 <div id="main">
-{block:TagPage}
-	<h2>Posts tagged "{Tag}"</h2>
-{/block:TagPage}
 
-<!-- INDEX PAGE -->
-{block:IndexPage}
-<ul class="posts-list">
-{/block:IndexPage}
-	{block:Posts}
-		{block:Text}
-			{block:IndexPage}
-			<li>
-			{/block:IndexPage}
-			<article class="{PostType} {TagsAsClasses}">
-				{block:Title}
-					{block:IndexPage}
-					<h2><a href="{Permalink}">
-					{/block:IndexPage}
-					{block:PermalinkPage}
-					<h1>
-					{/block:PermalinkPage}
-						{Title}
-					{block:PermalinkPage}
-					</h1>
-					{/block:PermalinkPage}
-					{block:IndexPage}
-					</a></h2>
-					{/block:IndexPage}
-				{/block:Title}
-				<div class="content">{Body}</div>
-			{block:HasTags}
-				<ul class="tags">
-					{block:Tags}
-						<li><a href="{TagURL}" title="{Tag}">{Tag}</a></li>
-					{/block:Tags}
-				</ul>
-			{/block:HasTags}
-			{block:Date}
-				<div clas="date">{DayOfWeek}, {DayOfMonth} {Month} / {Year}</div>
-			{/block:Date}
-			<div class="post_type"> {PostType} </div>
-			</article>
-		</li>
-		{/block:Text}
-	{/block:posts}
-{block:IndexPage}
-</ul>
-{/block:IndexPage}
-<!-- /INDEX PAGE -->
+{block:Posts}
+<article class="{PostType} {TagsAsClasses}">
+	<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
+		{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
+			{block:Text}
+				{block:Title}{Title}{/block:Title}
+			{/block:Text}
+			{block:Photo}
+				{block:Caption}{Caption}{/block:Caption}
+			{/block:Photo}
+			{block:Photoset}
+				{block:Caption}{Caption}{/block:Caption}
+			{/block:Photoset}
+			{block:Quote}{lang:Quote} #{PostID}{/block:Quote}
+			{block:Link}
+				{block:Title}{Title}{/block:Title}
+			{/block:Link}
+			{block:Chat}
+				{block:Title}{Title}{/block:Title}
+			{/block:Chat}
+			{block:Audio}
+				{block:Caption}{Caption}{/block:Caption}
+			{/block:Audio}
+			{block:Video}
+				{block:Caption}{Caption}{/block:Caption}
+			{/block:Video}
+			{block:Answer}{lang:Answer} #{PostID}{/block:Answer}
+		{block:IndexPage}</a>{/block:IndexPage}
+	</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
+	<!-- Tumblr posttitle
+		https://gist.github.com/2795206 -->
+	<div class="content">{Body}</div>
+	{block:HasTags}
+		<div class="tags">
+			{lang:Filed under}: 
+			<ul class="tags">
+				{block:Tags}
+					<li><a href="{TagURL}" title="{Tag}">{Tag}</a></li>
+				{/block:Tags}
+			</ul>
+		</div>
+	{/block:HasTags}
+	{block:Date}
+		<div clas="date">{DayOfWeek}, {DayOfMonth} {Month} / {Year}</div>
+	{/block:Date}
+</article>
+{/block:posts}
 
 </div>
 <!-- /#MAIN -->

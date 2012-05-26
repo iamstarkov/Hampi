@@ -21,12 +21,13 @@ Features
 
 Status
 ------
-Markup only for index page exists, and there is no CSS yet.
+NOT READY
 
 TODO
 -----
 * 'h1' for logo only on home page, not all index pages. Will be undone until Tumblr theming api will be updated.
 * Customizable `<title>` format
+* Add `CSS`
 
 
 [1]: http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither

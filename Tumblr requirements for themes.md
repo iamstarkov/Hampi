@@ -15,11 +15,11 @@ Requirements
 	* Video blocks.
 
 * Must support standard tags. Include:
-	* {RSS} (never use "/rss")
-	* {Favicon}
-	* {CustomCSS}
+	* {RSS} (never use "/rss") **YES**
+	* {Favicon} **YES**
+	* {CustomCSS} **YES**
 	* {LinkOpenTag} (for Photo posts)
-	* {MetaDescription}
+	* {MetaDescription} **YES**
 	* {PhotoAlt}
 
 * Try to include:

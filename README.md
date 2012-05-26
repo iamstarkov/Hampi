@@ -10,8 +10,8 @@ Features
 --------
 * Outputs only text and video (iframe) posts
 * Header structure is seo-optimized:
-	* **index page**: `h1` is logo and `h2` is posts' title
-	* **post page**: `h1` is post title, logo only simple div
+	* **index page**: `h1` is logo and `h2` is posts' title.
+	* **post page**: `h1` is post title, logo is a simple div.
 * Conditional comments containing `html` tag ([paul irish tip][1])
 * `html` attribute `lang` is displayed in accordance with the [blog settings ][2] (en, de, fr, it, ja, tr, es, ru, pl)
 * [Modernizr][3] included

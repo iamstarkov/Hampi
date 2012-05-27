@@ -8,7 +8,6 @@ Some time ago i wanted to create normal (full-featured and seo-optimized) blog o
 
 Features
 --------
-* Outputs only text and video (iframe) posts
 * Header structure is seo-optimized:
 	* *index* page: `h1` is logo and `h2` is posts' title.
 	* *permalink* page: `h1` is post title, logo is a simple div.
@@ -18,6 +17,8 @@ Features
 * `html` has `no-js/js` toggling by Modernizr class for advanced `css` styling
 * `html5` tags used
 * iPhone and iPad favicons
+* Classes per page type for advanced customize
+* Classes per post for advanced customize
 
 Status
 ------
@@ -25,7 +26,7 @@ NOT READY
 
 TODO
 -----
-* 'h1' for logo only on home page, not all index pages. Will be undone until Tumblr theming api will be updated.
+* 'h1' for logo only on home page, not all index pages. Will be undone until *Tumblr theming api* will be updated.
 * Customizable `<title>` format
 * Customizable `date` per post format
 * Add `CSS`

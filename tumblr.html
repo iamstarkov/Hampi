@@ -9,7 +9,7 @@
 
 <!-- TEXT -->
 {block:Text}
-<article class="{PostType} {TagsAsClasses}">
+<article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
 	{block:Title}
 		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
 			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
@@ -22,7 +22,7 @@
 
 <!-- PHOTO -->
 {block:Photo}
-<article class="{PostType} {TagsAsClasses}">
+<article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
 	{block:Caption}
 		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
 			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
@@ -35,7 +35,7 @@
 
 <!-- PHOTOSET -->
 {block:Photoset}
-<article class="{PostType} {TagsAsClasses}">
+<article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
 	{block:Caption}
 		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
 			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
@@ -48,14 +48,14 @@
 
 <!-- QUOTE -->
 {block:Quote}
-<article class="{PostType} {TagsAsClasses}">
+<article class="{PostType} {TagsAsClasses} {block:RebloggedFrom}reblog{/block:RebloggedFrom}">
 	quote
 </article>
 {/block:Quote}
 
 <!-- LINK -->
 {block:Link}
-<article class="{PostType} {TagsAsClasses}">
+<article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
 	<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
 		{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
 			{Name}
@@ -66,7 +66,7 @@
 
 <!-- CHAT -->
 {block:Chat}
-<article class="{PostType} {TagsAsClasses}">
+<article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
 	{block:Title}
 		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
 			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
@@ -79,7 +79,7 @@
 
 <!-- AUDIO -->
 {block:Audio}
-<article class="{PostType} {TagsAsClasses}">
+<article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
 	{block:Caption}
 		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
 			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
@@ -92,7 +92,7 @@
 
 <!-- VIDEO -->
 {block:Video}
-<article class="{PostType} {TagsAsClasses}">
+<article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
 	{block:Caption}
 		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
 			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
@@ -104,7 +104,7 @@
 {/block:Video}
 
 <!-- ANSWER -->
-{block:Answer}
+<article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
 <article class="{PostType} {TagsAsClasses}">
 	answer
 </article>

@@ -2,13 +2,14 @@
 <div id="main">
 
 {block:Posts}
-<article class="{PostType} {TagsAsClasses}">
 	<!-- Tumblr post title
 		https://gist.github.com/2795206 -->
 	<!-- Tumblr full list of post types
 		https://gist.github.com/2795239 -->
 
+<!-- TEXT -->
 {block:Text}
+<article class="{PostType} {TagsAsClasses}">
 	{block:Title}
 		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
 			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
@@ -16,9 +17,12 @@
 			{block:IndexPage}</a>{/block:IndexPage}
 		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
 	{/block:Title}
+</article>
 {/block:Text}
 
+<!-- PHOTO -->
 {block:Photo}
+<article class="{PostType} {TagsAsClasses}">
 	{block:Caption}
 		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
 			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
@@ -26,9 +30,12 @@
 			{block:IndexPage}</a>{/block:IndexPage}
 		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
 	{/block:Caption}
+</article>
 {/block:Photo}
 
+<!-- PHOTOSET -->
 {block:Photoset}
+<article class="{PostType} {TagsAsClasses}">
 	{block:Caption}
 		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
 			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
@@ -36,21 +43,30 @@
 			{block:IndexPage}</a>{/block:IndexPage}
 		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
 	{/block:Caption}
+</article>
 {/block:Photoset}
 
+<!-- QUOTE -->
 {block:Quote}
+<article class="{PostType} {TagsAsClasses}">
 	quote
+</article>
 {/block:Quote}
 
+<!-- LINK -->
 {block:Link}
+<article class="{PostType} {TagsAsClasses}">
 	<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
 		{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
 			{Name}
 		{block:IndexPage}</a>{/block:IndexPage}
 	</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
+</article>
 {/block:Link}
 
+<!-- CHAT -->
 {block:Chat}
+<article class="{PostType} {TagsAsClasses}">
 	{block:Title}
 		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
 			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
@@ -58,9 +74,12 @@
 			{block:IndexPage}</a>{/block:IndexPage}
 		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
 	{/block:Title}
+</article>
 {/block:Chat}
 
+<!-- AUDIO -->
 {block:Audio}
+<article class="{PostType} {TagsAsClasses}">
 	{block:Caption}
 		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
 			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
@@ -68,9 +87,12 @@
 			{block:IndexPage}</a>{/block:IndexPage}
 		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
 	{/block:Caption}
+</article>
 {/block:Audio}
 
+<!-- VIDEO -->
 {block:Video}
+<article class="{PostType} {TagsAsClasses}">
 	{block:Caption}
 		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
 			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
@@ -78,14 +100,18 @@
 			{block:IndexPage}</a>{/block:IndexPage}
 		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
 	{/block:Caption}
+</article>
 {/block:Video}
 
+<!-- ANSWER -->
 {block:Answer}
+<article class="{PostType} {TagsAsClasses}">
 	answer
+</article>
 {block:/Answer}
 
-	<div class="content">{Body}</div>
 	{block:HasTags}
+	{/block:HasTags}
 		<div class="tags">
 			{lang:Filed under}: 
 			<ul class="tags">
@@ -94,11 +120,9 @@
 				{/block:Tags}
 			</ul>
 		</div>
-	{/block:HasTags}
 	{block:Date}
 		<div clas="date">{DayOfWeek}, {DayOfMonth} {Month} / {Year}</div>
 	{/block:Date}
-</article>
 {/block:posts}
 
 </div>

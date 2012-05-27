@@ -27,6 +27,7 @@ TODO
 -----
 * 'h1' for logo only on home page, not all index pages. Will be undone until Tumblr theming api will be updated.
 * Customizable `<title>` format
+* Customizable `date` per post format
 * Add `CSS`
 
 

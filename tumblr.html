@@ -3,66 +3,86 @@
 
 {block:Posts}
 <article class="{PostType} {TagsAsClasses}">
-
-	<!-- .POST TITLE -->
-	{block:Text}{block:Title}
-		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
-			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
-				{Title}
-			{block:IndexPage}</a>{/block:IndexPage}
-		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
-	{/block:Title}{/block:Text}
-
-	{block:Photo}{block:Caption}
-		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
-			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
-				{Caption}
-			{block:IndexPage}</a>{/block:IndexPage}
-		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
-	{/block:Caption}{/block:Photo}
-
-	{block:Photoset}{block:Caption}
-		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
-			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
-				{Caption}
-			{block:IndexPage}</a>{/block:IndexPage}
-		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
-	{/block:Caption}{/block:Photoset}
-
-	{block:Link}{block:Title}
-		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
-			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
-				{Title}
-			{block:IndexPage}</a>{/block:IndexPage}
-		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
-	{/block:Title}{/block:Link}
-
-	{block:Chat}{block:Title}
-		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
-			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
-				{Title}
-			{block:IndexPage}</a>{/block:IndexPage}
-		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
-	{/block:Title}{/block:Chat}
-
-	{block:Audio}{block:Caption}
-		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
-			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
-				{Caption}
-			{block:IndexPage}</a>{/block:IndexPage}
-		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
-	{/block:Caption}{/block:Audio}
-
-	{block:Video}{block:Caption}
-		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
-			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
-				{Caption}
-			{block:IndexPage}</a>{/block:IndexPage}
-		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
-	{/block:Caption}{/block:Video}
-	<!-- Tumblr posttitle
+	<!-- Tumblr post title
 		https://gist.github.com/2795206 -->
-	<!-- /.POST TITLE -->
+	<!-- Tumblr full list of post types
+		https://gist.github.com/2795239 -->
+
+{block:Text}
+	{block:Title}
+		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
+			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
+				{Title}
+			{block:IndexPage}</a>{/block:IndexPage}
+		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
+	{/block:Title}
+{/block:Text}
+
+{block:Photo}
+	{block:Caption}
+		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
+			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
+				{Caption}
+			{block:IndexPage}</a>{/block:IndexPage}
+		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
+	{/block:Caption}
+{/block:Photo}
+
+{block:Photoset}
+	{block:Caption}
+		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
+			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
+				{Caption}
+			{block:IndexPage}</a>{/block:IndexPage}
+		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
+	{/block:Caption}
+{/block:Photoset}
+
+{block:Quote}
+	quote
+{/block:Quote}
+
+{block:Link}
+	<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
+		{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
+			{Name}
+		{block:IndexPage}</a>{/block:IndexPage}
+	</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
+{/block:Link}
+
+{block:Chat}
+	{block:Title}
+		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
+			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
+				{Title}
+			{block:IndexPage}</a>{/block:IndexPage}
+		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
+	{/block:Title}
+{/block:Chat}
+
+{block:Audio}
+	{block:Caption}
+		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
+			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
+				{Caption}
+			{block:IndexPage}</a>{/block:IndexPage}
+		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
+	{/block:Caption}
+{/block:Audio}
+
+{block:Video}
+	{block:Caption}
+		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
+			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
+				{Caption}
+			{block:IndexPage}</a>{/block:IndexPage}
+		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
+	{/block:Caption}
+{/block:Video}
+
+{block:Answer}
+	answer
+{block:/Answer}
 
 	<div class="content">{Body}</div>
 	{block:HasTags}

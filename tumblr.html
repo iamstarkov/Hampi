@@ -3,35 +3,67 @@
 
 {block:Posts}
 <article class="{PostType} {TagsAsClasses}">
-	<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
-		{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
-			{block:Text}
-				{block:Title}{Title}{/block:Title}
-			{/block:Text}
-			{block:Photo}
-				{block:Caption}{Caption}{/block:Caption}
-			{/block:Photo}
-			{block:Photoset}
-				{block:Caption}{Caption}{/block:Caption}
-			{/block:Photoset}
-			{block:Quote}{lang:Quote} #{PostID}{/block:Quote}
-			{block:Link}
-				{block:Title}{Title}{/block:Title}
-			{/block:Link}
-			{block:Chat}
-				{block:Title}{Title}{/block:Title}
-			{/block:Chat}
-			{block:Audio}
-				{block:Caption}{Caption}{/block:Caption}
-			{/block:Audio}
-			{block:Video}
-				{block:Caption}{Caption}{/block:Caption}
-			{/block:Video}
-			{block:Answer}{lang:Answer} #{PostID}{/block:Answer}
-		{block:IndexPage}</a>{/block:IndexPage}
-	</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
+
+	<!-- .POST TITLE -->
+	{block:Text}{block:Title}
+		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
+			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
+				{Title}
+			{block:IndexPage}</a>{/block:IndexPage}
+		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
+	{/block:Title}{/block:Text}
+
+	{block:Photo}{block:Caption}
+		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
+			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
+				{Caption}
+			{block:IndexPage}</a>{/block:IndexPage}
+		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
+	{/block:Caption}{/block:Photo}
+
+	{block:Photoset}{block:Caption}
+		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
+			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
+				{Caption}
+			{block:IndexPage}</a>{/block:IndexPage}
+		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
+	{/block:Caption}{/block:Photoset}
+
+	{block:Link}{block:Title}
+		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
+			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
+				{Title}
+			{block:IndexPage}</a>{/block:IndexPage}
+		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
+	{/block:Title}{/block:Link}
+
+	{block:Chat}{block:Title}
+		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
+			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
+				{Title}
+			{block:IndexPage}</a>{/block:IndexPage}
+		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
+	{/block:Title}{/block:Chat}
+
+	{block:Audio}{block:Caption}
+		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
+			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
+				{Caption}
+			{block:IndexPage}</a>{/block:IndexPage}
+		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
+	{/block:Caption}{/block:Audio}
+
+	{block:Video}{block:Caption}
+		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
+			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
+				{Caption}
+			{block:IndexPage}</a>{/block:IndexPage}
+		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
+	{/block:Caption}{/block:Video}
 	<!-- Tumblr posttitle
 		https://gist.github.com/2795206 -->
+	<!-- /.POST TITLE -->
+
 	<div class="content">{Body}</div>
 	{block:HasTags}
 		<div class="tags">

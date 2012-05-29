@@ -7,7 +7,7 @@ Requirements
 
 * Must support all post types. Include:
 	* Text **DONE**
-	* Photo
+	* Photo **DONE**
 	* Quote
 	* Link
 	* Chat
@@ -18,9 +18,9 @@ Requirements
 	* {RSS} (never use "/rss") **DONE**
 	* {Favicon} **DONE**
 	* {CustomCSS} **DONE**
-	* {LinkOpenTag} (for Photo posts)
+	* {LinkOpenTag} (for Photo posts) **DONE**
 	* {MetaDescription} **DONE**
-	* {PhotoAlt}
+	* {PhotoAlt} **DONE**
 
 * Try to include:
 	* {PostNotes}

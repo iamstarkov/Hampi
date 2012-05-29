@@ -1,11 +1,11 @@
 <!-- #MAIN -->
 <div id="main">
 
+<!-- Tumblr post title
+	https://gist.github.com/2795206 -->
+<!-- Tumblr full list of post types
+	https://gist.github.com/2795239 -->
 {block:Posts}
-	<!-- Tumblr post title
-		https://gist.github.com/2795206 -->
-	<!-- Tumblr full list of post types
-		https://gist.github.com/2795239 -->
 
 <!-- TEXT -->
 {block:Text}
@@ -28,11 +28,16 @@
 <article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
 	{block:Caption}
 		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
-			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
+			{block:IndexPage}<a href="{Permalink}" title="{PhotoAlt}">{/block:IndexPage}
 				{Caption}
 			{block:IndexPage}</a>{/block:IndexPage}
 		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
 	{/block:Caption}
+	<div class="content">
+		{LinkOpenTag}
+			<img src="{PhotoURL-500}" alt="{PhotoAlt}" />
+		{LinkCloseTag}
+	</div>
 </article>
 {/block:Photo}
 

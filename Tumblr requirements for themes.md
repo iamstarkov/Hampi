@@ -1,3 +1,5 @@
+#SUBMIT PHOTO PHOTOSET post-type detection
+
 Requirements
 ------------
 
@@ -8,11 +10,12 @@ Requirements
 * Must support all post types. Include:
 	* Text **DONE**
 	* Photo **DONE**
+	* Photosets **DONE**
 	* Quote
 	* Link
 	* Chat
 	* Audio
-	* Video blocks.
+	* Video blocks
 
 * Must support standard tags. Include:
 	* {RSS} (never use "/rss") **DONE**

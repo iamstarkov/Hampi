@@ -34,7 +34,8 @@ TODO
 * Add microformates syntax
 * Add `build in` possibility to add google/yandex verification codes, author's codes and google analytics, yandex.metrics;
 * Add posibillity to config which post types to output, and which not.
-* Short link to the each post 
+* Short link to the each post
+* Add author info blocks per post for multiply users blogs
 
 
 [1]: http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither

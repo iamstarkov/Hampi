@@ -6,7 +6,7 @@ Requirements
 * Third-party widgets must be optional.  All widgets (Disqus, Flickr, etc.) and placeholder content (blogrolls, etc.) should only be enabled using custom text.
 
 * Must support all post types. Include:
-	* Text
+	* Text **DONE**
 	* Photo
 	* Quote
 	* Link
@@ -15,11 +15,11 @@ Requirements
 	* Video blocks.
 
 * Must support standard tags. Include:
-	* {RSS} (never use "/rss") **YES**
-	* {Favicon} **YES**
-	* {CustomCSS} **YES**
+	* {RSS} (never use "/rss") **DONE**
+	* {Favicon} **DONE**
+	* {CustomCSS} **DONE**
 	* {LinkOpenTag} (for Photo posts)
-	* {MetaDescription} **YES**
+	* {MetaDescription} **DONE**
 	* {PhotoAlt}
 
 * Try to include:

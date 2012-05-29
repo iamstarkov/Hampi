@@ -30,6 +30,9 @@ TODO
 * Customizable `<title>` format
 * Customizable `date` per post format
 * Add `CSS`
+* Add more classes per post for advanced customize (realtive to date)
+* Add microformates syntax
+* Add `build in` possibility to add google/yandex verification codes, author's codes and google analytics, yandex.metrics; 
 
 
 [1]: http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither

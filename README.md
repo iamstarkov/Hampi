@@ -32,7 +32,9 @@ TODO
 * Add `CSS`
 * Add more classes per post for advanced customize (realtive to date)
 * Add microformates syntax
-* Add `build in` possibility to add google/yandex verification codes, author's codes and google analytics, yandex.metrics; 
+* Add `build in` possibility to add google/yandex verification codes, author's codes and google analytics, yandex.metrics;
+* Add posibillity to config which post types to output, and which not.
+* Short link to the each post 
 
 
 [1]: http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither

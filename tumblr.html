@@ -121,6 +121,13 @@
 			{block:IndexPage}</a>{/block:IndexPage}
 		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
 	{/block:Title}
+	<div class="content">
+		{block:Lines}
+			<p class="chat-line chat-line-{alt}">
+				{Line}
+			</p>
+		{/block:Lines}
+	</div>
 </article>
 {/block:Chat}
 

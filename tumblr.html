@@ -88,8 +88,11 @@
 
 <!-- QUOTE -->
 {block:Quote}
-<article class="{PostType} {TagsAsClasses} {block:RebloggedFrom}reblog{/block:RebloggedFrom}">
-	quote
+<article class="{PostType} {TagsAsClasses} {block:RebloggedFrom}reblog{/block:RebloggedFrom} {Length}">
+	<div class="content">
+		<blockquote>{Quote}</blockquote>
+		{block:Source}{Source}{/block:Source}
+	</div>
 </article>
 {/block:Quote}
 

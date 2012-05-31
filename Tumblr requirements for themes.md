@@ -11,7 +11,7 @@ Requirements
 	* Text **DONE**
 	* Photo **DONE**
 	* Photosets **DONE**
-	* Quote
+	* Quote **DONE**
 	* Link
 	* Chat
 	* Audio

@@ -15,7 +15,7 @@ Requirements
 	* Link **DONE**
 	* Chat **DONE**
 	* Audio **DONE**
-	* Video blocks
+	* Video blocks **DONE**
 
 * Must support standard tags. Include:
 	* {RSS} (never use "/rss") **DONE**

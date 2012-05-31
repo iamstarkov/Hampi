@@ -14,7 +14,7 @@ Requirements
 	* Quote **DONE**
 	* Link **DONE**
 	* Chat **DONE**
-	* Audio
+	* Audio **DONE**
 	* Video blocks
 
 * Must support standard tags. Include:

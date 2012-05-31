@@ -12,7 +12,7 @@ Requirements
 	* Photo **DONE**
 	* Photosets **DONE**
 	* Quote **DONE**
-	* Link
+	* Link **DONE**
 	* Chat
 	* Audio
 	* Video blocks

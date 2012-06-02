@@ -163,30 +163,16 @@
 		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
 	{/block:Caption}
 	<div class="content">
-		{block:AudioEmbed}
-			{AudioEmbed}
-		{/block:AudioEmbed}
+		{block:AudioEmbed}{AudioEmbed}{/block:AudioEmbed}
 		{block:AudioPlayer}
 			{AudioPlayer}
 			{block:AlbumArt}
 		{/block:AudioPlayer}
 		
-		{block:AlbumArt}
-			{AlbumArtURL}
-		{/block:AlbumArt}
-	
-		{block:Artist}
-			{Artist}
-		{/block:Artist}
-	
-		{block:Album}
-			{Album}
-		{/block:Album}
-		
-		{block:TrackName}
-			{TrackName}
-		{/block:TrackName}
-
+		{block:AlbumArt}{AlbumArtURL}{/block:AlbumArt}
+		{block:Artist}{Artist}{/block:Artist}
+		{block:Album}{Album}{/block:Album}
+		{block:TrackName}{TrackName}{/block:TrackName}
 		{block:PlayCount}{PlayCountWithLabel}{/block:PlayCount}
 	</div>
 </article>

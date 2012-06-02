@@ -52,37 +52,7 @@
 		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
 	{/block:Caption}
 	<div class="content">
-		<dl>
-			<dt>PhotoCount</dt>
-				<dd>{PhotoCount}</dd>
-			<dt>PhotosetLayout</dt>
-				<dd>{PhotosetLayout}</dd>
-			<dt>JSPhotosetLayou</dt>
-				<dd>{JSPhotosetLayout}</dd>
-		</dl>
-
 		{Photoset-500}
-		{block:Photos}
-			{block:Exif}
-				<ul>
-					{block:Camera}
-						<li>Camera: {Camera}</li>
-					{/block:Camera}
-					{block:Aperture}
-						<li>Aperture: {Aperture}</li>
-					{/block:Aperture}
-					{block:Exposure}
-						<li>Exposure: {Exposure}</li>
-					{/block:Exposure}
-					{block:FocalLength}
-						<li>Focal Length: {FocalLength}</li>
-					{/block:FocalLength}
-				</ul>
-			{/block:Exif}
-		{/block:Photos}
-		<!--
-		-->
-	</div>
 </article>
 {/block:Photoset}
 
@@ -190,24 +160,10 @@
 
 <!-- ANSWER -->
 <article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
-<article class="{PostType} {TagsAsClasses}">
 	answer
 </article>
 {block:/Answer}
 
-	{block:HasTags}
-	{/block:HasTags}
-		<div class="tags">
-			{lang:Filed under}:
-			<ul class="tags">
-				{block:Tags}
-					<li><a href="{TagURL}" title="{Tag}">{Tag}</a></li>
-				{/block:Tags}
-			</ul>
-		</div>
-	{block:Date}
-		<div clas="date">{DayOfWeek}, {DayOfMonth} {Month} / {Year}</div>
-	{/block:Date}
 {/block:posts}
 
 </div>

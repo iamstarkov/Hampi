@@ -52,11 +52,10 @@
 <!-- #MAIN -->
 <div id="main">
 
-	<!-- Tumblr post title
-		https://gist.github.com/2795206 -->
-	<!-- Tumblr full list of post types
-		https://gist.github.com/2795239 -->
-
+<!-- Tumblr post title
+	https://gist.github.com/2795206 -->
+<!-- Tumblr full list of post types
+	https://gist.github.com/2795239 -->
 {block:Posts}
 
 <!-- TEXT -->
@@ -89,16 +88,12 @@
 		{LinkOpenTag}
 			<img src="{PhotoURL-500}" alt="{PhotoAlt}" />
 		{LinkCloseTag}
-		
-		{block:Photoset}
-			{Photoset-500}
-		{/block:Photoset}
 	</div>
 </article>
 {/block:Photo}
 
-<!-- VIDEO -->
-{block:Video}
+<!-- PHOTOSET -->
+{block:Photoset}
 <article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
 	{block:Caption}
 		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
@@ -108,11 +103,9 @@
 		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
 	{/block:Caption}
 	<div class="content">
-		{Video-500}
-		{PlayCountWithLabel}
-	</div>
+		{Photoset-500}
 </article>
-{/block:Video}
+{/block:Photoset}
 
 <!-- QUOTE -->
 {block:Quote}
@@ -170,22 +163,57 @@
 		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
 	{/block:Caption}
 	<div class="content">
-		{block:AudioEmbed}{AudioEmbed}{/block:AudioEmbed}
+		{block:AudioEmbed}
+			{AudioEmbed}
+		{/block:AudioEmbed}
 		{block:AudioPlayer}
 			{AudioPlayer}
 			{block:AlbumArt}
 		{/block:AudioPlayer}
+		
+		{block:AlbumArt}
+			{AlbumArtURL}
+		{/block:AlbumArt}
+	
+		{block:Artist}
+			{Artist}
+		{/block:Artist}
+	
+		{block:Album}
+			{Album}
+		{/block:Album}
+		
+		{block:TrackName}
+			{TrackName}
+		{/block:TrackName}
 
-		{block:AlbumArt}{AlbumArtURL}{/block:AlbumArt}
-		{block:Artist}{Artist}{/block:Artist}
-		{block:Album}{Album}{/block:Album}
-		{block:TrackName}{TrackName}{/block:TrackName}
 		{block:PlayCount}{PlayCountWithLabel}{/block:PlayCount}
 	</div>
 </article>
 {/block:Audio}
 
+<!-- VIDEO -->
+{block:Video}
+<article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
+	{block:Caption}
+		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
+			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
+				{Caption}
+			{block:IndexPage}</a>{/block:IndexPage}
+		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
+	{/block:Caption}
+	<div class="content">
+		{Video-500}
+		{PlayCountWithLabel}
+	</div>
+</article>
+{/block:Video}
 
+<!-- ANSWER -->
+<article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
+	answer
+</article>
+{block:/Answer}
 
 {/block:posts}
 

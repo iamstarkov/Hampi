@@ -1,8 +1,8 @@
-<!--[if lt IE 7]>     <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="{block:English}en{/block:English}{block:German}de{/block:German}{block:French}fr{/block:French}{block:Italian}it{/block:Italian}{block:Japanese}ja{/block:Japanese}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}"><![endif]-->
-<!--[if IE 7]>        <html class="no-js lt-ie9 lt-ie8" lang="{block:English}en{/block:English}{block:German}de{/block:German}{block:French}fr{/block:French}{block:Italian}it{/block:Italian}{block:Japanese}ja{/block:Japanese}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}"><![endif]-->
+<!--[if lt IE 7]>	 <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="{block:English}en{/block:English}{block:German}de{/block:German}{block:French}fr{/block:French}{block:Italian}it{/block:Italian}{block:Japanese}ja{/block:Japanese}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}"><![endif]-->
+<!--[if IE 7]>		<html class="no-js lt-ie9 lt-ie8" lang="{block:English}en{/block:English}{block:German}de{/block:German}{block:French}fr{/block:French}{block:Italian}it{/block:Italian}{block:Japanese}ja{/block:Japanese}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}"><![endif]-->
 <!--[if IE 8]>		<html class="no-js lt-ie9" lang="{block:English}en{/block:English}{block:German}de{/block:German}{block:French}fr{/block:French}{block:Italian}it{/block:Italian}{block:Japanese}ja{/block:Japanese}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}"><![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" lang="{block:English}en{/block:English}{block:German}de{/block:German}{block:French}fr{/block:French}{block:Italian}it{/block:Italian}{block:Japanese}ja{/block:Japanese}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}"><!--<![endif]-->
-<!-- Tumblr lang codes 
+<!-- Tumblr lang codes
 	 https://gist.github.com/2793673 -->
 <head>
 	<meta charset="utf-8" />
@@ -10,7 +10,7 @@
 	<meta name="viewport" content="width=device-width">
 
 	<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-	
+
 
 	<link rel="stylesheet" type="text/css" href="https://raw.github.com/matmuchrapna/Hampi/master/css/master.css" media="all">
 
@@ -32,15 +32,15 @@
 
 
 <body class="{block:IndexPage} index-page{block:DayPage} index-day-page {/block:DayPage}{block:TagPage} index-tag-page {/block:TagPage}{block:SearchPage} index-search-page {/block:SearchPage}{/block:IndexPage}{block:PermalinkPage} permalink-page{/block:PermalinkPage}">
-<!-- Tumblr customizations snippet 
-    https://gist.github.com/2794705 -->
+<!-- Tumblr customizations snippet
+	https://gist.github.com/2794705 -->
 
 <!-- #WRAPPER -->
 <div id="wrapper">
 <!-- HEADER -->
 <header>
 	<{block:IndexPage}h1{/block:IndexPage}{block:PermalinkPage}a href="/" {/block:PermalinkPage}
-	 id="logo" title="{Title}"> 
+	 id="logo" title="{Title}">
 		{Title}
 	</{block:PermalinkPage}a{/block:PermalinkPage}{block:IndexPage}h1{/block:IndexPage}>
 
@@ -52,8 +52,8 @@
 <!-- #MAIN -->
 <div id="main">
 
-    <!-- Tumblr post title
-    	https://gist.github.com/2795206 -->
+	<!-- Tumblr post title
+		https://gist.github.com/2795206 -->
 	<!-- Tumblr full list of post types
 		https://gist.github.com/2795239 -->
 
@@ -62,7 +62,7 @@
 <!-- TEXT -->
 {block:Text}
 <article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
-    {block:Title}
+	{block:Title}
 		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
 			{block:IndexPage}<a href="{Permalink}" title="{Title}">{/block:IndexPage}
 				{Title}
@@ -78,7 +78,7 @@
 <!-- PHOTO -->
 {block:Photo}
 <article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
-    {block:Caption}
+	{block:Caption}
 		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
 			{block:IndexPage}<a href="{Permalink}" title="{PhotoAlt}">{/block:IndexPage}
 				{Caption}
@@ -89,30 +89,35 @@
 		{LinkOpenTag}
 			<img src="{PhotoURL-500}" alt="{PhotoAlt}" />
 		{LinkCloseTag}
+		
+		{block:Photoset}
+			{Photoset-500}
+		{/block:Photoset}
 	</div>
 </article>
 {/block:Photo}
 
-<!-- PHOTOSET -->
-{block:Photoset}
+<!-- VIDEO -->
+{block:Video}
 <article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
-    {block:Caption}
-    	<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
+	{block:Caption}
+		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
 			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
 				{Caption}
 			{block:IndexPage}</a>{/block:IndexPage}
 		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
 	{/block:Caption}
 	<div class="content">
-		{Photoset-500}
+		{Video-500}
+		{PlayCountWithLabel}
 	</div>
 </article>
-{/block:Photoset}
+{/block:Video}
 
 <!-- QUOTE -->
 {block:Quote}
 <article class="{PostType} {TagsAsClasses} {block:RebloggedFrom}reblog{/block:RebloggedFrom} {Length}">
-    <div class="content">
+	<div class="content">
 		<blockquote>{Quote}</blockquote>
 		{block:Source}{Source}{/block:Source}
 	</div>
@@ -122,7 +127,7 @@
 <!-- LINK -->
 {block:Link}
 <article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
-    <{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
+	<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
 		{block:IndexPage}<a href="{Permalink}" title="{Name}">{/block:IndexPage}
 			{Name}
 		{block:IndexPage}</a>{/block:IndexPage}
@@ -137,7 +142,7 @@
 <!-- CHAT -->
 {block:Chat}
 <article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
-    {block:Title}
+	{block:Title}
 		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
 			{block:IndexPage}<a href="{Permalink}" title="{Title}">{/block:IndexPage}
 				{Title}
@@ -157,7 +162,7 @@
 <!-- AUDIO -->
 {block:Audio}
 <article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
-    {block:Caption}
+	{block:Caption}
 		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
 			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
 				{Caption}
@@ -165,72 +170,23 @@
 		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
 	{/block:Caption}
 	<div class="content">
-		{block:AudioEmbed}
-			{AudioEmbed}
-		{/block:AudioEmbed}
+		{block:AudioEmbed}{AudioEmbed}{/block:AudioEmbed}
 		{block:AudioPlayer}
 			{AudioPlayer}
 			{block:AlbumArt}
 		{/block:AudioPlayer}
-		
-		{block:AlbumArt}
-			{AlbumArtURL}
-		{/block:AlbumArt}
-	
-		{block:Artist}
-			{Artist}
-		{/block:Artist}
-	
-		{block:Album}
-			{Album}
-		{/block:Album}
-		
-		{block:TrackName}
-			{TrackName}
-		{/block:TrackName}
+
+		{block:AlbumArt}{AlbumArtURL}{/block:AlbumArt}
+		{block:Artist}{Artist}{/block:Artist}
+		{block:Album}{Album}{/block:Album}
+		{block:TrackName}{TrackName}{/block:TrackName}
 		{block:PlayCount}{PlayCountWithLabel}{/block:PlayCount}
 	</div>
 </article>
 {/block:Audio}
 
-<!-- VIDEO -->
-{block:Video}
-<article class="VIDEO {PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
-    {block:Caption}
-		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
-			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
-				{Caption}
-			{block:IndexPage}</a>{/block:IndexPage}
-		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
-	{/block:Caption}
-	<div class="content">
-		{Video-500}
-		{PlayCountWithLabel}
-	</div>
-</article>
-{/block:Video}
 
 
-<!-- ANSWER -->
-{block:Answer}
-<article class="{PostType} {TagsAsClasses}">
-	answer
-</article>
-{block:/Answer}
-
-	{block:HasTags}
-	{/block:HasTags}
-		<div class="tags">
-			{lang:Filed under}: 
-			<ul class="tags">
-				{block:Tags}
-					<li><a href="{TagURL}" title="{Tag}">{Tag}</a></li>
-				{/block:Tags}
-			</ul>
-		</div>
-	{block:Date}
-		<div clas="date">{DayOfWeek}, {DayOfMonth} {Month} / {Year}</div>
-	{/block:Date}
 {/block:posts}
 
 </div>

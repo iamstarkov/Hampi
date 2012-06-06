@@ -1,13 +1,12 @@
 <!-- #MAIN -->
 <div id="main">
-
 <!-- Tumblr post title
 	https://gist.github.com/2795206 -->
 <!-- Tumblr full list of post types
 	https://gist.github.com/2795239 -->
 {block:Posts}
+<!-- LOOP -->
 
-<!-- TEXT -->
 {block:Text}
 <article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
 	{block:Title}
@@ -20,10 +19,10 @@
 	<div class="content">
 		{Body}
 	</div>
+	{block:PostNotes}{PostNotes}{/block:PostNotes}
 </article>
 {/block:Text}
 
-<!-- PHOTO -->
 {block:Photo}
 <article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
 	{block:Caption}
@@ -41,7 +40,6 @@
 </article>
 {/block:Photo}
 
-<!-- PHOTOSET -->
 {block:Photoset}
 <article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
 	{block:Caption}
@@ -56,7 +54,6 @@
 </article>
 {/block:Photoset}
 
-<!-- QUOTE -->
 {block:Quote}
 <article class="{PostType} {TagsAsClasses} {block:RebloggedFrom}reblog{/block:RebloggedFrom} {Length}">
 	<div class="content">
@@ -66,7 +63,6 @@
 </article>
 {/block:Quote}
 
-<!-- LINK -->
 {block:Link}
 <article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
 	<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
@@ -81,7 +77,6 @@
 </article>
 {/block:Link}
 
-<!-- CHAT -->
 {block:Chat}
 <article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
 	{block:Title}
@@ -101,7 +96,6 @@
 </article>
 {/block:Chat}
 
-<!-- AUDIO -->
 {block:Audio}
 <article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
 	{block:Caption}
@@ -127,7 +121,6 @@
 </article>
 {/block:Audio}
 
-<!-- VIDEO -->
 {block:Video}
 <article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
 	{block:Caption}
@@ -144,7 +137,6 @@
 </article>
 {/block:Video}
 
-<!-- ANSWER -->
 {block:Answer}
 <article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
 	answer

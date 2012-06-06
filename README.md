@@ -36,6 +36,7 @@ TODO
 * Add posibillity to config which post types to output, and which not.
 * Short link to the each post
 * Add author info blocks per post for multiply users blogs
+* Possibility to show/hide posttype icons per post
 
 
 [1]: http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither

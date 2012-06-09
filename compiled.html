@@ -54,7 +54,7 @@
 <!-- Tumblr full list of post types
 	https://gist.github.com/2795239 -->
 {block:Posts}
-<!-- LOOP -->
+
 
 {block:Text}
 <article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
@@ -71,126 +71,6 @@
 	{block:PostNotes}{PostNotes}{/block:PostNotes}
 </article>
 {/block:Text}
-
-{block:Photo}
-<article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
-	{block:Caption}
-		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
-			{block:IndexPage}<a href="{Permalink}" title="{PhotoAlt}">{/block:IndexPage}
-				{Caption}
-			{block:IndexPage}</a>{/block:IndexPage}
-		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
-	{/block:Caption}
-	<div class="content">
-		{LinkOpenTag}
-			<img src="{PhotoURL-500}" alt="{PhotoAlt}" />
-		{LinkCloseTag}
-	</div>
-</article>
-{/block:Photo}
-
-{block:Photoset}
-<article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
-	{block:Caption}
-		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
-			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
-				{Caption}
-			{block:IndexPage}</a>{/block:IndexPage}
-		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
-	{/block:Caption}
-	<div class="content">
-		{Photoset-500}
-</article>
-{/block:Photoset}
-
-{block:Quote}
-<article class="{PostType} {TagsAsClasses} {block:RebloggedFrom}reblog{/block:RebloggedFrom} {Length}">
-	<div class="content">
-		<blockquote>{Quote}</blockquote>
-		{block:Source}{Source}{/block:Source}
-	</div>
-</article>
-{/block:Quote}
-
-{block:Link}
-<article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
-	<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
-		{block:IndexPage}<a href="{Permalink}" title="{Name}">{/block:IndexPage}
-			{Name}
-		{block:IndexPage}</a>{/block:IndexPage}
-	</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
-	<div class="content">
-		<a href="{URL}" title="{URL}">{URL}</a>
-		{block:Description} {Description} {/block:Description}
-	</div>
-</article>
-{/block:Link}
-
-{block:Chat}
-<article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
-	{block:Title}
-		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
-			{block:IndexPage}<a href="{Permalink}" title="{Title}">{/block:IndexPage}
-				{Title}
-			{block:IndexPage}</a>{/block:IndexPage}
-		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
-	{/block:Title}
-	<div class="content">
-		{block:Lines}
-			<p class="chat-line chat-line-{alt}">
-				{Line}
-			</p>
-		{/block:Lines}
-	</div>
-</article>
-{/block:Chat}
-
-{block:Audio}
-<article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
-	{block:Caption}
-		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
-			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
-				{Caption}
-			{block:IndexPage}</a>{/block:IndexPage}
-		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
-	{/block:Caption}
-	<div class="content">
-		{block:AudioEmbed}{AudioEmbed}{/block:AudioEmbed}
-		{block:AudioPlayer}
-			{AudioPlayer}
-			{block:AlbumArt}
-		{/block:AudioPlayer}
-		
-		{block:AlbumArt}{AlbumArtURL}{/block:AlbumArt}
-		{block:Artist}{Artist}{/block:Artist}
-		{block:Album}{Album}{/block:Album}
-		{block:TrackName}{TrackName}{/block:TrackName}
-		{block:PlayCount}{PlayCountWithLabel}{/block:PlayCount}
-	</div>
-</article>
-{/block:Audio}
-
-{block:Video}
-<article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
-	{block:Caption}
-		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
-			{block:IndexPage}<a href="{Permalink}" >{/block:IndexPage}
-				{Caption}
-			{block:IndexPage}</a>{/block:IndexPage}
-		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
-	{/block:Caption}
-	<div class="content">
-		{Video-500}
-		{PlayCountWithLabel}
-	</div>
-</article>
-{/block:Video}
-
-{block:Answer}
-<article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
-	answer
-</article>
-{block:/Answer}
 
 {/block:posts}
 

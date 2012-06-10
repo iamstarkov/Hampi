@@ -37,6 +37,14 @@ TODO
 * Add author info blocks per post for multiply users blogs
 * Possibility to show/hide posttype icons per post
 * Add `CSS`
+* meta tag for previous and next and author tag
+* skip links
+* Add ARIA requirements
+
+
+http://vk.com/photo11004596_226116782
+
+http://vk.com/albums11004596?z=photo11004596_182015073%2Fphotos11004596
 
 
 [1]: http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither

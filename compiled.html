@@ -56,7 +56,21 @@
 
 
 {block:Text}
-<article class="{PostType} {TagsAsClasses} {block:RebloggedFrom} reblog{/block:RebloggedFrom}">
+<article id="post{PostID}" class="
+{PostType}
+{block:PostNotes}hasnotes{block:PostNotes}
+{block:More}hasmore{/block:More}
+{block:HasTags}hastags{/block:HasTags}
+{block:Date}
+	postdate-{AmPm}
+	postdate-{ShortDayOfWeek}
+	postdate-{ShortMonth}
+	postdate-{DayOfMonthWithZero}
+	postdate-{Year}
+{/block:Date}
+
+{TagsAsClasses}
+">
 	{block:Title}
 		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
 			{block:IndexPage}<a href="{Permalink}" title="{Title}">{/block:IndexPage}
@@ -66,6 +80,9 @@
 	{/block:Title}
 	<div class="content">
 		{Body}
+		{block:More}
+			<a href=""{block:Title}{Title}{/block:Title}>{lang:Read more}</a>
+		{/block:More}
 	</div>
 	<aside>
 		{block:NoteCount}
@@ -76,7 +93,18 @@
 			{PostNotes}
 		</div>
 		{/block:PostNotes}
+		
+		{block:HasTags}
+			<ul class="tags">
+				{block:Tags}
+					<li>
+						<a href="{TagURL}">{Tag}</a>
+					</li>
+				{/block:Tags}
+			</ul>
+		{/block:HasTags}
 	</aside>
+
 </article>
 {/block:Text}
 

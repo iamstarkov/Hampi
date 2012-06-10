@@ -23,7 +23,6 @@
 			width: 700px;
 			margin: auto;
 		}
-
 	</style>
 	<style type="text/css">{CustomCSS}</style>
 </head>
@@ -68,7 +67,16 @@
 	<div class="content">
 		{Body}
 	</div>
-	{block:PostNotes}{PostNotes}{/block:PostNotes}
+	<aside>
+		{block:NoteCount}
+			{NoteCountWithLabel}
+		{/block:NoteCount}
+		{block:PostNotes}
+		<div class="notes">
+			{PostNotes}
+		</div>
+		{/block:PostNotes}
+	</aside>
 </article>
 {/block:Text}
 

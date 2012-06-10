@@ -9,13 +9,13 @@ Requirements
 
 * Must support all post types. Include:
 	* Text **DONE**
-	* Photo **DONE**
-	* Photosets **DONE**
-	* Quote **DONE**
-	* Link **DONE**
-	* Chat **DONE**
-	* Audio **DONE**
-	* Video blocks **DONE**
+	* Photo
+	* Photosets
+	* Quote
+	* Link
+	* Chat
+	* Audio
+	* Video blocks
 
 * Must support standard tags. Include:
 	* {RSS} (never use "/rss") **DONE**

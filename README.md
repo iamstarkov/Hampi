@@ -29,7 +29,6 @@ TODO
 * 'h1' for logo only on home page, not all index pages. Will be undone until *Tumblr theming api* will be updated.
 * Customizable `<title>` format
 * Customizable `date` per post format
-* Add `CSS`
 * Add more classes per post for advanced customize (realtive to date)
 * Add microformates syntax
 * Add `build in` possibility to add google/yandex verification codes, author's codes and google analytics, yandex.metrics;
@@ -37,6 +36,7 @@ TODO
 * Short link to the each post
 * Add author info blocks per post for multiply users blogs
 * Possibility to show/hide posttype icons per post
+* Add `CSS`
 
 
 [1]: http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither

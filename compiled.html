@@ -20,7 +20,7 @@
 
 	<style type="text/css" media="screen">
 		#wrapper {
-			width: 700px;
+			max-width: 700px;
 			margin: auto;
 		}
 	</style>
@@ -28,7 +28,13 @@
 </head>
 
 
-<body class="{block:IndexPage} index-page{block:DayPage} index-day-page {/block:DayPage}{block:TagPage} index-tag-page {/block:TagPage}{block:SearchPage} index-search-page {/block:SearchPage}{/block:IndexPage}{block:PermalinkPage} permalink-page{/block:PermalinkPage}">
+<body class="
+{block:IndexPage} index-page{/block:IndexPage}
+{block:DayPage} index-day-page {/block:DayPage}
+{block:TagPage} index-tag-page {/block:TagPage}
+{block:SearchPage} index-search-page {/block:SearchPage}
+{block:PermalinkPage} permalink-page{/block:PermalinkPage}
+">
 <!-- Tumblr customizations snippet
 	https://gist.github.com/2794705 -->
 
@@ -81,29 +87,44 @@
 	<div class="content">
 		{Body}
 		{block:More}
-			<a href=""{block:Title}{Title}{/block:Title}>{lang:Read more}</a>
+			<a href="{Permalink}" title="{block:Title}{Title}{/block:Title} — {lang:Read more}">{lang:Read more}</a>
 		{/block:More}
-	</div>
-	<aside>
-		{block:NoteCount}
-			{NoteCountWithLabel}
-		{/block:NoteCount}
-		{block:PostNotes}
-		<div class="notes">
-			{PostNotes}
-		</div>
-		{/block:PostNotes}
-		
 		{block:HasTags}
-			<ul class="tags">
-				{block:Tags}
-					<li>
-						<a href="{TagURL}">{Tag}</a>
-					</li>
-				{/block:Tags}
-			</ul>
+		<ul class="tags">
+			{block:Tags}
+				<li>
+					<a href="{TagURL}" title="{Tag}">{Tag}</a>
+				</li>
+			{/block:Tags}
+		</ul>
 		{/block:HasTags}
+	</div>
+
+	{block:GroupMembers}
+	<aside>
+		<dl>
+			<dt>Author:</dt>
+			<dd>
+				<a href="{PostAuthorURL}" title="{PostAuthorTitle}">
+					<img src="{PostAuthorPortraitURL-24}" width="24" height="24" alt="{PostAuthorName}" />
+					{PostAuthorTitle}
+				</a>
+			</dd>
+		</dl>
 	</aside>
+	{/block:GroupMembers}
+	
+
+	{block:PostNotes}
+	<aside>
+			{block:NoteCount}
+				{NoteCountWithLabel}
+			{/block:NoteCount}
+			<div class="notes">
+				{PostNotes}
+			</div>
+	<aside>
+	{/block:PostNotes}
 
 </article>
 {/block:Text}

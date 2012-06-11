@@ -25,7 +25,7 @@ Status
 NOT READY
 
 TODO
------
+----
 * 'h1' for logo only on home page, not all index pages. Will be undone until *Tumblr theming api* will be updated.
 * Customizable `<title>` format
 * Customizable `date` per post format
@@ -39,8 +39,8 @@ TODO
 * Add `CSS`
 * meta tag for previous and next and author tag
 * skip links
-* Add ARIA requirements
-
+* Add ARIA requirements	
+* http://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D0%B2%D1%8B%D1%87%D0%BA%D0%B8
 
 http://vk.com/photo11004596_226116782
 

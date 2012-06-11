@@ -20,8 +20,10 @@ Features
 * Classes per post for advanced customize
 * Respect rtl and ltr languages
 * A lot of classes per post for advanced customize (relatively to date)
-* Customizable `date
-* Add author info blocks per post for multiply users blogs
+* Choice beetwen long and short date
+* Author info blocks per post for multiply users blogs
+* Google Analytics support
+* Yandex Metrika support (with features)
 
 Status
 ------
@@ -32,9 +34,8 @@ TODO
 * Conditional comments containing `html` tag ([paul irish tip][1])
 * Customizable `title` format
 * Customizable `date` format
-
+* Possibility to add google/yandex verification codes, author's codes;
 * Add microformates syntax
-* Add `build in` possibility to add google/yandex verification codes, author's codes and google analytics, yandex.metrics;
 * Add posibillity to config which post types to output, and which not.
 * Short link to the each post
 * Possibility to show/hide posttype icons per post

@@ -27,6 +27,10 @@
 	<!-- ANALYTICS -->
 	<meta name="if:Use Google Analytics" content="0" />
 	<meta name="text:Google Analytics ID with UA" content="" />
+	<meta name="if:Use Yandex Metrika" content="0" />
+	<meta name="text:Yandex Metrika ID" content="" />
+	<meta name="if:Use Yandex Metrika Webvisor" content="1" />
+	<meta name="if:Use Yandex Metrika Track Hash" content="1" />
 
 
 	<script src="//ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.0.6-development-only.js"> </script>
@@ -215,16 +219,51 @@
 
 <!-- SCRIPTS -->
 
-{block:ifUseGoogleAnalytics}
+{block:IfUseGoogleAnalytics}
 <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
 	 mathiasbynens.be/notes/async-analytics-snippet -->
 <script>
-	var _gaq=[['_setAccount','{text:text:Google Analytics ID with UA}'],['_trackPageview']];
+	var _gaq=[['_setAccount','{text:Google Analytics ID with UA}'],['_trackPageview']];
 	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
 	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
 	s.parentNode.insertBefore(g,s)}(document,'script'));
 </script>
-{/block:ifUseGoogleAnalytics}
+{/block:IfUseGoogleAnalytics}
+
+
+{block:IfUseYandexMetrika}
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+	(w[c] = w[c] || []).push(function() {
+		try {
+			w.yaCounter{text:Yandex Metrika ID} = new Ya.Metrika({id:{text:Yandex Metrika ID},
+				enableAll: true
+				{block:IfUseYandexMetrikaWebvisor}
+				, webvisor:true
+				{/block:IfUseYandexMetrikaWebvisor}
+				{block:IfUseYandexMetrikaTrackHash}
+				, trackHash: true
+				{/block:IfUseYandexMetrikaTrackHash}
+			});
+		} catch(e) {}
+	});
+
+	var n = d.getElementsByTagName("script")[0],
+		s = d.createElement("script"),
+		f = function () { n.parentNode.insertBefore(s, n); };
+	s.type = "text/javascript";
+	s.async = true;
+	s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+	if (w.opera == "[object Opera]") {
+		d.addEventListener("DOMContentLoaded", f);
+	} else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/{text:Yandex Metrika ID}" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+{block:IfUseYandexMetrika}
 
 </body>
 </html>

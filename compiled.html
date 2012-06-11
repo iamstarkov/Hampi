@@ -16,13 +16,18 @@
 	<link rel="apple-touch-icon" href="{PortraitURL-128}"/>
 	<link rel="alternate" type="application/rss+xml" href="{RSS}" />
 
-	<!-- width -->
+	<!-- WIDTH -->
 	<meta name="if:Wide Column" content="1" />
 	<meta name="if:Narrow Column" content="0" />
-	
-	<!-- date -->
+
+	<!-- DATE -->
 	<meta name="if:Use Short Date" content="1" />
 	<meta name="if:Use Visual Date" content="0" />
+
+	<!-- ANALYTICS -->
+	<meta name="if:Use Google Analytics" content="0" />
+	<meta name="text:Google Analytics ID with UA" content="" />
+
 
 	<script src="//ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.0.6-development-only.js"> </script>
 
@@ -125,12 +130,12 @@
 			{block:Italian}{DayOfMonthWithZero}/{MonthNumberWithZero}/{Year}{/block:Italian}
 			{block:Spanish}{DayOfMonthWithZero}/{MonthNumberWithZero}/{Year}{/block:Spanish}
 			{block:Portuguese}{DayOfMonthWithZero}/{MonthNumberWithZero}/{Year}{/block:Portuguese}
-			
+
 			{block:German}{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}{/block:German}
 			{block:Turkish}{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}{/block:Turkish}
 			{block:Russian}{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}{/block:Russian}
 			{block:Polish}{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}{/block:Polish}
-			
+
 			{block:Japanese}{Year}年{MonthNumberWithZero}月{DayOfMonthWithZero}日{/block:Japanese}
 			{block:Dutch}{DayOfMonthWithZero}-{MonthNumberWithZero}-{Year}{/block:Dutch}
 		{/block:IfUseShortDate}
@@ -156,7 +161,7 @@
 		</dl>
 	</aside>
 	{/block:GroupMembers}
-	
+
 
 	{block:PostNotes}
 	<aside>
@@ -206,6 +211,20 @@
 
 </div>
 <!-- /#WRAPPER -->
+
+
+<!-- SCRIPTS -->
+
+{block:ifUseGoogleAnalytics}
+<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
+	 mathiasbynens.be/notes/async-analytics-snippet -->
+<script>
+	var _gaq=[['_setAccount','{text:text:Google Analytics ID with UA}'],['_trackPageview']];
+	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+	s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+{/block:ifUseGoogleAnalytics}
 
 </body>
 </html>

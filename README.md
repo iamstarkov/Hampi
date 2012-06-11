@@ -30,8 +30,9 @@ NOT READY
 TODO
 ----
 * Conditional comments containing `html` tag ([paul irish tip][1])
-* Customizable `<title>` format
-* Customizable `date` per post format
+* Customizable `title` format
+* Customizable `date` format
+
 * Add microformates syntax
 * Add `build in` possibility to add google/yandex verification codes, author's codes and google analytics, yandex.metrics;
 * Add posibillity to config which post types to output, and which not.

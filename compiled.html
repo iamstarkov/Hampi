@@ -32,6 +32,14 @@
 	<meta name="if:Use Yandex Metrika Webvisor" content="1" />
 	<meta name="if:Use Yandex Metrika Track Hash" content="1" />
 
+	<!-- SEARCH ENGINES VERIFICATION -->
+	<meta name="if:Use Google Verification" content="0" />
+	<meta name="text:Google Verification code" content="" />
+	<meta name="if:Use Yandex Verification" content="0" />
+	<meta name="text:Yandex Verification code" content="" />
+
+
+
 
 	<script src="//ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.0.6-development-only.js"> </script>
 
@@ -46,6 +54,18 @@
 		article.hasmore .content p:nth-last-child(1)::after {content: '…';}
 	</style>
 	<style type="text/css">{CustomCSS}</style>
+
+	<!-- VERIFICATIONS -->
+	{block:IfUseGoogleVerification}
+		{block:IndexPage}
+			<meta name="google-site-verification" content="{text:Google Verification code}" />
+		{/block:IndexPage}
+	{/block:IfUseGoogleVerification}
+	{block:IfUseYandexVerification}
+		{block:IndexPage}
+			<meta name='yandex-verification' content='{text:Yandex Verification code}' />
+		{/block:IndexPage}
+	{/block:IfUseYandexVerification}
 </head>
 
 

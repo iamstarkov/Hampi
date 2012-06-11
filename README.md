@@ -23,7 +23,10 @@ Features
 * Choice beetwen long and short date
 * Author info blocks per post for multiply users blogs
 * Google Analytics support
+* Google Verification code support
 * Yandex Metrika support (with features)
+* Yandex Verification code support
+
 
 Status
 ------
@@ -34,7 +37,7 @@ TODO
 * Conditional comments containing `html` tag ([paul irish tip][1])
 * Customizable `title` format
 * Customizable `date` format
-* Possibility to add google/yandex verification codes, author's codes;
+*  author's codes;
 * Add microformates syntax
 * Add posibillity to config which post types to output, and which not.
 * Short link to the each post

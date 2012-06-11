@@ -1,4 +1,4 @@
-<html class="no-js" lang="{block:English}en{/block:English}{block:German}de{/block:German}{block:French}fr{/block:French}{block:Italian}it{/block:Italian}{block:Japanese}ja{/block:Japanese}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}{block:Dutch}nl{/block:Dutch}">
+<html class="no-js" dir="LTR" lang="{block:English}en{/block:English}{block:German}de{/block:German}{block:French}fr{/block:French}{block:Italian}it{/block:Italian}{block:Japanese}ja{/block:Japanese}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}{block:Portuguese}pt{/block:Portuguese}{block:Dutch}nl{/block:Dutch}">
 <!-- Tumblr lang codes
 	 https://gist.github.com/2793673 -->
 
@@ -55,9 +55,9 @@
 <!-- #MAIN -->
 <div id="main">
 <!-- Tumblr post title
-	https://gist.github.com/2795206 -->
+	 https://gist.github.com/2795206 -->
 <!-- Tumblr full list of post types
-	https://gist.github.com/2795239 -->
+	 https://gist.github.com/2795239 -->
 {block:Posts}
 
 
@@ -83,21 +83,41 @@
 			{block:IndexPage}</a>{/block:IndexPage}
 		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
 	{/block:Title}
+
 	<div class="content">
 		{Body}
 		{block:More}
 			<a href="{Permalink}" title="{block:Title}{Title}{/block:Title} — {lang:Read more}">{lang:Read more}</a>
 		{/block:More}
 		{block:HasTags}
-		<ul class="tags">
-			{block:Tags}
-				<li>
-					<a href="{TagURL}" title="{Tag}">{Tag}</a>
-				</li>
-			{/block:Tags}
-		</ul>
-		{/block:HasTags}
 	</div>
+
+	<ul class="tags">
+		{block:Tags}
+			<li>
+				<a href="{TagURL}" title="{Tag}">{Tag}</a>
+			</li>
+		{/block:Tags}
+	</ul>
+	{/block:HasTags}
+
+	{block:Date}
+	<span class="date">
+		{block:English}{DayOfMonthWithZero}/{MonthNumberWithZero}/{Year}{/block:English}
+		{block:French}{DayOfMonthWithZero}/{MonthNumberWithZero}/{Year}{/block:French}
+		{block:Italian}{DayOfMonthWithZero}/{MonthNumberWithZero}/{Year}{/block:Italian}
+		{block:Spanish}{DayOfMonthWithZero}/{MonthNumberWithZero}/{Year}{/block:Spanish}
+		{block:Portuguese}{DayOfMonthWithZero}/{MonthNumberWithZero}/{Year}{/block:Portuguese}
+		
+		{block:German}{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}{/block:German}
+		{block:Turkish}{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}{/block:Turkish}
+		{block:Russian}{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}{/block:Russian}
+		{block:Polish}{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}{/block:Polish}
+		
+		{block:Japanese}{Year}年{MonthNumberWithZero}月{DayOfMonthWithZero}日{/block:Japanese}
+		{block:Dutch}{DayOfMonthWithZero}-{MonthNumberWithZero}-{Year}{/block:Dutch}
+	</span>
+	{/block:Date}
 
 	{block:GroupMembers}
 	<aside>
@@ -122,7 +142,7 @@
 			<div class="notes">
 				{PostNotes}
 			</div>
-	<aside>
+	</aside>
 	{/block:PostNotes}
 
 </article>

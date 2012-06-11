@@ -41,6 +41,7 @@ TODO
 * skip links
 * Add ARIA requirements	
 * http://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D0%B2%D1%8B%D1%87%D0%BA%D0%B8
+* Respect rtl and ltr languages
 
 http://vk.com/photo11004596_226116782
 

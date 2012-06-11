@@ -132,7 +132,28 @@
 
 {block:Pagination}
 <nav>
-	ul
+<!-- pagination items snippet
+	 https://gist.github.com/2910030 -->
+	{block:PreviousPage}
+		<a class="prev" href="{PreviousPage}">{lang:Previous page}</a>
+	{/block:PreviousPage}
+
+	<ul>
+	{block:JumpPagination length="5"}
+		<li>
+			<{block:JumpPage}a href="{URL}"{/block:JumpPage}{block:CurrentPage}span{/block:CurrentPage}
+			class="pagination-item"
+			title="{block:CurrentPage}{PageNumber}{/block:CurrentPage}{block:JumpPage}{PageNumber}{/block:JumpPage}">
+				{block:CurrentPage}{PageNumber}{/block:CurrentPage}
+				{block:JumpPage}{PageNumber}{/block:JumpPage}
+			</{block:JumpPage}a{/block:JumpPage}{block:CurrentPage}span{/block:CurrentPage}>
+		</li>
+	{/block:JumpPagination}
+	</ul>
+
+	{block:NextPage}
+		<a class="next" href="{NextPage}" >{lang:Next page}</a>
+	{/block:NextPage}
 </nav>
 {/block:Pagination}
 

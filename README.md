@@ -26,6 +26,7 @@ Features
 * Google Verification code support
 * Yandex Metrika support (with features)
 * Yandex Verification code support
+* Posibillity to choose which post types to output, and which not.
 
 
 Status
@@ -37,14 +38,13 @@ TODO
 * Conditional comments containing `html` tag ([paul irish tip][1])
 * Customizable `title` format
 * Customizable `date` format
-*  author's codes;
 * Add microformates syntax
-* Add posibillity to config which post types to output, and which not.
 * Short link to the each post
 * Possibility to show/hide posttype icons per post
 * meta tag for previous and next and author tag
 * skip links
 * Add ARIA requirements	
+* Permalink navigation
 * Respect to http://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D0%B2%D1%8B%D1%87%D0%BA%D0%B8
 * **IMPOSSIBLE NOW** 'h1' for logo only on home page, not all index pages. Will be undone until *Tumblr theming api* will be updated.
 

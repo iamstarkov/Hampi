@@ -24,6 +24,16 @@
 	<meta name="if:Use Short Date" content="1" />
 	<meta name="if:Use Visual Date" content="0" />
 
+	<!-- POST TYPE OUTPUT -->
+	<meta name="if:Output Text" content="1" />
+	<meta name="if:Output Photo" content="1" />
+	<meta name="if:Output Photoset" content="1" />
+	<meta name="if:Output Link" content="1" />
+	<meta name="if:Output Chat" content="1" />
+	<meta name="if:Output Audio" content="1" />
+	<meta name="if:Output Video" content="1" />
+	<meta name="if:Output Answer" content="1" />
+
 	<!-- ANALYTICS -->
 	<meta name="if:Use Google Analytics" content="0" />
 	<meta name="text:Google Analytics ID with UA" content="" />
@@ -104,7 +114,7 @@
 	 https://gist.github.com/2795239 -->
 {block:Posts}
 
-
+{block:IfOutputText}
 {block:Text}
 <article id="post{PostID}" class="
 {PostType}
@@ -200,6 +210,7 @@
 
 </article>
 {/block:Text}
+{/block:IfOutputText}
 
 {/block:posts}
 

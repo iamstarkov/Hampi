@@ -9,9 +9,8 @@ Some time ago i wanted to create normal (full-featured and seo-optimized) blog o
 Features
 --------
 * Header structure is seo-optimized:
-	* *index* page: `h1` is logo and `h2` is posts' title.
+	* *index* page: `div` is logo and `h2` is posts' title.
 	* *permalink* page: `h1` is post title, logo is a simple div.
-* Conditional comments containing `html` tag ([paul irish tip][1])
 * `html` attribute `lang` is displayed in accordance with the [blog settings ][2] (en, de, fr, it, ja, tr, es, ru, pl)
 * [Modernizr][3] included
 * `html` has `no-js/js` toggling by Modernizr class for advanced `css` styling
@@ -19,6 +18,10 @@ Features
 * iPhone and iPad favicons
 * Classes per page type for advanced customize
 * Classes per post for advanced customize
+* Respect rtl and ltr languages
+* A lot of classes per post for advanced customize (relatively to date)
+* Customizable `date
+* Add author info blocks per post for multiply users blogs
 
 Status
 ------
@@ -26,27 +29,19 @@ NOT READY
 
 TODO
 ----
-* 'h1' for logo only on home page, not all index pages. Will be undone until *Tumblr theming api* will be updated.
+* Conditional comments containing `html` tag ([paul irish tip][1])
 * Customizable `<title>` format
 * Customizable `date` per post format
-* Add more classes per post for advanced customize (realtive to date)
 * Add microformates syntax
 * Add `build in` possibility to add google/yandex verification codes, author's codes and google analytics, yandex.metrics;
 * Add posibillity to config which post types to output, and which not.
 * Short link to the each post
-* Add author info blocks per post for multiply users blogs
 * Possibility to show/hide posttype icons per post
-* Add `CSS`
 * meta tag for previous and next and author tag
 * skip links
 * Add ARIA requirements	
-* http://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D0%B2%D1%8B%D1%87%D0%BA%D0%B8
-* Respect rtl and ltr languages
-
-http://vk.com/photo11004596_226116782
-
-http://vk.com/albums11004596?z=photo11004596_182015073%2Fphotos11004596
-
+* Respect to http://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D0%B2%D1%8B%D1%87%D0%BA%D0%B8
+* **IMPOSSIBLE NOW** 'h1' for logo only on home page, not all index pages. Will be undone until *Tumblr theming api* will be updated.
 
 [1]: http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither
 [2]: https://www.tumblr.com/preferences

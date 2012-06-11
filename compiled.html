@@ -16,6 +16,14 @@
 	<link rel="apple-touch-icon" href="{PortraitURL-128}"/>
 	<link rel="alternate" type="application/rss+xml" href="{RSS}" />
 
+	<!-- width -->
+	<meta name="if:Wide Column" content="1" />
+	<meta name="if:Narrow Column" content="0" />
+	
+	<!-- date -->
+	<meta name="if:Use Short Date" content="1" />
+	<meta name="if:Use Visual Date" content="0" />
+
 	<script src="//ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.0.6-development-only.js"> </script>
 
 	<style type="text/css" media="screen">
@@ -23,6 +31,10 @@
 			max-width: 700px;
 			margin: auto;
 		}
+		#wrapper.wide {   max-width: 900px; }
+		#wrapper.narrow { max-width: 500px; }
+
+		article.hasmore .content p:nth-last-child(1)::after {content: '…';}
 	</style>
 	<style type="text/css">{CustomCSS}</style>
 </head>
@@ -39,13 +51,16 @@
 	https://gist.github.com/2794705 -->
 
 <!-- #WRAPPER -->
-<div id="wrapper">
+<div id="wrapper" class="
+{block:IfWideColumn} wide {/block:IfWideColumn}
+{block:IfNarrowColumn} narrow {/block:IfNarrowColumn}
+">
 <!-- HEADER -->
 <header>
-	<{block:IndexPage}h1{/block:IndexPage}{block:PermalinkPage}a href="/" {/block:PermalinkPage}
+	<{block:IndexPage}div{/block:IndexPage}{block:PermalinkPage}a href="/" {/block:PermalinkPage}
 	 id="logo" title="{Title}">
 		{Title}
-	</{block:PermalinkPage}a{/block:PermalinkPage}{block:IndexPage}h1{/block:IndexPage}>
+	</{block:PermalinkPage}a{/block:PermalinkPage}{block:IndexPage}div{/block:IndexPage}>
 
 <!-- Tumblr #logo snippet
 	https://gist.github.com/2794926 -->
@@ -77,21 +92,21 @@
 {TagsAsClasses}
 ">
 	{block:Title}
-		<{block:IndexPage}h3{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
+		<{block:IndexPage}h2{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
 			{block:IndexPage}<a href="{Permalink}" title="{Title}">{/block:IndexPage}
 				{Title}
 			{block:IndexPage}</a>{/block:IndexPage}
-		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h3{/block:IndexPage}>
+		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h2{/block:IndexPage}>
 	{/block:Title}
 
 	<div class="content">
 		{Body}
-		{block:More}
-			<a href="{Permalink}" title="{block:Title}{Title}{/block:Title} — {lang:Read more}">{lang:Read more}</a>
-		{/block:More}
-		{block:HasTags}
 	</div>
+	{block:More}
+		<a href="{Permalink}" title="{block:Title}{Title}{/block:Title} — {lang:Read more}">{lang:Read more}</a>
+	{/block:More}
 
+	{block:HasTags}
 	<ul class="tags">
 		{block:Tags}
 			<li>
@@ -102,21 +117,30 @@
 	{/block:HasTags}
 
 	{block:Date}
-	<span class="date">
-		{block:English}{DayOfMonthWithZero}/{MonthNumberWithZero}/{Year}{/block:English}
-		{block:French}{DayOfMonthWithZero}/{MonthNumberWithZero}/{Year}{/block:French}
-		{block:Italian}{DayOfMonthWithZero}/{MonthNumberWithZero}/{Year}{/block:Italian}
-		{block:Spanish}{DayOfMonthWithZero}/{MonthNumberWithZero}/{Year}{/block:Spanish}
-		{block:Portuguese}{DayOfMonthWithZero}/{MonthNumberWithZero}/{Year}{/block:Portuguese}
-		
-		{block:German}{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}{/block:German}
-		{block:Turkish}{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}{/block:Turkish}
-		{block:Russian}{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}{/block:Russian}
-		{block:Polish}{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}{/block:Polish}
-		
-		{block:Japanese}{Year}年{MonthNumberWithZero}月{DayOfMonthWithZero}日{/block:Japanese}
-		{block:Dutch}{DayOfMonthWithZero}-{MonthNumberWithZero}-{Year}{/block:Dutch}
-	</span>
+	<div>
+		<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate>
+		{block:IfUseShortDate}
+			{block:English}{DayOfMonthWithZero}/{MonthNumberWithZero}/{Year}{/block:English}
+			{block:French}{DayOfMonthWithZero}/{MonthNumberWithZero}/{Year}{/block:French}
+			{block:Italian}{DayOfMonthWithZero}/{MonthNumberWithZero}/{Year}{/block:Italian}
+			{block:Spanish}{DayOfMonthWithZero}/{MonthNumberWithZero}/{Year}{/block:Spanish}
+			{block:Portuguese}{DayOfMonthWithZero}/{MonthNumberWithZero}/{Year}{/block:Portuguese}
+			
+			{block:German}{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}{/block:German}
+			{block:Turkish}{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}{/block:Turkish}
+			{block:Russian}{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}{/block:Russian}
+			{block:Polish}{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}{/block:Polish}
+			
+			{block:Japanese}{Year}年{MonthNumberWithZero}月{DayOfMonthWithZero}日{/block:Japanese}
+			{block:Dutch}{DayOfMonthWithZero}-{MonthNumberWithZero}-{Year}{/block:Dutch}
+		{/block:IfUseShortDate}
+		{block:ifUseVisualDate}
+			<span class="day">{DayOfMonth}</span>
+			<span class="month">{ShortMonth}</span>
+			<span class="year">{Year}</span>
+		{/block:ifUseVisualDate}
+		</time>
+	</div>
 	{/block:Date}
 
 	{block:GroupMembers}

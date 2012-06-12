@@ -27,7 +27,8 @@ Features
 * Yandex Metrika support (with features)
 * Yandex Verification code support
 * Posibillity to choose which post types to output, and which not.
-
+* rel="next" and rel="prev" support
+* Short link to the each post
 
 Status
 ------
@@ -39,12 +40,11 @@ TODO
 * Customizable `title` format
 * Customizable `date` format
 * Add microformates syntax
-* Short link to the each post
-* Possibility to show/hide posttype icons per post
-* meta tag for previous and next and author tag
+* Possibility to show/hide posttype icons per post and the all posts
+* Link rel="author" tag
+* Link rel="copyright" tag
 * skip links
 * Add ARIA requirements	
-* Permalink navigation
 * Respect to http://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D0%B2%D1%8B%D1%87%D0%BA%D0%B8
 * **IMPOSSIBLE NOW** 'h1' for logo only on home page, not all index pages. Will be undone until *Tumblr theming api* will be updated.
 * Optimizations for opera speed dial shots

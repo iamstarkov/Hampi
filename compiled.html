@@ -17,8 +17,8 @@
 	<link rel="alternate" type="application/rss+xml" href="{RSS}" />
 
 	<!-- WIDTH -->
-	<meta name="if:Wide Column" content="1" />
-	<meta name="if:Narrow Column" content="0" />
+	<meta name="if:Wide Column" content="0" />
+	<meta name="if:Narrow Column" content="1" />
 
 	<!-- DATE -->
 	<meta name="if:Use Short Date" content="1" />
@@ -226,6 +226,18 @@
 {/block:IfOutputText}
 
 {/block:posts}
+
+{block:PermalinkPagination}
+<nav>
+	{block:PreviousPost}
+		<a href="{PreviousPost}" title="{lang:Previous post}">{lang:Previous post}</a>
+	{/block:PreviousPost}
+
+	{block:NextPost}
+		<a href="{NextPost}" title="{lang:Next post}">{lang:Next post}</a>
+	{/block:NextPost}
+</nav>
+{/block:PermalinkPagination}
 
 {block:Pagination}
 <nav>

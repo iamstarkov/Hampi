@@ -29,6 +29,7 @@ Features
 * Posibillity to choose which post types to output, and which not.
 * rel="next" and rel="prev" support
 * Short link to the each post
+* Option to include custom css file to use custom design of hampi theme.
 
 Status
 ------
@@ -48,8 +49,8 @@ TODO
 * Respect to http://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D0%B2%D1%8B%D1%87%D0%BA%D0%B8
 * **IMPOSSIBLE NOW** 'h1' for logo only on home page, not all index pages. Will be undone until *Tumblr theming api* will be updated.
 * Optimizations for opera speed dial shots
-* http://www.globinch.com/pagination-seo-using-relnext-and-relprev-link-attributes/
 * сделать категории в тамблере можно с помощью дополнительных опций, ведущих на основные страницы тегов.
+* впоследствии сделать сайт посвящённый разным дизайнам темы
 
 [1]: http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither
 [2]: https://www.tumblr.com/preferences

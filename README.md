@@ -49,6 +49,7 @@ TODO
 * **IMPOSSIBLE NOW** 'h1' for logo only on home page, not all index pages. Will be undone until *Tumblr theming api* will be updated.
 * Optimizations for opera speed dial shots
 * http://www.globinch.com/pagination-seo-using-relnext-and-relprev-link-attributes/
+* сделать категории в тамблере можно с помощью дополнительных опций, ведущих на основные страницы тегов.
 
 [1]: http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither
 [2]: https://www.tumblr.com/preferences

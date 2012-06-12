@@ -48,6 +48,10 @@
 	<meta name="if:Use Yandex Verification" content="0" />
 	<meta name="text:Yandex Verification code" content="" />
 
+	<!-- LINK REL ACCESSIBILITY -->
+	<meta name="if:Use Link Home" content="0" />
+	<meta name="text:Home Page" content="" />
+
 
 
 
@@ -64,6 +68,17 @@
 		article.hasmore .content p:nth-last-child(1)::after {content: '…';}
 	</style>
 	<style type="text/css">{CustomCSS}</style>
+
+
+	<!-- LINK TAGS FOR ACCESSEBILITY -->
+	{block:IfUseLinkHome}
+		<link rel="home" href="{text:Home Page}" />
+		<link rel="index" href="{text:Home Page}" />
+	{/block:IfUseLinkHome}
+	{block:Pagination}
+		{block:PreviousPage} <link rel="prev" href="{PreviousPage}" /> {/block:PreviousPage}
+		{block:NextPage} <link rel="next" href="{NextPage}" /> {/block:NextPage}
+	{/block:Pagination}
 
 	<!-- VERIFICATIONS -->
 	{block:IfUseGoogleVerification}
@@ -219,7 +234,7 @@
 <!-- pagination items snippet
 	 https://gist.github.com/2910030 -->
 	{block:PreviousPage}
-		<a class="prev" href="{PreviousPage}">{lang:Previous page}</a>
+		<a class="prev" rel="prev" href="{PreviousPage}">{lang:Previous page}</a>
 	{/block:PreviousPage}
 
 	<ul>
@@ -236,7 +251,7 @@
 	</ul>
 
 	{block:NextPage}
-		<a class="next" href="{NextPage}" >{lang:Next page}</a>
+		<a class="next" rel="next" href="{NextPage}" >{lang:Next page}</a>
 	{/block:NextPage}
 </nav>
 {/block:Pagination}

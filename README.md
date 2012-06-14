@@ -51,6 +51,8 @@ TODO
 * Optimizations for opera speed dial shots
 * сделать категории в тамблере можно с помощью дополнительных опций, ведущих на основные страницы тегов.
 * впоследствии сделать сайт посвящённый разным дизайнам темы
+* Typekit support 
+
 
 [1]: http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither
 [2]: https://www.tumblr.com/preferences

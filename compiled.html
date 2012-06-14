@@ -28,10 +28,11 @@
 	<meta name="if:Narrow Column" content="1" />
 
 	<!-- DATE -->
-	<meta name="if:Use Short Date" content="1" />
-	<meta name="if:Use Visual Date" content="0" />
+	<meta name="if:Short Date" content="1" />
+	<meta name="if:Visual Date" content="0" />
 	<!-- DATE -->
-	<meta name="if:Use Jump Pagination" content="0" />
+	<meta name="if:Show Jump Pagination" content="0" />
+	<meta name="if:Show Read More" content="0" />
 
 	<!-- POST TYPE OUTPUT -->
 	<meta name="if:Output Text" content="1" />
@@ -203,9 +204,12 @@
 		</dl>
 	</div>
 	{/block:PermalinkPage}
-	{block:More}
-		<a href="{Permalink}" title="{block:Title}{Title}{/block:Title} — {lang:Read more}">{lang:Read more}</a>
-	{/block:More}
+
+	{block:IfShowReadMore}
+		{block:More}
+			<a href="{Permalink}" title="{block:Title}{Title}{/block:Title} — {lang:Read more}">{lang:Read more}</a>
+		{/block:More}
+	{/block:IfShowReadMore}
 
 	{block:HasTags}
 	<ul class="tags">
@@ -296,7 +300,7 @@
 		<a class="prev" rel="prev" href="{PreviousPage}">{lang:Previous page}</a>
 	{/block:PreviousPage}
 
-	{block:IfUseJumpPagination}
+	{block:ShowJumpPagination}
 		<ul>
 		{block:JumpPagination length="5"}
 			<li>
@@ -309,7 +313,7 @@
 			</li>
 		{/block:JumpPagination}
 		</ul>
-	{/block:IfUseJumpPagination}
+	{/block:ShowJumpPagination}
 
 	{block:NextPage}
 		<a class="next" rel="next" href="{NextPage}" >{lang:Next page}</a>

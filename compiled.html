@@ -1,4 +1,11 @@
-<html class="no-js" dir="LTR" lang="{block:English}en{/block:English}{block:German}de{/block:German}{block:French}fr{/block:French}{block:Italian}it{/block:Italian}{block:Japanese}ja{/block:Japanese}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}{block:Portuguese}pt{/block:Portuguese}{block:Dutch}nl{/block:Dutch}">
+<!--[if lt IE 7]>     <html class="no-js lt-ie9 lt-ie8 lt-ie7"  dir="LTR" 
+	lang="{block:English}en{/block:English}{block:German}de{/block:German}{block:French}fr{/block:French}{block:Italian}it{/block:Italian}{block:Japanese}ja{/block:Japanese}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}{block:Portuguese}pt{/block:Portuguese}{block:Dutch}nl{/block:Dutch}"><![endif]-->
+<!--[if IE 7]>        <html class="no-js lt-ie9 lt-ie8" dir="LTR" 
+	lang="{block:English}en{/block:English}{block:German}de{/block:German}{block:French}fr{/block:French}{block:Italian}it{/block:Italian}{block:Japanese}ja{/block:Japanese}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}{block:Portuguese}pt{/block:Portuguese}{block:Dutch}nl{/block:Dutch}"><![endif]-->
+<!--[if IE 8]>        <html class="no-js lt-ie9" dir="LTR" 
+	lang="{block:English}en{/block:English}{block:German}de{/block:German}{block:French}fr{/block:French}{block:Italian}it{/block:Italian}{block:Japanese}ja{/block:Japanese}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}{block:Portuguese}pt{/block:Portuguese}{block:Dutch}nl{/block:Dutch}"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" dir="LTR" 
+	lang="{block:English}en{/block:English}{block:German}de{/block:German}{block:French}fr{/block:French}{block:Italian}it{/block:Italian}{block:Japanese}ja{/block:Japanese}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}{block:Portuguese}pt{/block:Portuguese}{block:Dutch}nl{/block:Dutch}"><!--<![endif]-->
 <!-- Tumblr lang codes
 	 https://gist.github.com/2793673 -->
 
@@ -68,6 +75,16 @@
 		#wrapper.wide {   max-width: 900px; }
 		#wrapper.narrow { max-width: 500px; }
 
+	.common {
+		height: 10px; /* sizes are demo only */
+		width: 10px;
+		opacity: 1;
+	}
+
+	.diff01 { background-color: #FFF; }
+	.diff02 { background-color: #AAA; }
+	.diff03 { background-color: #333; }
+	.diff04 { background-color: #000; }
 		article.hasmore .content p:nth-last-child(1)::after {content: '…';}
 	</style>
 
@@ -75,6 +92,8 @@
 		<link rel="stylesheet" href="{text:Scheme css Url}" />
 	{/block:ifUseScheme}
 	<style type="text/css">{CustomCSS}</style>
+
+
 
 
 	<!-- LINK TAGS FOR ACCESSEBILITY -->

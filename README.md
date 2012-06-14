@@ -11,7 +11,7 @@ Features
 * Header structure is seo-optimized:
 	* *index* page: `div` is logo and `h2` is posts' title.
 	* *permalink* page: `h1` is post title, logo is a simple div.
-* `html` attribute `lang` is displayed in accordance with the [blog settings ][2] (en, de, fr, it, ja, tr, es, ru, pl)
+* `html` attribute `lang` is displayed in accordance with the [blog settings ][2] (en, de, fr, it, ja, tr, es, ru, pl, nl, pt)
 * [Modernizr][3] included
 * `html` has `no-js/js` toggling by Modernizr class for advanced `css` styling
 * `html5` tags used
@@ -33,6 +33,9 @@ Features
 * Conditional comments containing `html` tag ([paul irish tip][1])
 * Customizable `date` format (smart visual presentation or simpe text)
 * Skip links
+* Show “Read more” option
+* Link rel="author" tag for multiply blogs only as attribute for `a` tag
+* Disqus support
 
 Status
 ------
@@ -44,13 +47,15 @@ TODO
 * Possibility to show/hide posttype icons per post and the all posts
 * Link rel="author" tag
 * Link rel="copyright" tag
-* Add ARIA requirements	
+* Add ARIA requirements
 * Respect to http://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D0%B2%D1%8B%D1%87%D0%BA%D0%B8
-* **IMPOSSIBLE NOW** 'h1' for logo only on home page, not all index pages. Will be undone until *Tumblr theming api* will be updated.
 * Optimizations for opera speed dial shots
 * сделать категории в тамблере можно с помощью дополнительных опций, ведущих на основные страницы тегов.
 * впоследствии сделать сайт посвящённый разным дизайнам темы
 * Typekit support 
+* Twiiter support
+
+iusedisqus9890
 
 [1]: http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither
 [2]: https://www.tumblr.com/preferences

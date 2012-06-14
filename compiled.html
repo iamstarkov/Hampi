@@ -1,10 +1,10 @@
-<!--[if lt IE 7]>     <html class="no-js lt-ie9 lt-ie8 lt-ie7"  dir="LTR" 
+<!--[if lt IE 7]>	 <html class="no-js lt-ie9 lt-ie8 lt-ie7"  dir="LTR"
 	lang="{block:English}en{/block:English}{block:German}de{/block:German}{block:French}fr{/block:French}{block:Italian}it{/block:Italian}{block:Japanese}ja{/block:Japanese}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}{block:Portuguese}pt{/block:Portuguese}{block:Dutch}nl{/block:Dutch}"><![endif]-->
-<!--[if IE 7]>        <html class="no-js lt-ie9 lt-ie8" dir="LTR" 
+<!--[if IE 7]>		<html class="no-js lt-ie9 lt-ie8" dir="LTR"
 	lang="{block:English}en{/block:English}{block:German}de{/block:German}{block:French}fr{/block:French}{block:Italian}it{/block:Italian}{block:Japanese}ja{/block:Japanese}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}{block:Portuguese}pt{/block:Portuguese}{block:Dutch}nl{/block:Dutch}"><![endif]-->
-<!--[if IE 8]>        <html class="no-js lt-ie9" dir="LTR" 
+<!--[if IE 8]>		<html class="no-js lt-ie9" dir="LTR"
 	lang="{block:English}en{/block:English}{block:German}de{/block:German}{block:French}fr{/block:French}{block:Italian}it{/block:Italian}{block:Japanese}ja{/block:Japanese}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}{block:Portuguese}pt{/block:Portuguese}{block:Dutch}nl{/block:Dutch}"><![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js" dir="LTR" 
+<!--[if gt IE 8]><!--><html class="no-js" dir="LTR"
 	lang="{block:English}en{/block:English}{block:German}de{/block:German}{block:French}fr{/block:French}{block:Italian}it{/block:Italian}{block:Japanese}ja{/block:Japanese}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}{block:Portuguese}pt{/block:Portuguese}{block:Dutch}nl{/block:Dutch}"><!--<![endif]-->
 <!-- Tumblr lang codes
 	 https://gist.github.com/2793673 -->
@@ -62,6 +62,10 @@
 	<meta name="if:Use Link Home" content="0" />
 	<meta name="text:Home Page" content="" />
 
+	<!-- COMMENTS -->
+	<meta name="if:Use Disqus" content="0" />
+	<meta name="text:Disqus Name" content="" />
+
 	<!-- Hampi theme scheme -->
 	<meta name="if:Use Scheme" content="0" />
 	<meta name="text:Scheme css Url" content="" />
@@ -88,7 +92,7 @@
 		}
 
 		#skip-links a:active,
-		#skip-links a:focus { 
+		#skip-links a:focus {
 			position:static;
 			width:auto;
 			height:auto;
@@ -195,7 +199,7 @@
 	<div class="content">
 		{Body}
 	</div>
-	
+
 	{block:PermalinkPage}
 	<div>
 		<dl>
@@ -253,7 +257,7 @@
 		<dl>
 			<dt>Author:</dt>
 			<dd>
-				<a href="{PostAuthorURL}" title="{PostAuthorTitle}">
+				<a href="{PostAuthorURL}" title="{PostAuthorTitle}" rel="author">
 					<img src="{PostAuthorPortraitURL-24}" width="24" height="24" alt="{PostAuthorName}" />
 					{PostAuthorTitle}
 				</a>
@@ -321,12 +325,25 @@
 </nav>
 {/block:Pagination}
 
+{block:IfUseDisqus}
+	{block:PermalinkPage}
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+		var disqus_shortname = '{text:Disqus Name}';
+		(function() {
+			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+	</script>
+	{/block:PermalinkPage}
+{/block:IfUseDisqus}
+
 </div>
 <!-- /#MAIN -->
 
 </div>
 <!-- /#WRAPPER -->
-
 
 <!-- SCRIPTS -->
 

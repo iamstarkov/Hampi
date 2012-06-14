@@ -75,17 +75,23 @@
 		#wrapper.wide {   max-width: 900px; }
 		#wrapper.narrow { max-width: 500px; }
 
-	.common {
-		height: 10px; /* sizes are demo only */
-		width: 10px;
-		opacity: 1;
-	}
+		#skip-links a,
+		#skip-links a:hover,
+		#skip-links a:visited {
+			position: absolute;
+			top: -500px;
+			left: 0px;
+			height: 1px;
+			width: 1px;
+			overflow: hidden;
+		}
 
-	.diff01 { background-color: #FFF; }
-	.diff02 { background-color: #AAA; }
-	.diff03 { background-color: #333; }
-	.diff04 { background-color: #000; }
-		article.hasmore .content p:nth-last-child(1)::after {content: '…';}
+		#skip-links a:active,
+		#skip-links a:focus { 
+			position:static;
+			width:auto;
+			height:auto;
+		}
 	</style>
 
 	{block:ifUseScheme}
@@ -93,10 +99,7 @@
 	{/block:ifUseScheme}
 	<style type="text/css">{CustomCSS}</style>
 
-
-
-
-	<!-- LINK TAGS FOR ACCESSEBILITY -->
+	<!-- LINK TAGS FOR ACCESSIBILITY -->
 	{block:IfUseLinkHome}
 		<link rel="home" href="{text:Home Page}" />
 	{/block:IfUseLinkHome}
@@ -133,6 +136,10 @@
 ">
 <!-- Tumblr customizations snippet
 	https://gist.github.com/2794705 -->
+
+<div id="skip-links">
+	<a href="#main" title="Skip to content area">Skip to content area</a>
+</div>
 
 <!-- #WRAPPER -->
 <div id="wrapper" class="

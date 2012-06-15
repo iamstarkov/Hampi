@@ -43,6 +43,10 @@ NOT READY
 
 TODO
 ----
+* Source support
+* Reblogs support
+* CSS
+* 0.2 Milestone
 * Add microformates syntax
 * Possibility to show/hide posttype icons per post and the all posts
 * Link rel="author" tag

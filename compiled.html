@@ -26,14 +26,13 @@
 	<!-- WIDTH -->
 	<meta name="if:Wide Column" content="0" />
 	<meta name="if:Narrow Column" content="1" />
-
 	<!-- DATE -->
 	<meta name="if:Short Date" content="1" />
 	<meta name="if:Visual Date" content="0" />
-	<!-- DATE -->
+	<!-- LAYOUT -->
 	<meta name="if:Show Jump Pagination" content="0" />
 	<meta name="if:Show Read More" content="0" />
-
+	<meta name="if:Respectful footer" content="1" />
 	<!-- POST TYPE OUTPUT -->
 	<meta name="if:Output Text" content="1" />
 	<meta name="if:Output Photo" content="1" />
@@ -356,6 +355,7 @@ a[href="http://hampi-theme.tumblr.com/"]
 a[href="http://vstarkov.com/"]
 Hampi theme made ​​with love by Vladimir Starkov.
  -->
+	{block:IfRespectfulfooter}
 	<p>
 		{block:English}
 			<a href="http://hampi-theme.tumblr.com/">Hampi theme</a> made ​​with love by <a href="http://vstarkov.com/">Vladimir Starkov</a>
@@ -392,6 +392,7 @@ Hampi theme made ​​with love by Vladimir Starkov.
 		{/block:Dutch} 
 		. {lang:Powered by Tumblr}
 	</p>
+	{/block:IfRespectfulfooter}
 </footer>
 
 </div>

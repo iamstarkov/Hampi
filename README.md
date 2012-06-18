@@ -28,7 +28,6 @@ Features
 * Yandex Verification code support
 * Posibillity to choose which post types to output, and which not.
 * rel="next" and rel="prev" support
-* Short link to the each post
 * Option to include custom css file to use custom design of hampi theme.
 * Conditional comments containing `html` tag ([paul irish tip][1])
 * Customizable `date` format (smart visual presentation or simpe text)
@@ -44,6 +43,7 @@ Features
 * Notes
 * Tags
 * Group blogs
+* Reblogs support
 
 
 Status
@@ -53,7 +53,6 @@ NOT READY
 TODO
 ----
 * Source support
-* Reblogs support
 * CSS
 ---
 * Day pages

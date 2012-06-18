@@ -44,6 +44,7 @@ Features
 * Tags
 * Group blogs
 * Reblogs support
+* Source support
 
 
 Status
@@ -52,7 +53,6 @@ NOT READY
 
 TODO
 ----
-* Source support
 * CSS
 ---
 * Day pages

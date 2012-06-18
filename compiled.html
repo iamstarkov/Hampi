@@ -158,6 +158,14 @@
 		{Title}
 	</{block:PermalinkPage}a{/block:PermalinkPage}{block:IndexPage}div{/block:IndexPage}>
 
+	{block:HasPages}
+	<ul>
+		{block:Pages}
+			<li><a href="{URL}" title="{Label">{Label}</a></li>
+		{/block:Pages}
+	</ul>
+	{/block:HasPages}
+
 <!-- Tumblr #logo snippet
 	https://gist.github.com/2794926 -->
 </header>
@@ -194,6 +202,16 @@
 			{block:IndexPage}</a>{/block:IndexPage}
 		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h2{/block:IndexPage}>
 	{/block:Title}
+	
+	{block:RebloggedFrom}
+	<div class="reblog_content">
+		{lang:Originally from ReblogRootName}
+		<a href="{ReblogRootURL}" title="{ReblogRootTitle}">
+			<img src="{ReblogRootPortraitURL-24}" alt="{ReblogRootTitle}">
+			{ReblogRootTitle}
+		</a>
+	</div>
+	{/block:RebloggedFrom}
 
 
 	<div class="content">
@@ -251,7 +269,7 @@
 		</time>
 	</div>
 	{/block:Date}
-
+	
 	{block:GroupMembers}
 	<aside>
 		<dl>
@@ -269,14 +287,16 @@
 
 	{block:PostNotes}
 	<aside>
-			{block:NoteCount}
-				{NoteCountWithLabel}
-			{/block:NoteCount}
-			<div class="notes">
-				{PostNotes}
-			</div>
+		{block:NoteCount}
+			{NoteCountWithLabel}
+		{/block:NoteCount}
+		<div class="notes">
+			{PostNotes}
+		</div>
 	</aside>
 	{/block:PostNotes}
+
+
 
 </article>
 {/block:Text}

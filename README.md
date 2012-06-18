@@ -36,6 +36,15 @@ Features
 * Show “Read more” option
 * Link rel="author" tag for multiply blogs only as attribute for `a` tag
 * Disqus support
+* Text post type
+* Notes
+* Permalink Navigation
+* Jump Navigation
+* Dates
+* Notes
+* Tags
+* Group blogs
+
 
 Status
 ------
@@ -46,7 +55,13 @@ TODO
 * Source support
 * Reblogs support
 * CSS
-* 0.2 Milestone
+---
+* Day pages
+* Tag pages
+* Search pages
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* Following blogs
+* Twitter connection support
 * Add microformates syntax
 * Possibility to show/hide posttype icons per post and the all posts
 * Link rel="author" tag
@@ -58,8 +73,6 @@ TODO
 * впоследствии сделать сайт посвящённый разным дизайнам темы
 * Typekit support 
 * Twiiter support
-
-iusedisqus9890
 
 [1]: http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither
 [2]: https://www.tumblr.com/preferences

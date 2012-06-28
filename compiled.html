@@ -59,10 +59,13 @@
 	<!-- COMMENTS -->
 	<meta name="text:Disqus Name" content="" />
 
+	<!-- Typekit ID -->
+	<meta name="text:Typekit ID" content="" />
+
 	<!-- HAMPI THEME DESIGN SCHEME -->
 	<meta name="text:Scheme css Url" content="" />
 
-	<script src="//ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.0.6-development-only.js"> </script>
+
 
 	<style type="text/css" media="screen">
 		#wrapper {
@@ -122,6 +125,9 @@
 			<meta name='yandex-verification' content='{text:Yandex Verification code}' />
 		{/block:IndexPage}
 	{/block:IfYandexVerificationcode}
+
+	<script src="//ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.0.6-development-only.js"> </script>
+
 </head>
 
 
@@ -398,8 +404,14 @@ Hampi theme made ​​with love by Vladimir Starkov.
 </div>
 <!-- /#WRAPPER -->
 
-<!-- SCRIPTS -->
 
+{block:IfTypekitID}
+<script type="text/javascript" src="//use.typekit.com/{text:Typekit ID}.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+{/block:IfTypekitID}
+
+
+<!-- SCRIPTS -->
 {block:IfGoogleAnalyticsIDwithUA}
 <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
 	 mathiasbynens.be/notes/async-analytics-snippet -->

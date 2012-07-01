@@ -127,3 +127,28 @@ article ul,
 article p {
 	margin: 12px 0;
 }
+
+#permalink-pagination {
+	margin: 15px 0;
+}
+
+#permalink-pagination,
+#permalink-pagination ul,
+#permalink-pagination li,
+#permalink-pagination a {
+	height: 50px;
+}
+
+#permalink-pagination ul {}
+
+#permalink-pagination li {
+	width: 50%;
+	text-align: center;
+}
+
+#prev-post { float: left; }
+#next-post { float: right; }
+
+#permalink-pagination a {
+	line-height: 50px;
+}

@@ -278,14 +278,20 @@
 	{/block:posts}
 
 	{block:PermalinkPagination}
-	<nav>
+	<nav id="permalink-pagination">
+		<ul>
 		{block:PreviousPost}
-			<a rel="prev" href="{PreviousPost}" title="{lang:Previous post}">{lang:Previous post}</a>
+			<li id="prev-post">
+				<a rel="prev" href="{PreviousPost}" title="{lang:Previous post}">{lang:Previous post}</a>
+			</li>
 		{/block:PreviousPost}
 
 		{block:NextPost}
-			<a rel="next" href="{NextPost}" title="{lang:Next post}">{lang:Next post}</a>
+			<li id="next-post">
+				<a rel="next" href="{NextPost}" title="{lang:Next post}">{lang:Next post}</a>
+			</li>
 		{/block:NextPost}
+		</ul>
 	</nav>
 	{/block:PermalinkPagination}
 

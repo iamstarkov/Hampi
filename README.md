@@ -45,6 +45,7 @@ Features
 * Group blogs
 * Reblogs support
 * Source support
+* Twiiter support
 
 
 Status
@@ -54,11 +55,10 @@ NOT READY
 TODO
 ----
 * CSS
----
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Day pages
 * Tag pages
 * Search pages
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Following blogs
 * Twitter connection support
 * Add microformates syntax
@@ -71,7 +71,6 @@ TODO
 * сделать категории в тамблере можно с помощью дополнительных опций, ведущих на основные страницы тегов.
 * впоследствии сделать сайт посвящённый разным дизайнам темы
 * Typekit support 
-* Twiiter support
 
 [1]: http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither
 [2]: https://www.tumblr.com/preferences

@@ -42,7 +42,6 @@
 	<meta name="if:Output Audio" content="1" />
 	<meta name="if:Output Video" content="1" />
 	<meta name="if:Output Answer" content="1" />
-
 	<!-- ANALYTICS -->
 	<meta name="text:Google Analytics ID with UA" content="" />
 	<meta name="text:Yandex Metrika ID" content="" />
@@ -66,33 +65,8 @@
 	<meta name="text:Scheme css Url" content="" />
 
 
-
-	<style type="text/css" media="screen">
-		#wrapper {
-			max-width: 700px;
-			margin: auto;
-		}
-		#wrapper.wide {   max-width: 900px; }
-		#wrapper.narrow { max-width: 500px; }
-
-		#skip-links a,
-		#skip-links a:hover,
-		#skip-links a:visited {
-			position: absolute;
-			top: -500px;
-			left: 0px;
-			height: 1px;
-			width: 1px;
-			overflow: hidden;
-		}
-
-		#skip-links a:active,
-		#skip-links a:focus {
-			position:static;
-			width:auto;
-			height:auto;
-		}
-	</style>
+	<link href="//static.tumblr.com/6wgenqk/0uBm6gzbt/reset.css" rel="stylesheet" type="text/css" />
+	<link href="//static.tumblr.com/6wgenqk/vr5m6gxue/layout.css" rel="stylesheet" type="text/css" />
 
 	{block:IfSchemecssUrl}
 		<link rel="stylesheet" href="{text:Scheme css Url}" />
@@ -195,8 +169,9 @@
 {TagsAsClasses}
 ">
 	{block:Title}
-		<{block:IndexPage}h2{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}>
-			{block:IndexPage}<a href="{Permalink}" title="{Title}">{/block:IndexPage}
+		<{block:IndexPage}h2{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}
+			{block:IndexPage}<a href="{Permalink}"{/block:IndexPage}
+			title="{Title}" class="heading">
 				{Title}
 			{block:IndexPage}</a>{/block:IndexPage}
 		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h2{/block:IndexPage}>

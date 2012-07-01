@@ -20,7 +20,7 @@
 		{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
 
 		<link href="//static.tumblr.com/6wgenqk/0uBm6gzbt/reset.css" rel="stylesheet" type="text/css" />
-		<link href="//static.tumblr.com/6wgenqk/6UJm6hzbz/layout.css" rel="stylesheet" type="text/css" />
+		<link href="//static.tumblr.com/6wgenqk/Q8Im6i15j/layout.css" rel="stylesheet" type="text/css" />
 		{block:IfUseSmartMonospace}
 		<link href="//static.tumblr.com/6wgenqk/RQjm6hyp2/meslo.css" rel="stylesheet" type="text/css" />
 		{/block:IfUseSmartMonospace}
@@ -32,7 +32,7 @@
 
 		<!-- WIDTH -->
 		<meta name="if:Wide Column" content="0" />
-		<meta name="if:Narrow Column" content="1" />
+		<meta name="if:Narrow Column" content="" />
 		<!-- DATE -->
 		<meta name="if:Short Date" content="1" />
 		<meta name="if:Visual Date" content="0" />
@@ -269,8 +269,6 @@
 		</aside>
 		{/block:PostNotes}
 
-
-
 	</article>
 	{/block:Text}
 	{/block:IfOutputText}
@@ -278,16 +276,16 @@
 	{/block:posts}
 
 	{block:PermalinkPagination}
-	<nav id="permalink-pagination">
+	<nav id="pagination">
 		<ul>
 		{block:PreviousPost}
-			<li id="prev-post">
+			<li id="prev">
 				<a rel="prev" href="{PreviousPost}" title="{lang:Previous post}">{lang:Previous post}</a>
 			</li>
 		{/block:PreviousPost}
 
 		{block:NextPost}
-			<li id="next-post">
+			<li id="next">
 				<a rel="next" href="{NextPost}" title="{lang:Next post}">{lang:Next post}</a>
 			</li>
 		{/block:NextPost}
@@ -296,15 +294,17 @@
 	{/block:PermalinkPagination}
 
 	{block:Pagination}
-	<nav>
+	<nav id="pagination">
 	<!-- pagination items snippet
 		 https://gist.github.com/2910030 -->
+		<ul>
 		{block:PreviousPage}
-			<a class="prev" rel="prev" href="{PreviousPage}">{lang:Previous page}</a>
+			<li id="prev">
+				<a rel="prev" href="{PreviousPage}">{lang:Previous page}</a>
+			</li>
 		{/block:PreviousPage}
 
 		{block:ShowJumpPagination}
-			<ul>
 			{block:JumpPagination length="5"}
 				<li>
 					<{block:JumpPage}a href="{URL}"{/block:JumpPage}{block:CurrentPage}span{/block:CurrentPage}
@@ -315,12 +315,14 @@
 					</{block:JumpPage}a{/block:JumpPage}{block:CurrentPage}span{/block:CurrentPage}>
 				</li>
 			{/block:JumpPagination}
-			</ul>
 		{/block:ShowJumpPagination}
 
 		{block:NextPage}
-			<a class="next" rel="next" href="{NextPage}" >{lang:Next page}</a>
+			<li id="next">
+				<a rel="next" href="{NextPage}" >{lang:Next page}</a>
+			</li>
 		{/block:NextPage}
+		</ul>
 	</nav>
 	{/block:Pagination}
 

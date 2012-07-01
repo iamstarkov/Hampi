@@ -128,27 +128,53 @@ article p {
 	margin: 12px 0;
 }
 
-#permalink-pagination {
+/*
+--------------------------------------------------
+PAGINATION
+--------------------------------------------------
+*/
+
+#pagination {
 	margin: 15px 0;
+	border: 1px dashed #d1d1d1;
 }
 
-#permalink-pagination,
-#permalink-pagination ul,
-#permalink-pagination li,
-#permalink-pagination a {
+#pagination,
+#pagination ul,
+#pagination li,
+#pagination a {
 	height: 50px;
 }
 
-#permalink-pagination ul {}
+#pagination ul {}
 
-#permalink-pagination li {
+#pagination li {
 	width: 50%;
 	text-align: center;
 }
 
-#prev-post { float: left; }
-#next-post { float: right; }
+#prev { float: left; }
+#next { float: right; }
 
-#permalink-pagination a {
+#pagination a {
 	line-height: 50px;
 }
+
+
+/*
+--------------------------------------------------
+TAGS
+--------------------------------------------------
+*/
+
+.tags {}
+
+.tags li {
+	float: left;
+}
+
+.tags li:before {
+	content: '#';
+}
+
+.tags a {}

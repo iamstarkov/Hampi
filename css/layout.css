@@ -128,6 +128,12 @@ article p {
 	margin: 12px 0;
 }
 
+#main article + article {
+	border-top: 5px solid #f1f1f1;
+	margin-top: 70px;
+	padding-top: 10px;	
+}
+
 /*
 --------------------------------------------------
 PAGINATION

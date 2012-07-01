@@ -67,12 +67,16 @@ Footer
 */
 
 footer {
+	padding: 10px 20px;
 	margin-top: 25px;
 	height: 30px;
-	line-height: 30px;
+	line-height: 18px;
 	font-size: 14px;
 	color: #999;
-	background: #f2f2f2;
 	text-align: center;
 	border-top: 1px solid #ccc;
+}
+
+footer a {
+	color: inherit;
 }

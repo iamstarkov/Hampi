@@ -19,6 +19,9 @@
 	<title>{block:SearchPage}{lang:Search results for SearchQuery} — {/block:SearchPage}{block:PostSummary}{PostSummary} — {/block:PostSummary}{Title}</title>
 	{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
 
+	<link href="//static.tumblr.com/6wgenqk/0uBm6gzbt/reset.css" rel="stylesheet" type="text/css" />
+	<link href="//static.tumblr.com/6wgenqk/O5nm6hm63/layout.css" rel="stylesheet" type="text/css" />
+
 	<link rel="shortcut icon" href="{Favicon}" />
 	<link rel="apple-touch-icon" href="{PortraitURL-128}"/>
 	<link rel="alternate" type="application/rss+xml" href="{RSS}" />
@@ -65,8 +68,6 @@
 	<meta name="text:Scheme css Url" content="" />
 
 
-	<link href="//static.tumblr.com/6wgenqk/0uBm6gzbt/reset.css" rel="stylesheet" type="text/css" />
-	<link href="//static.tumblr.com/6wgenqk/vr5m6gxue/layout.css" rel="stylesheet" type="text/css" />
 
 	{block:IfSchemecssUrl}
 		<link rel="stylesheet" href="{text:Scheme css Url}" />
@@ -169,9 +170,8 @@
 {TagsAsClasses}
 ">
 	{block:Title}
-		<{block:IndexPage}h2{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage}
-			{block:IndexPage}<a href="{Permalink}"{/block:IndexPage}
-			title="{Title}" class="heading">
+		<{block:IndexPage}h2{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage} title="{Title}" class="heading">
+		 {block:IndexPage}<a href="{Permalink}"	title="{Title}" class="heading">{/block:IndexPage}
 				{Title}
 			{block:IndexPage}</a>{/block:IndexPage}
 		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h2{/block:IndexPage}>

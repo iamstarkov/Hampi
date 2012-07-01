@@ -86,17 +86,38 @@ body {
 	color: #444;
 }
 
-@font-face {
-	font-family: 'Meslo LG';
-	src: url('//static.tumblr.com/6wgenqk/kQCm6ht3p/meslo-dz.eot');
-	src: url('//static.tumblr.com/6wgenqk/kQCm6ht3p/meslo-dz.eot?#iefix') format('embedded-opentype'),
-		 url('//static.tumblr.com/6wgenqk/TtZm6htdd/meslo-dz.woff') format('woff'),
-		 url('//static.tumblr.com/6wgenqk/g1Um6htef/meslo-dz.ttf') format('truetype'),
-		 url('//static.tumblr.com/6wgenqk/SBqm6htfb/meslo-dz.svg#MesloLG') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
 code {
 	font-family: 'Meslo LG', monospace;
 }
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Helvetica, Arial, sans-serif;
+	color: #000;
+	line-height: 1.5;
+	text-shadow: 0 0 1px #bbb;
+}
+
+.permalink-page h1,
+.index-page h2 {
+	font-size: 28px;
+	padding: 10px 0;
+}
+
+.permalink-page h2 {
+	font-size: 20px;
+	padding: 6px 0;
+}
+
+.permalink-page h3,
+.permalink-page h4,
+.permalink-page h5,
+.permalink-page h6 {
+	font-size: 18px;
+	padding: 3px 0;
+} 
+
+.permalink-page h3,
+.permalink-page h4 {
+	font-style: italic;
+}
+

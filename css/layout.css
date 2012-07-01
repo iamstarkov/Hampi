@@ -167,13 +167,21 @@ TAGS
 --------------------------------------------------
 */
 
-.tags {}
+.tags {
+	list-style: none;
+	overflow: hidden;
+	margin: 19px 0;
+}
 
 .tags li {
 	float: left;
 }
 
-.tags li:before {
+.tags li + li:before {
+	content: ', ';
+}
+
+.tags li a:before {
 	content: '#';
 }
 

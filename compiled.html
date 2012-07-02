@@ -212,7 +212,7 @@
 		{block:Date}
 		<div>
 			<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate>
-			{block:IfUseShortDate}
+			{block:IfShortDate}
 				{block:English}{DayOfMonthWithZero}/{MonthNumberWithZero}/{Year}{/block:English}
 				{block:French}{DayOfMonthWithZero}/{MonthNumberWithZero}/{Year}{/block:French}
 				{block:Italian}{DayOfMonthWithZero}/{MonthNumberWithZero}/{Year}{/block:Italian}
@@ -226,12 +226,12 @@
 
 				{block:Japanese}{Year}年{MonthNumberWithZero}月{DayOfMonthWithZero}日{/block:Japanese}
 				{block:Dutch}{DayOfMonthWithZero}-{MonthNumberWithZero}-{Year}{/block:Dutch}
-			{/block:IfUseShortDate}
-			{block:ifUseVisualDate}
+			{/block:IfShortDate}
+			{block:ifVisualDate}
 				<span class="day">{DayOfMonth}</span>
 				<span class="month">{ShortMonth}</span>
 				<span class="year">{Year}</span>
-			{/block:ifUseVisualDate}
+			{/block:ifVisualDate}
 			</time>
 		</div>
 		{/block:Date}

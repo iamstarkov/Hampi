@@ -45,6 +45,7 @@ HEADER
 header {
 	border-bottom: 1px solid #555;
 	margin-bottom: 15px;
+	overflow: hidden;
 }
 
 #logo {
@@ -54,11 +55,40 @@ header {
 	font-family: Helvetica, Arial, sans-serif;
 	font-weight: bold;
 	color: #555;
+	float: left;
 }
 
 .permalink-page #logo:hover {
 	color: #111;
 }
+
+header ul {
+	float: left;
+	list-style: none;
+	min-height: 30px;
+	margin-left: 50px;
+	margin-bottom: 20px;
+}
+
+header li {
+	float: left;
+	border: solid #d1d1d1;
+	border-width: 1px 0;
+	padding: 0 10px;
+	margin-top: 20px;
+}
+
+header li + li {
+	margin-left: 7px;
+}
+
+header li,
+header li a {
+	height: 30px;
+	line-height: 30px;
+}
+
+header li a {}
 
 /*
 --------------------------------------------------
@@ -165,7 +195,6 @@ PAGINATION
 #pagination a {
 	line-height: 50px;
 }
-
 
 /*
 --------------------------------------------------

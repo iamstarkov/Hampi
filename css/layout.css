@@ -268,3 +268,39 @@ ASIDES
 	margin-right: 10px;
 	margin-top: 4px;
 }
+
+/*
+--------------------------------------------------
+REBLOGS
+--------------------------------------------------
+*/
+
+article.reblog .reblog_content {
+	font-size: .8em;
+	font-style: italic;
+	text-align: right;
+	color: #a1a1a1
+}
+
+article.reblog .content > p {
+	padding-left: 30px;
+	font-weight: bold;
+	color: #a1a1a1;
+}
+
+article.reblog .content > p a {
+	color: inherit;
+}
+
+article.reblog .content > blockquote {
+	border-left: 7px solid #d1d1d1;
+	padding-left: 30px;
+}
+
+
+
+
+
+
+
+

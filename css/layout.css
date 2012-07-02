@@ -151,10 +151,10 @@ h1, h2, h3, h4, h5, h6 {
 	font-style: italic;
 }
 
-article pre,
-article img,
-article ul,
-article p {
+.content pre,
+.content img,
+.content ul,
+.content p {
 	margin: 12px 0;
 }
 
@@ -221,3 +221,50 @@ TAGS
 }
 
 .tags a {}
+
+/*
+--------------------------------------------------
+ASIDES
+--------------------------------------------------
+*/
+
+.author,
+.source {
+	border-left: 5px solid #f1f1f1;
+	padding-left: 15px;
+	height: 32px;
+	overflow: hidden;
+}
+
+.author dl,
+.source dl {
+	line-height: 32px;
+}
+
+.author dt,
+.source dt {
+	float: left;
+	width: 100px;
+	text-align: right;
+	margin-right: 20px;
+}
+
+.author dd,
+.source dd {
+	float: left;
+}
+
+.author a,
+.source a {
+	height: 32px;
+	display: inline-block;
+	position: relative;
+}
+
+.author a img {
+	float: left;
+	height: 24px;
+	width: 24px;
+	margin-right: 10px;
+	margin-top: 4px;
+}

@@ -236,15 +236,9 @@
 		</div>
 		{/block:Date}
 
-		{block:ContentSource}
-		<dl>
-			<dt>{lang:Source}</dt>
-			<dd><a href="{SourceURL}" title="{SourceTitle}">{SourceTitle}</a></dd>
-		</dl>
-		{/block:ContentSource}
 		
 		{block:GroupMembers}
-		<aside>
+		<aside class="author">
 			<dl>
 				<dt>Author:</dt>
 				<dd>
@@ -256,6 +250,14 @@
 			</dl>
 		</aside>
 		{/block:GroupMembers}
+		{block:ContentSource}
+		<aside class="source">
+			<dl>
+				<dt>{lang:Source}:</dt>
+				<dd><a href="{SourceURL}" title="{SourceTitle}">{SourceTitle}</a></dd>
+			</dl>
+		</aside>
+		{/block:ContentSource}
 
 
 		{block:PostNotes}

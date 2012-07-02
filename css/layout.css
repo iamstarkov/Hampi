@@ -297,6 +297,26 @@ article.reblog .content > blockquote {
 	padding-left: 30px;
 }
 
+/*
+--------------------------------------------------
+TIME
+--------------------------------------------------
+*/
+
+time {
+	font-size: .8em;
+	font-style: italic;
+	text-align: right;
+	color: #a1a1a1;
+	display: block;
+}
+
+.shortdate time {}
+.visualdate time {}
+
+
+
+
 
 
 

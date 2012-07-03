@@ -228,45 +228,59 @@ ASIDES
 --------------------------------------------------
 */
 
-.author,
-.source {
+aside {
 	border-left: 5px solid #f1f1f1;
 	padding-left: 15px;
-	height: 32px;
+	min-height: 32px;
 	overflow: hidden;
 }
 
-.author dl,
-.source dl {
+aside dl {
 	line-height: 32px;
 }
 
-.author dt,
-.source dt {
+aside dt {
 	float: left;
 	width: 100px;
 	text-align: right;
 	margin-right: 20px;
 }
 
-.author dd,
-.source dd {
+aside dd {
 	float: left;
 }
 
-.author a,
-.source a {
+aside a {
 	height: 32px;
 	display: inline-block;
 	position: relative;
 }
 
-.author a img {
+aside.author a img {
 	float: left;
 	height: 24px;
 	width: 24px;
 	margin-right: 10px;
 	margin-top: 4px;
+}
+
+aside.notes-list ol {
+	list-style: none;
+}
+
+aside.notes-list li {
+	float: left;
+}
+
+aside.notes-list .action,
+aside.notes-list blockquote {
+	display: none;
+}
+
+aside.notes-list li.like {}
+aside.notes-list li.reblog {}
+aside.notes-list .more_notes_link_container {
+	margin-left: 12px;
 }
 
 /*
@@ -314,7 +328,51 @@ time {
 .shortdate time {}
 .visualdate time {}
 
+/*
+--------------------------------------------------
+REBLOGS
+--------------------------------------------------
+*/
 
+article.reblog .reblog_content {
+	
+	font-size: .8em;
+	font-style: italic;
+	text-align: right;
+	color: #a1a1a1
+}
+
+article.reblog .content > p {
+	padding-left: 30px;
+	font-weight: bold;
+	color: #a1a1a1;
+}
+
+article.reblog .content > p a {
+	color: inherit;
+}
+
+article.reblog .content > blockquote {
+	border-left: 7px solid #d1d1d1;
+	padding-left: 30px;
+}
+
+/*
+--------------------------------------------------
+TIME
+--------------------------------------------------
+*/
+
+time {
+	font-size: .8em;
+	font-style: italic;
+	text-align: right;
+	color: #a1a1a1;
+	display: block;
+}
+
+.shortdate time {}
+.visualdate time {}
 
 
 

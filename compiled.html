@@ -1,454 +1,463 @@
-	<!--[if lt IE 7]>	 <html class="no-js lt-ie9 lt-ie8 lt-ie7"  dir="LTR"
-		lang="{block:English}en{/block:English}{block:German}de{/block:German}{block:French}fr{/block:French}{block:Italian}it{/block:Italian}{block:Japanese}ja{/block:Japanese}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}{block:Portuguese}pt{/block:Portuguese}{block:Dutch}nl{/block:Dutch}"><![endif]-->
-	<!--[if IE 7]>		<html class="no-js lt-ie9 lt-ie8" dir="LTR"
-		lang="{block:English}en{/block:English}{block:German}de{/block:German}{block:French}fr{/block:French}{block:Italian}it{/block:Italian}{block:Japanese}ja{/block:Japanese}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}{block:Portuguese}pt{/block:Portuguese}{block:Dutch}nl{/block:Dutch}"><![endif]-->
-	<!--[if IE 8]>		<html class="no-js lt-ie9" dir="LTR"
-		lang="{block:English}en{/block:English}{block:German}de{/block:German}{block:French}fr{/block:French}{block:Italian}it{/block:Italian}{block:Japanese}ja{/block:Japanese}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}{block:Portuguese}pt{/block:Portuguese}{block:Dutch}nl{/block:Dutch}"><![endif]-->
-	<!--[if gt IE 8]><!--><html class="no-js" dir="LTR"
-		lang="{block:English}en{/block:English}{block:German}de{/block:German}{block:French}fr{/block:French}{block:Italian}it{/block:Italian}{block:Japanese}ja{/block:Japanese}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}{block:Portuguese}pt{/block:Portuguese}{block:Dutch}nl{/block:Dutch}"><!--<![endif]-->
-	<!-- Tumblr lang codes
-		 https://gist.github.com/2793673 -->
+<!--[if lt IE 7]>	 <html class="no-js lt-ie9 lt-ie8 lt-ie7"  dir="LTR"
+	lang="{block:English}en{/block:English}{block:German}de{/block:German}{block:French}fr{/block:French}{block:Italian}it{/block:Italian}{block:Japanese}ja{/block:Japanese}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}{block:Portuguese}pt{/block:Portuguese}{block:Dutch}nl{/block:Dutch}"><![endif]-->
+<!--[if IE 7]>		<html class="no-js lt-ie9 lt-ie8" dir="LTR"
+	lang="{block:English}en{/block:English}{block:German}de{/block:German}{block:French}fr{/block:French}{block:Italian}it{/block:Italian}{block:Japanese}ja{/block:Japanese}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}{block:Portuguese}pt{/block:Portuguese}{block:Dutch}nl{/block:Dutch}"><![endif]-->
+<!--[if IE 8]>		<html class="no-js lt-ie9" dir="LTR"
+	lang="{block:English}en{/block:English}{block:German}de{/block:German}{block:French}fr{/block:French}{block:Italian}it{/block:Italian}{block:Japanese}ja{/block:Japanese}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}{block:Portuguese}pt{/block:Portuguese}{block:Dutch}nl{/block:Dutch}"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" dir="LTR"
+	lang="{block:English}en{/block:English}{block:German}de{/block:German}{block:French}fr{/block:French}{block:Italian}it{/block:Italian}{block:Japanese}ja{/block:Japanese}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}{block:Portuguese}pt{/block:Portuguese}{block:Dutch}nl{/block:Dutch}"><!--<![endif]-->
+<!-- Tumblr lang codes
+	 https://gist.github.com/2793673 -->
 
-	<head>
-		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<meta name="viewport" content="width=device-width">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width">
 
-		<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+	<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
-		<title>{block:SearchPage}{lang:Search results for SearchQuery} — {/block:SearchPage}{block:PostSummary}{PostSummary} — {/block:PostSummary}{Title}</title>
-		{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+	<title>{block:SearchPage}{lang:Search results for SearchQuery} — {/block:SearchPage}{block:PostSummary}{PostSummary} — {/block:PostSummary}{Title}</title>
+	{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
 
-		<link href="//static.tumblr.com/6wgenqk/0uBm6gzbt/reset.css" rel="stylesheet" type="text/css" />
-		<link href="//static.tumblr.com/6wgenqk/Xi5m6jx1v/layout.css" rel="stylesheet" type="text/css" />
-		{block:IfUseSmartMonospace}
-		<link href="//static.tumblr.com/6wgenqk/RQjm6hyp2/meslo.css" rel="stylesheet" type="text/css" />
-		{/block:IfUseSmartMonospace}
-
-
-		<link rel="shortcut icon" href="{Favicon}" />
-		<link rel="apple-touch-icon" href="{PortraitURL-128}"/>
-		<link rel="alternate" type="application/rss+xml" href="{RSS}" />
-
-		<!-- WIDTH -->
-		<meta name="if:Wide Column" content="0" />
-		<meta name="if:Narrow Column" content="" />
-		<!-- DATE -->
-		<meta name="if:Short Date" content="1" />
-		<meta name="if:Visual Date" content="0" />
-		<!-- LAYOUT -->
-		<meta name="if:Show Jump Pagination" content="0" />
-		<meta name="if:Show Read More" content="0" />
-		<meta name="if:Respectful Footer" content="1" />
-		<meta name="if:Use Smart Monospace" content="0" />
-		<!-- POST TYPE OUTPUT -->
-		<meta name="if:Output Text" content="1" />
-		<meta name="if:Output Photo" content="1" />
-		<meta name="if:Output Photoset" content="1" />
-		<meta name="if:Output Link" content="1" />
-		<meta name="if:Output Chat" content="1" />
-		<meta name="if:Output Audio" content="1" />
-		<meta name="if:Output Video" content="1" />
-		<meta name="if:Output Answer" content="1" />
-		<!-- ANALYTICS -->
-		<meta name="text:Google Analytics ID with UA" content="" />
-		<meta name="text:Yandex Metrika ID" content="" />
-		<meta name="if:Use Yandex Metrika Webvisor" content="1" />
-		<meta name="if:Use Yandex Metrika Track Hash" content="1" />
-
-		<!-- SEARCH ENGINES VERIFICATION -->
-		<meta name="text:Google Verification code" content="" />
-		<meta name="text:Yandex Verification code" content="" />
-
-		<!-- LINK REL ACCESSIBILITY -->
-		<meta name="text:Home Page" content="" />
-
-		<!-- COMMENTS -->
-		<meta name="text:Disqus Name" content="" />
-
-		<!-- Typekit ID -->
-		<meta name="text:Typekit ID" content="" />
-
-		<!-- HAMPI THEME DESIGN SCHEME -->
-		<meta name="text:Scheme css Url" content="" />
+	<link href="//static.tumblr.com/6wgenqk/0uBm6gzbt/reset.css" rel="stylesheet" type="text/css" />
+	<link href="//static.tumblr.com/6wgenqk/dKnm6lq90/layout.css" rel="stylesheet" type="text/css" />
+	{block:IfUseSmartMonospace}
+	<link href="//static.tumblr.com/6wgenqk/RQjm6hyp2/meslo.css" rel="stylesheet" type="text/css" />
+	{/block:IfUseSmartMonospace}
 
 
+	<link rel="shortcut icon" href="{Favicon}" />
+	<link rel="apple-touch-icon" href="{PortraitURL-128}"/>
+	<link rel="alternate" type="application/rss+xml" href="{RSS}" />
 
-		{block:IfSchemecssUrl}
-			<link rel="stylesheet" href="{text:Scheme css Url}" />
-		{/block:IfSchemecssUrl}
-		<style type="text/css">{CustomCSS}</style>
+	<!-- WIDTH -->
+	<meta name="if:Wide Column" content="0" />
+	<meta name="if:Narrow Column" content="" />
+	<!-- DATE -->
+	<meta name="if:Short Date" content="1" />
+	<meta name="if:Visual Date" content="0" />
+	<!-- LAYOUT -->
+	<meta name="if:Show Jump Pagination" content="0" />
+	<meta name="if:Show Read More" content="0" />
+	<meta name="if:Respectful Footer" content="1" />
+	<meta name="if:Use Smart Monospace" content="0" />
+	<!-- TUMBLR LIKES AND REBLOGS -->
+	<meta name="if:Output Notes" content="0" />
+	<meta name="if:Output Full Notes" content="0" />
+	<!-- POST TYPE OUTPUT -->
+	<meta name="if:Output Text" content="1" />
+	<meta name="if:Output Photo" content="1" />
+	<meta name="if:Output Photoset" content="1" />
+	<meta name="if:Output Link" content="1" />
+	<meta name="if:Output Chat" content="1" />
+	<meta name="if:Output Audio" content="1" />
+	<meta name="if:Output Video" content="1" />
+	<meta name="if:Output Answer" content="1" />
 
-		<!-- LINK TAGS FOR ACCESSIBILITY -->
-		{block:IfHomePage}
-			<link rel="home" href="{text:Home Page}" />
-		{/block:IfHomePage}
-		{block:Pagination}
-			{block:PreviousPage} <link rel="prev" href="{PreviousPage}" /> {/block:PreviousPage}
-			{block:NextPage} <link rel="next" href="{NextPage}" /> {/block:NextPage}
-		{/block:Pagination}
+	<!-- ANALYTICS -->
+	<meta name="text:Google Analytics ID with UA" content="" />
+	<meta name="text:Yandex Metrika ID" content="" />
+	<meta name="if:Use Yandex Metrika Webvisor" content="1" />
+	<meta name="if:Use Yandex Metrika Track Hash" content="1" />
 
-		{block:PermalinkPagination}
-			{block:PreviousPost}<link rel="prev" href="{PreviousPost}" />{/block:PreviousPost}
-			{block:NextPost}<link rel="next" href="{NextPost}" />{/block:NextPost}
-		{/block:PermalinkPagination}
+	<!-- SEARCH ENGINES VERIFICATION -->
+	<meta name="text:Google Verification code" content="" />
+	<meta name="text:Yandex Verification code" content="" />
 
-		<!-- VERIFICATIONS -->
-		{block:IfGoogleVerificationcode}
-			{block:IndexPage}
-				<meta name="google-site-verification" content="{text:Google Verification code}" />
-			{/block:IndexPage}
-		{/block:IfGoogleVerificationcode}
-		
-		{block:IfYandexVerificationcode}
-			{block:IndexPage}
-				<meta name='yandex-verification' content='{text:Yandex Verification code}' />
-			{/block:IndexPage}
-		{/block:IfYandexVerificationcode}
+	<!-- LINK REL ACCESSIBILITY -->
+	<meta name="text:Home Page" content="" />
 
-		<script src="//ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.0.6-development-only.js"> </script>
+	<!-- COMMENTS -->
+	<meta name="text:Disqus Name" content="" />
 
-	</head>
+	<!-- Typekit ID -->
+	<meta name="text:Typekit ID" content="" />
 
-
-	<body class="
-	{block:IndexPage} index-page{/block:IndexPage}
-	{block:DayPage} index-day-page {/block:DayPage}
-	{block:TagPage} index-tag-page {/block:TagPage}
-	{block:SearchPage} index-search-page {/block:SearchPage}
-	{block:PermalinkPage} permalink-page{/block:PermalinkPage}
-	">
-	<!-- Tumblr customizations snippet
-		https://gist.github.com/2794705 -->
-
-	<div id="skip-links">
-		<a href="#main" title="Skip to content area">Skip to content area</a>
-	</div>
-
-	<!-- #WRAPPER -->
-	<div id="wrapper" class="
-	{block:IfWideColumn} wide {/block:IfWideColumn}
-	{block:IfNarrowColumn} narrow {/block:IfNarrowColumn}
-	">
-	<!-- HEADER -->
-	<header>
-		<{block:IndexPage}div{/block:IndexPage}{block:PermalinkPage}a href="/" {/block:PermalinkPage}
-		 id="logo" title="{Title}">
-			{Title}
-		</{block:PermalinkPage}a{/block:PermalinkPage}{block:IndexPage}div{/block:IndexPage}>
-
-		{block:HasPages}
-		<ul>
-			{block:Pages}
-				<li><a href="{URL}" title="{Label}">{Label}</a></li>
-			{/block:Pages}
-		</ul>
-		{/block:HasPages}
-
-	<!-- Tumblr #logo snippet
-		https://gist.github.com/2794926 -->
-	</header>
-	<!-- /HEADER -->
-
-	<!-- #MAIN -->
-	<div id="main">
-	<!-- Tumblr post title
-		 https://gist.github.com/2795206 -->
-	<!-- Tumblr full list of post types
-		 https://gist.github.com/2795239 -->
-	{block:Posts}
-
-	{block:IfOutputText}
-	{block:Text}
-	<article id="post{PostID}" class="
-	{PostType}
-	{block:PostNotes}hasnotes{block:PostNotes}
-	{block:More}hasmore{/block:More}
-	{block:HasTags}hastags{/block:HasTags}
-	{block:IfShortDate}shortdate{/block:IfShortDate}
-	{block:IfVisualDate}visualdate{/block:IfVisualDate}
-	{block:Date}
-		postdate-{AmPm}
-		postdate-{ShortDayOfWeek}
-		postdate-{ShortMonth}
-		postdate-{DayOfMonthWithZero}
-		postdate-{Year}
-	{/block:Date}
-	{TagsAsClasses}
-	">
-		{block:Title}
-			<{block:IndexPage}h2{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage} title="{Title}" class="heading">
-			 {block:IndexPage}<a href="{Permalink}"	title="{Title}" class="heading">{/block:IndexPage}
-					{Title}
-				{block:IndexPage}</a>{/block:IndexPage}
-			</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h2{/block:IndexPage}>
-		{/block:Title}
-		
-		{block:RebloggedFrom}
-		<div class="reblog_content">
-			{lang:Reblogged TimeAgo from ReblogParentName 2}
-		</div>
-		{/block:RebloggedFrom}
+	<!-- HAMPI THEME DESIGN SCHEME -->
+	<meta name="text:Scheme css Url" content="" />
 
 
-		<div class="content">
-			{Body}
-		</div>
 
-		{block:IfShowReadMore}
-			{block:More}
-				<a href="{Permalink}" title="{block:Title}{Title}{/block:Title} — {lang:Read more}">{lang:Read more}</a>
-			{/block:More}
-		{/block:IfShowReadMore}
+	{block:IfSchemecssUrl}
+		<link rel="stylesheet" href="{text:Scheme css Url}" />
+	{/block:IfSchemecssUrl}
+	<style type="text/css">{CustomCSS}</style>
 
-		{block:HasTags}
-		<ul class="tags">
-			{block:Tags}
-				<li>
-					<a href="{TagURL}" title="{Tag}">{Tag}</a>
-				</li>
-			{/block:Tags}
-		</ul>
-		{/block:HasTags}
-
-		{block:Date}
-		<div>
-			<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate>
-			{block:IfShortDate}
-				{block:English}{DayOfMonthWithZero}/{MonthNumberWithZero}/{Year}{/block:English}
-				{block:French}{DayOfMonthWithZero}/{MonthNumberWithZero}/{Year}{/block:French}
-				{block:Italian}{DayOfMonthWithZero}/{MonthNumberWithZero}/{Year}{/block:Italian}
-				{block:Spanish}{DayOfMonthWithZero}/{MonthNumberWithZero}/{Year}{/block:Spanish}
-				{block:Portuguese}{DayOfMonthWithZero}/{MonthNumberWithZero}/{Year}{/block:Portuguese}
-
-				{block:German}{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}{/block:German}
-				{block:Turkish}{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}{/block:Turkish}
-				{block:Russian}{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}{/block:Russian}
-				{block:Polish}{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}{/block:Polish}
-
-				{block:Japanese}{Year}年{MonthNumberWithZero}月{DayOfMonthWithZero}日{/block:Japanese}
-				{block:Dutch}{DayOfMonthWithZero}-{MonthNumberWithZero}-{Year}{/block:Dutch}
-			{/block:IfShortDate}
-			{block:ifVisualDate}
-				<span class="day">{DayOfMonth}</span>
-				<span class="month">{ShortMonth}</span>
-				<span class="year">{Year}</span>
-			{/block:ifVisualDate}
-			</time>
-		</div>
-		{/block:Date}
-
-		
-		{block:GroupMembers}
-		<aside class="author">
-			<dl>
-				<dt>Author:</dt>
-				<dd>
-					<a href="{PostAuthorURL}" title="{PostAuthorTitle}" rel="author">
-						<img src="{PostAuthorPortraitURL-24}" width="24" height="24" alt="{PostAuthorName}" />
-						{PostAuthorTitle}
-					</a>
-				</dd>
-			</dl>
-		</aside>
-		{/block:GroupMembers}
-		{block:ContentSource}
-		<aside class="source">
-			<dl>
-				<dt>{lang:Source}:</dt>
-				<dd><a href="{SourceURL}" title="{SourceTitle}">{SourceTitle}</a></dd>
-			</dl>
-		</aside>
-		{/block:ContentSource}
-
-
-		{block:PostNotes}
-		<aside>
-			{block:NoteCount}
-				{NoteCountWithLabel}
-			{/block:NoteCount}
-			<div class="notes">
-				{PostNotes}
-			</div>
-		</aside>
-		{/block:PostNotes}
-
-	</article>
-	{/block:Text}
-	{/block:IfOutputText}
-
-	{/block:posts}
-
-	{block:PermalinkPagination}
-	<nav id="pagination">
-		<ul>
-		{block:PreviousPost}
-			<li id="prev">
-				<a rel="prev" href="{PreviousPost}" title="{lang:Previous post}">{lang:Previous post}</a>
-			</li>
-		{/block:PreviousPost}
-
-		{block:NextPost}
-			<li id="next">
-				<a rel="next" href="{NextPost}" title="{lang:Next post}">{lang:Next post}</a>
-			</li>
-		{/block:NextPost}
-		</ul>
-	</nav>
-	{/block:PermalinkPagination}
-
+	<!-- LINK TAGS FOR ACCESSIBILITY -->
+	{block:IfHomePage}
+		<link rel="home" href="{text:Home Page}" />
+	{/block:IfHomePage}
 	{block:Pagination}
-	<nav id="pagination">
-	<!-- pagination items snippet
-		 https://gist.github.com/2910030 -->
-		<ul>
-		{block:PreviousPage}
-			<li id="prev">
-				<a rel="prev" href="{PreviousPage}">{lang:Previous page}</a>
-			</li>
-		{/block:PreviousPage}
-
-		{block:ShowJumpPagination}
-			{block:JumpPagination length="5"}
-				<li>
-					<{block:JumpPage}a href="{URL}"{/block:JumpPage}{block:CurrentPage}span{/block:CurrentPage}
-					class="pagination-item"
-					title="{block:CurrentPage}{PageNumber}{/block:CurrentPage}{block:JumpPage}{PageNumber}{/block:JumpPage}">
-						{block:CurrentPage}{PageNumber}{/block:CurrentPage}
-						{block:JumpPage}{PageNumber}{/block:JumpPage}
-					</{block:JumpPage}a{/block:JumpPage}{block:CurrentPage}span{/block:CurrentPage}>
-				</li>
-			{/block:JumpPagination}
-		{/block:ShowJumpPagination}
-
-		{block:NextPage}
-			<li id="next">
-				<a rel="next" href="{NextPage}" >{lang:Next page}</a>
-			</li>
-		{/block:NextPage}
-		</ul>
-	</nav>
+		{block:PreviousPage} <link rel="prev" href="{PreviousPage}" /> {/block:PreviousPage}
+		{block:NextPage} <link rel="next" href="{NextPage}" /> {/block:NextPage}
 	{/block:Pagination}
 
-	{block:IfDisqusName}
-		{block:PermalinkPage}
-		<div id="disqus_thread"></div>
-		<script type="text/javascript">
-			var disqus_shortname = '{text:Disqus Name}';
-			(function() {
-				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-				dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-			})();
-		</script>
-		{/block:PermalinkPage}
-	{/block:IfDisqusName}
+	{block:PermalinkPagination}
+		{block:PreviousPost}<link rel="prev" href="{PreviousPost}" />{/block:PreviousPost}
+		{block:NextPost}<link rel="next" href="{NextPost}" />{/block:NextPost}
+	{/block:PermalinkPagination}
 
+	<!-- VERIFICATIONS -->
+	{block:IfGoogleVerificationcode}
+		{block:IndexPage}
+			<meta name="google-site-verification" content="{text:Google Verification code}" />
+		{/block:IndexPage}
+	{/block:IfGoogleVerificationcode}
+	
+	{block:IfYandexVerificationcode}
+		{block:IndexPage}
+			<meta name='yandex-verification' content='{text:Yandex Verification code}' />
+		{/block:IndexPage}
+	{/block:IfYandexVerificationcode}
+
+	<script src="//ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.0.6-development-only.js"> </script>
+
+</head>
+
+
+<body class="
+{block:IndexPage} index-page{/block:IndexPage}
+{block:DayPage} index-day-page {/block:DayPage}
+{block:TagPage} index-tag-page {/block:TagPage}
+{block:SearchPage} index-search-page {/block:SearchPage}
+{block:PermalinkPage} permalink-page{/block:PermalinkPage}
+">
+<!-- Tumblr customizations snippet
+	https://gist.github.com/2794705 -->
+
+<div id="skip-links">
+	<a href="#main" title="Skip to content area">Skip to content area</a>
+</div>
+
+<!-- #WRAPPER -->
+<div id="wrapper" class="
+{block:IfWideColumn} wide {/block:IfWideColumn}
+{block:IfNarrowColumn} narrow {/block:IfNarrowColumn}
+">
+<!-- HEADER -->
+<header>
+	<{block:IndexPage}div{/block:IndexPage}{block:PermalinkPage}a href="/" {/block:PermalinkPage}
+	 id="logo" title="{Title}">
+		{Title}
+	</{block:PermalinkPage}a{/block:PermalinkPage}{block:IndexPage}div{/block:IndexPage}>
+
+	{block:HasPages}
+	<ul>
+		{block:Pages}
+			<li><a href="{URL}" title="{Label}">{Label}</a></li>
+		{/block:Pages}
+	</ul>
+	{/block:HasPages}
+
+<!-- Tumblr #logo snippet
+	https://gist.github.com/2794926 -->
+</header>
+<!-- /HEADER -->
+
+<!-- #MAIN -->
+<div id="main">
+<!-- Tumblr post title
+	 https://gist.github.com/2795206 -->
+<!-- Tumblr full list of post types
+	 https://gist.github.com/2795239 -->
+{block:Posts}
+
+{block:IfOutputText}
+{block:Text}
+<article id="post{PostID}" class="
+{PostType}
+{block:PostNotes}hasnotes{block:PostNotes}
+{block:More}hasmore{/block:More}
+{block:HasTags}hastags{/block:HasTags}
+{block:IfShortDate}shortdate{/block:IfShortDate}
+{block:IfVisualDate}visualdate{/block:IfVisualDate}
+{block:Date}
+	postdate-{AmPm}
+	postdate-{ShortDayOfWeek}
+	postdate-{ShortMonth}
+	postdate-{DayOfMonthWithZero}
+	postdate-{Year}
+{/block:Date}
+{TagsAsClasses}
+">
+	{block:Title}
+		<{block:IndexPage}h2{/block:IndexPage}{block:PermalinkPage}h1{/block:PermalinkPage} title="{Title}" class="heading">
+		 {block:IndexPage}<a href="{Permalink}"	title="{Title}" class="heading">{/block:IndexPage}
+				{Title}
+			{block:IndexPage}</a>{/block:IndexPage}
+		</{block:PermalinkPage}h1{/block:PermalinkPage}{block:IndexPage}h2{/block:IndexPage}>
+	{/block:Title}
+	
+	{block:RebloggedFrom}
+	<div class="reblog_content">
+		{lang:Reblogged TimeAgo from ReblogParentName 2}
 	</div>
-	<!-- /#MAIN -->
+	{/block:RebloggedFrom}
 
-	<footer>
-	<!-- 
-	a[href="http://hampi-theme.tumblr.com/"]
-	a[href="http://vstarkov.com/"]
-	Hampi theme made ​​with love by Vladimir Starkov.
-	 -->
-		{block:IfRespectfulFooter}
-		<p>
-			{block:English}
-				<a href="http://hampi-theme.tumblr.com/">Hampi theme</a> made ​​with love by <a href="http://vstarkov.com/">Vladimir Starkov</a>
-			{/block:English}
-			{block:German}
-				<a href="http://hampi-theme.tumblr.com/">Hampi thema</a> gemacht mit der Liebe von <a href="http://vstarkov.com/">Wladimir Starkov</a>
-			{/block:German}
-			{block:French}
-				<a href="http://hampi-theme.tumblr.com/">Hampi thème</a> fait avec amour par <a href="http://vstarkov.com/">Vladimir Starkov</a>
-			{/block:French}
-			{block:Italian}
-				<a href="http://hampi-theme.tumblr.com/">Hampi tema</a> realizzato con amore da <a href="http://vstarkov.com/">Vladimir Starkov</a>
-			{/block:Italian}
-			{block:Japanese}
-				ウラジミールStarkovによって愛で作られたハンピのテーマ
-			{/block:Japanese}
-			{block:Turkish}
-				<a href="http://hampi-theme.tumblr.com/">Hampi tema</a> <a href="http://vstarkov.com/">Vladimir Starkov</a> tarafından sevgi ile yapılan
-			{/block:Turkish}
-			{block:Spanish}
-				<a href="http://hampi-theme.tumblr.com/">Tema de Hampi</a> hecho con amor por <a href="http://vstarkov.com/">Vladimir Starkov</a>
-			{/block:Spanish}
-			{block:Russian}
-				<a href="http://hampi-theme.tumblr.com/">«Хампи» тема</a> сделана с любовью <a href="http://vstarkov.com/">Владимиром Старковым</a>
-			{/block:Russian}
-			{block:Polish}
-				<a href="http://hampi-theme.tumblr.com/">Tematem Hampi</a> wykonane z miłością przez <a href="http://vstarkov.com/">Władimira Starkov</a>
-			{/block:Polish}
-			{block:Portuguese}
-				<a href="http://hampi-theme.tumblr.com/">Tema Hampi</a> feito com amor por <a href="http://vstarkov.com/">Vladimir Starkov</a>
-			{/block:Portuguese}
-			{block:Dutch}
-				<a href="http://hampi-theme.tumblr.com/">Hampi thema</a> met liefde gemaakt door <a href="http://vstarkov.com/">Vladimir Starkov</a>
-			{/block:Dutch} 
-			. {lang:Powered by Tumblr}
-		</p>
-		{/block:IfRespectfulFooter}
-	</footer>
 
+	<div class="content">
+		{Body}
 	</div>
-	<!-- /#WRAPPER -->
 
+	{block:IfShowReadMore}
+		{block:More}
+			<a href="{Permalink}" title="{block:Title}{Title}{/block:Title} — {lang:Read more}">{lang:Read more}</a>
+		{/block:More}
+	{/block:IfShowReadMore}
 
-	{block:IfTypekitID}
-	<script type="text/javascript" src="//use.typekit.com/{text:Typekit ID}.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-	{/block:IfTypekitID}
+	{block:HasTags}
+	<ul class="tags">
+		{block:Tags}
+			<li>
+				<a href="{TagURL}" title="{Tag}">{Tag}</a>
+			</li>
+		{/block:Tags}
+	</ul>
+	{/block:HasTags}
 
+	{block:Date}
+	<div>
+		<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate>
+		{block:IfShortDate}
+			{block:English}{DayOfMonthWithZero}/{MonthNumberWithZero}/{Year}{/block:English}
+			{block:French}{DayOfMonthWithZero}/{MonthNumberWithZero}/{Year}{/block:French}
+			{block:Italian}{DayOfMonthWithZero}/{MonthNumberWithZero}/{Year}{/block:Italian}
+			{block:Spanish}{DayOfMonthWithZero}/{MonthNumberWithZero}/{Year}{/block:Spanish}
+			{block:Portuguese}{DayOfMonthWithZero}/{MonthNumberWithZero}/{Year}{/block:Portuguese}
 
-	<!-- SCRIPTS -->
-	{block:IfGoogleAnalyticsIDwithUA}
-	<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
-		 mathiasbynens.be/notes/async-analytics-snippet -->
-	<script>
-		var _gaq=[['_setAccount','{text:Google Analytics ID with UA}'],['_trackPageview']];
-		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-		s.parentNode.insertBefore(g,s)}(document,'script'));
-	</script>
-	{/block:IfGoogleAnalyticsIDwithUA}
+			{block:German}{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}{/block:German}
+			{block:Turkish}{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}{/block:Turkish}
+			{block:Russian}{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}{/block:Russian}
+			{block:Polish}{DayOfMonthWithZero}.{MonthNumberWithZero}.{Year}{/block:Polish}
 
+			{block:Japanese}{Year}年{MonthNumberWithZero}月{DayOfMonthWithZero}日{/block:Japanese}
+			{block:Dutch}{DayOfMonthWithZero}-{MonthNumberWithZero}-{Year}{/block:Dutch}
+		{/block:IfShortDate}
+		{block:ifVisualDate}
+			<span class="day">{DayOfMonth}</span>
+			<span class="month">{ShortMonth}</span>
+			<span class="year">{Year}</span>
+		{/block:ifVisualDate}
+		</time>
+	</div>
+	{/block:Date}
 
-	{block:IfYandexMetrikaID}
-	<!-- Yandex.Metrika counter -->
+	
+	{block:GroupMembers}
+	<aside class="author">
+		<dl>
+			<dt>Author:</dt>
+			<dd>
+				<a href="{PostAuthorURL}" title="{PostAuthorTitle}" rel="author">
+					<img src="{PostAuthorPortraitURL-24}" width="24" height="24" alt="{PostAuthorName}" />
+					{PostAuthorTitle}
+				</a>
+			</dd>
+		</dl>
+	</aside>
+	{/block:GroupMembers}
+	{block:ContentSource}
+	<aside class="source">
+		<dl>
+			<dt>{lang:Source}:</dt>
+			<dd><a href="{SourceURL}" title="{SourceTitle}">{SourceTitle}</a></dd>
+		</dl>
+	</aside>
+	{/block:ContentSource}
+
+	{block:ifOutputNotes}
+		<aside class="notes-list">
+		{block:ifOutputFullNotes}
+			<div class="notes-title">{NoteCountWithLabel}</div>
+			{block:PostNotes}
+				{block:NoteCount}
+					{PostNotes}
+				{/block:NoteCount}
+			{/block:PostNotes}
+		{block:ifOutputFullNotes}
+
+		{block:ifNotOutputFullNotes}
+			{NoteCountWithLabel}
+		{/block:ifNotOutputFullNotes}
+		</aside>
+	{/block:ifOutputNotes}
+
+</article>
+{/block:Text}
+{/block:IfOutputText}
+
+{/block:posts}
+
+{block:PermalinkPagination}
+<nav id="pagination">
+	<ul>
+	{block:PreviousPost}
+		<li id="prev">
+			<a rel="prev" href="{PreviousPost}" title="{lang:Previous post}">{lang:Previous post}</a>
+		</li>
+	{/block:PreviousPost}
+
+	{block:NextPost}
+		<li id="next">
+			<a rel="next" href="{NextPost}" title="{lang:Next post}">{lang:Next post}</a>
+		</li>
+	{/block:NextPost}
+	</ul>
+</nav>
+{/block:PermalinkPagination}
+
+{block:Pagination}
+<nav id="pagination">
+<!-- pagination items snippet
+	 https://gist.github.com/2910030 -->
+	<ul>
+	{block:PreviousPage}
+		<li id="prev">
+			<a rel="prev" href="{PreviousPage}">{lang:Previous page}</a>
+		</li>
+	{/block:PreviousPage}
+
+	{block:ShowJumpPagination}
+		{block:JumpPagination length="5"}
+			<li>
+				<{block:JumpPage}a href="{URL}"{/block:JumpPage}{block:CurrentPage}span{/block:CurrentPage}
+				class="pagination-item"
+				title="{block:CurrentPage}{PageNumber}{/block:CurrentPage}{block:JumpPage}{PageNumber}{/block:JumpPage}">
+					{block:CurrentPage}{PageNumber}{/block:CurrentPage}
+					{block:JumpPage}{PageNumber}{/block:JumpPage}
+				</{block:JumpPage}a{/block:JumpPage}{block:CurrentPage}span{/block:CurrentPage}>
+			</li>
+		{/block:JumpPagination}
+	{/block:ShowJumpPagination}
+
+	{block:NextPage}
+		<li id="next">
+			<a rel="next" href="{NextPage}" >{lang:Next page}</a>
+		</li>
+	{/block:NextPage}
+	</ul>
+</nav>
+{/block:Pagination}
+
+{block:IfDisqusName}
+	{block:PermalinkPage}
+	<div id="disqus_thread"></div>
 	<script type="text/javascript">
-	(function (d, w, c) {
-		(w[c] = w[c] || []).push(function() {
-			try {
-				w.yaCounter{text:Yandex Metrika ID} = new Ya.Metrika({id:{text:Yandex Metrika ID},
-					enableAll: true
-					{block:IfUseYandexMetrikaWebvisor}
-					, webvisor:true
-					{/block:IfUseYandexMetrikaWebvisor}
-					{block:IfUseYandexMetrikaTrackHash}
-					, trackHash: true
-					{/block:IfUseYandexMetrikaTrackHash}
-				});
-			} catch(e) {}
-		});
-
-		var n = d.getElementsByTagName("script")[0],
-			s = d.createElement("script"),
-			f = function () { n.parentNode.insertBefore(s, n); };
-		s.type = "text/javascript";
-		s.async = true;
-		s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
-
-		if (w.opera == "[object Opera]") {
-			d.addEventListener("DOMContentLoaded", f);
-		} else { f(); }
-	})(document, window, "yandex_metrika_callbacks");
+		var disqus_shortname = '{text:Disqus Name}';
+		(function() {
+			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
 	</script>
-	<noscript><div><img src="//mc.yandex.ru/watch/{text:Yandex Metrika ID}" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-	<!-- /Yandex.Metrika counter -->
-	{block:IfYandexMetrikaID}
+	{/block:PermalinkPage}
+{/block:IfDisqusName}
 
-	</body>
-	</html>
+</div>
+<!-- /#MAIN -->
+
+<footer>
+<!-- 
+a[href="http://hampi-theme.tumblr.com/"]
+a[href="http://vstarkov.com/"]
+Hampi theme made ​​with love by Vladimir Starkov.
+ -->
+	{block:IfRespectfulFooter}
+	<p>
+		{block:English}
+			<a href="http://hampi-theme.tumblr.com/">Hampi theme</a> made ​​with love by <a href="http://vstarkov.com/">Vladimir Starkov</a>
+		{/block:English}
+		{block:German}
+			<a href="http://hampi-theme.tumblr.com/">Hampi thema</a> gemacht mit der Liebe von <a href="http://vstarkov.com/">Wladimir Starkov</a>
+		{/block:German}
+		{block:French}
+			<a href="http://hampi-theme.tumblr.com/">Hampi thème</a> fait avec amour par <a href="http://vstarkov.com/">Vladimir Starkov</a>
+		{/block:French}
+		{block:Italian}
+			<a href="http://hampi-theme.tumblr.com/">Hampi tema</a> realizzato con amore da <a href="http://vstarkov.com/">Vladimir Starkov</a>
+		{/block:Italian}
+		{block:Japanese}
+			ウラジミールStarkovによって愛で作られたハンピのテーマ
+		{/block:Japanese}
+		{block:Turkish}
+			<a href="http://hampi-theme.tumblr.com/">Hampi tema</a> <a href="http://vstarkov.com/">Vladimir Starkov</a> tarafından sevgi ile yapılan
+		{/block:Turkish}
+		{block:Spanish}
+			<a href="http://hampi-theme.tumblr.com/">Tema de Hampi</a> hecho con amor por <a href="http://vstarkov.com/">Vladimir Starkov</a>
+		{/block:Spanish}
+		{block:Russian}
+			<a href="http://hampi-theme.tumblr.com/">«Хампи» тема</a> сделана с любовью <a href="http://vstarkov.com/">Владимиром Старковым</a>
+		{/block:Russian}
+		{block:Polish}
+			<a href="http://hampi-theme.tumblr.com/">Tematem Hampi</a> wykonane z miłością przez <a href="http://vstarkov.com/">Władimira Starkov</a>
+		{/block:Polish}
+		{block:Portuguese}
+			<a href="http://hampi-theme.tumblr.com/">Tema Hampi</a> feito com amor por <a href="http://vstarkov.com/">Vladimir Starkov</a>
+		{/block:Portuguese}
+		{block:Dutch}
+			<a href="http://hampi-theme.tumblr.com/">Hampi thema</a> met liefde gemaakt door <a href="http://vstarkov.com/">Vladimir Starkov</a>
+		{/block:Dutch} 
+		. {lang:Powered by Tumblr}
+	</p>
+	{/block:IfRespectfulFooter}
+</footer>
+
+</div>
+<!-- /#WRAPPER -->
+
+
+{block:IfTypekitID}
+<script type="text/javascript" src="//use.typekit.com/{text:Typekit ID}.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+{/block:IfTypekitID}
+
+
+<!-- SCRIPTS -->
+{block:IfGoogleAnalyticsIDwithUA}
+<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
+	 mathiasbynens.be/notes/async-analytics-snippet -->
+<script>
+	var _gaq=[['_setAccount','{text:Google Analytics ID with UA}'],['_trackPageview']];
+	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+	s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+{/block:IfGoogleAnalyticsIDwithUA}
+
+
+{block:IfYandexMetrikaID}
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+	(w[c] = w[c] || []).push(function() {
+		try {
+			w.yaCounter{text:Yandex Metrika ID} = new Ya.Metrika({id:{text:Yandex Metrika ID},
+				enableAll: true
+				{block:IfUseYandexMetrikaWebvisor}
+				, webvisor:true
+				{/block:IfUseYandexMetrikaWebvisor}
+				{block:IfUseYandexMetrikaTrackHash}
+				, trackHash: true
+				{/block:IfUseYandexMetrikaTrackHash}
+			});
+		} catch(e) {}
+	});
+
+	var n = d.getElementsByTagName("script")[0],
+		s = d.createElement("script"),
+		f = function () { n.parentNode.insertBefore(s, n); };
+	s.type = "text/javascript";
+	s.async = true;
+	s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+	if (w.opera == "[object Opera]") {
+		d.addEventListener("DOMContentLoaded", f);
+	} else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/{text:Yandex Metrika ID}" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+{block:IfYandexMetrikaID}
+
+</body>
+</html>

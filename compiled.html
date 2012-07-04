@@ -282,6 +282,25 @@
 		</aside>
 	{/block:ifOutputNotes}
 
+
+	{block:PermalinkPagination}
+	<aside class="comments">
+		{block:IfDisqusName}
+			{block:PermalinkPage}
+			<div id="disqus_thread"></div>
+			<script type="text/javascript">
+				var disqus_shortname = '{text:Disqus Name}';
+				(function() {
+					var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+					dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+					(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+				})();
+			</script>
+			{/block:PermalinkPage}
+		{/block:IfDisqusName}
+	</aside>
+	{/block:PermalinkPagination}
+
 </article>
 {/block:Text}
 {/block:IfOutputText}
@@ -338,20 +357,6 @@
 	</ul>
 </nav>
 {/block:Pagination}
-
-{block:IfDisqusName}
-	{block:PermalinkPage}
-	<div id="disqus_thread"></div>
-	<script type="text/javascript">
-		var disqus_shortname = '{text:Disqus Name}';
-		(function() {
-			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-			dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-		})();
-	</script>
-	{/block:PermalinkPage}
-{/block:IfDisqusName}
 
 </div>
 <!-- /#MAIN -->

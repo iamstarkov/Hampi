@@ -1,0 +1,503 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+	display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+#wrapper {
+	max-width: 700px;
+	margin: auto;
+}
+
+#wrapper.wide {   max-width: 900px; }
+#wrapper.narrow { max-width: 500px; }
+
+#skip-links a,
+#skip-links a:hover,
+#skip-links a:visited {
+	position: absolute;
+	top: -500px;
+	left: 0;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+#skip-links a:active,
+#skip-links a:focus {
+	position:static;
+	width:auto;
+	height:auto;
+}
+
+article img {
+	max-width: 100%;
+	
+}
+
+pre {
+	width: 100%;
+	overflow-x: auto;
+	overflow-y: auto;
+	max-height: 600px;
+}
+
+/*
+--------------------------------------------------
+HEADER
+--------------------------------------------------
+*/
+
+header {
+	border-bottom: 1px solid #555;
+	margin-bottom: 15px;
+	overflow: hidden;
+}
+
+#logo {
+	height: 70px;
+	line-height: 70px;
+	font-size: 36px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	color: #555;
+	float: left;
+}
+
+.permalink-page #logo:hover {
+	color: #111;
+}
+
+header ul {
+	float: left;
+	list-style: none;
+	min-height: 30px;
+	margin-left: 50px;
+	margin-bottom: 20px;
+}
+
+header li {
+	float: left;
+	border: solid #d1d1d1;
+	border-width: 1px 0;
+	padding: 0 10px;
+	margin-top: 20px;
+}
+
+header li + li {
+	margin-left: 7px;
+}
+
+header li,
+header li a {
+	height: 30px;
+	line-height: 30px;
+}
+
+header li a {}
+
+/*
+--------------------------------------------------
+Footer
+--------------------------------------------------
+*/
+
+footer {
+	padding: 10px 20px;
+	margin-top: 25px;
+	height: 30px;
+	line-height: 18px;
+	font-size: 14px;
+	color: #999;
+	text-align: center;
+	border-top: 1px solid #ccc;
+}
+
+footer a {
+	color: inherit;
+}
+
+body {
+	font: normal 18px/29px Garamond, Georgia, serif;
+	color: #444;
+}
+
+code {
+	font-family: 'Meslo LG', monospace;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Helvetica, Arial, sans-serif;
+	color: #000;
+	line-height: 1.5;
+	text-shadow: 0 0 1px #bbb;
+}
+
+.permalink-page h1,
+.index-page h2 {
+	font-size: 28px;
+	padding: 10px 0;
+}
+
+.permalink-page h2 {
+	font-size: 20px;
+	padding: 6px 0;
+}
+
+.permalink-page h3,
+.permalink-page h4,
+.permalink-page h5,
+.permalink-page h6 {
+	font-size: 18px;
+	padding: 3px 0;
+} 
+
+.permalink-page h3,
+.permalink-page h4 {
+	font-style: italic;
+}
+
+.content pre,
+.content img,
+.content ul,
+.content p {
+	margin: 12px 0;
+}
+
+#main article + article {
+	border-top: 5px solid #f1f1f1;
+	margin-top: 70px;
+	padding-top: 10px;	
+}
+
+/*
+--------------------------------------------------
+PAGINATION
+--------------------------------------------------
+*/
+
+#pagination {
+	margin: 15px 0;
+	border: 1px dashed #d1d1d1;
+}
+
+#pagination,
+#pagination ul,
+#pagination li,
+#pagination a {
+	height: 50px;
+}
+
+#pagination ul {}
+
+#pagination li {
+	width: 50%;
+	text-align: center;
+}
+
+#prev { float: left; }
+#next { float: right; }
+
+#pagination a {
+	line-height: 50px;
+}
+
+/*
+--------------------------------------------------
+TAGS
+--------------------------------------------------
+*/
+
+.tags {
+	list-style: none;
+	overflow: hidden;
+	margin: 19px 0;
+}
+
+.tags li {
+	float: left;
+}
+
+.tags li + li:before {
+	content: ', ';
+}
+
+.tags li a:before {
+	content: '#';
+}
+
+.tags a {}
+
+/*
+--------------------------------------------------
+ASIDES
+--------------------------------------------------
+*/
+
+aside {
+	border-left: 5px solid #f1f1f1;
+	padding-left: 15px;
+	min-height: 32px;
+	overflow: hidden;
+}
+
+aside dl {
+	line-height: 32px;
+}
+
+aside dt {
+	float: left;
+	width: 100px;
+	text-align: right;
+	margin-right: 20px;
+}
+
+aside dd {
+	float: left;
+}
+
+aside a {
+	height: 32px;
+	display: inline-block;
+	position: relative;
+}
+
+aside.author a img {
+	float: left;
+	height: 24px;
+	width: 24px;
+	margin-right: 10px;
+	margin-top: 4px;
+}
+
+aside.notes-list ol {
+	list-style: none;
+}
+
+aside.notes-list li {
+	float: left;
+}
+
+aside.notes-list .action,
+aside.notes-list blockquote {
+	display: none;
+}
+
+aside.notes-list li.like {}
+aside.notes-list li.reblog {}
+aside.notes-list .more_notes_link_container {
+	margin-left: 12px;
+}
+
+/*
+--------------------------------------------------
+REBLOGS
+--------------------------------------------------
+*/
+
+article.reblog .reblog_content {
+	font-size: .8em;
+	font-style: italic;
+	text-align: right;
+	color: #a1a1a1
+}
+
+article.reblog .content > p {
+	padding-left: 30px;
+	font-weight: bold;
+	color: #a1a1a1;
+}
+
+article.reblog .content > p a {
+	color: inherit;
+}
+
+article.reblog .content > blockquote {
+	border-left: 7px solid #d1d1d1;
+	padding-left: 30px;
+}
+
+/*
+--------------------------------------------------
+TIME
+--------------------------------------------------
+*/
+
+time {
+	font-size: .8em;
+	font-style: italic;
+	text-align: right;
+	color: #a1a1a1;
+	display: block;
+}
+
+.shortdate time {}
+.visualdate time {}
+
+/*
+--------------------------------------------------
+REBLOGS
+--------------------------------------------------
+*/
+
+article.reblog .reblog_content {
+	
+	font-size: .8em;
+	font-style: italic;
+	text-align: right;
+	color: #a1a1a1
+}
+
+article.reblog .content > p {
+	padding-left: 30px;
+	font-weight: bold;
+	color: #a1a1a1;
+}
+
+article.reblog .content > p a {
+	color: inherit;
+}
+
+article.reblog .content > blockquote {
+	border-left: 7px solid #d1d1d1;
+	padding-left: 30px;
+}
+
+/*
+--------------------------------------------------
+TIME
+--------------------------------------------------
+*/
+
+time {
+	font-size: .8em;
+	font-style: italic;
+	text-align: right;
+	color: #a1a1a1;
+	display: block;
+}
+
+.shortdate time {}
+.visualdate time {}
+
+
+
+
+
+
+
+
+
+
+/* typo.css */
+/* decoration.css */
+@media print {
+  * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; } /* Black prints faster: h5bp.com/s */
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; } /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* h5bp.com/t */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}

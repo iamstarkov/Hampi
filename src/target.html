@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+	{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+
+	<!-- DEFAULT COLORS -->
+	<meta name="color:Light" content="#fff000" />
+	<meta name="color:Dark" content="#19C2FF" />
+	<meta name="color:Alt" content="#e60000" />
+	<!-- END DEFAULT COLORS -->
+	
+	<meta name="if:Show notes" content="1" />	
+	<meta name="text:Disqus Shortname" content="" />
+   <meta name="image:Header" content=""/>
+
+	<title>{Title}{block:PostSummary} | {PostSummary}{/block:PostSummary}</title>
+
+		 <!-- Just for Tumblr -->
+        <link rel="shortcut icon" href="{Favicon}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+
+	<!-- YUI Reset CSS (http://developer.yahoo.com/yui/reset/) -->
+	<link rel="stylesheet" type="text/css" href="http://static.tumblr.com/sajzoro/tmrmHt/SQ/reset-min.css"> 
+
+	<!-- Blueprint Framework CSS (http://www.blueprintcss.org/) -->
+	<link rel="stylesheet" href="http://static.tumblr.com/2hc8tqc/vMCC/BwSQ/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="http://static.tumblr.com/2hc8tqc/8uVHfBwSQ/print.css" type="text/css" media="print">
+	<!--[if IE]><link rel="stylesheet" href="http://static.tumblr.com/2hc8tqc/3a2K/BwSQ/ie.css" type="text/css" media="screen, projection"><![endif]-->
+		
+	<!-- Fancy-type Plugin -->
+	<link rel="stylesheet" href="http://static.tumblr.com/2hc8tqc/ln0OfBwSQ/screen.css" type="text/css" media="screen, projection">
+	
+	<link rel="stylesheet" href="http://static.tumblr.com/2hc8tqc/dijTfBwSQ/gs_style.css" type="text/css" media="all">
+	
+		{CustomCSS}
+		
+	</style>
+
+</head>
+<body>
+
+	<div class="container">
+		<div id="headerwrap">
+		<div class="span-18" id="header">
+			<div class="span-18 last"><ul>
+				<li><a href="/" class="name active">{%Title%}</a></li>
+
+				<li><a href="/random/">{lang:Random post}</a></li>
+				<li><a href="/mobile/">{lang:Mobile}</a></li>
+				<li><a href="/archive/">{lang:Archive}</a></li>
+			</ul></div>
+		</div></div>
+		{block:IfHeaderImage}<img src="{image:Header}"/>{/block:IfHeaderImage}
+		<div class="span-24"><div class="span-5 blue_striped">&nbsp;</div><div class="span-18 last"><p>{Description}</p></div></div>
+		<hr/>
+		
+		{block:TagPage}
+		<div class="span-19 prepend-5"><h1>{lang:Posts tagged Tag}</h1></div>
+		<hr/>
+		{/block:TagPage}
+		
+		<div class="span-18" id="content">
+		{block:Posts}
+
+			{block:Text}
+			<div class="span-12 prepend-5 maincontent">
+				<div class="span-5 pull-5 border left meta">
+					<h2>{lang:Text}</h2>
+					{block:Date}<p>{ShortMonth} {DayOfMonth}, {Year}<br />
+					@ {12Hour}:{Minutes} {AmPm}<br />{/block:Date}
+					<a href="{Permalink}">{lang:Permalink}</a>{block:RebloggedFrom}<a href="{ReblogRootURL}" title="{ReblogRootTitle}">&#9996;</a>{/block:RebloggedFrom}{block:Date}{block:IfDisqusShortname}<br /><a href="{Permalink}#disqus_thread"></a>{/block:IfDisqusShortname}{/block:Date}{block:IfShowNotes}{block:NoteCount}<br />{NoteCountWithLabel}{/block:NoteCount}{/block:IfShowNotes}</p>
+				</div>
+			{block:Title}<h1 class="title"><span>{Title}</span></h1>{/block:Title}
+			<div class="regular_post_body">{Body}</div>
+			
+			</div>
+			{/block:Text}
+
+			{block:Photo}
+			<div class="span-12 prepend-5 maincontent">
+				<div class="span-5 pull-5 border left meta">
+					<h2>{lang:Photo}</h2>
+					{block:Date}<p>{ShortMonth} {DayOfMonth}, {Year}<br />
+					@ {12Hour}:{Minutes} {AmPm}<br />{/block:Date}
+					<a href="{Permalink}">{lang:Permalink}</a>{block:RebloggedFrom}<a href="{ReblogRootURL}" title="{ReblogRootTitle}">&#9996;</a>{/block:RebloggedFrom}{block:Date}{block:IfDisqusShortname}<br /><a href="{Permalink}#disqus_thread"></a>{/block:IfDisqusShortname}{/block:Date}{block:IfShowNotes}{block:NoteCount}<br />{NoteCountWithLabel}{/block:NoteCount}{/block:IfShowNotes}</p>
+				</div>
+			<a href="{LinkURL}"><img src="{PhotoURL-500}" alt="{PhotoAlt}"/></a>
+			{block:Caption}<div>{Caption}</div>{/block:Caption}
+			</div>
+			{/block:Photo}
+
+			{block:Photoset}
+			<div class="span-12 prepend-5 maincontent">
+				<div class="span-5 pull-5 border left meta">
+					<h2>{lang:Photoset}</h2>
+					{block:Date}<p>{ShortMonth} {DayOfMonth}, {Year}<br />
+					@ {12Hour}:{Minutes} {AmPm}<br />{/block:Date}
+					<a href="{Permalink}">{lang:Permalink}</a>{block:RebloggedFrom}<a href="{ReblogRootURL}" title="{ReblogRootTitle}">&#9996;</a>{/block:RebloggedFrom}{block:Date}{block:IfDisqusShortname}<br /><a href="{Permalink}#disqus_thread"></a>{/block:IfDisqusShortname}{/block:Date}{block:IfShowNotes}{block:NoteCount}<br />{NoteCountWithLabel}{/block:NoteCount}{/block:IfShowNotes}</p>
+				</div>
+			{Photoset-500}
+			{block:Caption}<div>{Caption}</div>{/block:Caption}
+			</div>
+			{/block:Photoset}
+			
+			{block:Quote}
+			<div class="span-12 prepend-5 maincontent">
+				<div class="span-5 pull-5 border left meta">
+					<h2>{lang:Quote}</h2>
+					{block:Date}<p>{ShortMonth} {DayOfMonth}, {Year}<br />
+					@ {12Hour}:{Minutes} {AmPm}<br />{/block:Date}
+					<a href="{Permalink}">{lang:Permalink}</a>{block:RebloggedFrom}<a href="{ReblogRootURL}" title="{ReblogRootTitle}">&#9996;</a>{/block:RebloggedFrom}{block:Date}{block:IfDisqusShortname}<br /><a href="{Permalink}#disqus_thread"></a>{/block:IfDisqusShortname}{/block:Date}{block:IfShowNotes}{block:NoteCount}<br />{NoteCountWithLabel}{/block:NoteCount}{/block:IfShowNotes}</p>
+				</div>
+				<h1 class="quote"><span></span>{Quote}<div class="q">&#8221;</div></h1>
+				{block:Source}<p>&mdash; {Source}</p>{/block:Source}
+			</div>
+			{/block:Quote}
+			
+			{block:Link}
+			<div class="span-12 prepend-5 maincontent">
+				<div class="span-5 pull-5 border left meta">
+					<h2>{lang:Link}</h2>
+					{block:Date}<p>{ShortMonth} {DayOfMonth}, {Year}<br />
+					@ {12Hour}:{Minutes} {AmPm}<br />{/block:Date}
+					<a href="{Permalink}">{lang:Permalink}</a>{block:RebloggedFrom}<a href="{ReblogRootURL}" title="{ReblogRootTitle}">&#9996;</a>{/block:RebloggedFrom}{block:Date}{block:IfDisqusShortname}<br /><a href="{Permalink}#disqus_thread"></a>{/block:IfDisqusShortname}{/block:Date}{block:IfShowNotes}{block:NoteCount}<br />{NoteCountWithLabel}{/block:NoteCount}{/block:IfShowNotes}</p>
+				</div>
+				<h1 class="title"><span class="link"><a href="{URL}">{Name} &raquo;</a></span></h1>
+				{block:Description}{Description}{/block:Description}
+			</div>
+			{/block:Link}
+
+			{block:Chat}
+			<div class="span-12 prepend-5 maincontent">
+				<div class="span-5 pull-5 border left meta">
+					<h2>{lang:Chat}</h2>
+					{block:Date}<p>{ShortMonth} {DayOfMonth}, {Year}<br />
+					@ {12Hour}:{Minutes} {AmPm}<br />{/block:Date}
+					<a href="{Permalink}">{lang:Permalink}</a>{block:RebloggedFrom}<a href="{ReblogRootURL}" title="{ReblogRootTitle}">&#9996;</a>{/block:RebloggedFrom}{block:Date}{block:IfDisqusShortname}<br /><a href="{Permalink}#disqus_thread"></a>{/block:IfDisqusShortname}{/block:Date}{block:IfShowNotes}{block:NoteCount}<br />{NoteCountWithLabel}{/block:NoteCount}{/block:IfShowNotes}</p>
+				</div>
+				{block:Title}<h1 class="title"><span class="link">{Title}</span></h1>{/block:Title}
+				{block:Lines}
+				<p class="chat {Alt}">{block:Label}<span>{Label} </span>{/block:Label}{Line}</p>
+				{/block:Lines}
+			</div>
+			{/block:Chat}
+			
+			{block:Audio}
+			<div class="span-12 prepend-5 maincontent">
+				<div class="span-5 pull-5 border left meta">
+					<h2>{lang:Audio}</h2>
+					{block:Date}<p>{ShortMonth} {DayOfMonth}, {Year}<br />
+					@ {12Hour}:{Minutes} {AmPm}<br />{/block:Date}
+					<a href="{Permalink}">{lang:Permalink}</a>{block:Date}{block:IfDisqusShortname}<br /><a href="{Permalink}#disqus_thread"></a>{block:IfDisqusShortname}{/block:Date}<br />{lang:Played PlayCount times}.{block:ExternalAudio} <a href="{ExternalAudioURL}">DL</a>{/block:ExternalAudio}{block:IfShowNotes}{block:NoteCount}<br />{NoteCountWithLabel}{/block:NoteCount}{/block:IfShowNotes}</p>
+				</div>
+				{AudioPlayerWhite}
+				{block:Caption}<p>{Caption}</p>{/block:Caption}
+			</div>
+			{/block:Audio}
+			
+			{block:Video}
+			<div class="span-12 prepend-5 maincontent">
+				<div class="span-5 pull-5 border left meta">
+					<h2>{lang:Video}</h2>
+					{block:Date}<p>{ShortMonth} {DayOfMonth}, {Year}<br />
+					@ {12Hour}:{Minutes} {AmPm}<br />{/block:Date}
+					<a href="{Permalink}">{lang:Permalink}</a>{block:RebloggedFrom}<a href="{ReblogRootURL}" title="{ReblogRootTitle}">&#9996;</a>{/block:RebloggedFrom}{block:Date}{block:IfDisqusShortname}<br /><a href="{Permalink}#disqus_thread"></a>{/block:IfDisqusShortname}{/block:Date}{block:IfShowNotes}{block:NoteCount}<br />{NoteCountWithLabel}{/block:NoteCount}{/block:IfShowNotes}</p>
+				</div>
+			{Video-500}
+			{block:Caption}<p>{Caption}</p>{/block:Caption}
+			</div>
+			{/block:Video}
+
+			{block:HasTags}
+			<div class="span-24" id="nav">
+				<div class="span-10 prepend-5"><p id="tags">{Tags}: {block:Tags}<a href="{TagURL}">{Tag}</a> {/block:Tags}</p></div>
+			</div>
+			{/block:HasTags}
+			
+			{block:Permalink}
+            {block:IfDisqusShortname}
+            <div id="disqus_thread"></div>
+            <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
+            <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
+            {/block:IfDisqusShortname}
+            
+            {block:IfShowNotes}
+            {PostNotes}
+            {/block:IfShowNotes}
+            {/block:Permalink}
+		<hr/>		
+		{/block:Posts}
+		</div>
+		
+			{block:Pagination}
+			<div>
+				<div class="span-24"><div class="span-3 border prepend-2">&nbsp;{block:PreviousPage}<a href="{PreviousPage}"><img src="http://static.tumblr.com/2hc8tqc/Fmh9+pwSQ/b.png"></a>{/block:PreviousPage}</div>{block:NextPage}<div class="span-3 last"><a href="{NextPage}"><img src="http://static.tumblr.com/2hc8tqc/pBO7OpwSQ/f.png"></a></div></div>{/block:NextPage}
+				<p>&nbsp;</p>
+			</div>
+			<hr/>
+			{/block:Pagination}
+		
+		<div class="span-23 prepend-1" id="footer" style="text-transform:lowercase;">
+			<p>&copy; {CopyrightYears} &mdash; {Title} &mdash; (except where cited) | {Powered by Tumblr 2}</p>
+		</div>
+
+	</div>
+	
+	{block:IfDisqusShortname}
+    <script type="text/javascript">
+    //<![CDATA[
+    (function() {
+        var links = document.getElementsByTagName('a');
+        var query = '?';
+        for(var i = 0; i < links.length; i++) {
+        if(links[i].href.indexOf('#disqus_thread') >= 0) {
+            query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+        }
+        }
+        document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
+    })();
+    //]]>
+    </script>
+    {/block:IfDisqusShortname}
+</body>
+</html>

@@ -1,0 +1,10 @@
+mixin html(classname, langs )
+	html(class=classname, lang=langs(langs))
+
+mixin block(type, content)
+	|{block:#{type}}#{content}{/block:#{type}}
+
+
+mixin langs(langs)
+	- each lang in langs
+		+block(lang.title, lang.code)

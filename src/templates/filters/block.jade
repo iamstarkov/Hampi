@@ -1,0 +1,29 @@
+var jade = require('jade');
+
+/*
+var types = ['Posts', 'Links', 'Tweets'];
+var str = [];
+
+for (var i = types.length - 1; i >= 0; i--) {
+	str[i] = 'jade.filters.'+types[i]+' = function(block) {'+
+		'return "{block:'+types[i]+'}" + jade.render(block) +"{/block:'+types[i]+'}";'+
+	'};';
+}
+
+for (var i = str.length - 1; i >= 0; i--) {
+	eval(str[i]);
+}
+*/
+
+jade.filters.Posts = function(block) {
+	return "{block:Posts}" + jade.render(block) +"{/block:Posts}";
+};
+jade.filters.Links = function(block) {
+	return "{block:Links}" + jade.render(block) +"{/block:Links}";
+};
+jade.filters.Tweets = function(block) {
+	return "{block:Tweets}" + jade.render(block) +"{/block:Tweets}";
+};
+
+
+

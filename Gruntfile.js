@@ -1,5 +1,5 @@
 module.exports = function(grunt) {
-
+	var jade = require('jade');
 	// Project configuration.
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -27,15 +27,17 @@ module.exports = function(grunt) {
 				options: {
 					pretty: true,
 					// debug: true,
-					asd: 'asd',
+					/*
+					filters: {
+						Posts: function(block) { return '{blockPosts}'+jade.render(block)+'{/blockPosts}'; },
+						Audio: function(block) { return '{blockAudio}'+jade.render(block)+'{/blockAudio}'; },
+						Video: function(block) { return '{blockVideo}'+jade.render(block)+'{/blockVideo}'; }
+					},
+					*/
+					filters: require('./src/templates/filters/filters.js'),
 					data: function(dest, src) {
 						// Return an object of data to pass to templates
-						return {
-							"filters": [
-								"src/templates/filters/block.jade"
-							],
-							"theme": require('./theme_options.json')
-						};
+						return require('./theme_options.json');
 					},
 				},
 				files: {

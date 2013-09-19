@@ -27,13 +27,6 @@ module.exports = function(grunt) {
 				options: {
 					pretty: true,
 					// debug: true,
-					/*
-					filters: {
-						Posts: function(block) { return '{blockPosts}'+jade.render(block)+'{/blockPosts}'; },
-						Audio: function(block) { return '{blockAudio}'+jade.render(block)+'{/blockAudio}'; },
-						Video: function(block) { return '{blockVideo}'+jade.render(block)+'{/blockVideo}'; }
-					},
-					*/
 					filters: require('./src/templates/filters/filters.js'),
 					data: function(dest, src) {
 						// Return an object of data to pass to templates

@@ -8,20 +8,29 @@ body
 		|#{title}
 	hr
 	
+	div
+		b
+			i
+				| bi
+	//-just swap next lines with each others
 	:Posts
 		div
+
+	//-just swap next lines with each others
+	div#asd
+		div
 			a(href='http://tumblr.com')
-				//-#{title}
-			:Links
+				| #{title}
+			hr
+			:Audio
 				post
-					li: 'asd1'
-					li: 'asd2'
+					li: 'asd1'+ #{title} + 1
+					li: 'asd2'+ #{title} + 2
 					li
 						'asd3'
 						ul
 							li: "qwe"
 							li: "qwe2"
-
-
-			:Tweets
+			hr
+			:Video
 				a: 'posts'

@@ -6,13 +6,12 @@ module.exports = function(grunt) {
 		concat: {
 			css: {
 				src: [
-					'src/css/reset.css',
-					'src/css/layout.css',
-					'src/css/typo.css',
-					'src/css/decoration.css',
+					'src/css/normalize.css',
+					'src/css/helper.css',
+					'src/css/main.css',
 					'src/css/print.css'
 					],
-				dest: 'out/css/style.css',
+				dest: 'out/css/style.css'
 			},
 		},
 		cssmin: {

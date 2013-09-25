@@ -39,7 +39,7 @@ module.exports = function(grunt) {
 			}
 		},
 		watch: {
-			files: [ 'src/*', 'src/*/*' ],
+			files: [ 'src/**' ],
 			tasks: [ 'concat', 'cssmin', 'jade' ]
 		}
 
@@ -53,9 +53,3 @@ module.exports = function(grunt) {
 	grunt.registerTask('default', ['concat', 'cssmin', 'jade']);
 	grunt.registerTask('dev', ['default', 'watch']);
 };
-
-/*
-grunt.registerTask('main', ['task1', 'stylus', 'jade']);
-grunt.registerTask('dev', ['main',  'watch']);
-grunt.registerTask('prod', ['main', 'uglify', 'cssmin']);
-*/

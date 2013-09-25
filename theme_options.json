@@ -9,5 +9,6 @@
 			"title": "Russian",
 			"code": "ru"
 		}
-	]
+	],
+	"post_types": ["Text", "Audio", "Video", "Photo", "Photosets", "Chat"]
 }

@@ -6,6 +6,7 @@ body
 	ul
 		:b('Posts')
 			div
-				each val in ["Text", "Audio", "Video", "Photo", "Photosets", "Chat"]
+				//- each val in ["Text", "Audio", "Video", "Photo", "Photosets", "Chat"]
+				each val in #{post_types}
 					hr
 					b= val

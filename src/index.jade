@@ -5,13 +5,51 @@ html(class='no-js')
 	head
 		meta(charset="utf-8")
 		meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
-		meta(name="viewport", content="width=device-width")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
 
 		title: | #{title}
 
+		link(rel="shortcut icon", href="http://matmuchrapna.github.io/Hampi-sketch/favicon.ico")
 		link(rel='stylesheet', href='./css/style.min.css')
+		link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic,cyrillic-ext')
+
+			script(src="./js/vendor/modernizr-2.6.2.min.js")
 	body
-		:b('Posts')
-			:b('Photo')
-				| photo
+
+		#wrap
+			header.clearfix
+				a.logo(href="index.html")
+					img(src="img/logo.png").logo.logo_img
+				.menu__wrap.i-non-select.clearfix
+					input#menu-toggler.hidden.menu__toggler-checkbox(type="checkbox")
+					label.menu__toggler(for="menu-toggler")
+					ul.menu__list.unstyled.i-smoothness.clearfix
+						li.menu__item
+							a.menu__link(href="#")
+								| Contact
+						li.menu__item
+							a.menu__link(href="#")
+								| Monika
+						li.menu__item
+							a.menu__link(href="#")
+								| Twitter
+						li.menu__item
+							a.menu__link(href="#")
+								| Search
+			:b('Posts')
+				.cells-wrap.clearfix
+					:b('Photo')
+						.cell
+							.post-preview.post-preview_type_img
+								a.post-preview__link(href="./post.html")
+									img.post-preview__img(alt="", src="http://data.whicdn.com/images/53160516/mHSLB9oB27k_large.jpg")
+								.post-preview__title
+									| Interview and feature in Printed Pages
+								.post-preview__desc
+									| Interview and feature in Printed Pages
+
+		script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
+		script(src="http://rawgithub.com/sapegin/jquery.mosaicflow/master/jquery.mosaicflow.min.js")
+		script(src="js/plugins.js")
+		script(src="js/main.js")
 

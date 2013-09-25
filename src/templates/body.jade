@@ -1,36 +1,11 @@
 body
 	b
 		|#{title}
-	hr
-	a(href='tumblr.com'): 'tumblr.com'
-	hr
-	a(href="http://hampi-theme.tumblr.com")
-		|#{title}
-	hr
-	
-	div
-		b
-			i
-				| bi
-	//-just swap next lines with each others
-	:Posts
-		div
 
-	//-just swap next lines with each others
-	div#asd
-		div
-			a(href='http://tumblr.com')
-				| #{title}
-			hr
-			:Audio
-				post
-					li: 'asd1'+ #{title} + 1
-					li: 'asd2'+ #{title} + 2
-					li
-						'asd3'
-						ul
-							li: "qwe"
-							li: "qwe2"
-			hr
-			:Video
-				a: 'posts'
+	br
+	ul
+		:b('Posts')
+			div
+				each val in ["Text", "Audio", "Video", "Photo", "Photosets", "Chat"]
+					hr
+					b= val

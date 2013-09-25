@@ -3,24 +3,18 @@ module.exports = function(grunt) {
 	// Project configuration.
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-		concat: {
-			css: {
-				src: [
-					'src/css/normalize.css',
-					'src/css/helper.css',
-					'src/css/main.css',
-					'src/css/print.css'
-					],
-				dest: 'out/css/style.css'
-			},
-		},
 		cssmin: {
-			css: {
-				src: 'out/css/style.css',
-				dest: 'out/css/style.min.css',
+			min: {
+				files: {
+					'./out/css/style.min.css': [
+						'./src/css/normalize.css',
+						'./src/css/helper.css',
+						'./src/css/main.css',
+						'./src/css/print.css'
+					]
+				}
 			},
 		},
-
 		jade: {
 			compile: {
 				options: {
@@ -39,16 +33,34 @@ module.exports = function(grunt) {
 		},
 		watch: {
 			files: [ 'src/**' ],
-			tasks: [ 'concat', 'cssmin', 'jade' ]
+			tasks: [ 'cssmin', 'jade', 'copy' ]
+		},
+		clean: ['./out/'],
+		copy: {
+			js: {
+				expand: true,
+				cwd: './src/js/',
+				src: '**',
+				dest: './out/js/'
+			},
+			imgs: {
+				expand: true,
+				cwd: './src/img/',
+				src: '**',
+				dest: './out/img/'
+			}
+
 		}
 
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-concat');
-	grunt.loadNpmTasks('grunt-css');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-jade');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-clean');
 
-	grunt.registerTask('default', ['concat', 'cssmin', 'jade']);
+	grunt.registerTask('default', ['clean', 'cssmin', 'jade', 'copy']);
 	grunt.registerTask('dev', ['default', 'watch']);
 };

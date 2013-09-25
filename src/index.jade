@@ -11,26 +11,7 @@ html(class='no-js')
 
 		link(rel='stylesheet', href='./css/style.min.css')
 	body
-		ul
-			:b('Posts')
-				div
-					each val in #{post_types}
-						.block(data-type='article')
-							span.time
-								| {{post.time}}
-							- if (val = 'text')
-								div
-									#asd
-
-								include templates/types/video
-							- if (val = 'video')
-								:qwe
-									|qwe
-								include templates/types/video
-							- if (val = 'audio')
-								include templates/types/audio
-							- if (val = 'photo')
-								include templates/types/photo
-							- if (val = 'photoset')
-								include templates/types/text
+		:b('Posts')
+			:b('Photo')
+				| photo
 

@@ -27,10 +27,10 @@ module.exports = function(grunt) {
 				options: {
 					pretty: true,
 					// debug: true,
-					filters: require('./src/templates/filters/filters.js'),
+					filters: require('./src/filters.js'),
 					data: function(dest, src) {
 						// Return an object of data to pass to templates
-						return require('./theme_options.json');
+						return require('./src/options.json');
 					},
 				},
 				files: {

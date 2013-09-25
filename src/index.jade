@@ -1,8 +1,36 @@
-include templates/mixins
+include mixins
 
 doctype 5
 html(class='no-js')
 	head
-		include head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+		meta(name="viewport", content="width=device-width")
+
+		title: | #{title}
+
+		link(rel='stylesheet', href='./css/style.min.css')
 	body
-		incude body
+		ul
+			:b('Posts')
+				div
+					each val in #{post_types}
+						.block(data-type='article')
+							span.time
+								| {{post.time}}
+							- if (val = 'text')
+								div
+									#asd
+
+								include templates/types/video
+							- if (val = 'video')
+								:qwe
+									|qwe
+								include templates/types/video
+							- if (val = 'audio')
+								include templates/types/audio
+							- if (val = 'photo')
+								include templates/types/photo
+							- if (val = 'photoset')
+								include templates/types/text
+

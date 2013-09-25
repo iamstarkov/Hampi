@@ -4,6 +4,9 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		cssmin: {
+			options: {
+				keepSpecialComments: '*'
+			},
 			min: {
 				files: {
 					'./out/css/style.min.css': [

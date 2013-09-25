@@ -2,9 +2,8 @@ var jadefilters = module.exports = {};
 
 jadefilters.b = function(block, options) {
 	// console.log(arguments);
-	var type = Object.keys(options)[0];
-	var res = this.jade.render(block, this.locals);
-	// console.log(this.locals.tumblr_markup);
+	var type = Object.keys(options)[0],
+		res = this.jade.render(block, this.locals);
 
 	if (this.locals.tumblr_markup) {
 		res = '{block:'+type+'}' + res + '{/block:'+type+'}';

@@ -1,0 +1,79 @@
+.wrap
+	include layout_header
+	:b('IndexPage')
+		.cells-wrap.clearfix
+			:b('Posts')
+
+				:b('Photo')
+					.cell(id="post{PostID}", class=post_class)
+						.post-preview.post-preview_type_img
+							a.post-preview__link(href="{Permalink}")
+								img.post-preview__img(alt="", src="{PhotoURL-400}")
+								:b('Caption')
+									.post-preview__title
+										| {Caption}
+
+				:b('Text')
+					.cell(id="post{PostID}", class=post_class)
+						.post-preview.post-preview_type_text.post-preview_type_green
+							if tumblr_markup
+								a.post-preview__link(href="{Permalink}")
+									:b('Title')
+										.post-preview__title
+											| {Title}
+
+				:b('Photoset')
+					.cell(id="post{PostID}", class=post_class)
+						.post-preview.post-preview_type_img
+							if tumblr_markup
+								a.post-preview__link(href="{Permalink}")
+									//- | {Photoset-400}
+									:b('Photos')
+										img.photoset-images.post-preview__img(alt="", src="{PhotoURL-400}")
+									:b('Caption')
+										.post-preview__title
+											| {Caption} 
+										.post-preview__desc
+											| Interview and feature in Printed Pages
+							else
+								a.post-preview__link(href="post.html")
+									img.post-preview__img(alt="", src="http://data.whicdn.com/images/53160516/mHSLB9oB27k_large.jpg")
+									.post-preview__title
+										| Interview and feature in Printed Pages
+									.post-preview__desc
+										| Interview and feature in Printed Pages
+
+				:b('Quote')
+					.cell(id="post{PostID}", class=post_class)
+						.post-preview.post-preview_type_text.post-preview_type_green
+							a.post-preview__link(href="{Permalink}")
+								.post-preview__desc
+									| {Quote}
+
+				:b('Link')
+					.cell(id="post{PostID}", class=post_class)
+						.post-preview.post-preview_type_text.post-preview_type_green
+							a.post-preview__link(href="{URL}")
+								.post-preview__title
+									| {Name}
+								:b('Description')
+									.post-preview__desc
+										| {Description}
+
+				:b('Chat')
+					.cell(id="post{PostID}", class=post_class)
+						.post-preview.post-preview_type_text.post-preview_type_green
+							a.post-preview__link(href="{Permalink}")
+								:b('Title')
+									.post-preview__title
+										| {Title}
+								.post-preview__desc
+
+				:b('Audio')
+					.cell(id="post{PostID}", class=post_class)
+						.post-preview.post-preview_type_text.post-preview_type_green
+							a.post-preview__link(href="{Permalink}")
+								:b('Caption')
+									.post-preview__title
+										| {Caption}
+									| {AudioPlayerWhite}

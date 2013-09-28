@@ -137,6 +137,18 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
 
-	grunt.registerTask('default', ['clean', 'cssmin', 'jade:compile_helpers', 'jade:compile_pages', 'jade:compile_tumblr', 'copy']);
-	grunt.registerTask('dev', ['default', 'watch']);
+	grunt.registerTask('default', [
+		'clean',
+		'cssmin',
+		'jade:compile_helpers',
+		'jade:compile_pages',
+		'jade:compile_tumblr',
+		'copy'
+		]
+	);
+	grunt.registerTask('dev', [
+		'default',
+		'watch'
+		]
+	);
 };

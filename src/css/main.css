@@ -396,3 +396,11 @@ body {
 	}
 
 }
+
+.photoset-images {
+	display: none;
+}
+
+.photoset-images:first-child {
+	display: block;
+}

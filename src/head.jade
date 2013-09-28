@@ -4,11 +4,17 @@ meta(name="viewport", content="width=device-width, initial-scale=1")
 
 title #{head_title}
 
+
+// must be uploaded to tumblr cdn
+meta(name="image:Logo", content="http://static.tumblr.com/4kzimp0/UMBmtu4pe/logo.png")
+
 unless tumblr_markup
 	:b('Description')
 		meta(name="description", content="{MetaDescription}")
 else
 	meta(name="description", content="{MetaDescription}")
+
+
 
 link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic,cyrillic-ext')
 

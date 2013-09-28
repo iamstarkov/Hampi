@@ -5,7 +5,7 @@ mixin langs(langs)
 	each lang in langs
 		+block(lang.title, lang.code)
 
-mixin post_title
+mixin post_title()
 	:b('Title')
 		:b('IndexPage')
 			h2(title="{Title}", class="heading")

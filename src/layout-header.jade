@@ -2,11 +2,17 @@ header.header.clearfix
 
 	:b('IndexPage')
 		h1.logo(title="{Title}")
-			img(src="img/logo.png").logo.logo_img
+			:b('ifLogoImage')
+				img(src="{image:Logo}").logo.logo_img
+			:b('ifNotImageLogo')
+				| {Title}
 	if tumblr_markup
 		:b('PermalinkPage')
 			a.logo(href="/", title="{Title}")
-				img(src="img/logo.png").logo.logo_img
+				:b('ifLogoImage')
+					img(src="{image:Logo}").logo.logo_img
+				:b('ifNotImageLogo')
+					| {Title}
 
 
 	:b('HasPages')
@@ -23,7 +29,8 @@ header.header.clearfix
 						a.menu__link(href="#") Twitter
 					li.menu__item
 						a.menu__link(href="#") Search
-				:b('Pages')
-					li.menu__item
-						a.menu__link(href="{URL}", title="{Label}")
-							| {Label}
+				else 
+					:b('Pages')
+						li.menu__item
+							a.menu__link(href="{URL}", title="{Label}")
+								| {Label}

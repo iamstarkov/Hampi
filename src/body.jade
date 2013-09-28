@@ -1,22 +1,21 @@
 //- include mixins
+include post_title
 .wrap
 	include layout-header
 	.cells-wrap.clearfix
 		:b('Posts')
 			.cell(id="post{PostID}", class=post_class)
-				each type, index in post_types
-					if type === 'Photo'
-						:b('Photo')
-							| PHOTO
-							//- +post_title()
-							//- include post_title
-							//- 
-							.post-preview.post-preview_type_img
-								a.post-preview__link(href="./post.html")
-									img.post-preview__img(alt="", src="http://data.whicdn.com/images/53160516/mHSLB9oB27k_large.jpg")
-									.post-preview__title
-										| Interview and feature in Printed Pages
-									.post-preview__desc
-										| Interview and feature in Printed Pages
+				:b('Photo')
+					| PHOTO
 					//- +post_title()
-					//- include post_title
+					//- 
+					.post-preview.post-preview_type_img
+						a.post-preview__link(href="./post.html")
+							img.post-preview__img(alt="", src="http://data.whicdn.com/images/53160516/mHSLB9oB27k_large.jpg")
+							.post-preview__title
+								| Interview and feature in Printed Pages
+							.post-preview__desc
+								| Interview and feature in Printed Pages
+				//- 
+					each type, index in post_types
+						if type === 'Photo'

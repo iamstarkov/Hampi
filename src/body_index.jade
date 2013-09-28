@@ -25,23 +25,12 @@
 				:b('Photoset')
 					.cell(id="post{PostID}", class=post_class)
 						.post-preview.post-preview_type_img
-							if tumblr_markup
-								a.post-preview__link(href="{Permalink}")
-									//- | {Photoset-400}
-									:b('Photos')
-										img.photoset-images.post-preview__img(alt="", src="{PhotoURL-400}")
-									:b('Caption')
-										.post-preview__title
-											| {Caption} 
-										.post-preview__desc
-											| Interview and feature in Printed Pages
-							else
-								a.post-preview__link(href="post.html")
-									img.post-preview__img(alt="", src="http://data.whicdn.com/images/53160516/mHSLB9oB27k_large.jpg")
+							a.post-preview__link(href="{Permalink}")
+								:b('Photos')
+									img.photoset-images.post-preview__img(alt="", src="{PhotoURL-400}")
+								:b('Caption')
 									.post-preview__title
-										| Interview and feature in Printed Pages
-									.post-preview__desc
-										| Interview and feature in Printed Pages
+										| {Caption} 
 
 				:b('Quote')
 					.cell(id="post{PostID}", class=post_class)

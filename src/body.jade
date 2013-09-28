@@ -9,7 +9,7 @@
 						:b('Photo')
 							| PHOTO
 							//- +post_title()
-							include post_title
+							//- include post_title
 							//- 
 							.post-preview.post-preview_type_img
 								a.post-preview__link(href="./post.html")
@@ -19,9 +19,4 @@
 									.post-preview__desc
 										| Interview and feature in Printed Pages
 					//- +post_title()
-					include post_title
-
-script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
-script(src="http://rawgithub.com/sapegin/jquery.mosaicflow/master/jquery.mosaicflow.min.js")
-script(src="js/plugins.js")
-script(src="js/main.js")
+					//- include post_title

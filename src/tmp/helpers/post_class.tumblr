@@ -1,0 +1,8 @@
+
+{PostType}
+ {block:PostNotes}hasnotes{/block:PostNotes} {block:More}hasmore{/block:More} {block:HasTags}hastags{/block:HasTags} {block:IfShortDate}shortdate{/block:IfShortDate} {block:IfVisualDate}visualdate{/block:IfVisualDate} {block:Date}postdate-{AmPm}
+postdate-{ShortDayOfWeek}
+postdate-{ShortMonth}
+postdate-{DayOfMonthWithZero}
+postdate-{Year}{/block:Date} 
+{TagsAsClasses}

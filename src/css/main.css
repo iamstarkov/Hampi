@@ -25,6 +25,7 @@ body {
 
 
 .logo {
+	margin: 0;
 	display: block;
 	float: left;
 	height: 35px;

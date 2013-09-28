@@ -1,0 +1,1 @@
+{block:SearchPage}{lang:Search results for SearchQuery} — {/block:SearchPage}{block:PostSummary}{PostSummary} — {/block:PostSummary}{Title}

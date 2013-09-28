@@ -1,15 +1,22 @@
 {
-	"tumblr_markup": false,
-	"title": "HAMPI",
+	"post_types": ["Text", "Audio", "Video", "Photo", "Photosets", "Chat"],
+	"mode": "development",
+
 	"langs": [
-		{
-			"title": "English",
-			"code": "en"
-		},
-		{
-			"title": "Russian",
-			"code": "ru"
-		}
+
+		{ "title": "English", "code": "en" },
+		{ "title": "German", "code": "de" },
+		{ "title": "French", "code": "fr" },
+		{ "title": "Italian", "code": "it" },
+		{ "title": "Japanese", "code": "ja" },
+		{ "title": "Turkish", "code": "tr" },
+		{ "title": "Spanish", "code": "es" },
+		{ "title": "Russian", "code": "ru" },
+		{ "title": "Polish", "code": "pl" },
+		{ "title": "Portuguese", "code": "pt" },
+		{ "title": "Dutch", "code": "nl" }
 	],
-	"post_types": ["Text", "Audio", "Video", "Photo", "Photosets", "Chat"]
+
+	"head_title": "HAMPI",
+	"html_lang": "en"
 }

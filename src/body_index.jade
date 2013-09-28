@@ -66,3 +66,12 @@
 									.post-preview__title
 										| {Caption}
 									| {AudioPlayerWhite}
+
+				:b('Video')
+					.cell(id="post{PostID}", class=post_class)
+						.post-preview.post-preview_type_text
+							| {Video-400}
+							:b('Caption')
+								a.post-preview__link(href="{Permalink}")
+									.post-preview__title
+										| {Caption}

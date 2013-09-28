@@ -405,3 +405,7 @@ body {
 .photoset-images:first-child {
 	display: block;
 }
+
+.post-preview__title * {
+	display: inline;
+}

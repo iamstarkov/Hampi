@@ -4,6 +4,19 @@
 		.cells-wrap.clearfix
 			:b('Posts')
 
+				:b('Text')
+					.cell(id="post{PostID}", class=post_class)
+						.post-preview.post-preview_type_text.post-preview_type_green
+							a.post-preview__link(href="{Permalink}")
+								:b('Title')
+									.post-preview__title
+										| {Title}
+									:b('HasTags')
+										ul.post__tags.i-tags.unstyled.clearfix
+											:b('Tags')
+												li.post-preview__tag.i-tags__tag
+													| {Tag}
+
 				:b('Photo')
 					.cell(id="post{PostID}", class=post_class)
 						.post-preview.post-preview_type_img
@@ -12,15 +25,25 @@
 								:b('Caption')
 									.post-preview__title
 										| {Caption}
-
-				:b('Text')
+								:b('HasTags')
+										ul.post__tags.i-tags.unstyled.clearfix
+											:b('Tags')
+												li.post-preview__tag.i-tags__tag
+													| {Tag}
+				:b('Panorama')
 					.cell(id="post{PostID}", class=post_class)
-						.post-preview.post-preview_type_text.post-preview_type_green
-							if tumblr_markup
-								a.post-preview__link(href="{Permalink}")
-									:b('Title')
-										.post-preview__title
-											| {Title}
+						.post-preview.post-preview_type_img
+							a.post-preview__link(href="{Permalink}")
+								:b('LinkOpenTag')
+									img(src="{PhotoURL-Panorama}", alt="{PhotoAlt}")
+								:b('Caption')
+									.post-preview__title
+										| {Caption}
+								:b('HasTags')
+										ul.post__tags.i-tags.unstyled.clearfix
+											:b('Tags')
+												li.post-preview__tag.i-tags__tag
+													| {Tag}
 
 				:b('Photoset')
 					.cell(id="post{PostID}", class=post_class)
@@ -30,7 +53,12 @@
 									img.photoset-images.post-preview__img(alt="", src="{PhotoURL-400}")
 								:b('Caption')
 									.post-preview__title
-										| {Caption} 
+										| {Caption}
+								:b('HasTags')
+										ul.post__tags.i-tags.unstyled.clearfix
+											:b('Tags')
+												li.post-preview__tag.i-tags__tag
+													| {Tag}
 
 				:b('Quote')
 					.cell(id="post{PostID}", class=post_class)
@@ -38,6 +66,11 @@
 							a.post-preview__link(href="{Permalink}")
 								.post-preview__desc
 									| {Quote}
+								:b('HasTags')
+										ul.post__tags.i-tags.unstyled.clearfix
+											:b('Tags')
+												li.post-preview__tag.i-tags__tag
+													| {Tag}
 
 				:b('Link')
 					.cell(id="post{PostID}", class=post_class)
@@ -48,6 +81,11 @@
 								:b('Description')
 									.post-preview__desc
 										| {Description}
+								:b('HasTags')
+										ul.post__tags.i-tags.unstyled.clearfix
+											:b('Tags')
+												li.post-preview__tag.i-tags__tag
+													| {Tag}
 
 				:b('Chat')
 					.cell(id="post{PostID}", class=post_class)
@@ -56,7 +94,11 @@
 								:b('Title')
 									.post-preview__title
 										| {Title}
-								.post-preview__desc
+								:b('HasTags')
+										ul.post__tags.i-tags.unstyled.clearfix
+											:b('Tags')
+												li.post-preview__tag.i-tags__tag
+													| {Tag}
 
 				:b('Audio')
 					.cell(id="post{PostID}", class=post_class)
@@ -66,6 +108,11 @@
 									.post-preview__title
 										| {Caption}
 									| {AudioPlayerWhite}
+								:b('HasTags')
+										ul.post__tags.i-tags.unstyled.clearfix
+											:b('Tags')
+												li.post-preview__tag.i-tags__tag
+													| {Tag}
 
 				:b('Video')
 					.cell(id="post{PostID}", class=post_class)
@@ -75,3 +122,20 @@
 								a.post-preview__link(href="{Permalink}")
 									.post-preview__title
 										| {Caption}
+							:b('HasTags')
+									ul.post__tags.i-tags.unstyled.clearfix
+										:b('Tags')
+											li.post-preview__tag.i-tags__tag
+												| {Tag}
+
+				:b('Answer')
+					.cell(id="post{PostID}", class=post_class)
+						.post-preview.post-preview_type_text
+							a.post-preview__link(href="{Permalink}")
+								.post-preview__desc
+									| {Question}
+								:b('HasTags')
+										ul.post__tags.i-tags.unstyled.clearfix
+											:b('Tags')
+												li.post-preview__tag.i-tags__tag
+													| {Tag}

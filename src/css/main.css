@@ -211,12 +211,12 @@ body {
 .i-tags__tag::before {
 	content: '#';
 	display: inline;
-	margin-right: -.3em;
+	/*margin-right: -.3em;*/
 }
 
 .i-tags__tag::after {
 	content: ', ';
-	margin-left: -.3em;
+	/*margin-left: -.3em;*/
 	margin-right: .3em;
 }
 

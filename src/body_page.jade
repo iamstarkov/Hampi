@@ -1,0 +1,171 @@
+:b('PermalinkPage')
+	.content-wrap.clearfix
+		:b('Posts')
+
+			:b('Text')
+				.post
+					.post__content-wrap
+						.post__date
+							| {Month} {DayOfMonth}, {Year}
+						:b('Title')
+							.post__title
+								| {Title}
+						.post__desc
+							| {Body}
+						:b('HasTags')
+							ul.post__tags.i-tags.unstyled.clearfix
+								:b('Tags')
+									li.post-preview__tag.i-tags__tag
+										| {Tag}
+
+			:b('Photo')
+				.post
+					.post__content-wrap
+						.post__date
+							| {Month} {DayOfMonth}, {Year}
+						:b('Caption')
+							.post__title
+								| {Caption}
+						:b('HasTags')
+								ul.post__tags.i-tags.unstyled.clearfix
+									:b('Tags')
+										li.post-preview__tag.i-tags__tag
+											| {Tag}
+					.post__images-wrap
+						img.post-preview__img(alt="", src="{PhotoURL-500}")
+
+			:b('Panorama')
+				.post
+					.post__content-wrap
+						.post__date
+							| {Month} {DayOfMonth}, {Year}
+						:b('Caption')
+							.post__title
+								| {Caption}
+						:b('HasTags')
+								ul.post__tags.i-tags.unstyled.clearfix
+									:b('Tags')
+										li.post-preview__tag.i-tags__tag
+											| {Tag}
+					:b('LinkOpenTag')
+						.post__images-wrap
+							img.post__image(src="{PhotoURL-Panorama}", alt="{PhotoAlt}")
+
+			:b('Photoset')
+				.post
+					.post__content-wrap
+						.post__date
+							| {Month} {DayOfMonth}, {Year}
+						:b('Caption')
+							.post__title
+								| {Caption}
+						:b('HasTags')
+								ul.post__tags.i-tags.unstyled.clearfix
+									:b('Tags')
+										li.post-preview__tag.i-tags__tag
+											| {Tag}
+					.post__images-wrap
+						:b('Photos')
+							img.post__image(alt="", src="{PhotoURL-500}")
+
+			:b('Quote')
+				.post
+					.post__content-wrap
+						.post__date
+							| {Month} {DayOfMonth}, {Year}
+						.post__desc
+							| {Quote}
+						:b('HasTags')
+								ul.post__tags.i-tags.unstyled.clearfix
+									:b('Tags')
+										li.post-preview__tag.i-tags__tag
+											| {Tag}
+
+			:b('Link')
+				.post
+					.post__content-wrap
+						.post__date
+							| {Month} {DayOfMonth}, {Year}
+						.post__title
+							| {Name}
+						:b('Description')
+							.post__desc
+								| {Description}
+						:b('HasTags')
+								ul.post__tags.i-tags.unstyled.clearfix
+									:b('Tags')
+										li.post-preview__tag.i-tags__tag
+											| {Tag}
+
+			:b('Chat')
+				.post
+					.post__content-wrap
+						.post__date
+							| {Month} {DayOfMonth}, {Year}
+						:b('Title')
+							.post__title
+								| {Title}
+						:b('HasTags')
+								ul.post__tags.i-tags.unstyled.clearfix
+									:b('Tags')
+										li.post-preview__tag.i-tags__tag
+											| {Tag}
+
+					.post__images-wrap
+						ul.unstyled
+							:b('Lines')
+								li.unstyle
+									:b('Label')
+										b: {Label} 
+									| {Line}
+
+
+			:b('Audio')
+				.post
+					.post__content-wrap
+						.post__date
+							| {Month} {DayOfMonth}, {Year}
+						:b('Caption')
+							.post__title
+								| {Caption}
+						:b('HasTags')
+								ul.post__tags.i-tags.unstyled.clearfix
+									:b('Tags')
+										li.post-preview__tag.i-tags__tag
+											| {Tag}
+					.post__images-wrap
+						| {AudioPlayerWhite}
+
+			:b('Video')
+				.post
+					.post__content-wrap
+						.post__date
+							| {Month} {DayOfMonth}, {Year}
+						:b('Caption')
+							a.post-preview__link(href="{Permalink}")
+								.post__title
+									| {Caption}
+						:b('HasTags')
+								ul.post__tags.i-tags.unstyled.clearfix
+									:b('Tags')
+										li.post-preview__tag.i-tags__tag
+											| {Tag}
+					.post__images-wrap
+						| {Video-500}
+
+			:b('Answer')
+				.post
+					.post__content-wrap
+						.post__date
+							| {Month} {DayOfMonth}, {Year}
+						.post__desc
+							| {Question}
+						:b('HasTags')
+								ul.post__tags.i-tags.unstyled.clearfix
+									:b('Tags')
+										li.post-preview__tag.i-tags__tag
+											| {Tag}
+					.post__images-wrap
+						b: {Question}
+						hr
+						| {Answer}

@@ -3,6 +3,8 @@ html(lang=html_lang)
 	head
 		include head
 	body(class=body_class)
-		include body_index
-		//- include body_page
+		.wrap
+			include layout_header
+			include body_index
+			include body_page
 		include bottom_scripts

@@ -1,19 +1,4 @@
 module.exports = function(grunt) {
-	// var fs = require('fs');
-	// Project configuration.
-	/*
-	var qwe;
-	grunt.file.expand(
-		{filter: 'isFile'},
-		'./src/tmp/helpers/*'
-	)
-	.forEach(function(file) {
-		console.log(file);
-		qwe[file] = grunt.file.read('./src/temp/helpers/'+file);
-	});
-
-	console.log('qwe', qwe);
-	*/
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -125,7 +110,6 @@ module.exports = function(grunt) {
 				src: '**',
 				dest: './out/img/'
 			}
-
 		}
 
 	});

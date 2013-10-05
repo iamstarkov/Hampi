@@ -1,1 +1,0 @@
-{block:IndexPage}index-page{/block:IndexPage}{block:DayPage}index-day-page{/block:DayPage}{block:TagPage}index-tag-page{/block:TagPage}{block:SearchPage}index-search-page{/block:SearchPage}{block:PermalinkPage}permalink-page{/block:PermalinkPage}

@@ -52,8 +52,7 @@
 				.cell(id="post{PostID}", class=post_class)
 					.post-preview.post-preview_type_text.post-preview_type_green
 						a.post-preview__link(href="{URL}")
-							.post-preview__title
-								| {Name}
+							.post-preview__title: {Name}
 							:b('Description')
 								.post-preview__desc
 									| {Description}
@@ -69,12 +68,10 @@
 
 			:b('Audio')
 				.cell(id="post{PostID}", class=post_class)
-					.post-preview.post-preview_type_text.post-preview_type_green
-						a.post-preview__link(href="{Permalink}")
+					.post-preview.post-preview_type_text
+						div.post-preview__link
 							:b('AudioEmbed')
 								| {AudioEmbed-400}
-							:b(Caption)
-								.post-preview__title: {Caption}
 							:Tags
 
 			:b('Video')

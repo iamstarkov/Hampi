@@ -1,18 +1,15 @@
-| {PostType} 
+| post  
+| post_type_{PostType}  
 :b('PostNotes')
-	| hasnotes 
+	| post_type_hasnotes 
 :b('More')
-	| hasmore 
+	| post_type_hasmore 
 :b('HasTags')
-	| hastags 
-:b('IfShortDate')
-	| shortdate 
-:b('IfVisualDate')
-	| visualdate 
+	| post_type_hastags 
 :b('Date')
-	| postdate-{AmPm} 
-	| postdate-{ShortDayOfWeek} 
-	| postdate-{ShortMonth} 
-	| postdate-{DayOfMonthWithZero} 
-	| postdate-{Year} 
+	| post_date_{AmPm} 
+	| post_date_{ShortDayOfWeek} 
+	| post_date_{ShortMonth} 
+	| post_date_{DayOfMonthWithZero} 
+	| post_date_{Year} 
 | {TagsAsClasses} 

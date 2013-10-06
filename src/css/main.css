@@ -454,3 +454,7 @@ body {
 .post-preview__img {
 	margin-bottom: 0.3em;
 }
+
+.index-page .post_type_audio .post-preview__link {
+	padding: 0;
+}

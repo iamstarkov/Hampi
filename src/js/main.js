@@ -16,3 +16,6 @@ if ($('.post__images-wrap')[0]) {
 
 
 $('iframe').prop('width', '100%');
+$(window).resize(function() {
+	$('iframe').prop('width', '100%');
+});

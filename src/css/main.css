@@ -177,6 +177,7 @@ body {
 	font-size: 17px;
 	line-height: 21px;
 	font-weight: 700;
+	margin-bottom: 5px;
 }
 
 .post-preview_type_green .post-preview__title {
@@ -188,6 +189,7 @@ body {
 .post-preview__desc {
 	font-size: 14px;
 	line-height: 21px;
+	margin-bottom: 2em;
 }
 
 .post-preview_type_green .post-preview__desc {
@@ -227,7 +229,7 @@ body {
 
 
 .post-preview__tags {
-	margin-top: 5em;
+	/*margin-top: 5em;*/
 }
 
 .post {
@@ -257,13 +259,13 @@ body {
 
 .post__desc,
 .post__tags {
-	margin-top: 1em;
+	/*margin-top: 1em;*/
 	font-size: 14px;
 	line-height: 19px;
 }
 
 .post__tags {
-	margin-top: 2em;
+	/*margin-top: 2em;*/
 }
 
 

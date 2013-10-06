@@ -304,6 +304,10 @@ body {
 	.content-wrap {
 		padding: 0 20px;
 	}
+	
+	.js .is-hidden {
+		visibility: hidden;
+	}
 
 	.post__images-wrap {
 		margin-top: 48px;

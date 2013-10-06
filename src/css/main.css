@@ -459,7 +459,8 @@ body {
 	padding: 0;
 }
 
-.index-page .post_type_audio iframe {
+.index-page .post_type_audio iframe,
+.index-page .post_type_video iframe {
 	display: block;
 	width: 100%;
 }

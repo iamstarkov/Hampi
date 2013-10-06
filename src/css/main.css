@@ -429,13 +429,14 @@ body {
 		padding: 0 4px;
 	}
 
-	.post__image .mosaicflow__column:nth-child(2n+1) .post__image {
+	.post__images-wrap .mosaicflow__column:nth-child(2n+2) .post__image {
 		padding-left: 0;
 	}
-
-	.post__image .mosaicflow__column:nth-child(2n+2) .post__image {
+	
+	.post__images-wrap .mosaicflow__column:nth-child(2n+1) .post__image {
 		padding-right: 0;
 	}
+
 
 }
 

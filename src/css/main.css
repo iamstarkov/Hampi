@@ -458,3 +458,8 @@ body {
 .index-page .post_type_audio .post-preview__link {
 	padding: 0;
 }
+
+.index-page .post_type_audio iframe {
+	display: block;
+	width: 100%;
+}

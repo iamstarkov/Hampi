@@ -1,7 +1,7 @@
 if ($('.cells-wrap')[0]) {
 	$('.cells-wrap').mosaicflow({
 		itemSelector: '.cell',
-		minItemWidth: 304,
+		minItemWidth: 400,
 		itemHeightCalculation: 'attribute'
 	});
 }

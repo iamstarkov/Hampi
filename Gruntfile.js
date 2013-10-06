@@ -109,7 +109,7 @@ module.exports = function(grunt) {
 		'cssmin',
 		'jade:locales',
 		'jade:tumblr',
-		'copy'
+		// 'copy'
 		]
 	);
 	grunt.registerTask('dev', [

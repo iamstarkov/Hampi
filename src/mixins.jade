@@ -4,14 +4,3 @@ mixin block(type, content)
 mixin langs(langs)
 	each lang in langs
 		+block(lang.title, lang.code)
-
-mixin post_title()
-	:b('Title')
-		:b('IndexPage')
-			h2(title="{Title}", class="heading")
-				a(href="{Permalink}", title="{Title}", class="heading")
-					| {Title}
-		
-		:b('PermalinkPage')
-			h1(title="{Title}", class="heading")
-				| {Title}

@@ -5,51 +5,30 @@
 			:b('Text')
 				.post
 					.post__content-wrap
-						:b('Date')
-							.post__date
-								| {Month} {DayOfMonth}, {Year}
+						:Date
 						:b('Title')
-							.post__title
-								| {Title}
+							.post_title: {Title}
 						.post__desc
 							| {Body}
-						:b('HasTags')
-							ul.post__tags.i-tags.unstyled.clearfix
-								:b('Tags')
-									li.post-preview__tag.i-tags__tag
-										| {Tag}
+						:Tags
 
 			:b('Photo')
 				.post
 					.post__content-wrap
-						:b('Date')
-							.post__date
-								| {Month} {DayOfMonth}, {Year}
+						:Date
 						:b('Caption')
-							.post__title
-								| {Caption}
-						:b('HasTags')
-								ul.post__tags.i-tags.unstyled.clearfix
-									:b('Tags')
-										li.post-preview__tag.i-tags__tag
-											| {Tag}
+							.post__title: {Caption}
+						:Tags
 					.post__images-wrap
 						img.post-preview__img(alt="", src="{PhotoURL-500}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 
 			:b('Panorama')
 				.post
 					.post__content-wrap
-						:b('Date')
-							.post__date
-								| {Month} {DayOfMonth}, {Year}
+						:Date
 						:b('Caption')
-							.post__title
-								| {Caption}
-						:b('HasTags')
-								ul.post__tags.i-tags.unstyled.clearfix
-									:b('Tags')
-										li.post-preview__tag.i-tags__tag
-											| {Tag}
+							.post__title: {Caption}
+						:Tags
 					:b('LinkOpenTag')
 						.post__images-wrap
 							img.post__image(src="{PhotoURL-Panorama}", alt="{PhotoAlt}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
@@ -57,17 +36,10 @@
 			:b('Photoset')
 				.post
 					.post__content-wrap
-						:b('Date')
-							.post__date
-								| {Month} {DayOfMonth}, {Year}
+						:Date
 						:b('Caption')
-							.post__title
-								| {Caption}
-						:b('HasTags')
-								ul.post__tags.i-tags.unstyled.clearfix
-									:b('Tags')
-										li.post-preview__tag.i-tags__tag
-											| {Tag}
+							.post__title: {Caption}
+						:Tags
 					.post__images-wrap.is-hidden.i-smoothness
 						:b('Photos')
 							img.post__image(alt="", src="{PhotoURL-500}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
@@ -75,49 +47,29 @@
 			:b('Quote')
 				.post
 					.post__content-wrap
-						:b('Date')
-							.post__date
-								| {Month} {DayOfMonth}, {Year}
+						:Date
 						.post__desc
 							| {Quote}
-						:b('HasTags')
-								ul.post__tags.i-tags.unstyled.clearfix
-									:b('Tags')
-										li.post-preview__tag.i-tags__tag
-											| {Tag}
+						:Tags
 
 			:b('Link')
 				.post
 					.post__content-wrap
-						:b('Date')
-							.post__date
-								| {Month} {DayOfMonth}, {Year}
+						:Date
 						.post__title
 							| {Name}
 						:b('Description')
 							.post__desc
 								| {Description}
-						:b('HasTags')
-								ul.post__tags.i-tags.unstyled.clearfix
-									:b('Tags')
-										li.post-preview__tag.i-tags__tag
-											| {Tag}
+						:Tags
 
 			:b('Chat')
 				.post
 					.post__content-wrap
-						:b('Date')
-							.post__date
-								| {Month} {DayOfMonth}, {Year}
+						:Date
 						:b('Title')
-							.post__title
-								| {Title}
-						:b('HasTags')
-								ul.post__tags.i-tags.unstyled.clearfix
-									:b('Tags')
-										li.post-preview__tag.i-tags__tag
-											| {Tag}
-
+							.post_title: {Title}
+						:Tags
 					.post__images-wrap
 						ul.unstyled
 							:b('Lines')
@@ -126,55 +78,34 @@
 										b: {Label} 
 									| {Line}
 
-
 			:b('Audio')
 				.post
 					.post__content-wrap
-						:b('Date')
-							.post__date
-								| {Month} {DayOfMonth}, {Year}
+						:Date
 						:b('Caption')
-							.post__title
-								| {Caption}
-						:b('HasTags')
-								ul.post__tags.i-tags.unstyled.clearfix
-									:b('Tags')
-										li.post-preview__tag.i-tags__tag
-											| {Tag}
-					.post__images-wrap
-						| {AudioPlayerWhite}
+							.post__title: {Caption}
+						:Tags
+					:b('AudioEmbed')
+						.post__images-wrap
+							| {AudioEmbed-400}
 
 			:b('Video')
 				.post
 					.post__content-wrap
-						:b('Date')
-							.post__date
-								| {Month} {DayOfMonth}, {Year}
+						:Date
 						:b('Caption')
-							a.post-preview__link(href="{Permalink}")
-								.post__title
-									| {Caption}
-						:b('HasTags')
-								ul.post__tags.i-tags.unstyled.clearfix
-									:b('Tags')
-										li.post-preview__tag.i-tags__tag
-											| {Tag}
+							.post__title: {Caption}
+						:Tags
 					.post__images-wrap
-						| {Video-500}
+						| {VideoEmbed-400}
 
 			:b('Answer')
 				.post
 					.post__content-wrap
-						:b('Date')
-							.post__date
-								| {Month} {DayOfMonth}, {Year}
+						:Date
 						.post__desc
 							| {Question}
-						:b('HasTags')
-								ul.post__tags.i-tags.unstyled.clearfix
-									:b('Tags')
-										li.post-preview__tag.i-tags__tag
-											| {Tag}
+						:Tags
 					.post__images-wrap
 						b: {Question}
 						hr

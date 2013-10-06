@@ -6,13 +6,12 @@ header.header.clearfix
 				img(src="{image:Logo}").logo.logo_img
 			:b('ifNotImageLogo')
 				| {Title}
-	if tumblr_markup
-		:b('PermalinkPage')
-			a.logo(href="/", title="{Title}")
-				:b('ifLogoImage')
-					img(src="{image:Logo}").logo.logo_img.logo_size_small
-				:b('ifNotImageLogo')
-					| {Title}
+	:b('PermalinkPage')
+		a.logo(href="/", title="{Title}")
+			:b('ifLogoImage')
+				img(src="{image:Logo}").logo.logo_img.logo_size_small
+			:b('ifNotImageLogo')
+				| {Title}
 
 
 	:b('HasPages')
@@ -20,17 +19,7 @@ header.header.clearfix
 			input#menu-toggler.hidden.menu__toggler-checkbox(type="checkbox")
 			label.menu__toggler(for="menu-toggler")
 			ul.menu__list.unstyled.i-smoothness.clearfix
-				unless tumblr_markup
+				:b('Pages')
 					li.menu__item
-						a.menu__link(href="#") Contact
-					li.menu__item
-						a.menu__link(href="#") Monika
-					li.menu__item
-						a.menu__link(href="#") Twitter
-					li.menu__item
-						a.menu__link(href="#") Search
-				else 
-					:b('Pages')
-						li.menu__item
-							a.menu__link(href="{URL}", title="{Label}")
-								| {Label}
+						a.menu__link(href="{URL}", title="{Label}")
+							| {Label}

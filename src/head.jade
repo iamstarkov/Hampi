@@ -4,21 +4,15 @@ meta(name="viewport", content="width=device-width, initial-scale=1")
 
 title #{head_title}
 
+meta(name="description", content="{MetaDescription}")
 
 //- must be uploaded to tumblr cdn
 //- should be switched in grunt task, by uploading files (if they have been changed),
 //- getting new urls, saving it and then replacing it with str.replace('');
-
-meta(name="image:Logo", content="http://static.tumblr.com/4kzimp0/UMBmtu4pe/logo.png")
 meta(name="image:Logo", content="http://static.tumblr.com/4kzimp0/UMBmtu4pe/logo.png")
 
-unless tumblr_markup
-	:b('Description')
-		meta(name="description", content="{MetaDescription}")
-else
-	meta(name="description", content="{MetaDescription}")
+meta(name="if:Respectfull Footer", content="1")
 
-	meta(name="if:Respectfull Footer", content="1")
 
 link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic,cyrillic-ext')
 
@@ -34,7 +28,7 @@ if mode === 'production'
 if mode === 'development'
 	script(src="http://rawgithub.com/matmuchrapna/Hampi/master/src/js/vendor/modernizr-2.6.2.min.js")
 
-script
+script.
 	photosets = {};
 
 	function pasteFirstImg(postID, imgURL, w, h) {

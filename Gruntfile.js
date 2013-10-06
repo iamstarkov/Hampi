@@ -18,50 +18,26 @@ module.exports = function(grunt) {
 			},
 		},
 		jade: {
-			compile_helpers: {
+			locales: {
 				options: {
 					pretty: true,
 					filters: require('./src/filters.js'),
 					data: function(dest, src) {
 						var options = require('./src/options.json');
-						options.tumblr_markup = true;
 						return options;
 					},
 				},
 				files: [
 					{
 						expand: true,
-						cwd: './src/helpers/',
+						cwd: './src/helpers/locales/',
 						src: '*',
-						dest: './src/tmp/helpers/',
+						dest: './src/tmp/helpers/locales/',
 						ext: '.tumblr'
 					}
 				]
 			},
-			compile_pages: {
-				options: {
-					pretty: true,
-					filters: require('./src/filters.js'),
-					data: function(dest, src) {
-						var options = require('./src/options.json');
-
-						options.tumblr_markup = false;
-
-						return options;
-					},
-				},
-				files: [
-					{
-						expand: true,
-						cwd: './src/pages/',
-						src: '*',
-						dest: './out/',
-						ext: '.html'
-
-					}
-				]
-			},
-			compile_tumblr: {
+			tumblr: {
 				options: {
 					pretty: true,
 					filters: require('./src/filters.js'),
@@ -69,21 +45,21 @@ module.exports = function(grunt) {
 
 						var options = require('./src/options.json');
 						
+						/**
+						 * Including helpers locales
+						 */
 						grunt.file.expand(
 							{filter: 'isFile'},
-							'./src/tmp/helpers/*'
+							'./src/tmp/helpers/locales/*'
 						)
 						.forEach(function(file) {
 							// console.log(file);
 							var name = file
-								.replace('./src/tmp/helpers/', '')
-								.replace('.tumblr', ''),
+									.replace('./src/tmp/helpers/locales/', '')
+									.replace('.tumblr', '');
 								content = grunt.file.read(file);
 							options[name] = content;
 						});
-						
-						options.tumblr_markup = true;
-						
 						return options;
 					},
 				},
@@ -93,7 +69,7 @@ module.exports = function(grunt) {
 			},
 		},
 		watch: {
-			files: [ './src/**' ],
+			files: [ './Gruntfile.js', './src/**' ],
 			tasks: [ 'cssmin', 'jade', 'copy' ]
 		},
 		clean: ['./out/', './src/tmp/'],
@@ -113,6 +89,13 @@ module.exports = function(grunt) {
 		}
 
 	});
+	
+	/*
+	
+	var asd = require('./src/filters.js');
+
+	console.log(asd.Date());
+	 */
 
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -124,9 +107,8 @@ module.exports = function(grunt) {
 	grunt.registerTask('default', [
 		'clean',
 		'cssmin',
-		'jade:compile_helpers',
-		'jade:compile_pages',
-		'jade:compile_tumblr',
+		'jade:locales',
+		'jade:tumblr',
 		'copy'
 		]
 	);

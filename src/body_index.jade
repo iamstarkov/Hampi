@@ -7,27 +7,17 @@
 					.post-preview.post-preview_type_text.post-preview_type_green
 						a.post-preview__link(href="{Permalink}")
 							:b('Title')
-								.post-preview__title
-									| {Title}
-								:b('HasTags')
-									ul.post__tags.i-tags.unstyled.clearfix
-										:b('Tags')
-											li.post-preview__tag.i-tags__tag
-												| {Tag}
+								.post-preview__title: {Title}
+							:Tags
 
 			:b('Photo')
 				.cell(id="post{PostID}", class=post_class)
 					.post-preview.post-preview_type_img
 						a.post-preview__link(href="{Permalink}")
 							img.post-preview__img(alt="", src="{PhotoURL-400}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
-							:b('Caption')
-								.post-preview__title
-									| {Caption}
-							:b('HasTags')
-									ul.post__tags.i-tags.unstyled.clearfix
-										:b('Tags')
-											li.post-preview__tag.i-tags__tag
-												| {Tag}
+							:b(Caption)
+								.post-preview__title: {Caption}
+							:Tags
 
 			:b('Panorama')
 				.cell(id="post{PostID}", class=post_class)
@@ -35,32 +25,20 @@
 						a.post-preview__link(href="{Permalink}")
 							:b('LinkOpenTag')
 								img(src="{PhotoURL-Panorama}", alt="{PhotoAlt}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
-							:b('Caption')
-								.post-preview__title
-									| {Caption}
-							:b('HasTags')
-									ul.post__tags.i-tags.unstyled.clearfix
-										:b('Tags')
-											li.post-preview__tag.i-tags__tag
-												| {Tag}
+							:b(Caption)
+								.post-preview__title: {Caption}
+							:Tags
 
 			:b('Photoset')
 				.cell(id="post{PostID}", class=post_class)
 					.post-preview.post-preview_type_img
 						a.post-preview__link(href="{Permalink}")
 							:b('Photos')
-								script
+								script.
 									pasteFirstImg("{PostId}", "{PhotoURL-400}", "{PhotoWidth-400}", "{PhotoHeight-400}");
-
-									//- img.photoset-images.post-preview__img(alt="", src="{PhotoURL-400}")
-							:b('Caption')
-								.post-preview__title
-									| {Caption}
-							:b('HasTags')
-									ul.post__tags.i-tags.unstyled.clearfix
-										:b('Tags')
-											li.post-preview__tag.i-tags__tag
-												| {Tag}
+							:b(Caption)
+								.post-preview__title: {Caption}
+							:Tags
 
 			:b('Quote')
 				.cell(id="post{PostID}", class=post_class)
@@ -68,11 +46,7 @@
 						a.post-preview__link(href="{Permalink}")
 							.post-preview__desc
 								| {Quote}
-							:b('HasTags')
-									ul.post__tags.i-tags.unstyled.clearfix
-										:b('Tags')
-											li.post-preview__tag.i-tags__tag
-												| {Tag}
+							:Tags
 
 			:b('Link')
 				.cell(id="post{PostID}", class=post_class)
@@ -83,55 +57,34 @@
 							:b('Description')
 								.post-preview__desc
 									| {Description}
-							:b('HasTags')
-									ul.post__tags.i-tags.unstyled.clearfix
-										:b('Tags')
-											li.post-preview__tag.i-tags__tag
-												| {Tag}
+							:Tags
 
 			:b('Chat')
 				.cell(id="post{PostID}", class=post_class)
 					.post-preview.post-preview_type_text.post-preview_type_green
 						a.post-preview__link(href="{Permalink}")
 							:b('Title')
-								.post-preview__title
-									| {Title}
-							:b('HasTags')
-									ul.post__tags.i-tags.unstyled.clearfix
-										:b('Tags')
-											li.post-preview__tag.i-tags__tag
-												| {Tag}
+								.post-preview__title: {Title}
+							:Tags
 
 			:b('Audio')
 				.cell(id="post{PostID}", class=post_class)
 					.post-preview.post-preview_type_text.post-preview_type_green
 						a.post-preview__link(href="{Permalink}")
-							:b('Caption')
-								.post-preview__title
-									| {Caption}
-									| {AudioPlayerWhite}
-							:b('HasTags')
-									ul.post__tags.i-tags.unstyled.clearfix
-										:b('Tags')
-											li.post-preview__tag.i-tags__tag
-												| {Tag}
+							:b('AudioEmbed')
+								| {AudioEmbed-400}
+							:b(Caption)
+								.post-preview__title: {Caption}
+							:Tags
 
 			:b('Video')
 				.cell(id="post{PostID}", class=post_class)
 					.post-preview.post-preview_type_text
 						a.post-preview__link(href="{Permalink}")
 							| {VideoEmbed-400}
-							//- :b('VideoThumbnail')
-								img.post-preview__img(alt="", src="{VideoThumbnailURL}")
-							:b('Caption')
-								a.post-preview__link(href="{Permalink}")
-									.post-preview__title
-										| {Caption}
-							:b('HasTags')
-									ul.post__tags.i-tags.unstyled.clearfix
-										:b('Tags')
-											li.post-preview__tag.i-tags__tag
-												| {Tag}
+							:b(Caption)
+								.post-preview__title: {Caption}
+							:Tags
 
 			:b('Answer')
 				.cell(id="post{PostID}", class=post_class)
@@ -139,8 +92,4 @@
 						a.post-preview__link(href="{Permalink}")
 							.post-preview__desc
 								| {Question}
-							:b('HasTags')
-									ul.post__tags.i-tags.unstyled.clearfix
-										:b('Tags')
-											li.post-preview__tag.i-tags__tag
-												| {Tag}
+							:Tags

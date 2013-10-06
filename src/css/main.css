@@ -247,6 +247,14 @@ body {
 	line-height: 1;
 }
 
+.post-preview__title *,
+.post__title * {
+	display: inline;
+	color: inherit;
+	font: inherit;
+}
+
+
 .post__desc,
 .post__tags {
 	margin-top: 1em;

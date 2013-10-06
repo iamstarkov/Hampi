@@ -9,6 +9,20 @@ meta(name="description", content="{MetaDescription}")
 link(rel="shortcut icon", href="{Favicon}")
 link(rel="apple-touch-icon", href="{PortraitURL-128}")
 
+link(rel="alternate", type="application/rss+xml", href="{RSS}")
+
+// LINK TAGS FOR ACCESSIBILITY
+:b('Pagination')
+	:b('PreviousPage')
+		link(rel="prev", href="{PreviousPage}")
+	:b('NextPage')
+		link(rel="next", href="{NextPage}")
+:b('PermalinkPagination')
+	:b('PreviousPost')
+		link(rel="prev", href="{PreviousPost}")
+	:b('NextPost')
+		link(rel="next", href="{NextPost}")
+
 
 
 //- must be uploaded to tumblr cdn

@@ -32,7 +32,7 @@
 										li.post-preview__tag.i-tags__tag
 											| {Tag}
 					.post__images-wrap
-						img.post-preview__img(alt="", src="{PhotoURL-500}")
+						img.post-preview__img(alt="", src="{PhotoURL-500}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 
 			:b('Panorama')
 				.post
@@ -49,7 +49,7 @@
 											| {Tag}
 					:b('LinkOpenTag')
 						.post__images-wrap
-							img.post__image(src="{PhotoURL-Panorama}", alt="{PhotoAlt}")
+							img.post__image(src="{PhotoURL-Panorama}", alt="{PhotoAlt}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 
 			:b('Photoset')
 				.post
@@ -64,9 +64,9 @@
 									:b('Tags')
 										li.post-preview__tag.i-tags__tag
 											| {Tag}
-					.post__images-wrap
+					.post__images-wrap.is-hidden.i-smoothness
 						:b('Photos')
-							img.post__image(alt="", src="{PhotoURL-500}")
+							img.post__image(alt="", src="{PhotoURL-500}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 
 			:b('Quote')
 				.post

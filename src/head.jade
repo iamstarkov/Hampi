@@ -28,4 +28,17 @@ if mode === 'development'
 if mode === 'production'
 	link(rel='stylesheet', href='./css/style.min.css')
 
-script(src="./js/vendor/modernizr-2.6.2.min.js")
+if mode === 'development'
+	script(src="http://rawgithub.com/matmuchrapna/Hampi/master/src/js/vendor/modernizr-2.6.2.min.js")
+
+script
+	photosets = {};
+
+	function pasteFirstImg(postID, imgURL, w, h) {
+		if (typeof photosets[postID] === 'undefined') {
+			photosets[postID] = true;
+
+			console.log(imgURL);
+			document.write('<img class="post-preview__img" alt="" src="'+imgURL+'" width="'+w+'" height="'+h+'" />');
+		}
+	}

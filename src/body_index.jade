@@ -1,5 +1,5 @@
 :b('IndexPage')
-	.cells-wrap.clearfix
+	.cells-wrap.clearfix.is-hidden.i-smoothness
 		:b('Posts')
 
 			:b('Text')
@@ -19,7 +19,7 @@
 				.cell(id="post{PostID}", class=post_class)
 					.post-preview.post-preview_type_img
 						a.post-preview__link(href="{Permalink}")
-							img.post-preview__img(alt="", src="{PhotoURL-400}")
+							img.post-preview__img(alt="", src="{PhotoURL-400}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 							:b('Caption')
 								.post-preview__title
 									| {Caption}
@@ -34,7 +34,7 @@
 					.post-preview.post-preview_type_img
 						a.post-preview__link(href="{Permalink}")
 							:b('LinkOpenTag')
-								img(src="{PhotoURL-Panorama}", alt="{PhotoAlt}")
+								img(src="{PhotoURL-Panorama}", alt="{PhotoAlt}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 							:b('Caption')
 								.post-preview__title
 									| {Caption}
@@ -49,7 +49,10 @@
 					.post-preview.post-preview_type_img
 						a.post-preview__link(href="{Permalink}")
 							:b('Photos')
-								img.photoset-images.post-preview__img(alt="", src="{PhotoURL-400}")
+								script
+									pasteFirstImg("{PostId}", "{PhotoURL-400}", "{PhotoWidth-400}", "{PhotoHeight-400}");
+
+									//- img.photoset-images.post-preview__img(alt="", src="{PhotoURL-400}")
 							:b('Caption')
 								.post-preview__title
 									| {Caption}
@@ -116,16 +119,19 @@
 			:b('Video')
 				.cell(id="post{PostID}", class=post_class)
 					.post-preview.post-preview_type_text
-						| {Video-400}
-						:b('Caption')
-							a.post-preview__link(href="{Permalink}")
-								.post-preview__title
-									| {Caption}
-						:b('HasTags')
-								ul.post__tags.i-tags.unstyled.clearfix
-									:b('Tags')
-										li.post-preview__tag.i-tags__tag
-											| {Tag}
+						a.post-preview__link(href="{Permalink}")
+							| {VideoEmbed-400}
+							//- :b('VideoThumbnail')
+								img.post-preview__img(alt="", src="{VideoThumbnailURL}")
+							:b('Caption')
+								a.post-preview__link(href="{Permalink}")
+									.post-preview__title
+										| {Caption}
+							:b('HasTags')
+									ul.post__tags.i-tags.unstyled.clearfix
+										:b('Tags')
+											li.post-preview__tag.i-tags__tag
+												| {Tag}
 
 			:b('Answer')
 				.cell(id="post{PostID}", class=post_class)

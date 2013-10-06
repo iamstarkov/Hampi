@@ -10,12 +10,15 @@ title #{head_title}
 //- getting new urls, saving it and then replacing it with str.replace('');
 
 meta(name="image:Logo", content="http://static.tumblr.com/4kzimp0/UMBmtu4pe/logo.png")
+meta(name="image:Logo", content="http://static.tumblr.com/4kzimp0/UMBmtu4pe/logo.png")
 
 unless tumblr_markup
 	:b('Description')
 		meta(name="description", content="{MetaDescription}")
 else
 	meta(name="description", content="{MetaDescription}")
+
+	meta(name="if:Respectfull Footer", content="1")
 
 link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic,cyrillic-ext')
 

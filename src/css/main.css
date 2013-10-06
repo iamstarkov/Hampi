@@ -307,7 +307,8 @@ body {
 		background: #000;
 	}
 	
-	header {
+	.header,
+	.footer {
 		padding: 20px;
 	}
 
@@ -370,7 +371,8 @@ body {
 		background: none;
 	}
 
-	.header {
+	.header,
+	.footer {
 		padding: 40px;
 	}
 	

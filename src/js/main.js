@@ -13,5 +13,6 @@ if ($('.post__images-wrap')[0]) {
 		itemHeightCalculation: 'attribute'
 	});
 }
-/*
-*/
+
+
+$('iframe').prop('width', '100%');

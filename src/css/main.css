@@ -170,6 +170,7 @@ body {
 .post-preview__img {
 	display: block;
 	width: 100%;
+	height: auto;
 }
 
 .post-preview__title {
@@ -311,6 +312,7 @@ body {
 	.post__image {
 		max-width: 100%;
 		margin-bottom: 12px;
+		height: auto;
 	}
 
 }

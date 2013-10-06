@@ -305,8 +305,13 @@ body {
 		padding: 0 20px;
 	}
 	
+
 	.js .is-hidden {
-		visibility: hidden;
+		opacity: 0;
+	}
+	
+	.js .is-hidden[style] {
+		opacity: 1;
 	}
 
 	.post__images-wrap {

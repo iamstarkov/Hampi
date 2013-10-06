@@ -304,15 +304,6 @@ body {
 	.content-wrap {
 		padding: 0 20px;
 	}
-	
-
-	.js .is-hidden {
-		opacity: 0;
-	}
-	
-	.js .is-hidden[style] {
-		opacity: 1;
-	}
 
 	.post__images-wrap {
 		margin-top: 48px;
@@ -324,6 +315,14 @@ body {
 		height: auto;
 	}
 
+}
+
+.js .is-hidden {
+	opacity: 0;
+}
+
+.js .is-hidden[style] {
+	opacity: 1;
 }
 
 @media screen and (min-width: 600px) {

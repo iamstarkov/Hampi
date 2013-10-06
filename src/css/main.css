@@ -312,6 +312,11 @@ body {
 		padding: 20px;
 	}
 
+	.footer {
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+
 	.cells-wrap,
 	.content-wrap {
 		padding: 0 20px;
@@ -374,6 +379,17 @@ body {
 	.header,
 	.footer {
 		padding: 40px;
+	}
+	
+	.footer {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	.footer,
+	.footer * {
+		color: #bbb;
+
 	}
 	
 	.cells-wrap,

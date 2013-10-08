@@ -1,6 +1,21 @@
-mixin block(type, content)
-	{block:#{type}}#{content}{/block:#{type}}
+mixin block(type)
+	| {block:#{type}}
+	block
+	| {/block:#{type}}
+
 
 mixin langs(langs)
 	each lang in langs
-		+block(lang.title, lang.code)
+		+block(lang.title)
+			| #{lang.code}
+
+
+
+//- mixin block(type)
+//- 	| 
+//- 	| {block:#{type}}
+//- 	| 
+//- 	block
+//- 	| 
+//- 	| {/block:#{type}}
+//- 	| 

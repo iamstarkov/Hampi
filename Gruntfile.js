@@ -21,7 +21,6 @@ module.exports = function(grunt) {
 			locales: {
 				options: {
 					pretty: true,
-					filters: require('./src/filters.js'),
 					data: function(dest, src) {
 						var options = require('./src/options.json');
 						return options;
@@ -40,23 +39,13 @@ module.exports = function(grunt) {
 			tumblr: {
 				options: {
 					pretty: true,
-					filters: require('./src/filters.js'),
 					data: function(dest, src) {
 
 						var options = require('./src/options.json');
 						
-						/**
-						 * Including helpers locales
-						 */
-						grunt.file.expand(
-							{filter: 'isFile'},
-							'./src/tmp/helpers/locales/*'
-						)
-						.forEach(function(file) {
-							// console.log(file);
-							var name = file
-									.replace('./src/tmp/helpers/locales/', '')
-									.replace('.tumblr', '');
+						// Including helpers locales
+						grunt.file.expand( {filter: 'isFile'}, './src/tmp/helpers/locales/*') .forEach(function(file) {
+							var name = file.replace('./src/tmp/helpers/locales/', '').replace('.tumblr', '');
 								content = grunt.file.read(file);
 							options[name] = content;
 						});

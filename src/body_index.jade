@@ -1,92 +1,93 @@
-:b('IndexPage')
++block('IndexPage')
 	.cells-wrap.clearfix.is-hidden.i-smoothness
-		:b('Posts')
+		
+		+block('Posts')
 
-			:b('Text')
+			+block('Text')
 				.cell(id="post{PostID}", class=post_class)
 					.post-preview.post-preview_type_text.post-preview_type_green
 						a.post-preview__link(href="{Permalink}")
-							:b('Title')
+							+block('Title')
 								.post-preview__title: {Title}
-							:Tags
+							include helpers/blocks/Tags
 
-			:b('Photo')
+			+block('Photo')
 				.cell(id="post{PostID}", class=post_class)
 					.post-preview.post-preview_type_img
 						a.post-preview__link(href="{Permalink}")
 							img.post-preview__img(alt="", src="{PhotoURL-400}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
-							:b(Caption)
+							+block('Caption')
 								.post-preview__title: {Caption}
-							:Tags
+							include helpers/blocks/Tags
 
-			:b('Panorama')
+			+block('Panorama')
 				.cell(id="post{PostID}", class=post_class)
 					.post-preview.post-preview_type_img
 						a.post-preview__link(href="{Permalink}")
-							:b('LinkOpenTag')
+							+block('LinkOpenTag')
 								img(src="{PhotoURL-Panorama}", alt="{PhotoAlt}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
-							:b(Caption)
+							+block('Caption')
 								.post-preview__title: {Caption}
-							:Tags
+							include helpers/blocks/Tags
 
-			:b('Photoset')
+			+block('Photoset')
 				.cell(id="post{PostID}", class=post_class)
 					.post-preview.post-preview_type_img
 						a.post-preview__link(href="{Permalink}")
-							:b('Photos')
+							+block('Photos')
 								script.
 									pasteFirstImg("{PostId}", "{PhotoURL-400}", "{PhotoWidth-400}", "{PhotoHeight-400}");
-							:b(Caption)
+							+block('Caption')
 								.post-preview__title: {Caption}
-							:Tags
+							include helpers/blocks/Tags
 
-			:b('Quote')
+			+block('Quote')
 				.cell(id="post{PostID}", class=post_class)
 					.post-preview.post-preview_type_text.post-preview_type_green
 						a.post-preview__link(href="{Permalink}")
 							.post-preview__desc
 								| {Quote}
-							:Tags
+							include helpers/blocks/Tags
 
-			:b('Link')
+			+block('Link')
 				.cell(id="post{PostID}", class=post_class)
 					.post-preview.post-preview_type_text.post-preview_type_green
 						a.post-preview__link(href="{URL}")
 							.post-preview__title: {Name}
-							:b('Description')
+							+block('Description')
 								.post-preview__desc
 									| {Description}
-							:Tags
+							include helpers/blocks/Tags
 
-			:b('Chat')
+			+block('Chat')
 				.cell(id="post{PostID}", class=post_class)
 					.post-preview.post-preview_type_text.post-preview_type_green
 						a.post-preview__link(href="{Permalink}")
-							:b('Title')
+							+block('Title')
 								.post-preview__title: {Title}
-							:Tags
+							include helpers/blocks/Tags
 
-			:b('Audio')
+			+block('Audio')
 				.cell(id="post{PostID}", class=post_class)
 					.post-preview.post-preview_type_text
 						div.post-preview__link
-							:b('AudioEmbed')
+							+block('AudioEmbed')
 								| {AudioEmbed-400}
-							:Tags
+							include helpers/blocks/Tags
 
-			:b('Video')
+			+block('Video')
 				.cell(id="post{PostID}", class=post_class)
 					.post-preview.post-preview_type_text
 						a.post-preview__link(href="{Permalink}")
 							| {VideoEmbed-400}
-							:b(Caption)
+							+block('Caption')
 								.post-preview__title: {Caption}
-							:Tags
+							include helpers/blocks/Tags
 
-			:b('Answer')
+			+block('Answer')
 				.cell(id="post{PostID}", class=post_class)
 					.post-preview.post-preview_type_text
 						a.post-preview__link(href="{Permalink}")
 							.post-preview__desc
 								| {Question}
-							:Tags
+							include helpers/blocks/Tags

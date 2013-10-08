@@ -1,25 +1,25 @@
 header.header.clearfix
 
-	:b('IndexPage')
+	+block('IndexPage')
 		h1.logo(title="{Title}")
-			:b('ifLogoImage')
+			+block('ifLogoImage')
 				img(src="{image:Logo}").logo.logo_img
-			:b('ifNotImageLogo')
+			+block('ifNotImageLogo')
 				| {Title}
-	:b('PermalinkPage')
+	+block('PermalinkPage')
 		a.logo(href="/", title="{Title}")
-			:b('ifLogoImage')
+			+block('ifLogoImage')
 				img(src="{image:Logo}").logo.logo_img.logo_size_small
-			:b('ifNotImageLogo')
+			+block('ifNotImageLogo')
 				| {Title}
 
 
-	:b('HasPages')
+	+block('HasPages')
 		.menu__wrap.i-non-select.clearfix
 			input#menu-toggler.hidden.menu__toggler-checkbox(type="checkbox")
 			label.menu__toggler(for="menu-toggler")
 			ul.menu__list.unstyled.i-smoothness.clearfix
-				:b('Pages')
+				+block('Pages')
 					li.menu__item
 						a.menu__link(href="{URL}", title="{Label}")
 							| {Label}

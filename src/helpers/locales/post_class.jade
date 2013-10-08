@@ -1,12 +1,14 @@
+include ../../mixins
+
 | post  
 | post_type_{PostType}  
-:b('PostNotes')
++block('PostNotes')
 	| post_type_hasnotes 
-:b('More')
++block('More')
 	| post_type_hasmore 
-:b('HasTags')
++block('HasTags')
 	| post_type_hastags 
-:b('Date')
++block('Date')
 	| post_date_{AmPm} 
 	| post_date_{ShortDayOfWeek} 
 	| post_date_{ShortMonth} 

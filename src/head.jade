@@ -12,15 +12,16 @@ link(rel="apple-touch-icon", href="{PortraitURL-128}")
 link(rel="alternate", type="application/rss+xml", href="{RSS}")
 
 // LINK TAGS FOR ACCESSIBILITY
-:b('Pagination')
-	:b('PreviousPage')
++block('Pagination')
+	+block('PreviousPage')
 		link(rel="prev", href="{PreviousPage}")
-	:b('NextPage')
+	+block('NextPage')
 		link(rel="next", href="{NextPage}")
-:b('PermalinkPagination')
-	:b('PreviousPost')
+
++block('PermalinkPagination')
+	+block('PreviousPost')
 		link(rel="prev", href="{PreviousPost}")
-	:b('NextPost')
+	+block('NextPost')
 		link(rel="next", href="{NextPost}")
 
 

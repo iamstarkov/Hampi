@@ -1,111 +1,113 @@
-:b('PermalinkPage')
-	.content-wrap.clearfix
-		:b('Posts')
++block('PermalinkPage')
 
-			:b('Text')
+	.content-wrap.clearfix
+
+		+block('Posts')
+
+			+block('Text')
 				.post
 					.post__content-wrap
-						:Date
-						:b('Title')
+						include helpers/blocks/Date
+						+block('Title')
 							.post_title: {Title}
 						.post__desc
 							| {Body}
-						:Tags
+						include helpers/blocks/Tags
 
-			:b('Photo')
+			+block('Photo')
 				.post
 					.post__content-wrap
-						:Date
-						:b('Caption')
+						include helpers/blocks/Date
+						+block('Caption')
 							.post__title: {Caption}
-						:Tags
+						include helpers/blocks/Tags
 					.post__images-wrap
 						img.post-preview__img(alt="", src="{PhotoURL-500}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 
-			:b('Panorama')
+			+block('Panorama')
 				.post
 					.post__content-wrap
-						:Date
-						:b('Caption')
+						include helpers/blocks/Date
+						+block('Caption')
 							.post__title: {Caption}
-						:Tags
-					:b('LinkOpenTag')
+						include helpers/blocks/Tags
+					+block('LinkOpenTag')
 						.post__images-wrap
 							img.post__image(src="{PhotoURL-Panorama}", alt="{PhotoAlt}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 
-			:b('Photoset')
+			+block('Photoset')
 				.post
 					.post__content-wrap
-						:Date
-						:b('Caption')
+						include helpers/blocks/Date
+						+block('Caption')
 							.post__title: {Caption}
-						:Tags
+						include helpers/blocks/Tags
 					.post__images-wrap.is-hidden.i-smoothness
-						:b('Photos')
+						+block('Photos')
 							img.post__image(alt="", src="{PhotoURL-500}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 
-			:b('Quote')
+			+block('Quote')
 				.post
 					.post__content-wrap
-						:Date
+						include helpers/blocks/Date
 						.post__desc
 							| {Quote}
-						:Tags
+						include helpers/blocks/Tags
 
-			:b('Link')
+			+block('Link')
 				.post
 					.post__content-wrap
-						:Date
+						include helpers/blocks/Date
 						.post__title
 							| {Name}
-						:b('Description')
+						+block('Description')
 							.post__desc
 								| {Description}
-						:Tags
+						include helpers/blocks/Tags
 
-			:b('Chat')
+			+block('Chat')
 				.post
 					.post__content-wrap
-						:Date
-						:b('Title')
+						include helpers/blocks/Date
+						+block('Title')
 							.post_title: {Title}
-						:Tags
+						include helpers/blocks/Tags
 					.post__images-wrap
 						ul.unstyled
-							:b('Lines')
+							+block('Lines')
 								li.unstyle
-									:b('Label')
+									+block('Label')
 										b: {Label} 
 									| {Line}
 
-			:b('Audio')
+			+block('Audio')
 				.post
 					.post__content-wrap
-						:Date
-						:b('Caption')
+						include helpers/blocks/Date
+						+block('Caption')
 							.post__title: {Caption}
-						:Tags
-					:b('AudioEmbed')
+						include helpers/blocks/Tags
+					+block('AudioEmbed')
 						.post__images-wrap
 							| {AudioEmbed-400}
 
-			:b('Video')
+			+block('Video')
 				.post
 					.post__content-wrap
-						:Date
-						:b('Caption')
+						include helpers/blocks/Date
+						+block('Caption')
 							.post__title: {Caption}
-						:Tags
+						include helpers/blocks/Tags
 					.post__images-wrap
 						| {VideoEmbed-400}
 
-			:b('Answer')
+			+block('Answer')
 				.post
 					.post__content-wrap
-						:Date
+						include helpers/blocks/Date
 						.post__desc
 							| {Question}
-						:Tags
+						include helpers/blocks/Tags
 					.post__images-wrap
 						b: {Question}
 						hr

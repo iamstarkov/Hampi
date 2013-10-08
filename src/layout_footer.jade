@@ -1,7 +1,9 @@
 footer.footer
-	:if('RespectfullFooter')
+
+	+block('ifRespectfullFooter')
 		//- Excellent [Hampi](http://hampi-theme.tumblr.com/) delivered to you by [Vladimir Starkov](http://vstarkov.com/) and [Evgeny Elovsky](http://iesys.tumblr.com/)
-		:b('English')
+
+		+block('English')
 			//- Excellent Hampi delivered to you by Vladimir Starkov and Evgeny Elovsky
 			| Excellent 
 			a(href="http://hampi-theme.tumblr.com/", title="Hampi")
@@ -13,7 +15,7 @@ footer.footer
 			a(href="http://iesys.tumblr.com/", title="Evgeny Elovsky")
 				| Evgeny Elovsky
 
-		:b('German')
+		+block('German')
 			//- Ausgezeichnet Hampi an Sie geliefert von Vladimir Starkov und Evgeny Elovsky
 			| Ausgezeichnet 
 			a(href="http://hampi-theme.tumblr.com/", title="Hampi")
@@ -25,7 +27,7 @@ footer.footer
 			a(href="http://iesys.tumblr.com/", title="Evgeny Elovsky")
 				| Evgeny Elovsky
 
-		:b('French')
+		+block('French')
 			//- Excellente Hampi livré par Vladimir Starkov et Evgeny Elovsky
 			| Excellente 
 			a(href="http://hampi-theme.tumblr.com/", title="Hampi")
@@ -37,7 +39,7 @@ footer.footer
 			a(href="http://iesys.tumblr.com/", title="Evgeny Elovsky")
 				| Evgeny Elovsky
 
-		:b('Italian')
+		+block('Italian')
 			//- Eccellente Hampi consegnato a voi da Vladimir Starkov e Evgeny Elovsky
 			| Eccellente 
 			a(href="http://hampi-theme.tumblr.com/", title="Hampi")
@@ -49,7 +51,7 @@ footer.footer
 			a(href="http://iesys.tumblr.com/", title="Evgeny Elovsky")
 				| Evgeny Elovsky
 
-		:b('Japanese')
+		+block('Japanese')
 			//- 優秀ハンピStarkovとElovskyによってあなたに配信
 			//- Yūshū hanpi Starkov to Elovsky ni yotte anata ni haishin
 			| 優秀
@@ -62,7 +64,7 @@ footer.footer
 				| Elovsky
 			| によってあなたに配信
 
-		:b('Turkish')
+		+block('Turkish')
 			//- Mükemmel Hampi Vladimir Starkov ve Evgeny Elovsky tarafından size teslim
 			| Mükemmel 
 			a(href="http://hampi-theme.tumblr.com/", title="Hampi")
@@ -75,7 +77,7 @@ footer.footer
 				| Evgeny Elovsky
 			|  tarafından size teslim
 
-		:b('Spanish')
+		+block('Spanish')
 			//- Excelente Hampi entregado a usted por Vladimir Starkov y Evgeny Elovsky
 			| Excelente 
 			a(href="http://hampi-theme.tumblr.com/", title="Hampi")
@@ -87,7 +89,7 @@ footer.footer
 			a(href="http://iesys.tumblr.com/", title="Evgeny Elovsky")
 				| Evgeny Elovsky
 
-		:b('Russian')
+		+block('Russian')
 			//- Отлично Хампи доставлены к вам Владимир Старков и Евгений Elovsky
 			a(href="http://vstarkov.ru/", title="Владимир Старков")
 				| Владимир Старков
@@ -98,7 +100,7 @@ footer.footer
 			a(href="http://hampi-theme.tumblr.com/", title="Хампи")
 				| Хампи
 
-		:b('Polish')
+		+block('Polish')
 			//- Doskonały Hampi dostarczone do Ciebie przez Władimira Starkov i Jewgienija Elovsky
 			| Doskonały 
 			a(href="http://hampi-theme.tumblr.com/", title="Hampi")
@@ -110,7 +112,7 @@ footer.footer
 			a(href="http://iesys.tumblr.com/", title="Jewgienija Elovsky")
 				| Jewgienija Elovsky
 
-		:b('Portuguese')
+		+block('Portuguese')
 			//- Excelente Hampi entregue a você por Vladimir Starkov e Evgeny Elovsky
 			| Excelente 
 			a(href="http://hampi-theme.tumblr.com/", title="Hampi")
@@ -122,7 +124,7 @@ footer.footer
 			a(href="http://iesys.tumblr.com/", title="Evgeny Elovsky")
 				| Evgeny Elovsky
 
-		:b('Dutch')
+		+block('Dutch')
 			//- Uitstekende Hampi aan u geleverd door Vladimir Starkov en Evgeny Elovsky
 			| Uitstekende 
 			a(href="http://hampi-theme.tumblr.com/", title="Hampi")

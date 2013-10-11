@@ -15,9 +15,8 @@ header.header.clearfix
 
 
 	+block('HasPages')
-		.menu__wrap.i-non-select.clearfix
-			input#menu-toggler.hidden.menu__toggler-checkbox(type="checkbox")
-			label.menu__toggler(for="menu-toggler")
+		.menu__wrap.i-non-select.clearfix.imenu
+			div.menu__toggler.imenu__toggler
 			ul.menu__list.unstyled.i-smoothness.clearfix
 				+block('Pages')
 					li.menu__item

@@ -101,48 +101,49 @@ body {
 }
 
 /**
- * imenu_mode_mobile
+ * imenu_state_mobile
  */
 
 
-.imenu_mode_mobile .menu__list,
-.imenu_mode_mobile .menu__toggler {
+.imenu_state_mobile .menu__list,
+.imenu_state_mobile .menu__toggler {
 	display: block;
 }
 
-.imenu_mode_mobile .menu__toggler {
+.imenu_state_mobile .menu__toggler {
 	z-index: 1;
 }
 
 /* States */
-.imenu_mode_mobile-closed .menu__list {
+.imenu_state_mobile-closed .menu__list {
 	height: auto;
 	max-height: 0;
 	opacity: 0;
 }
 
-.imenu_mode_mobile-opened .menu__list {
+.imenu_state_mobile-opened .menu__list {
 	max-height: 1000px;
-	padding-top: 55px;
+	padding-top: 20px;
+	overflow: hidden;
 	opacity: 1;
 }
 /* /States */
 
 
-.imenu_mode_mobile .menu__list {
+.imenu_state_mobile .menu__list {
 	width: 100%;
 }
 
-.imenu_mode_mobile .menu__item + .menu__item {
+.imenu_state_mobile .menu__item + .menu__item {
 	margin-top: 2px;
 }
 
-.imenu_mode_mobile.menu__wrap {
+.imenu_state_mobile.menu__wrap {
 	line-height: 60px;
 	font-size: 16px;
 }
 
-.imenu_mode_mobile .menu__link {
+.imenu_state_mobile .menu__link {
 	display: block;
 	text-align: center;
 	color: #fff;

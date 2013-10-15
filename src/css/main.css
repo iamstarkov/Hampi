@@ -223,13 +223,15 @@ body {
 	margin-bottom: 20px;
 	
 	width: 100%;
-	box-sizing: border-box;
 }
 
 .mosaicflow__column {
 	float: left;
+	box-sizing: border-box;
+	padding: 0 5px;
 }
 
+/*
 .mosaicflow__column .cell {
 	padding: 0 10px;
 }
@@ -240,6 +242,7 @@ body {
 .mosaicflow__column:nth-child(2):last-child .cell {
 	width: 100%;
 }
+*/
 
 
 .post-preview {

@@ -264,7 +264,7 @@ body {
 	position: relative;
 }
 
-.post_type_even .post-preview__link::before {
+.post-preview__link::before {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -273,6 +273,14 @@ body {
 	bottom: 0;
 	display: block;
 	opacity: 0;
+}
+
+.post-preview__link::before,
+.post-preview__link:hover::before {
+    -webkit-transition: all 0.1s ease-in-out; 
+       -moz-transition: all 0.1s ease-in-out; 
+         -o-transition: all 0.1s ease-in-out; 
+            transition: all 0.1s ease-in-out; 
 }
 
 .post_type_odd .post-preview__link:hover::before {

@@ -44,6 +44,7 @@ body {
          -o-transform: scale(0.6);
             transform: scale(0.6);
 }
+
 /**
  * menu
  */
@@ -85,12 +86,10 @@ body {
 }
 
 
-.imenu_state_mobile .menu__link:hover,
-.imenu_state_desktop .menu__link:hover {
-	color: #4d9a66;
+.menu .menu__link:hover {
+	/*color: #4d9a66;*/
+	border-bottom: 2px solid #000;
 }
-/*
-*/
 
 /**
  * imenu default states for preventing flash

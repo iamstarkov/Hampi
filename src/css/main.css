@@ -264,6 +264,7 @@ body {
 	text-decoration: none;
 	display: block;
 	font-family: 'PT Sans', sans-serif;
+	position: relative;
 }
 
 .post-preview_type_green .post-preview__link:link {
@@ -292,6 +293,16 @@ body {
 	font-size: 28px;
 	line-height: 1.2;
 	margin-top: -.3em;
+}
+
+
+.post-preview__link .post-preview__title {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	top: 50%;
+	transform: translate(0, -50%);
 }
 
 .post-preview__desc {

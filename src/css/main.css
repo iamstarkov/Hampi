@@ -300,6 +300,11 @@ body {
 	line-height: 21px;
 	font-weight: 700;
 	margin-bottom: 5px;
+	opacity: 0;
+}
+
+.post-preview__link:hover .post-preview__title {
+	opacity: 1;
 }
 
 .post-preview_type_green .post-preview__title {

@@ -9,7 +9,6 @@
 						a.post-preview__link(href="{Permalink}")
 							+block('Title')
 								.post-preview__title: {Title}
-							include helpers/blocks/Tags
 
 			+block('Photo')
 				.cell(id="post{PostID}", class=post_class)
@@ -18,7 +17,6 @@
 							img.post-preview__img(alt="", src="{PhotoURL-400}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 							+block('Caption')
 								.post-preview__title: {Caption}
-							include helpers/blocks/Tags
 
 			+block('Panorama')
 				.cell(id="post{PostID}", class=post_class)
@@ -28,7 +26,6 @@
 								img(src="{PhotoURL-Panorama}", alt="{PhotoAlt}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 							+block('Caption')
 								.post-preview__title: {Caption}
-							include helpers/blocks/Tags
 
 			+block('Photoset')
 				.cell(id="post{PostID}", class=post_class)
@@ -39,7 +36,6 @@
 									pasteFirstImg("{PostId}", "{PhotoURL-400}", "{PhotoWidth-400}", "{PhotoHeight-400}");
 							+block('Caption')
 								.post-preview__title: {Caption}
-							include helpers/blocks/Tags
 
 			+block('Quote')
 				.cell(id="post{PostID}", class=post_class)
@@ -47,7 +43,6 @@
 						a.post-preview__link(href="{Permalink}")
 							.post-preview__desc
 								| {Quote}
-							include helpers/blocks/Tags
 
 			+block('Link')
 				.cell(id="post{PostID}", class=post_class)
@@ -57,7 +52,6 @@
 							+block('Description')
 								.post-preview__desc
 									| {Description}
-							include helpers/blocks/Tags
 
 			+block('Chat')
 				.cell(id="post{PostID}", class=post_class)
@@ -65,7 +59,6 @@
 						a.post-preview__link(href="{Permalink}")
 							+block('Title')
 								.post-preview__title: {Title}
-							include helpers/blocks/Tags
 
 			+block('Audio')
 				.cell(id="post{PostID}", class=post_class)
@@ -73,7 +66,6 @@
 						div.post-preview__link
 							+block('AudioEmbed')
 								| {AudioEmbed-400}
-							include helpers/blocks/Tags
 
 			+block('Video')
 				.cell(id="post{PostID}", class=post_class)
@@ -82,7 +74,6 @@
 							| {VideoEmbed-400}
 							+block('Caption')
 								.post-preview__title: {Caption}
-							include helpers/blocks/Tags
 
 			+block('Answer')
 				.cell(id="post{PostID}", class=post_class)
@@ -90,4 +81,3 @@
 						a.post-preview__link(href="{Permalink}")
 							.post-preview__desc
 								| {Question}
-							include helpers/blocks/Tags

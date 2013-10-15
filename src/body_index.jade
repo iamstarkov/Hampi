@@ -6,14 +6,14 @@
 			+block('Text')
 				.cell(id="post{PostID}", class=post_class)
 					.post-preview.post-preview_type_text
-						a.post-preview__link(href="{Permalink}")
+						a.post-preview__link.i-smoothness(href="{Permalink}")
 							+block('Title')
 								.post-preview__title: {Title}
 
 			+block('Photo')
 				.cell(id="post{PostID}", class=post_class)
 					.post-preview.post-preview_type_img
-						a.post-preview__link(href="{Permalink}")
+						a.post-preview__link.i-smoothness(href="{Permalink}")
 							img.post-preview__img(alt="", src="{PhotoURL-400}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 							+block('Caption')
 								.post-preview__title: {Caption}
@@ -21,7 +21,7 @@
 			+block('Panorama')
 				.cell(id="post{PostID}", class=post_class)
 					.post-preview.post-preview_type_img
-						a.post-preview__link(href="{Permalink}")
+						a.post-preview__link.i-smoothness(href="{Permalink}")
 							+block('LinkOpenTag')
 								img(src="{PhotoURL-Panorama}", alt="{PhotoAlt}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 							+block('Caption')
@@ -30,7 +30,7 @@
 			+block('Photoset')
 				.cell(id="post{PostID}", class=post_class)
 					.post-preview.post-preview_type_img
-						a.post-preview__link(href="{Permalink}")
+						a.post-preview__link.i-smoothness(href="{Permalink}")
 							+block('Photos')
 								script.
 									pasteFirstImg("{PostId}", "{PhotoURL-400}", "{PhotoWidth-400}", "{PhotoHeight-400}");
@@ -40,14 +40,14 @@
 			+block('Quote')
 				.cell(id="post{PostID}", class=post_class)
 					.post-preview.post-preview_type_text
-						a.post-preview__link(href="{Permalink}")
+						a.post-preview__link.i-smoothness(href="{Permalink}")
 							.post-preview__desc
 								| {Quote}
 
 			+block('Link')
 				.cell(id="post{PostID}", class=post_class)
 					.post-preview.post-preview_type_text
-						a.post-preview__link(href="{URL}")
+						a.post-preview__link.i-smoothness(href="{URL}")
 							.post-preview__title: {Name}
 							+block('Description')
 								.post-preview__desc
@@ -56,7 +56,7 @@
 			+block('Chat')
 				.cell(id="post{PostID}", class=post_class)
 					.post-preview.post-preview_type_text
-						a.post-preview__link(href="{Permalink}")
+						a.post-preview__link.i-smoothness(href="{Permalink}")
 							+block('Title')
 								.post-preview__title: {Title}
 
@@ -70,7 +70,7 @@
 			+block('Video')
 				.cell(id="post{PostID}", class=post_class)
 					.post-preview.post-preview_type_text
-						a.post-preview__link(href="{Permalink}")
+						a.post-preview__link.i-smoothness(href="{Permalink}")
 							| {VideoEmbed-400}
 							+block('Caption')
 								.post-preview__title: {Caption}
@@ -78,6 +78,6 @@
 			+block('Answer')
 				.cell(id="post{PostID}", class=post_class)
 					.post-preview.post-preview_type_text
-						a.post-preview__link(href="{Permalink}")
+						a.post-preview__link.i-smoothness(href="{Permalink}")
 							.post-preview__desc
 								| {Question}

@@ -85,7 +85,8 @@ body {
 }
 
 
-.menu__link:hover {
+.imenu_state_mobile .menu__link:hover,
+.imenu_state_desktop .menu__link:hover {
 	color: #4d9a66;
 }
 /*

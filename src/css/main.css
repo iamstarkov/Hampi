@@ -127,6 +127,7 @@ body {
 	overflow: hidden;
 	opacity: 1;
 }
+
 /* /States */
 
 
@@ -153,41 +154,41 @@ body {
 */
 
 /**
- * imenu_mode_desktop
+ * imenu_state_desktop
  */
 
-.imenu_mode_desktop .menu__toggler {
+.imenu_state_desktop .menu__toggler {
 	display: none;
 }
 
-.imenu_mode_desktop .menu__list {
+.imenu_state_desktop .menu__list {
 	display: block;
 }
 
-.imenu_mode_desktop .menu__list {
+.imenu_state_desktop .menu__list {
 	float: right;
 }
 
-.imenu_mode_desktop .menu__item {
+.imenu_state_desktop .menu__item {
 	float: left;
 }
 
-.imenu_mode_desktop .menu__item + .menu__item {
+.imenu_state_desktop .menu__item + .menu__item {
 	margin-left: 24px;
 	margin-top: 0;
 }
 
-.imenu_mode_desktop .menu__toggler {
+.imenu_state_desktop .menu__toggler {
 	display: none;
 }
 
-.imenu_mode_desktop {
+.imenu_state_desktop {
 	line-height: 35px;
 	font-weight: 700;
 	font-size: 12px;
 }
 
-.imenu_mode_desktop .menu__link {
+.imenu_state_desktop .menu__link {
 	color: #000;
 	background: none;
 }

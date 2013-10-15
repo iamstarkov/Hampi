@@ -285,10 +285,6 @@ body {
 	opacity: 0.95;
 }
 
-.post-preview__link:hover .post-preview__title {
-	text-decoration: underline;
-}
-
 .post-preview__img {
 	display: block;
 	width: 100%;

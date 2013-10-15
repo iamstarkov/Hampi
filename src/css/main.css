@@ -49,7 +49,7 @@ body {
  * menu
  */
 
-.menu__wrap {
+.menu {
 	display: block;
 	font-family: 'PT Sans', sans-serif;
 	text-transform: uppercase;
@@ -142,7 +142,7 @@ body {
 	margin-top: 2px;
 }
 
-.imenu_state_mobile.menu__wrap {
+.menu.imenu_state_mobile {
 	line-height: 60px;
 	font-size: 16px;
 }

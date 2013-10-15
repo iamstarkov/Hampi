@@ -280,7 +280,7 @@ body {
 	opacity: 0.90;
 }
 
-.post_type_even .post-preview__link::hover::before {
+.post_type_even .post-preview__link:hover::before {
 	background: #fff;
 	opacity: 0.95;
 }

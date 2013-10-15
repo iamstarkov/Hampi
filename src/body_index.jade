@@ -8,7 +8,7 @@
 					.post-preview.post-preview_type_text
 						a.post-preview__link.i-smoothness(href="{Permalink}")
 							+block('Title')
-								.post-preview__title: {Title}
+								.post-preview__title.i-smoothness: {Title}
 
 			+block('Photo')
 				.cell(id="post{PostID}", class=post_class)
@@ -16,7 +16,7 @@
 						a.post-preview__link.i-smoothness(href="{Permalink}")
 							img.post-preview__img(alt="", src="{PhotoURL-400}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 							+block('Caption')
-								.post-preview__title: {Caption}
+								.post-preview__title.i-smoothness: {Caption}
 
 			+block('Panorama')
 				.cell(id="post{PostID}", class=post_class)
@@ -25,7 +25,7 @@
 							+block('LinkOpenTag')
 								img(src="{PhotoURL-Panorama}", alt="{PhotoAlt}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 							+block('Caption')
-								.post-preview__title: {Caption}
+								.post-preview__title.i-smoothness: {Caption}
 
 			+block('Photoset')
 				.cell(id="post{PostID}", class=post_class)
@@ -35,7 +35,7 @@
 								script.
 									pasteFirstImg("{PostId}", "{PhotoURL-400}", "{PhotoWidth-400}", "{PhotoHeight-400}");
 							+block('Caption')
-								.post-preview__title: {Caption}
+								.post-preview__title.i-smoothness: {Caption}
 
 			+block('Quote')
 				.cell(id="post{PostID}", class=post_class)
@@ -48,7 +48,7 @@
 				.cell(id="post{PostID}", class=post_class)
 					.post-preview.post-preview_type_text
 						a.post-preview__link.i-smoothness(href="{URL}")
-							.post-preview__title: {Name}
+							.post-preview__title.i-smoothness: {Name}
 							+block('Description')
 								.post-preview__desc
 									| {Description}
@@ -58,7 +58,7 @@
 					.post-preview.post-preview_type_text
 						a.post-preview__link.i-smoothness(href="{Permalink}")
 							+block('Title')
-								.post-preview__title: {Title}
+								.post-preview__title.i-smoothness: {Title}
 
 			+block('Audio')
 				.cell(id="post{PostID}", class=post_class)
@@ -73,7 +73,7 @@
 						a.post-preview__link.i-smoothness(href="{Permalink}")
 							| {VideoEmbed-400}
 							+block('Caption')
-								.post-preview__title: {Caption}
+								.post-preview__title.i-smoothness: {Caption}
 
 			+block('Answer')
 				.cell(id="post{PostID}", class=post_class)

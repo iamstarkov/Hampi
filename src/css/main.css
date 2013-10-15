@@ -255,9 +255,6 @@ body {
 	color: #000;
 }
 
-.post-preview_type_green {
-	color: #fff;
-}
 
 .post-preview__link {
 	color: inherit;
@@ -267,10 +264,25 @@ body {
 	position: relative;
 }
 
-.post-preview_type_green .post-preview__link:link {
-	background: #4d9a66;
-	padding: 38px;
-}	
+.post_type_even .post-preview__link::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	display: block;
+}
+
+.post_type_odd .post-preview__link::before {
+	background: #f5de1c;
+	opacity: 0.90;
+}
+
+.post_type_even .post-preview__link::before {
+	background: #fff;
+	opacity: 0.95;
+}
 
 .post-preview__link:hover .post-preview__title {
 	text-decoration: underline;

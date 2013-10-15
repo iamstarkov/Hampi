@@ -5,7 +5,7 @@
 
 			+block('Text')
 				.cell(id="post{PostID}", class=post_class)
-					.post-preview.post-preview_type_text.post-preview_type_green
+					.post-preview.post-preview_type_text
 						a.post-preview__link(href="{Permalink}")
 							+block('Title')
 								.post-preview__title: {Title}
@@ -39,14 +39,14 @@
 
 			+block('Quote')
 				.cell(id="post{PostID}", class=post_class)
-					.post-preview.post-preview_type_text.post-preview_type_green
+					.post-preview.post-preview_type_text
 						a.post-preview__link(href="{Permalink}")
 							.post-preview__desc
 								| {Quote}
 
 			+block('Link')
 				.cell(id="post{PostID}", class=post_class)
-					.post-preview.post-preview_type_text.post-preview_type_green
+					.post-preview.post-preview_type_text
 						a.post-preview__link(href="{URL}")
 							.post-preview__title: {Name}
 							+block('Description')
@@ -55,7 +55,7 @@
 
 			+block('Chat')
 				.cell(id="post{PostID}", class=post_class)
-					.post-preview.post-preview_type_text.post-preview_type_green
+					.post-preview.post-preview_type_text
 						a.post-preview__link(href="{Permalink}")
 							+block('Title')
 								.post-preview__title: {Title}

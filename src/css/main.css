@@ -86,9 +86,12 @@ body {
 }
 
 
-.menu__wrap .menu__link:hover {
-	/*color: #4d9a66;*/
+.imenu_state_desktop .menu__link:hover {
 	border-bottom: 2px solid #000;
+}
+
+.imenu_state_mobile .menu__link:hover {
+	color: #f5de1c;
 }
 
 /**

@@ -1,6 +1,6 @@
-if ($('.cells-wrap')[0]) {
-	$('.cells-wrap').mosaicflow({
-		itemSelector: '.cell',
+if ($('.content-wrap_type_index')[0]) {
+	$('.content-wrap_type_index').mosaicflow({
+		itemSelector: '.post-preview',
 		minItemWidth: 304,
 		itemHeightCalculation: 'attribute'
 	});

@@ -250,6 +250,7 @@ body {
 
 .post-preview {
 	/*overflow: hidden;*/
+	margin-bottom: 10px;
 }
 
 .post-preview_type_img {

@@ -219,13 +219,14 @@ body {
 
  */
 
-
+/*
 .cell {
 	float: left;
 	margin-bottom: 10px;
 	
 	width: 100%;
 }
+*/
 
 .mosaicflow__column {
 	float: left;
@@ -248,7 +249,7 @@ body {
 
 
 .post-preview {
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 
 .post-preview_type_img {
@@ -428,7 +429,6 @@ body {
 		padding-bottom: 5px;
 	}
 
-	.cells-wrap,
 	.content-wrap {
 		padding: 0 15px;
 	}
@@ -472,7 +472,6 @@ body {
 
 	}
 	
-	.cells-wrap,
 	.content-wrap {
 		padding: 0 35px;
 	}

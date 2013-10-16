@@ -1,26 +1,36 @@
+//- 
+	текстовая рамка
+	| preview-post_visual-state_text
+	наложение
+	| preview-post_visual-state_overlay 
+	ифрейм
+	| preview-post_visual-state_iframe
+
 +block('IndexPage')
 	.content-wrap.content-wrap_type_index.clearfix.is-hidden.i-smoothness
 		
 		+block('Posts')
 
 			+block('Text')
-				//- .cell
-				.post-preview(id="post{PostID}", class=post_class)
+				//- текстовая рамка
+				.post-preview.preview-post_visual-state_text(id="post{PostID}", class=post_class)
 					a.post-preview__link(href="{Permalink}")
 						+block('Title')
 							.post-preview__title: {Title}
 
+
+
 			+block('Photo')
-				//- .cell
-				.post-preview(id="post{PostID}", class=post_class)
+				//- наложение
+				.post-preview.preview-post_visual-state_overlay(id="post{PostID}", class=post_class)
 					a.post-preview__link(href="{Permalink}")
 						img.post-preview__img(alt="", src="{PhotoURL-400}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 						+block('Caption')
 							.post-preview__title: {Caption}
 
 			+block('Photoset')
-				//- .cell
-				.post-preview(id="post{PostID}", class=post_class)
+				//- наложение
+				.post-preview.preview-post_visual-state_overlay(id="post{PostID}", class=post_class)
 					a.post-preview__link(href="{Permalink}")
 						+block('Photos')
 							script.
@@ -29,8 +39,8 @@
 							.post-preview__title: {Caption}
 
 			+block('Panorama')
-				//- .cell
-				.post-preview(id="post{PostID}", class=post_class)
+				//- наложение
+				.post-preview.preview-post_visual-state_overlay(id="post{PostID}", class=post_class)
 					a.post-preview__link(href="{Permalink}")
 						+block('LinkOpenTag')
 							img(src="{PhotoURL-Panorama}", alt="{PhotoAlt}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
@@ -39,15 +49,15 @@
 
 
 			+block('Quote')
-				//- .cell
-				.post-preview(id="post{PostID}", class=post_class)
+				//- текстовая рамка
+				.post-preview.preview-post_visual-state_text(id="post{PostID}", class=post_class)
 					a.post-preview__link(href="{Permalink}")
 						.post-preview__desc
 							| {Quote}
 
 			+block('Link')
-				//- .cell
-				.post-preview(id="post{PostID}", class=post_class)
+				//- текстовая рамка
+				.post-preview.preview-post_visual-state_text(id="post{PostID}", class=post_class)
 					a.post-preview__link(href="{URL}")
 						.post-preview__title: {Name}
 						+block('Description')
@@ -55,30 +65,30 @@
 								| {Description}
 
 			+block('Chat')
-				//- .cell
-				.post-preview(id="post{PostID}", class=post_class)
+				//- текстовая рамка
+				.post-preview.preview-post_visual-state_text(id="post{PostID}", class=post_class)
 					a.post-preview__link(href="{Permalink}")
 						+block('Title')
 							.post-preview__title: {Title}
 
 			+block('Audio')
-				//- .cell
-				.post-preview(id="post{PostID}", class=post_class)
+				//- ифрейм
+				.post-preview.preview-post_visual-state_iframe(id="post{PostID}", class=post_class)
 					div.post-preview__link
 						+block('AudioEmbed')
 							| {AudioEmbed-400}
 
 			+block('Video')
-				//- .cell
-				.post-preview(id="post{PostID}", class=post_class)
+				//- ифрейм
+				.post-preview.preview-post_visual-state_iframe(id="post{PostID}", class=post_class)
 					a.post-preview__link(href="{Permalink}")
 						| {VideoEmbed-400}
 						+block('Caption')
 							.post-preview__title: {Caption}
 
 			+block('Answer')
-				//- .cell
-				.post-preview(id="post{PostID}", class=post_class)
+				//- текстовая рамка
+				.post-preview.preview-post_visual-state_text(id="post{PostID}", class=post_class)
 					a.post-preview__link(href="{Permalink}")
 						.post-preview__desc
 							| {Question}

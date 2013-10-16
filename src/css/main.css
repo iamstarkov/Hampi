@@ -230,10 +230,9 @@ body {
 	margin-bottom: 10px;
 }
 
-.post-preview_type_img {
+.post-preview {
 	color: #000;
 }
-
 
 .post-preview__link {
 	color: inherit;

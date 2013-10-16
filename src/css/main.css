@@ -219,14 +219,6 @@ body {
 
  */
 
-/*
-.cell {
-	float: left;
-	margin-bottom: 10px;
-	
-	width: 100%;
-}
-*/
 
 .mosaicflow__column {
 	float: left;
@@ -234,22 +226,7 @@ body {
 	padding: 0 5px;
 }
 
-/*
-.mosaicflow__column .cell {
-	padding: 0 10px;
-}
-
-.mosaicflow__column:nth-child(2) .cell { padding-left: 0; }
-.mosaicflow__column:last-child .cell { padding-right: 0; }
-
-.mosaicflow__column:nth-child(2):last-child .cell {
-	width: 100%;
-}
-*/
-
-
 .post-preview {
-	/*overflow: hidden;*/
 	margin-bottom: 10px;
 }
 

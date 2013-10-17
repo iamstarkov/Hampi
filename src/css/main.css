@@ -545,7 +545,7 @@ body {
 
 .navigation__link {
 	display: inline-block;
-	padding: 1em;
+	padding: 1em 0;
 	color: #888;
 	font-size: 20px;
 	line-height: 1.2;
@@ -563,6 +563,7 @@ body {
 	text-align: left;
 	float: left;
 	margin-left: -1em;
+	padding-left: 1em;
 }
 
 .navigation__link_type_prev::before {
@@ -573,6 +574,7 @@ body {
 	text-align: right;
 	float: right;
 	margin-right: -1em;
+	padding-right: 1em;
 }
 
 .navigation__link_type_next::after {

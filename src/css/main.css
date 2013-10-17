@@ -258,7 +258,8 @@ body {
 	display: block;
 }
 
-.preview-post_visual-state_text.post_type_odd .post-preview__link:hover,
+.preview-post_visual-state_text .post-preview__link:hover,
+/*.preview-post_visual-state_text.post_type_odd .post-preview__link:hover,*/
 .preview-post_visual-state_overlay.post_type_odd .post-preview__link:hover::before {
 	background: rgba(245, 222, 28, 0.90);
 	/*
@@ -267,7 +268,7 @@ body {
 	*/
 }
 
-.preview-post_visual-state_text.post_type_even .post-preview__link:hover,
+/*.preview-post_visual-state_text.post_type_even .post-preview__link:hover,*/
 .preview-post_visual-state_overlay.post_type_even .post-preview__link:hover::before {
 	background: rgba(255, 255, 255, 0.90);
 	/*

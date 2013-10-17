@@ -256,7 +256,6 @@ body {
 	top: 0;
 	bottom: 0;
 	display: block;
-	opacity: 0;
 }
 
 .preview-post_visual-state_text.post_type_odd .post-preview__link:hover,

@@ -324,7 +324,7 @@ preview-post_visual-state_text {
 	margin-bottom: 2em;
 }
 
-.post_type_quote .post-preview__desc
+.post_type_quote .post-preview__desc,
 .post_type_link .post-preview__desc {
 	margin-bottom: 0;
 }

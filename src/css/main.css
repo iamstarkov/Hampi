@@ -325,9 +325,13 @@ preview-post_visual-state_text {
 }
 
 .post_type_quote .post-preview__desc,
-.post_type_link .post-preview__desc,
-.post_type_link .post-preview__desc blockquote {
+.post_type_link .post-preview__desc {
 	margin-bottom: 0;
+}
+
+.post_type_link .post-preview__desc blockquote,
+.post_type_link .post-preview__desc p {
+	margin: 0;
 }
 
 /*

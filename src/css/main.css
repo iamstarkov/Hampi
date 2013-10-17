@@ -466,13 +466,14 @@ body {
 		text-align: left;
 	}
 	
+	.content-wrap {
+		padding: 0 40px;
+	}
+	
 	.content-wrap_type_index {
 		padding: 0 35px;
 	}
 	
-	.content-wrap {
-		padding: 0 40px;
-	}
 }
 
 @media screen and (min-width: 1000px) {

@@ -290,8 +290,8 @@ body {
 	font-weight: 700;
 }
 
-preview-post_visual-state_text {
-
+.preview-post_visual-state_overlay .post-preview__title {
+	font-weight: 100;
 }
 
 .preview-post_visual-state_overlay .post-preview__title {
@@ -337,22 +337,6 @@ preview-post_visual-state_text {
 .post_type_link .post-preview__desc p {
 	margin: 0;
 }
-
-/*
-.post-preview_type_green .post-preview__desc {
-	margin-top: 95px;
-	font-size: 16px;
-	line-height: 1.2;
-}
-
-.post-preview_type_green .post-preview__desc::before {
-	font-family: 'PT Sans', sans-serif;
-	content: '__';
-	display: block;
-	font-weight: bold;
-	margin-bottom: 0.5em;
-}
-*/
 
 .i-tags__tag {
 	display: inline;

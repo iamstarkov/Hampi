@@ -317,10 +317,16 @@ preview-post_visual-state_text {
 			transform: translate(0, -50%);
 }
 
+
 .post-preview__desc {
 	font-size: 14px;
 	line-height: 21px;
 	margin-bottom: 2em;
+}
+
+.post_type_quote .post-preview__desc,
+.post_type_link .post-preview__desc {
+	margin-bottom: 0;
 }
 
 /*

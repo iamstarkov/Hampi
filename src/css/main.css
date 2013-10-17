@@ -494,12 +494,13 @@ body {
 	}
 
 	.post__images-wrap .mosaicflow__column .post__image {
-		margin-bottom: 8px;
+		/*margin-bottom: 8px;*/
 		width: 100%;
-		box-sizing: border-box;
-		padding: 0 4px;
+		/*padding: 0 4px;*/
+		margin-bottom: 10px;
 	}
-
+	
+	/*
 	.post__images-wrap .mosaicflow__column:nth-child(2n+2) .post__image {
 		padding-left: 0;
 	}
@@ -507,6 +508,7 @@ body {
 	.post__images-wrap .mosaicflow__column:nth-child(2n+1) .post__image {
 		padding-right: 0;
 	}
+	*/
 
 
 }

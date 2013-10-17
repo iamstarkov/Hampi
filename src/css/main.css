@@ -551,7 +551,7 @@ body {
 	line-height: 1.2;
 	font-family: 'PT Sans', sans-serif;
 	text-decoration: none;
-	width: 50%;
+	width: 100%;
 }
 
 .navigation__link:hover {
@@ -562,8 +562,6 @@ body {
 .navigation__link_type_prev {
 	text-align: left;
 	float: left;
-	margin-left: -1em;
-	padding-left: 1em;
 }
 
 .navigation__link_type_prev::before {
@@ -573,10 +571,25 @@ body {
 .navigation__link_type_next {
 	text-align: right;
 	float: right;
-	margin-right: -1em;
-	padding-right: 1em;
 }
 
 .navigation__link_type_next::after {
 	content: ' →';
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+
+	.navigation__link {
+		width: 50%;
+	}
+	
+	.navigation__link_type_prev {
+		margin-left: -1em;
+		padding-left: 1em;
+	}
+
+	.navigation__link_type_next {
+		margin-right: -1em;
+		padding-right: 1em;
+	}
 }

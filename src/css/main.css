@@ -545,7 +545,7 @@ body {
 
 .navigation__link {
 	display: inline-block;
-	padding: 1em 0;
+	padding: 1em;
 	color: #888;
 	font-size: 20px;
 	line-height: 1.2;
@@ -577,19 +577,19 @@ body {
 	content: ' →';
 }
 
-@media screen and (min-width: 0px) and (max-width: 600px) {
+@media screen and (min-width: 600px) {
 
 	.navigation__link {
 		width: 50%;
 	}
-	
+
 	.navigation__link_type_prev {
 		margin-left: -1em;
-		padding-left: 1em;
+		padding-right: 0;
 	}
 
 	.navigation__link_type_next {
 		margin-right: -1em;
-		padding-right: 1em;
+		padding-left: 0;
 	}
 }

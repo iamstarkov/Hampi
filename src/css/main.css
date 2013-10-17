@@ -417,6 +417,12 @@ preview-post_visual-state_text {
 	/*margin-top: 2em;*/
 }
 
+.footer,
+.footer * {
+	color: #bbb;
+
+}
+
 
 @media screen and (min-width: 0px) {
 	
@@ -465,12 +471,6 @@ preview-post_visual-state_text {
 	.footer {
 		padding-top: 20px;
 		padding-bottom: 20px;
-	}
-
-	.footer,
-	.footer * {
-		color: #bbb;
-
 	}
 	
 	.content-wrap {

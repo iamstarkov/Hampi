@@ -542,6 +542,12 @@ body {
 	color: #888;
 	font-size: 20px;
 	line-height: 1.2;
+	font-family: 'PT Sans', sans-serif;
+	text-decoration: none;
+}
+
+.navigation__link:hover {
+	color: #333;
 }
 
 .navigation__link_type_prev {

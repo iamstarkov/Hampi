@@ -1,11 +1,3 @@
-//- 
-	текстовая рамка
-	| preview-post_visual-state_text
-	наложение
-	| preview-post_visual-state_overlay 
-	ифрейм
-	| preview-post_visual-state_iframe
-
 +block('IndexPage')
 	.content-wrap.content-wrap_type_index.clearfix.is-hidden.i-smoothness
 		
@@ -92,3 +84,5 @@
 					a.post-preview__link(href="{Permalink}")
 						.post-preview__desc
 							| {Question}
+
+		include helpers/blocks/pagination

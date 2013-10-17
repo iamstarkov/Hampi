@@ -1,0 +1,19 @@
++block('Pagination')
+	.navigation.navigation_type_pagination.clearfix
+		+block('PreviousPage')
+			a.navigation__link.navigation__link_type_prev(href="{PreviousPage}", rel="prev")
+				| {lang:Previous page}
+		+block('NextPage')
+			a.navigation__link.navigation__link_type_next(href="{NextPage}", rel="next")
+				| {lang:Next page}
+
++block('PermalinkPagination')
+	.navigation.navigation_type_around.clearfix
+		+block('PreviousPost')
+			a.navigation__link.navigation__link_type_prev(href="{PreviousPost}", rel="prev")
+				| {lang:Previous post}
+		+block('NextPost')
+			a.navigation__link.navigation__link_type_next(href="{NextPost}", rel="next")
+				| {lang:Next post}
+//- 
+	←  →

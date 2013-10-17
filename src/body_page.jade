@@ -2,10 +2,13 @@
 
 	.content-wrap.content-wrap_type_page.clearfix
 
+
+
+
 		+block('Posts')
 
 			+block('Text')
-				.post
+				.post.clearfix
 					.post__content-wrap
 						include helpers/blocks/Date
 						+block('Title')
@@ -15,7 +18,7 @@
 						include helpers/blocks/Tags
 
 			+block('Photo')
-				.post
+				.post.clearfix
 					.post__content-wrap
 						include helpers/blocks/Date
 						+block('Caption')
@@ -25,7 +28,7 @@
 						img.post-preview__img(alt="", src="{PhotoURL-500}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 
 			+block('Panorama')
-				.post
+				.post.clearfix
 					.post__content-wrap
 						include helpers/blocks/Date
 						+block('Caption')
@@ -36,7 +39,7 @@
 							img.post__image(src="{PhotoURL-Panorama}", alt="{PhotoAlt}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 
 			+block('Photoset')
-				.post
+				.post.clearfix
 					.post__content-wrap
 						include helpers/blocks/Date
 						+block('Caption')
@@ -47,7 +50,7 @@
 							img.post__image(alt="", src="{PhotoURL-500}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 
 			+block('Quote')
-				.post
+				.post.clearfix
 					.post__content-wrap
 						include helpers/blocks/Date
 						.post__desc
@@ -55,7 +58,7 @@
 						include helpers/blocks/Tags
 
 			+block('Link')
-				.post
+				.post.clearfix
 					.post__content-wrap
 						include helpers/blocks/Date
 						.post__title
@@ -66,7 +69,7 @@
 						include helpers/blocks/Tags
 
 			+block('Chat')
-				.post
+				.post.clearfix
 					.post__content-wrap
 						include helpers/blocks/Date
 						+block('Title')
@@ -81,7 +84,7 @@
 									| {Line}
 
 			+block('Audio')
-				.post
+				.post.clearfix
 					.post__content-wrap
 						include helpers/blocks/Date
 						+block('Caption')
@@ -92,7 +95,7 @@
 							| {AudioEmbed-400}
 
 			+block('Video')
-				.post
+				.post.clearfix
 					.post__content-wrap
 						include helpers/blocks/Date
 						+block('Caption')
@@ -102,7 +105,7 @@
 						| {VideoEmbed-400}
 
 			+block('Answer')
-				.post
+				.post.clearfix
 					.post__content-wrap
 						include helpers/blocks/Date
 						.post__desc
@@ -112,3 +115,5 @@
 						b: {Question}
 						hr
 						| {Answer}
+
+		include helpers/blocks/pagination

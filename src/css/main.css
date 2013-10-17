@@ -529,3 +529,33 @@ body {
 	display: block;
 	width: 100%;
 }
+
+
+.navigation {}
+
+.navigation_type_pagination {}
+.navigation_type_around {}
+
+.navigation__link {
+	display: inline-block;
+	padding: 1em;
+	color: #888;
+	font-size: 2em;
+	line-height: 1.2;
+}
+
+.navigation__link_type_prev {
+	float: left;
+}
+
+.navigation__link_type_prev::before {
+	content: '← ';
+}
+
+.navigation__link_type_next {
+	float: right;
+}
+
+.navigation__link_type_prev::after {
+	content: ' →';
+}

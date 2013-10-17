@@ -552,17 +552,17 @@ body {
 	font-family: 'PT Sans', sans-serif;
 	text-decoration: none;
 	width: 50%;
-	box-sizing: border-box;
 }
 
 .navigation__link:hover {
 	color: #333;
-	background: rgba(0, 0, 0, 0.10);
+	background: rgba(111, 111, 111, 0.03);
 }
 
 .navigation__link_type_prev {
+	text-align: left;
 	float: left;
-	padding-left: 0;
+	margin-left: -1em;
 }
 
 .navigation__link_type_prev::before {
@@ -570,8 +570,9 @@ body {
 }
 
 .navigation__link_type_next {
+	text-align: right;
 	float: right;
-	padding-right: 0;
+	margin-right: -1em;
 }
 
 .navigation__link_type_next::after {

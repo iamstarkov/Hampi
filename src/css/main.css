@@ -562,6 +562,7 @@ body {
 .navigation__link_type_prev {
 	text-align: left;
 	float: left;
+	padding-right: 0;
 }
 
 .navigation__link_type_prev::before {
@@ -571,6 +572,7 @@ body {
 .navigation__link_type_next {
 	text-align: right;
 	float: right;
+	padding-left: 0;
 }
 
 .navigation__link_type_next::after {
@@ -585,11 +587,9 @@ body {
 
 	.navigation__link_type_prev {
 		margin-left: -1em;
-		padding-right: 0;
 	}
 
 	.navigation__link_type_next {
 		margin-right: -1em;
-		padding-left: 0;
 	}
 }

@@ -540,7 +540,7 @@ body {
 	display: inline-block;
 	padding: 1em;
 	color: #888;
-	font-size: 2em;
+	font-size: 20px;
 	line-height: 1.2;
 }
 
@@ -556,6 +556,6 @@ body {
 	float: right;
 }
 
-.navigation__link_type_prev::after {
+.navigation__link_type_next::after {
 	content: ' →';
 }

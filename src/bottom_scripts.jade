@@ -9,3 +9,50 @@ if mode === 'development'
 if mode === 'production'
 	script(src="js/plugins.js")
 	script(src="js/main.js")
+
+script.
+
+	$('iframe').prop('width', '100%');
+	$(window).resize(function() {
+		$('iframe').prop('width', '100%');
+	});
+
+	if ($('.post__images-wrap')[0]) {
+		$('.post__images-wrap').mosaicflow({
+			itemSelector: 'img',
+			minItemWidth: 468,
+			itemHeightCalculation: 'attribute'
+		});
+	}
+
+	if ($('.content-wrap_type_index')[0]) {
+		var mosaicflow_container = $('.content-wrap_type_index').mosaicflow({
+			itemSelector: '.post-preview',
+			minItemWidth: 304,
+			itemHeightCalculation: 'attribute'
+		});
+	}
+
+	$(function() {
+
+		if ($('.content-wrap_type_index')[0]) {
+
+			$('.content-wrap_type_index').infinitescroll({
+				navSelector: '.navigation_type_pagination',
+				nextSelector: '.navigation_type_pagination [rel="next"]',
+				itemSelector: '.post-preview',
+				bufferPx: document.height,
+				binder: $(window),
+				debug: true,
+				prefill: true,
+				appendCallback: function() {
+					console.log('append', arguments);
+				}
+			}, function(items) {
+				console.log(items);
+				items.map(function(item) { $(item).hide(); });
+				items.map(function(item) { mosaicflow_container.mosaicflow('add', $(item).clone().show(); });
+				//- items.map(function(item) { $(item).remove(); });
+			});
+		}
+	});

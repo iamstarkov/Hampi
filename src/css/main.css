@@ -411,11 +411,6 @@ body {
 	margin-right: -5px;
 }
 
-.content-wrap_type_index {
-	margin: 0 -5px;
-}
-
-
 @media screen and (min-width: 0px) {
 	
 	.header,
@@ -602,4 +597,8 @@ body {
 		margin-right: -1em;
 		padding-left: 0;
 	}
+}
+
+.content-wrap_type_index {
+	margin: 0 -5px;
 }

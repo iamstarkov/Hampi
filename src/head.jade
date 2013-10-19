@@ -58,3 +58,17 @@ script.
 			document.write('<img class="post-preview__img" alt="" src="'+imgURL+'" width="'+w+'" height="'+h+'" />');
 		}
 	}
+
+	function buildTextForPhoto(title_selector, desc_selector) {
+		console.log('buildTextForPhoto', arguments);
+		var placeholder = '%MORE%',
+			content = document.querySelector('meta[name=photo_caption]').getAttribute('content');
+
+		content = content.replace(/<!-- more -->/gim, placeholder).replace(/<[^<]+?>/gim, '').split(placeholder);
+
+		var post_title = content[0].trim(),
+			post_desc = content[1].trim();
+
+		document.querySelector(title_selector).innerText = post_title;
+		document.querySelector(desc_selector).innerText = post_desc;
+	}

@@ -7,7 +7,7 @@
 				.post-preview.preview-post_visual-state_text(id="post{PostID}", class=post_class)
 					a.post-preview__link(href="{Permalink}")
 						+block('Title')
-							.post-preview__title: {Title}
+							.post-preview__title: {PlaintextTitle}
 
 
 
@@ -17,7 +17,7 @@
 					a.post-preview__link(href="{Permalink}")
 						img.post-preview__img(alt="", src="{PhotoURL-400}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 						+block('Caption')
-							.post-preview__title: {Caption}
+							.post-preview__title: {PlaintextCaption}
 
 			+block('Photoset')
 				//- наложение
@@ -27,7 +27,7 @@
 							script.
 								pasteFirstImg("{PostId}", "{PhotoURL-400}", "{PhotoWidth-400}", "{PhotoHeight-400}");
 						+block('Caption')
-							.post-preview__title: {Caption}
+							.post-preview__title: {PlaintextCaption}
 
 			+block('Panorama')
 				//- наложение
@@ -36,7 +36,7 @@
 						+block('LinkOpenTag')
 							img(src="{PhotoURL-Panorama}", alt="{PhotoAlt}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 						+block('Caption')
-							.post-preview__title: {Caption}
+							.post-preview__title: {PlaintextCaption}
 
 
 			+block('Quote')
@@ -44,23 +44,23 @@
 				.post-preview.preview-post_visual-state_text(id="post{PostID}", class=post_class)
 					a.post-preview__link(href="{Permalink}")
 						.post-preview__desc
-							| {Quote}
+							| {PlaintextQuote}
 
 			+block('Link')
 				//- текстовая рамка
 				.post-preview.preview-post_visual-state_text(id="post{PostID}", class=post_class)
 					a.post-preview__link(href="{URL}")
-						.post-preview__title: {Name}
+						.post-preview__title: {PlaintextName}
 						+block('Description')
 							.post-preview__desc
-								| {Description}
+								| {PlaintextDescription}
 
 			+block('Chat')
 				//- текстовая рамка
 				.post-preview.preview-post_visual-state_text(id="post{PostID}", class=post_class)
 					a.post-preview__link(href="{Permalink}")
 						+block('Title')
-							.post-preview__title: {Title}
+							.post-preview__title: {PlaintextTitle}
 
 			+block('Audio')
 				//- ифрейм
@@ -75,13 +75,13 @@
 					a.post-preview__link(href="{Permalink}")
 						| {VideoEmbed-400}
 						+block('Caption')
-							.post-preview__title: {Caption}
+							.post-preview__title: {PlaintextCaption}
 
 			+block('Answer')
 				//- текстовая рамка
 				.post-preview.preview-post_visual-state_text(id="post{PostID}", class=post_class)
 					a.post-preview__link(href="{Permalink}")
 						.post-preview__desc
-							| {Question}
+							| {PlaintextQuestion}
 	.content-wrap
 			include helpers/blocks/pagination

@@ -1,7 +1,35 @@
 include ../../mixins
++block('IndexPage')
+	+block('SearchPage')
+		| {lang:Search results for SearchQuery} — 
+	+block('PostSummary')
+		| {PlaintextPostSummary} — 
+	| {Title}
 
-+block('SearchPage')
-	| {lang:Search results for SearchQuery} — 
-+block('PostSummary')
-	| {PostSummary} — 
-| {Title}
++block('PermalinkPage')
+	+block('Posts')
+		+block('Text')
+			+block('Title')
+				| {PlaintextTitle}
+		+block('Photo')
+			+block('Caption')
+				| {PlaintextCaption}
+		+block('Photoset')
+			+block('Caption')
+				| {PlaintextCaption}
+		+block('Panorama')
+			+block('Caption')
+				| {PlaintextCaption}
+		+block('Quote')
+			| {PlaintextQuote}
+		+block('Link')
+			| {PlaintextName}
+		+block('Chat')
+			+block('Title')
+				| {PlaintextTitle}
+		+block('Video')
+			+block('Caption')
+				| {PlaintextCaption}
+		+block('Answer')
+			| {PlaintextQuestion}
+	|  – {Title}

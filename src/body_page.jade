@@ -12,7 +12,7 @@
 					.post__content-wrap
 						include helpers/blocks/Date
 						+block('Title')
-							.post_title: {Title}
+							.post__title: {PlaintextTitle}
 						.post__desc
 							| {Body}
 						include helpers/blocks/Tags
@@ -22,39 +22,44 @@
 					.post__content-wrap
 						include helpers/blocks/Date
 						+block('Caption')
-							.post__title: {Caption}
+							.post__title: {PlaintextCaption}
 						include helpers/blocks/Tags
 					.post__images-wrap
 						img.post-preview__img(alt="", src="{PhotoURL-500}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
+
+			+block('Photoset')
+				.post.clearfix
+					.post__content-wrap
+						include helpers/blocks/Date
+						.post__title
+						.post__desc
+						+block('Caption')
+							meta(name="photo_caption", content='{Caption}')
+							script.
+								buildTextForPhoto('.post__title', '.post__desc');
+						include helpers/blocks/Tags
+					.post__images-wrap.is-hidden.i-smoothness
+						+block('Photos')
+							img.post__image(alt="", src="{PhotoURL-500}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 
 			+block('Panorama')
 				.post.clearfix
 					.post__content-wrap
 						include helpers/blocks/Date
 						+block('Caption')
-							.post__title: {Caption}
+							.post__title: {PlaintextCaption}
 						include helpers/blocks/Tags
 					+block('LinkOpenTag')
 						.post__images-wrap
 							img.post__image(src="{PhotoURL-Panorama}", alt="{PhotoAlt}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 
-			+block('Photoset')
-				.post.clearfix
-					.post__content-wrap
-						include helpers/blocks/Date
-						+block('Caption')
-							.post__title: {Caption}
-						include helpers/blocks/Tags
-					.post__images-wrap.is-hidden.i-smoothness
-						+block('Photos')
-							img.post__image(alt="", src="{PhotoURL-500}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 
 			+block('Quote')
 				.post.clearfix
 					.post__content-wrap
 						include helpers/blocks/Date
 						.post__desc
-							| {Quote}
+							| {PlaintextQuote}
 						include helpers/blocks/Tags
 
 			+block('Link')
@@ -62,10 +67,10 @@
 					.post__content-wrap
 						include helpers/blocks/Date
 						.post__title
-							| {Name}
+							| {PlaintextName}
 						+block('Description')
 							.post__desc
-								| {Description}
+								| {PlaintextDescription}
 						include helpers/blocks/Tags
 
 			+block('Chat')
@@ -73,7 +78,7 @@
 					.post__content-wrap
 						include helpers/blocks/Date
 						+block('Title')
-							.post_title: {Title}
+							.post_title: {PlaintextTitle}
 						include helpers/blocks/Tags
 					.post__images-wrap
 						ul.unstyled
@@ -88,7 +93,7 @@
 					.post__content-wrap
 						include helpers/blocks/Date
 						+block('Caption')
-							.post__title: {Caption}
+							.post__title: {PlaintextCaption}
 						include helpers/blocks/Tags
 					+block('AudioEmbed')
 						.post__images-wrap
@@ -99,7 +104,7 @@
 					.post__content-wrap
 						include helpers/blocks/Date
 						+block('Caption')
-							.post__title: {Caption}
+							.post__title: {PlaintextCaption}
 						include helpers/blocks/Tags
 					.post__images-wrap
 						| {VideoEmbed-400}

@@ -34,7 +34,9 @@ $(function() {
 			nextSelector: '.navigation_type_pagination [rel="next"]',
 
 			// selector for all items you'll retrieve
-			itemSelector: ".post-preview"
+			itemSelector: '.post-preview',
+
+			bufferPx: document.height
 		});
 	}
 });

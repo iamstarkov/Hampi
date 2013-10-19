@@ -136,6 +136,7 @@ body {
 
 .imenu_state_mobile .menu__list {
 	width: 100%;
+	overflow: hidden;
 }
 
 .imenu_state_mobile .menu__item + .menu__item {

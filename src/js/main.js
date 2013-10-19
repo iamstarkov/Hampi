@@ -31,7 +31,7 @@ $(function() {
 			navSelector: '.navigation_type_pagination',
 
 			// selector for the NEXT link (to page 2)
-			nextSelector: '.navigation_type_pagination[rel="next"]',
+			nextSelector: '.navigation_type_pagination [rel="next"]',
 
 			// selector for all items you'll retrieve
 			itemSelector: ".post-preview"

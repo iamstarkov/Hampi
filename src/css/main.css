@@ -411,6 +411,10 @@ body {
 	margin-right: -5px;
 }
 
+.content-wrap_type_index {
+	margin: 0 -5px;
+}
+
 
 @media screen and (min-width: 0px) {
 	
@@ -425,9 +429,6 @@ body {
 		text-align: center;
 	}
 
-	.content-wrap_type_index {
-		padding: 0 15px;
-	}
 	.content-wrap {
 		padding: 0 20px;
 	}
@@ -470,9 +471,6 @@ body {
 		padding: 0 40px;
 	}
 	
-	.content-wrap_type_index {
-		padding: 0 35px;
-	}
 	
 }
 

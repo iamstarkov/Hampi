@@ -1,5 +1,6 @@
 script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
 script(src="http://rawgithub.com/sapegin/jquery.mosaicflow/master/jquery.mosaicflow.min.js")
+
 script(src="http://rawgithub.com/matmuchrapna/jquery.imenu/master/jquery.imenu.min.js")
 script(src="http://rawgithub.com/paulirish/infinite-scroll/master/jquery.infinitescroll.min.js")
 
@@ -9,6 +10,7 @@ if mode === 'development'
 if mode === 'production'
 	script(src="js/plugins.js")
 	script(src="js/main.js")
+
 
 script.
 
@@ -28,8 +30,7 @@ script.
 	if ($('.content-wrap_type_index')[0]) {
 		var mosaicflow_container = $('.content-wrap_type_index').mosaicflow({
 			itemSelector: '.post-preview',
-			minItemWidth: 304,
-			itemHeightCalculation: 'attribute'
+			minItemWidth: 304
 		});
 	}
 
@@ -43,16 +44,13 @@ script.
 				itemSelector: '.post-preview',
 				bufferPx: document.height,
 				binder: $(window),
-				debug: true,
-				prefill: true,
-				appendCallback: function() {
-					console.log('append', arguments);
-				}
+				debug: false,
+				prefill: false,
+				appendCallback: false
 			}, function(items) {
-				console.log(items);
-				items.map(function(item) { $(item).hide(); });
-				items.map(function(item) { mosaicflow_container.mosaicflow('add', $(item).clone().show(); });
-				//- items.map(function(item) { $(item).remove(); });
+				$.each(items, function(index, value) {
+					mosaicflow_container.mosaicflow('add', $(value));
+				});
 			});
 		}
 	});

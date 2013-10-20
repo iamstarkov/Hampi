@@ -34,7 +34,7 @@
 						.post__title
 						.post__desc
 						+block('Caption')
-							meta(name="photo_caption", content='{Caption}')
+							.hidden(content="photo_caption"): {Caption}
 							script.
 								buildTextForPhoto('.post__title', '.post__desc');
 						include helpers/blocks/Tags

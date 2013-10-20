@@ -62,13 +62,17 @@ script.
 	function buildTextForPhoto(title_selector, desc_selector) {
 		console.log('buildTextForPhoto', arguments);
 		var placeholder = '%MORE%',
-			content = document.querySelector('meta[name=photo_caption]').getAttribute('content');
+			container = document.querySelector('[content=photo_caption]'),
+			content = container.innerHTML;
 
-		content = content.replace(/<!-- more -->/gim, placeholder).replace(/<[^<]+?>/gim, '').split(placeholder);
 
-		var post_title = content[0].trim(),
-			post_desc = content[1].trim();
+		container.remove();
+		content = content.replace(/<!-- more -->/gim, placeholder).replace(/<[^<]+?>/gim, '').replace(/&nbsp;/gim, ' ').split(placeholder);
 
-		document.querySelector(title_selector).innerText = post_title;
-		document.querySelector(desc_selector).innerText = post_desc;
+		if (content[0]) {
+			document.querySelector(title_selector).innerText = content[0].trim();
+		};
+		if (content[1]) {
+			document.querySelector(desc_selector).innerText = content[1].trim();
+		}
 	}

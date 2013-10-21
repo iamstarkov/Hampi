@@ -1,5 +1,6 @@
 script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
 script(src="http://rawgithub.com/sapegin/jquery.mosaicflow/master/jquery.mosaicflow.min.js")
+//- script(src="http://rawgithub.com/matmuchrapna/jquery.mosaicflow/issues/11/jquery.mosaicflow.js")
 
 script(src="http://rawgithub.com/matmuchrapna/jquery.imenu/master/jquery.imenu.min.js")
 script(src="http://rawgithub.com/paulirish/infinite-scroll/master/jquery.infinitescroll.min.js")
@@ -26,31 +27,75 @@ script.
 			itemHeightCalculation: 'attribute'
 		});
 	}
-
+	var mosaicflow_container = $('.content-wrap_type_index');
 	if ($('.content-wrap_type_index')[0]) {
-		var mosaicflow_container = $('.content-wrap_type_index').mosaicflow({
+		mosaicflow_container.mosaicflow({
 			itemSelector: '.post-preview',
 			minItemWidth: 304
 		});
 	}
 
 	$(function() {
+		/*
 
+		var selectors = {
+			navigation: '.navigation_type_pagination',
+			next_page_btn: '.navigation_type_pagination [rel="next"]',
+			post_selector: '.post-preview'
+		}
+
+		$(selectors.navigation).hide();
+		$('body').data('loading', false)
+
+		if ($(selectors.next_page_btn).length > 0) {
+			$(window).scroll(function() {
+				if ($(document).height() - $(window).height() - 100 < $(window).scrollTop() && !$('body').data('loading')) {
+					$('body').data('loading', true);
+					$.ajax({
+						url: $(selectors.next_page_btn).attr('href')
+					})
+					.done(function(data) {
+						console.log('near to the bottom');
+						
+						var items = $(data).find(selectors.post_selector);
+						console.log('items', items);
+
+						$.each(items, function(index, value) {
+							mosaicflow_container.mosaicflow('add', $(value));
+						});
+
+						$('body').data('loading', false);
+						
+					});	
+				} else {
+					console.log('far from the bottom OR is loading now');
+				}
+			})
+		}
+		*/
+
+
+		/*
+		*/
 		if ($('.content-wrap_type_index')[0]) {
-
-			$('.content-wrap_type_index').infinitescroll({
+			var infinitescroll_container = $('.content-wrap_type_index').infinitescroll({
 				navSelector: '.navigation_type_pagination',
 				nextSelector: '.navigation_type_pagination [rel="next"]',
 				itemSelector: '.post-preview',
 				bufferPx: document.height,
-				binder: $(window),
-				debug: false,
-				prefill: false,
+				//- binder: $(window),
+				debug: true,
 				appendCallback: false
 			}, function(items) {
 				$.each(items, function(index, value) {
 					mosaicflow_container.mosaicflow('add', $(value));
 				});
 			});
+
+			if( $(window).height() >= $(document).height() ) {
+				console.log('big screen');
+				infinitescroll_container.infinitescroll( 'retrieve' );
+			}
 		}
+
 	});

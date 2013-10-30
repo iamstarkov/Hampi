@@ -603,3 +603,7 @@ body {
 .content-wrap_type_index {
 	margin: 0 -5px;
 }
+
+.content-wrap_type_page + .content-wrap_type_index {
+	margin-top: 10px;
+}

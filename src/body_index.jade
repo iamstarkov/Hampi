@@ -24,8 +24,10 @@
 				.post-preview.preview-post_visual-state_overlay(id="post{PostID}", class=post_class)
 					a.post-preview__link(href="{Permalink}")
 						+block('Photos')
-							script.
-								pasteFirstImg("{PostId}", "{PhotoURL-400}", "{PhotoWidth-400}", "{PhotoHeight-400}");
+							img.post-preview__img(src="{PhotoURL-400}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
+							//- 
+								script.
+									pasteFirstImg("{PostId}", "{PhotoURL-400}", "{PhotoWidth-400}", "{PhotoHeight-400}");
 						+block('Caption')
 							.post-preview__title: {PlaintextCaption}
 

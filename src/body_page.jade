@@ -8,7 +8,7 @@
 		+block('Posts')
 
 			+block('Text')
-				.post.clearfix
+				.post.clearfix(id="post{PostID}", class=post_class)
 					.post__content-wrap
 						include helpers/blocks/Date
 						+block('Title')
@@ -18,7 +18,7 @@
 						include helpers/blocks/Tags
 
 			+block('Photo')
-				.post.clearfix
+				.post.clearfix(id="post{PostID}", class=post_class)
 					.post__content-wrap
 						include helpers/blocks/Date
 						+block('Caption')
@@ -28,7 +28,7 @@
 						img.post-preview__img(alt="", src="{PhotoURL-500}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 
 			+block('Photoset')
-				.post.clearfix
+				.post.clearfix(id="post{PostID}", class=post_class)
 					.post__content-wrap
 						include helpers/blocks/Date
 						.post__title
@@ -43,7 +43,7 @@
 							img.post__image(alt="", src="{PhotoURL-500}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 
 			+block('Panorama')
-				.post.clearfix
+				.post.clearfix(id="post{PostID}", class=post_class)
 					.post__content-wrap
 						include helpers/blocks/Date
 						+block('Caption')
@@ -55,7 +55,7 @@
 
 
 			+block('Quote')
-				.post.clearfix
+				.post.clearfix(id="post{PostID}", class=post_class)
 					.post__content-wrap
 						include helpers/blocks/Date
 						.post__desc
@@ -63,7 +63,7 @@
 						include helpers/blocks/Tags
 
 			+block('Link')
-				.post.clearfix
+				.post.clearfix(id="post{PostID}", class=post_class)
 					.post__content-wrap
 						include helpers/blocks/Date
 						.post__title
@@ -74,7 +74,7 @@
 						include helpers/blocks/Tags
 
 			+block('Chat')
-				.post.clearfix
+				.post.clearfix(id="post{PostID}", class=post_class)
 					.post__content-wrap
 						include helpers/blocks/Date
 						+block('Title')
@@ -89,7 +89,7 @@
 									| {Line}
 
 			+block('Audio')
-				.post.clearfix
+				.post.clearfix(id="post{PostID}", class=post_class)
 					.post__content-wrap
 						include helpers/blocks/Date
 						+block('Caption')
@@ -100,7 +100,7 @@
 							| {AudioEmbed-400}
 
 			+block('Video')
-				.post.clearfix
+				.post.clearfix(id="post{PostID}", class=post_class)
 					.post__content-wrap
 						include helpers/blocks/Date
 						+block('Caption')
@@ -110,7 +110,7 @@
 						| {VideoEmbed-400}
 
 			+block('Answer')
-				.post.clearfix
+				.post.clearfix(id="post{PostID}", class=post_class)
 					.post__content-wrap
 						include helpers/blocks/Date
 						.post__desc

@@ -21,8 +21,12 @@
 				.post.clearfix(id="post{PostID}", class=post_class)
 					.post__content-wrap
 						include helpers/blocks/Date
+						.post__title
+						.post__desc
 						+block('Caption')
-							.post__title: {PlaintextCaption}
+							.hidden(content="photo_caption"): {Caption}
+							script.
+								buildTextForPhoto('.post__title', '.post__desc');
 						include helpers/blocks/Tags
 					.post__images-wrap
 						img.post-preview__img(alt="", src="{PhotoURL-500}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
@@ -46,8 +50,12 @@
 				.post.clearfix(id="post{PostID}", class=post_class)
 					.post__content-wrap
 						include helpers/blocks/Date
+						.post__title
+						.post__desc
 						+block('Caption')
-							.post__title: {PlaintextCaption}
+							.hidden(content="photo_caption"): {Caption}
+							script.
+								buildTextForPhoto('.post__title', '.post__desc');
 						include helpers/blocks/Tags
 					+block('LinkOpenTag')
 						.post__images-wrap
@@ -122,5 +130,7 @@
 						| {Answer}
 	
 	.content-wrap.content-wrap_type_index.clearfix
+		.heading_last_posts
+			| {lang:See more}
 	.content-wrap.content-wrap_type_page
 		include helpers/blocks/pagination

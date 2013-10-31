@@ -607,3 +607,13 @@ body {
 .content-wrap_type_page + .content-wrap_type_index {
 	margin-top: 10px;
 }
+
+
+.heading_last_posts {
+	font-family: 'PT Sans', sans-serif;
+	margin-top: .2em;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 1;
+	margin-bottom: 5px;
+}

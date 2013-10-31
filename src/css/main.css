@@ -280,8 +280,17 @@ body {
 
 .post-preview__img {
 	display: block;
-	width: 100%;
+	width: auto;
 	height: auto;
+	min-width: 100%;
+}
+
+.post-preview__img_type_highres {
+	width: 100%;
+}
+
+.post_type_highres .post-preview__img_type_normal {
+	display: none;
 }
 
 

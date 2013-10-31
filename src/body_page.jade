@@ -28,8 +28,10 @@
 							script.
 								buildTextForPhoto('.post__title', '.post__desc');
 						include helpers/blocks/Tags
-					.post__images-wrap
-						img.post-preview__img(alt="", src="{PhotoURL-500}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
+					.post__images-wrap	
+						+block('HighRes')
+							img.post-preview__img.post-preview__img_type_highres(alt="", src="{PhotoURL-HighRes}", width="{PhotoWidth-HighRes}", height="{PhotoHeight-HighRes}")
+						img.post-preview__img.post-preview__img_type_normal(alt="", src="{PhotoURL-500}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 
 			+block('Photoset')
 				.post.clearfix(id="post{PostID}", class=post_class)

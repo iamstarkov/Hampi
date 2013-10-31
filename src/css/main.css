@@ -282,7 +282,7 @@ body {
 	display: block;
 	width: auto;
 	height: auto;
-	min-width: 100%;
+	max-width: 100%;
 }
 
 .post-preview__img_type_highres {

@@ -278,18 +278,25 @@ body {
 	*/
 }
 
+
 .post-preview__img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.post_type_photo .post-preview__img {
 	display: block;
 	width: auto;
 	height: auto;
 	max-width: 100%;
 }
 
-.post-preview__img_type_highres {
+.post_type_photo .post-preview__img_type_highres {
 	width: 100%;
 }
 
-.post_type_highres .post-preview__img_type_normal {
+.post_type_photo.post_type_highres .post-preview__img_type_normal {
 	display: none;
 }
 

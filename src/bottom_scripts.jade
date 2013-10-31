@@ -31,7 +31,6 @@ script.
 	$('.post-preview__img').not(':first-of-type').remove();
 
 	var mosaicflow_container = $('.content-wrap_type_index');
-	mosaicflow_container.fadeOut(0);
 	$(function() {
 
 		if ($('body.permalink-page .content-wrap_type_index').length !== 0) {
@@ -61,8 +60,7 @@ script.
 					mosaicflow_container.mosaicflow({
 						itemSelector: '.post-preview',
 						minItemWidth: 304
-					})
-					mosaicflow_container.fadeIn();
+					});
 				});
 				
 			});

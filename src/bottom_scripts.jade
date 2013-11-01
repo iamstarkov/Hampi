@@ -1,5 +1,6 @@
 script(src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js")
 script(src="http://rawgithub.com/sapegin/jquery.mosaicflow/master/jquery.mosaicflow.min.js")
+//- script(src="http://rawgithub.com/desandro/imagesloaded/master/imagesloaded.js")
 //- script(src="http://rawgithub.com/matmuchrapna/jquery.mosaicflow/issues/11/jquery.mosaicflow.js")
 
 script(src="http://rawgithub.com/matmuchrapna/jquery.imenu/master/jquery.imenu.min.js")
@@ -24,7 +25,7 @@ script.
 		index: {
 			itemSelector: '.post-preview',
 			minItemWidth: 304
-		}
+		},
 		photoset: {
 			itemSelector: 'img',
 			minItemWidth: 468,
@@ -33,40 +34,46 @@ script.
 	}
 
 	if ($('.post_type_photoset .post__images-wrap').length !== 0) {
-		$('.post_type_photoset .post__images-wrap').mosaicflow(mosaic_options.photosets);
+		//- $('.post_type_photoset .post__images-wrap').fadeOut(0);
+		$('.post_type_photoset .post__images-wrap').mosaicflow(mosaic_options.photoset);
 	}
 
-	$('.post-preview__img').not(':first-of-type').remove();
+	$('.content-wrap_type_index .post-preview__img').not(':first-of-type').remove();
 
-	var mosaicflow_container = $('.content-wrap_type_index');
+	var mosaicflow_container = $('.content-wrap_type_index').fadeOut(0);
 	$(function() {
 
 		if ($('body.permalink-page .content-wrap_type_index').length !== 0) {
 			$.ajax({url:'/'}).done(function(data) {
-
 				
 				var items = $(data).find('.post-preview');
 				items.find('.post-preview__img').not(':first-of-type').remove();
-
-
 				$.each(items, function(index, value) {
 					mosaicflow_container.append($(value));
 				});
-				
+
 				$.ajax({url:'/page/2'}).done(function(data) {
-					
+				
 					var items = $(data).find('.post-preview');
 					items.find('.post-preview__img').not(':first-of-type').remove();
-
 					$.each(items, function(index, value) {
 						mosaicflow_container.append($(value));
 					});
 					
-					$('.post-preview__img').not(':first-of-type').remove();
-					mosaicflow_container.mosaicflow(mosaic_options.index);
+					setTimeout(function() {
+						mosaicflow_container.mosaicflow(mosaic_options.index).fadeIn();
+						$(window).resize();
+					}, 1500);
 				});
 				
 			});
+			
+			/*
+			mosaicflow_container.imagesLoaded(function() {
+				console.log('fin');
+			});
+			*/			
+
 		}
 
 		/*
@@ -89,6 +96,7 @@ script.
 					mosaicflow_container.mosaicflow('add', $(value));
 				});
 			});
+
 
 			/*
 			

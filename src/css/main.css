@@ -424,7 +424,7 @@ body {
 	color: #bbb;
 }
 
-.post__images-wrap {
+.post_type_photoset .post__images-wrap {
 	margin-left: -5px;
 	margin-right: -5px;
 }
@@ -451,7 +451,6 @@ body {
 	}
 
 	.post__image {
-		width: 100%;
 		margin-bottom: 12px;
 		height: auto;
 		display: block;

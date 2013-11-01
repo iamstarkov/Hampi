@@ -30,8 +30,8 @@
 						include helpers/blocks/Tags
 					.post__images-wrap	
 						+block('HighRes')
-							img.post-preview__img.post-preview__img_type_highres(alt="", src="{PhotoURL-HighRes}", width="{PhotoWidth-HighRes}", height="{PhotoHeight-HighRes}")
-						img.post-preview__img.post-preview__img_type_normal(alt="", src="{PhotoURL-500}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
+							img.post__image.post__image_type_highres(alt="", src="{PhotoURL-HighRes}", width="{PhotoWidth-HighRes}", height="{PhotoHeight-HighRes}")
+						img.post__image.post__image_type_normal(alt="", src="{PhotoURL-500}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 
 			+block('Photoset')
 				.post.clearfix(id="post{PostID}", class=post_class)

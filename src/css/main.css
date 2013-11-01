@@ -285,20 +285,21 @@ body {
 	height: auto;
 }
 
-.post_type_photo .post-preview__img {
+.post_type_photo .post__img {
 	display: block;
 	width: auto;
 	height: auto;
 	max-width: 100%;
 }
 
-.post_type_photo .post-preview__img_type_highres {
+.post_type_photo .post__image_type_highres {
 	width: 100%;
 }
 
-.post_type_photo.post_type_highres .post-preview__img_type_normal {
+.post_type_photo.post_type_highres .post__image_type_normal {
 	display: none;
 }
+
 
 
 .post-preview__title {

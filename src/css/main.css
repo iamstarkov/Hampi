@@ -609,7 +609,7 @@ body {
 @media screen and (min-width: 600px) {
 
 	.navigation__link-text {
-		display: block;
+		display: inline;
 	}
 
 }

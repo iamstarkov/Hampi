@@ -227,19 +227,14 @@ body {
 	padding: 0 5px;
 }
 
-.post-preview {
-	margin-bottom: 10px;
-}
 
 .post-preview {
-	color: #000;
-}
-
-.preview-post {
 	font-family: 'PT Sans', sans-serif;
 	text-decoration: none;
 	display: block;
+	color: #000;
 	position: relative;
+	margin-bottom: 10px;
 }
 
 .preview-post_visual-state_text {

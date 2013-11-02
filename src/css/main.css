@@ -253,6 +253,14 @@ body {
 	display: block;
 }
 
+.preview-post_visual-state_text {
+	z-index: 1;
+}
+
+.preview-post_visual-state_text:before {
+	z-index: -1;
+}
+
 .preview-post_visual-state_text:hover:before,
 /*.preview-post_visual-state_text.post_type_odd .post-preview__link:hover,*/
 .preview-post_visual-state_overlay.post_type_odd:hover:before {

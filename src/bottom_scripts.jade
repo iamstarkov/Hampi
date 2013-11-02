@@ -5,7 +5,7 @@ script(src="http://rawgithub.com/sapegin/jquery.mosaicflow/master/jquery.mosaicf
 
 script(src="http://rawgithub.com/matmuchrapna/jquery.imenu/master/jquery.imenu.min.js")
 script(src="http://rawgithub.com/paulirish/infinite-scroll/master/jquery.infinitescroll.min.js")
-script(src="http://rawgithub.com/webcreate/infinite-ajax-scroll/master/dist/jquery-ias.js")
+//- script(src="http://rawgithub.com/webcreate/infinite-ajax-scroll/master/dist/jquery-ias.js")
 
 if mode === 'development'
 	script(src="http://rawgithub.com/matmuchrapna/Hampi/master/src/js/plugins.js")
@@ -154,20 +154,28 @@ script.
 			*/
 
 
+			var postSelector =  '.post-preview';
+			var postsPerPage = $(postSelector).length;
+			console.log('postsPerPage', postsPerPage);
 			var infinitescroll_container = $('.content-wrap_type_index').infinitescroll({
 				navSelector: '.navigation_type_pagination',
 				nextSelector: '.navigation_type_pagination [rel="next"]',
-				itemSelector: '.post-preview',
+				itemSelector: postSelector,
 				extraScrollPx: 500,
-				//- bufferPx: $(document).height(),
-				//- binder: $(window),
-				//- debug: true,
-				//- prefill: true,
+				bufferPx: $(document).height(),
+				binder: $(window),
+				debug: true,
+				prefill: true,
 				appendCallback: false
 			}, function(items) {
-				$.each(items, function(index, value) {
-					mosaicflow_container.mosaicflow('add', $(value));
-				});
+				if (items.length) {
+					$.each(items, function(index, value) {
+						mosaicflow_container.mosaicflow('add', $(value));
+					});
+					if (items.length < postsPerPage) {
+						infinitescroll_container.infinitescroll('pause');
+					}
+				}
 			});
 			/*
 			*/

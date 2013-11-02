@@ -612,6 +612,10 @@ body {
 	display: none;
 }
 
+.js .navigation_type_pagination {
+	display: none;
+}
+
 @media screen and (min-width: 600px) {
 
 	.navigation__link-text {

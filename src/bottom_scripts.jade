@@ -5,6 +5,8 @@ script(src="http://rawgithub.com/sapegin/jquery.mosaicflow/master/jquery.mosaicf
 
 script(src="http://rawgithub.com/matmuchrapna/jquery.imenu/master/jquery.imenu.min.js")
 script(src="http://rawgithub.com/paulirish/infinite-scroll/master/jquery.infinitescroll.min.js")
+//- script(src="http://rawgithub.com/paulirish/infinite-scroll/master/jquery.infinitescroll.js")
+//- script(src="http://rawgithub.com/matmuchrapna/infinite-scroll/master/jquery.infinitescroll.js")
 //- script(src="http://rawgithub.com/webcreate/infinite-ajax-scroll/master/dist/jquery-ias.js")
 
 if mode === 'development'
@@ -173,7 +175,25 @@ script.
 					img: 'http://mtrpl.ru/wp-content/uploads/2012/12/ajax-loader.gif',
 					//- msg: null,
 					msgText: '{lang:Loading}…',
-					speed: 'slow'
+					/*
+					start: function (o) {
+						console.log('o', o);
+						//- console.log('arguments', arguments);
+						//- console.log('this', this);
+						$(o.navSelector).hide();
+						o.loading.msg.appendTo(o.loading.selector)
+							.slideDown(
+								//- o.loading.speed,
+								//- 20000,
+								$.proxy(function(){
+									//- this.beginAjax(o)
+									infinitescroll_container.infinitescroll('begin_ajax', o)
+								}, infinitescroll_container.infinitescroll())
+
+							)
+					},
+					*/
+					speed: 'normal'
 				},
 				navSelector: '.navigation_type_pagination',
 				nextSelector: '.navigation_type_pagination [rel="next"]',
@@ -191,6 +211,7 @@ script.
 					$.each(items, function(index, value) {
 						mosaicflow_container.mosaicflow('add', $(value));
 					});
+
 					if (items.length < postsPerPage) {
 						opts.state.isDone = true;
 

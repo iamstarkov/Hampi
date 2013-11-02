@@ -3,7 +3,7 @@ script(src="http://rawgithub.com/sapegin/jquery.mosaicflow/master/jquery.mosaicf
 //- script(src="http://rawgithub.com/desandro/imagesloaded/master/imagesloaded.js")
 //- script(src="http://rawgithub.com/matmuchrapna/jquery.mosaicflow/issues/11/jquery.mosaicflow.js")
 
-//- script(src="http://rawgithub.com/matmuchrapna/jquery.imenu/master/jquery.imenu.min.js")
+script(src="http://rawgithub.com/matmuchrapna/jquery.imenu/master/jquery.imenu.min.js")
 script(src="http://rawgithub.com/paulirish/infinite-scroll/master/jquery.infinitescroll.min.js")
 //- script(src="http://rawgithub.com/webcreate/infinite-ajax-scroll/master/dist/jquery-ias.js")
 
@@ -159,7 +159,10 @@ script.
 				}
 			});
 			*/
-
+			var $doc = $(document);
+			var $win = $(window);
+			var isBottom = function($win, $doc) { return $doc.scrollTop() === $doc.height() - $win.height(); }
+			var already = false;
 
 			var postSelector =  '.post-preview';
 			var postsPerPage = $(postSelector).length;
@@ -175,19 +178,30 @@ script.
 				navSelector: '.navigation_type_pagination',
 				nextSelector: '.navigation_type_pagination [rel="next"]',
 				itemSelector: postSelector,
+				//- animate: true,
 				//- extraScrollPx: 500,
 				//- bufferPx: $(document).height(),
 				binder: $(window),
 				debug: true,
 				prefill: true,
 				appendCallback: false
-			}, function(items) {
+			}, function(items, opts) {
+				console.log('opts', opts);
 				if (items.length) {
 					$.each(items, function(index, value) {
 						mosaicflow_container.mosaicflow('add', $(value));
 					});
 					if (items.length < postsPerPage) {
-						infinitescroll_container.infinitescroll('pause');
+						opts.state.isDone = true;
+
+						$doc.scroll(function() {
+							if (!already && isBottom($win, $doc)) {
+								console.log('visible');
+								$(opts.loading.msg[0]).text(opts.loading.finishedMsg).slideDown().delay(2000).slideUp();
+								already = true;
+							}
+						});
+						//- infinitescroll_container.infinitescroll('pause');
 					}
 				}
 			});

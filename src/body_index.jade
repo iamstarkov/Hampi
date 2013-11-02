@@ -4,7 +4,7 @@
 
 			+block('Text')
 				//- текстовая рамка
-				a.post-preview.preview-post_visual-state_text(id="post{PostID}", class=post_class, href="{Permalink}")
+				a.post-preview.post_type_text.preview-post_visual-state_text(id="post{PostID}", class=post_class, href="{Permalink}")
 					+block('Title')
 						.post-preview__title: {PlaintextTitle}
 
@@ -12,14 +12,14 @@
 
 			+block('Photo')
 				//- наложение
-				a.post-preview.preview-post_visual-state_overlay(id="post{PostID}", class=post_class, href="{Permalink}")
+				a.post-preview.post_type_photo.preview-post_visual-state_overlay(id="post{PostID}", class=post_class, href="{Permalink}")
 					img.post-preview__img(alt="", src="{PhotoURL-400}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 					+block('Caption')
 						.post-preview__title: {PlaintextCaption}
 
 			+block('Photoset')
 				//- наложение
-				a.post-preview.preview-post_visual-state_overlay(id="post{PostID}", class=post_class, href="{Permalink}")
+				a.post-preview.post_type_photoset.preview-post_visual-state_overlay(id="post{PostID}", class=post_class, href="{Permalink}")
 					+block('Photos')
 						img.post-preview__img(src="{PhotoURL-400}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 						//- 
@@ -30,7 +30,7 @@
 
 			+block('Panorama')
 				//- наложение
-				a.post-preview.preview-post_visual-state_overlay(id="post{PostID}", class=post_class, href="{Permalink}")
+				a.post-preview.post_type_panorama.preview-post_visual-state_overlay(id="post{PostID}", class=post_class, href="{Permalink}")
 					+block('LinkOpenTag')
 						img(src="{PhotoURL-Panorama}", alt="{PhotoAlt}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 					+block('Caption')
@@ -39,13 +39,13 @@
 
 			+block('Quote')
 				//- текстовая рамка
-				a.post-preview.preview-post_visual-state_text(id="post{PostID}", class=post_class, href="{Permalink}")
+				a.post-preview.post_type_quote.preview-post_visual-state_text(id="post{PostID}", class=post_class, href="{Permalink}")
 					.post-preview__desc
 						| {PlaintextQuote}
 
 			+block('Link')
 				//- текстовая рамка
-				a.post-preview.preview-post_visual-state_text(id="post{PostID}", class=post_class, href="{URL}")
+				a.post-preview.post_type_link.preview-post_visual-state_text(id="post{PostID}", class=post_class, href="{URL}")
 					.post-preview__title: {PlaintextName}
 					+block('Description')
 						.post-preview__desc
@@ -53,26 +53,26 @@
 
 			+block('Chat')
 				//- текстовая рамка
-				a.post-preview.preview-post_visual-state_text(id="post{PostID}", class=post_class, href="{Permalink}")
+				a.post-preview.post_type_chat.preview-post_visual-state_text(id="post{PostID}", class=post_class, href="{Permalink}")
 					+block('Title')
 						.post-preview__title: {PlaintextTitle}
 
 			+block('Audio')
 				//- ифрейм
-				.post-preview.preview-post_visual-state_iframe(id="post{PostID}", class=post_class)
+				div.post-preview.post_type_audio.preview-post_visual-state_iframe(id="post{PostID}", class=post_class)
 					+block('AudioEmbed')
 						| {AudioEmbed-400}
 
 			+block('Video')
 				//- ифрейм
-				a.post-preview.preview-post_visual-state_iframe(id="post{PostID}", class=post_class, href="{Permalink}")
+				a.post-preview.post_type_video.preview-post_visual-state_iframe(id="post{PostID}", class=post_class, href="{Permalink}")
 					| {VideoEmbed-400}
 					+block('Caption')
 						.post-preview__title: {PlaintextCaption}
 
 			+block('Answer')
 				//- текстовая рамка
-				a.post-preview.preview-post_visual-state_text(id="post{PostID}", class=post_class, href="{Permalink}")
+				a.post-preview.post_type_answer.preview-post_visual-state_text(id="post{PostID}", class=post_class, href="{Permalink}")
 					.post-preview__desc
 						| {PlaintextQuestion}
 	.content-wrap

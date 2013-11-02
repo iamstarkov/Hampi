@@ -8,7 +8,7 @@
 		+block('Posts')
 
 			+block('Text')
-				.post.clearfix(id="post{PostID}", class=post_class)
+				.post.post_type_text.clearfix(id="post{PostID}", class=post_class)
 					.post__content-wrap
 						include helpers/blocks/Date
 						+block('Title')
@@ -18,7 +18,7 @@
 						include helpers/blocks/Tags
 
 			+block('Photo')
-				.post.clearfix(id="post{PostID}", class=post_class)
+				.post.post_type_photo.clearfix(id="post{PostID}", class=post_class)
 					.post__content-wrap
 						include helpers/blocks/Date
 						.post__title
@@ -34,7 +34,7 @@
 						img.post__image.post__image_type_normal(alt="", src="{PhotoURL-500}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 
 			+block('Photoset')
-				.post.clearfix(id="post{PostID}", class=post_class)
+				.post.post_type_photoset.clearfix(id="post{PostID}", class=post_class)
 					.post__content-wrap
 						include helpers/blocks/Date
 						.post__title
@@ -49,7 +49,7 @@
 							img.post__image(alt="", src="{PhotoURL-500}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 
 			+block('Panorama')
-				.post.clearfix(id="post{PostID}", class=post_class)
+				.post.post_type_panorama.clearfix(id="post{PostID}", class=post_class)
 					.post__content-wrap
 						include helpers/blocks/Date
 						.post__title
@@ -65,7 +65,7 @@
 
 
 			+block('Quote')
-				.post.clearfix(id="post{PostID}", class=post_class)
+				.post.post_type_quote.clearfix(id="post{PostID}", class=post_class)
 					.post__content-wrap
 						include helpers/blocks/Date
 						.post__desc
@@ -73,7 +73,7 @@
 						include helpers/blocks/Tags
 
 			+block('Link')
-				.post.clearfix(id="post{PostID}", class=post_class)
+				.post.post_type_link.clearfix(id="post{PostID}", class=post_class)
 					.post__content-wrap
 						include helpers/blocks/Date
 						.post__title
@@ -84,7 +84,7 @@
 						include helpers/blocks/Tags
 
 			+block('Chat')
-				.post.clearfix(id="post{PostID}", class=post_class)
+				.post.post_type_chat.clearfix(id="post{PostID}", class=post_class)
 					.post__content-wrap
 						include helpers/blocks/Date
 						+block('Title')
@@ -99,7 +99,7 @@
 									| {Line}
 
 			+block('Audio')
-				.post.clearfix(id="post{PostID}", class=post_class)
+				.post.post_type_audio.clearfix(id="post{PostID}", class=post_class)
 					.post__content-wrap
 						include helpers/blocks/Date
 						+block('Caption')
@@ -110,7 +110,7 @@
 							| {AudioEmbed-400}
 
 			+block('Video')
-				.post.clearfix(id="post{PostID}", class=post_class)
+				.post.post_type_video.clearfix(id="post{PostID}", class=post_class)
 					.post__content-wrap
 						include helpers/blocks/Date
 						+block('Caption')
@@ -120,7 +120,7 @@
 						| {VideoEmbed-400}
 
 			+block('Answer')
-				.post.clearfix(id="post{PostID}", class=post_class)
+				.post.post_type_answer.clearfix(id="post{PostID}", class=post_class)
 					.post__content-wrap
 						include helpers/blocks/Date
 						.post__desc

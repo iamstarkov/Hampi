@@ -1,62 +1,10 @@
 include ../../mixins
 
 | post  
-+block('IndexPage')
-    +block('Posts')
-        +block('Text')
-            | post_type_text 
-        +block('Photo')
-            | post_type_photo 
-            +block('HighRes')
-                | post_type_highres 
-        +block('Photoset')
-            | post_type_photoset 
-            +block('HighRes')
-                | post_type_highres 
-        +block('Panorama')
-            | post_type_panorama 
-            +block('HighRes')
-                | post_type_highres 
-        +block('Quote')
-            | post_type_quote 
-        +block('Link')
-            | post_type_link 
-        +block('Chat')
-            | post_type_chat 
-        +block('Audio')
-            | post_type_audio 
-        +block('Video')
-            | post_type_video 
-        +block('Answer')
-            | post_type_answer 
-+block('PermalinkPage')
-    +block('Posts')
-        +block('Text')
-            | post_type_text 
-        +block('Photo')
-            | post_type_photo 
-            +block('HighRes')
-                | post_type_highres 
-        +block('Photoset')
-            | post_type_photoset 
-            +block('HighRes')
-                | post_type_highres 
-        +block('Panorama')
-            | post_type_panorama 
-            +block('HighRes')
-                | post_type_highres 
-        +block('Quote')
-            | post_type_quote 
-        +block('Link')
-            | post_type_link 
-        +block('Chat')
-            | post_type_chat 
-        +block('Audio')
-            | post_type_audio 
-        +block('Video')
-            | post_type_video 
-        +block('Answer')
-            | post_type_answer 
+
++block('HighRes')
+    | post_type_highres 
+
 +block('PostNotes')
     | post_type_hasnotes 
 +block('More')

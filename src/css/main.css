@@ -272,7 +272,7 @@ body {
 	*/
 }
 
-.preview-post_visual-state_text:hover:before:hover,
+.preview-post_visual-state_text:hover:before,
 /*.preview-post_visual-state_text.post_type_odd .post-preview__link:hover,*/
 .mosaicflow__column:nth-child(2n) .post-preview:nth-child(2n+1):hover:before,
 .mosaicflow__column:nth-child(2n+1) .post-preview:nth-child(2n):hover:before {

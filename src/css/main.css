@@ -237,7 +237,6 @@ body {
 
 .preview-post {
 	font-family: 'PT Sans', sans-serif;
-	color: inherit;
 	text-decoration: none;
 	display: block;
 	position: relative;
@@ -249,7 +248,7 @@ body {
 }
 
 
-.preview-post_visual-state_overlay {
+.preview-post_visual-state_overlay:before {
 	content: '';
 	position: absolute;
 	left: 0;

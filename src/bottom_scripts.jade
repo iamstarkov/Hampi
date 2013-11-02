@@ -4,7 +4,7 @@ script(src="http://rawgithub.com/sapegin/jquery.mosaicflow/master/jquery.mosaicf
 //- script(src="http://rawgithub.com/matmuchrapna/jquery.mosaicflow/issues/11/jquery.mosaicflow.js")
 
 script(src="http://rawgithub.com/matmuchrapna/jquery.imenu/master/jquery.imenu.min.js")
-//- script(src="http://rawgithub.com/paulirish/infinite-scroll/master/jquery.infinitescroll.min.js")
+script(src="http://rawgithub.com/paulirish/infinite-scroll/master/jquery.infinitescroll.min.js")
 script(src="http://rawgithub.com/webcreate/infinite-ajax-scroll/master/dist/jquery-ias.js")
 
 if mode === 'development'
@@ -15,11 +15,15 @@ if mode === 'production'
 	script(src="js/main.js")
 
 style
+	.content-wrap_type_index {
+		position: relative;
+	}
+	
 	.asd {
 		display: block;
 		width: 100%;
 		padding: 5px;
-		height: 32px;
+		height: 150px;
 		position: absolute;
 		left: 5px;
 		right: 5px;
@@ -123,10 +127,9 @@ script.
 
 		}
 
-		/*
-		*/
 		if ($('body.index-page .content-wrap_type_index').length !== 0) {
 			mosaicflow_container.mosaicflow(mosaic_options.index).fadeIn();
+			/*
 			jQuery.ias({
 				container : 'body.index-page .content-wrap_type_index',
 				item: '.post-preview',
@@ -148,9 +151,9 @@ script.
 					return false;
 				}
 			});
+			*/
 
 
-			/*
 			var infinitescroll_container = $('.content-wrap_type_index').infinitescroll({
 				navSelector: '.navigation_type_pagination',
 				nextSelector: '.navigation_type_pagination [rel="next"]',
@@ -166,6 +169,7 @@ script.
 					mosaicflow_container.mosaicflow('add', $(value));
 				});
 			});
+			/*
 			*/
 
 

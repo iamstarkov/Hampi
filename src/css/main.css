@@ -233,7 +233,7 @@ body {
 	text-decoration: none;
 	display: block;
 	color: #000;
-	position: relative;
+	position: relative !important;
 	margin-bottom: 10px;
 }
 

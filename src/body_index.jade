@@ -4,86 +4,76 @@
 
 			+block('Text')
 				//- текстовая рамка
-				.post-preview.preview-post_visual-state_text(id="post{PostID}", class=post_class)
-					a.post-preview__link(href="{Permalink}")
-						+block('Title')
-							.post-preview__title: {PlaintextTitle}
+				a.post-preview.preview-post_visual-state_text(id="post{PostID}", class=post_class, href="{Permalink}")
+					+block('Title')
+						.post-preview__title: {PlaintextTitle}
 
 
 
 			+block('Photo')
 				//- наложение
-				.post-preview.preview-post_visual-state_overlay(id="post{PostID}", class=post_class)
-					a.post-preview__link(href="{Permalink}")
-						img.post-preview__img(alt="", src="{PhotoURL-400}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
-						+block('Caption')
-							.post-preview__title: {PlaintextCaption}
+				a.post-preview.preview-post_visual-state_overlay(id="post{PostID}", class=post_class, href="{Permalink}")
+					img.post-preview__img(alt="", src="{PhotoURL-400}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
+					+block('Caption')
+						.post-preview__title: {PlaintextCaption}
 
 			+block('Photoset')
 				//- наложение
-				.post-preview.preview-post_visual-state_overlay(id="post{PostID}", class=post_class)
-					a.post-preview__link(href="{Permalink}")
-						+block('Photos')
-							img.post-preview__img(src="{PhotoURL-400}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
-							//- 
-								script.
-									pasteFirstImg("{PostId}", "{PhotoURL-400}", "{PhotoWidth-400}", "{PhotoHeight-400}");
-						+block('Caption')
-							.post-preview__title: {PlaintextCaption}
+				a.post-preview.preview-post_visual-state_overlay(id="post{PostID}", class=post_class, href="{Permalink}")
+					+block('Photos')
+						img.post-preview__img(src="{PhotoURL-400}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
+						//- 
+							script.
+								pasteFirstImg("{PostId}", "{PhotoURL-400}", "{PhotoWidth-400}", "{PhotoHeight-400}");
+					+block('Caption')
+						.post-preview__title: {PlaintextCaption}
 
 			+block('Panorama')
 				//- наложение
-				.post-preview.preview-post_visual-state_overlay(id="post{PostID}", class=post_class)
-					a.post-preview__link(href="{Permalink}")
-						+block('LinkOpenTag')
-							img(src="{PhotoURL-Panorama}", alt="{PhotoAlt}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
-						+block('Caption')
-							.post-preview__title: {PlaintextCaption}
+				a.post-preview.preview-post_visual-state_overlay(id="post{PostID}", class=post_class, href="{Permalink}")
+					+block('LinkOpenTag')
+						img(src="{PhotoURL-Panorama}", alt="{PhotoAlt}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
+					+block('Caption')
+						.post-preview__title: {PlaintextCaption}
 
 
 			+block('Quote')
 				//- текстовая рамка
-				.post-preview.preview-post_visual-state_text(id="post{PostID}", class=post_class)
-					a.post-preview__link(href="{Permalink}")
-						.post-preview__desc
-							| {PlaintextQuote}
+				a.post-preview.preview-post_visual-state_text(id="post{PostID}", class=post_class, href="{Permalink}")
+					.post-preview__desc
+						| {PlaintextQuote}
 
 			+block('Link')
 				//- текстовая рамка
-				.post-preview.preview-post_visual-state_text(id="post{PostID}", class=post_class)
-					a.post-preview__link(href="{URL}")
-						.post-preview__title: {PlaintextName}
-						+block('Description')
-							.post-preview__desc
-								| {PlaintextDescription}
+				a.post-preview.preview-post_visual-state_text(id="post{PostID}", class=post_class, href="{URL}")
+					.post-preview__title: {PlaintextName}
+					+block('Description')
+						.post-preview__desc
+							| {PlaintextDescription}
 
 			+block('Chat')
 				//- текстовая рамка
-				.post-preview.preview-post_visual-state_text(id="post{PostID}", class=post_class)
-					a.post-preview__link(href="{Permalink}")
-						+block('Title')
-							.post-preview__title: {PlaintextTitle}
+				a.post-preview.preview-post_visual-state_text(id="post{PostID}", class=post_class, href="{Permalink}")
+					+block('Title')
+						.post-preview__title: {PlaintextTitle}
 
 			+block('Audio')
 				//- ифрейм
 				.post-preview.preview-post_visual-state_iframe(id="post{PostID}", class=post_class)
-					div.post-preview__link
-						+block('AudioEmbed')
-							| {AudioEmbed-400}
+					+block('AudioEmbed')
+						| {AudioEmbed-400}
 
 			+block('Video')
 				//- ифрейм
-				.post-preview.preview-post_visual-state_iframe(id="post{PostID}", class=post_class)
-					a.post-preview__link(href="{Permalink}")
-						| {VideoEmbed-400}
-						+block('Caption')
-							.post-preview__title: {PlaintextCaption}
+				a.post-preview.preview-post_visual-state_iframe(id="post{PostID}", class=post_class, href="{Permalink}")
+					| {VideoEmbed-400}
+					+block('Caption')
+						.post-preview__title: {PlaintextCaption}
 
 			+block('Answer')
 				//- текстовая рамка
-				.post-preview.preview-post_visual-state_text(id="post{PostID}", class=post_class)
-					a.post-preview__link(href="{Permalink}")
-						.post-preview__desc
-							| {PlaintextQuestion}
+				a.post-preview.preview-post_visual-state_text(id="post{PostID}", class=post_class, href="{Permalink}")
+					.post-preview__desc
+						| {PlaintextQuestion}
 	.content-wrap
 			include helpers/blocks/pagination

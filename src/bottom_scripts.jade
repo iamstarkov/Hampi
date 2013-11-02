@@ -4,7 +4,8 @@ script(src="http://rawgithub.com/sapegin/jquery.mosaicflow/master/jquery.mosaicf
 //- script(src="http://rawgithub.com/matmuchrapna/jquery.mosaicflow/issues/11/jquery.mosaicflow.js")
 
 script(src="http://rawgithub.com/matmuchrapna/jquery.imenu/master/jquery.imenu.min.js")
-script(src="http://rawgithub.com/paulirish/infinite-scroll/master/jquery.infinitescroll.min.js")
+//- script(src="http://rawgithub.com/paulirish/infinite-scroll/master/jquery.infinitescroll.min.js")
+script(src="http://rawgithub.com/webcreate/infinite-ajax-scroll/master/dist/jquery-ias.js")
 
 if mode === 'development'
 	script(src="http://rawgithub.com/matmuchrapna/Hampi/master/src/js/plugins.js")
@@ -13,8 +14,48 @@ if mode === 'production'
 	script(src="js/plugins.js")
 	script(src="js/main.js")
 
+style
+	.asd {
+		display: block;
+		width: 100%;
+		padding: 5px;
+		background: red url('http://mtrpl.ru/wp-content/uploads/2012/12/ajax-loader.gif') 50% 50% no-repeat;
+	}
+
 
 script.
+	
+	/*
+	function getPostsByPageId(pageId, cb) {
+
+		$.ajax({url: (pageId === 1) ? '/' : '/page/'+pageId}).done(function(data) {
+			
+			var items = $(data).find('.post-preview');
+			items.find('.post-preview__img').not(':first-of-type').remove();
+			$.each(items, function(index, value) {
+				mosaicflow_container.append($(value));
+			});
+
+			cb && cb(items);			
+		});
+
+	}
+
+	var pages = [1, 2, 3, 4];
+
+	$.when($.get('/'), $.get('/page/2'), $.get('/page/3'), $.get('/page/4'), $.get('/page/5')).then(function(res, err) {
+		console.log(arguments);
+		//- res[0];
+		//- res[1];
+	}).alway()
+
+
+
+	function getPosts(startPage, pageNumber, cb) {
+
+
+	}
+	*/
 
 	$('iframe').prop('width', '100%');
 	$(window).resize(function() {
@@ -40,7 +81,8 @@ script.
 
 	$('.content-wrap_type_index .post-preview__img').not(':first-of-type').remove();
 
-	var mosaicflow_container = $('.content-wrap_type_index').fadeOut(0);
+	var mosaicflow_container = $('.content-wrap_type_index');
+	$('.content-wrap_type_index').fadeOut(0);
 	$(function() {
 
 		if ($('body.permalink-page .content-wrap_type_index').length !== 0) {
@@ -61,9 +103,9 @@ script.
 					});
 					
 					setTimeout(function() {
-						mosaicflow_container.mosaicflow(mosaic_options.index).fadeIn();
+						mosaicflow_container.mosaicflow(mosaic_options.index).fadeIn().slideDown();
 						$(window).resize();
-					}, 1500);
+					}, 500);
 				});
 				
 			});
@@ -80,7 +122,30 @@ script.
 		*/
 		if ($('body.index-page .content-wrap_type_index').length !== 0) {
 			mosaicflow_container.mosaicflow(mosaic_options.index).fadeIn();
+			jQuery.ias({
+				container : 'body.index-page .content-wrap_type_index',
+				item: '.post-preview',
+				pagination: '.navigation_type_pagination',
+				next: '.navigation_type_pagination [rel="next"]',
+				loader: '<div class="asd  clearfix"> </div>',
+				//- loaderDelay: 0,
+				//- thresholdMargin: 500,
+				//- bottomBuffer: 500,
+				//- triggerInitialLoad: true,
+				//- triggerPageThreshold: 5,
+				//- trigger: 'Load more items',
+				onLoadItems: function(items) {
+					console.log(items);
+					console.log('We loaded ' + items.length + ' items');
+					$.each(items, function(index, value) {
+						mosaicflow_container.mosaicflow('add', $(value));
+					});
+					return false;
+				}
+			});
 
+
+			/*
 			var infinitescroll_container = $('.content-wrap_type_index').infinitescroll({
 				navSelector: '.navigation_type_pagination',
 				nextSelector: '.navigation_type_pagination [rel="next"]',
@@ -96,6 +161,7 @@ script.
 					mosaicflow_container.mosaicflow('add', $(value));
 				});
 			});
+			*/
 
 
 			/*

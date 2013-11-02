@@ -235,21 +235,21 @@ body {
 	color: #000;
 }
 
-.preview-post_visual-state_text .post-preview__link {
+.preview-post {
+	font-family: 'PT Sans', sans-serif;
+	color: inherit;
+	text-decoration: none;
+	display: block;
+	position: relative;
+}
+
+.preview-post_visual-state_text {
 	display: block;
 	padding: 30px 35px;
 }
 
 
-.post-preview__link {
-	color: inherit;
-	text-decoration: none;
-	display: block;
-	font-family: 'PT Sans', sans-serif;
-	position: relative;
-}
-
-.preview-post_visual-state_overlay .post-preview__link::before {
+.preview-post_visual-state_overlay {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -259,9 +259,9 @@ body {
 	display: block;
 }
 
-.preview-post_visual-state_text .post-preview__link:hover,
+.preview-post_visual-state_text,
 /*.preview-post_visual-state_text.post_type_odd .post-preview__link:hover,*/
-.preview-post_visual-state_overlay.post_type_odd .post-preview__link:hover::before {
+.preview-post_visual-state_overlay.post_type_odd:hover:before {
 	background: rgba(245, 222, 28, 0.90);
 	/*
 	background: #f5de1c;
@@ -270,7 +270,7 @@ body {
 }
 
 /*.preview-post_visual-state_text.post_type_even .post-preview__link:hover,*/
-.preview-post_visual-state_overlay.post_type_even .post-preview__link:hover::before {
+.preview-post_visual-state_overlay.post_type_even:hover::before {
 	background: rgba(255, 255, 255, 0.90);
 	/*
 	background: #fff;

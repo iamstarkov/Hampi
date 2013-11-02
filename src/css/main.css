@@ -243,7 +243,7 @@ body {
 }
 
 
-.preview-post_visual-state_overlay:before {
+.post-preview:before {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -253,7 +253,7 @@ body {
 	display: block;
 }
 
-.preview-post_visual-state_text,
+.preview-post_visual-state_text:before:hover,
 /*.preview-post_visual-state_text.post_type_odd .post-preview__link:hover,*/
 .preview-post_visual-state_overlay.post_type_odd:hover:before {
 	background: rgba(245, 222, 28, 0.90);

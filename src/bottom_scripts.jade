@@ -46,7 +46,7 @@ script.
 	var mosaic_options = {
 		index: {
 			itemSelector: '.post-preview',
-			minItemWidth: 450
+			minItemWidth: ($(window).width() < 1600) ? 341 : 450
 		},
 		photoset: {
 			itemSelector: 'img',
@@ -54,6 +54,7 @@ script.
 			itemHeightCalculation: 'attribute'
 		}
 	}
+
 
 	if ($('.post_type_photoset .post__images-wrap').length !== 0) {
 		//- $('.post_type_photoset .post__images-wrap').fadeOut(0);

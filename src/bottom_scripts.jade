@@ -46,7 +46,7 @@ script.
 	var mosaic_options = {
 		index: {
 			itemSelector: '.post-preview',
-			minItemWidth: 304
+			minItemWidth: 450
 		},
 		photoset: {
 			itemSelector: 'img',
@@ -64,7 +64,7 @@ script.
 
 	var mosaicflow_container = $('.content-wrap_type_index');
 	$('.content-wrap_type_index').fadeOut(0);
-	
+
 	$(function() {
 		if ($('body.permalink-page .content-wrap_type_index').length !== 0) {
 			$.ajax({url:'/'}).done(function(data) {
@@ -77,8 +77,8 @@ script.
 
 				//- $(window).resize();
 				mosaicflow_container.mosaicflow(mosaic_options.index);
-				mosaicflow_container.fadeIn();
 				mosaicflow_container.slideDown();
+				mosaicflow_container.fadeIn();
 				/*
 				setTimeout(function() {
 				}, 500);
@@ -96,6 +96,7 @@ script.
 			var postSelector =  '.post-preview';
 			var postsPerPage = $(postSelector).length;
 			console.log('postsPerPage', postsPerPage);
+
 			var infinitescroll_container = $('.content-wrap_type_index').infinitescroll({
 				loading: {
 					finishedMsg: '{lang:No more posts}',
@@ -106,16 +107,22 @@ script.
 				navSelector: '.navigation_type_pagination',
 				nextSelector: '.navigation_type_pagination [rel="next"]',
 				itemSelector: postSelector,
+				extraScrollPx: 1500,
+				bufferPx: 1500,
 				binder: $(window),
 				debug: true,
 				prefill: true,
 				appendCallback: false
 			}, function(items, opts) {
 				console.log('opts', opts);
+				
 				if (items.length) {
 					$.each(items, function(index, value) {
+						$(value).find('.post-preview__img').not(':first-of-type').remove();
 						mosaicflow_container.mosaicflow('add', $(value));
 					});
+					//- $('.content-wrap_type_index .post-preview__img').not(':first-of-type').remove();
+
 
 					if (items.length < postsPerPage) {
 						opts.state.isDone = true;

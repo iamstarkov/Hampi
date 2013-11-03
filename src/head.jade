@@ -47,35 +47,3 @@ if mode === 'production'
 
 if mode === 'development'
 	script(src="http://rawgithub.com/matmuchrapna/Hampi/master/src/js/vendor/modernizr-2.6.2.min.js")
-
-script.
-	photosets = {};
-
-	/*
-	function pasteFirstImg(postID, imgURL, w, h) {
-		if (typeof photosets[postID] === 'undefined') {
-			photosets[postID] = true;
-
-			document.write('<img class="post-preview__img" alt="" src="'+imgURL+'" width="'+w+'" height="'+h+'" />');
-		}
-	}
-	*/
-
-	function buildTextForPhoto(title_selector, desc_selector) {
-		//- console.log('buildTextForPhoto');
-		//- console.log('arguments', arguments);
-		var placeholder = '%MORE%',
-			container = document.querySelector('[content=photo_caption]'),
-			content = container.innerHTML;
-
-
-		container.remove();
-		content = content.replace(/<!-- more -->/gim, placeholder).replace(/<[^<]+?>/gim, '').replace(/&nbsp;/gim, ' ').split(placeholder);
-
-		if (content[0]) {
-			document.querySelector(title_selector).innerText = content[0].trim();
-		};
-		if (content[1]) {
-			document.querySelector(desc_selector).innerText = content[1].trim();
-		}
-	}

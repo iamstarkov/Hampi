@@ -11,7 +11,8 @@ if mode === 'production'
 	script(src="js/plugins.js")
 	script(src="js/main.js")
 
-style
+style.
+	
 	.content-wrap_type_index {
 		position: relative;
 	}
@@ -37,6 +38,22 @@ style
 
 
 script.
+
+	if ($('[content=photo_caption]').length !== 0) {
+		var placeholder = '%MORE%',
+			$container = $('[content=photo_caption]'),
+			content = $container.html();
+
+		//- $container.remove();
+		content = content.replace(/<!-- more -->/gim, placeholder).replace(/<[^<]+?>/gim, '').replace(/&nbsp;/gim, ' ').split(placeholder);
+
+		if (content[0]) {
+			$('.post__title').text(content[0].trim());
+		};
+		if (content[1]) {
+			$('.post__desc').text(content[1].trim());
+		}
+	}
 
 	$('iframe').prop('width', '100%');
 	$(window).resize(function() {

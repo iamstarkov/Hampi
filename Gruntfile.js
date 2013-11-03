@@ -1,6 +1,8 @@
 module.exports = function(grunt) {
 	"use strict";
 
+	// require('load-grunt-tasks')(grunt);
+
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		cssmin: {
@@ -23,11 +25,11 @@ module.exports = function(grunt) {
 				browsers: ['last 3 version', 'android 4', 'bb 10', 'bb 7']
 			},
 			files: {
-		      expand: true,
-		      flatten: true,
-		      src: 'src/css/*.css', // -> src/css/file1.css, src/css/file2.css
-		      dest: 'src/css/' // -> dest/css/file1.css, dest/css/file2.css
-		    },
+				expand: true,
+				flatten: true,
+				src: 'src/css/*.css',
+				dest: 'src/css/'
+			}
 		},
 		jade: {
 			locales: {
@@ -57,8 +59,9 @@ module.exports = function(grunt) {
 						
 						// Including helpers locales
 						grunt.file.expand( {filter: 'isFile'}, './src/tmp/helpers/locales/*') .forEach(function(file) {
+												//  './src/tmp/helpers/locales/body_class.tumblr'
 							var name = file.replace('./src/tmp/helpers/locales/', '').replace('.tumblr', '');
-								content = grunt.file.read(file);
+							var content = grunt.file.read(file);
 							options[name] = content;
 						});
 						return options;
@@ -91,7 +94,17 @@ module.exports = function(grunt) {
 
 	});
 
+	/*
     require('matchdep').filter('grunt-*').forEach(grunt.loadNpmTasks);
+	*/
+
+    grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-jade');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-clean');
 
 	grunt.registerTask('default', [
 		'clean',

@@ -16,6 +16,7 @@
     "matchdep": "~0.3.0",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-cssmin": "~0.6.2",
-    "grunt-autoprefixer": "~0.4.0"
+    "grunt-autoprefixer": "~0.4.0",
+    "load-grunt-tasks": "~0.2.0"
   }
 }

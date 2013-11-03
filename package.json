@@ -2,18 +2,20 @@
   "name": "Hampi",
   "version": "0.0.1",
   "dependencies": {
-    "grunt": "~0.4.1",
-    "grunt-cli": "*",
+    "casper": "*",
     "grunt-contrib-copy": "*",
     "grunt-contrib-jshint": "*",
     "grunt-contrib-nodeunit": "*",
     "grunt-contrib-uglify": "*",
+    "grunt": "~0.4.1",
+    "grunt-cli": "~0.1.9",
     "grunt-css ": "*",
-    "grunt-contrib-cssmin ": "*",
     "grunt-contrib-jade": "*",
-    "casper": "*",
     "grunt-contrib-watch": "*",
-    "grunt-contrib-clean": "*",
-    "grunt-jade": "*"
+    "grunt-jade": "*",
+    "matchdep": "~0.3.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-cssmin": "~0.6.2",
+    "grunt-autoprefixer": "~0.4.0"
   }
 }

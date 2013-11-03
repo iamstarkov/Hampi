@@ -5,24 +5,21 @@
  */
 
 html {
-    font-size: 62.5%; /* 1 */
-    -webkit-text-size-adjust: 62.5%; /* 2 */
-    -ms-text-size-adjust: 62.5%; /* 2 */
+	font-size: 62.5%; /* 1 */
+	-webkit-text-size-adjust: 62.5%; /* 2 */
+	-ms-text-size-adjust: 62.5%; /* 2 */
 }
 
 body {
-    font-size: 62.5%;
-   
-    font-size: 16px;
-    font-size: 1.6rem;
+	font-size: 62.5%;
+	font-size: 16px;
+	font-size: 1.6rem;
 }
 
 .wrap {
 	max-width: 1900px;
 	margin: 0 auto;
 }
-
-
 
 .logo {
 	margin: 0;
@@ -33,16 +30,13 @@ body {
 
 .logo_size_small {
 	-webkit-transform-origin-x: 0;
-	   -moz-transform-origin-x: 0;
-	    -ms-transform-origin-x: 0;
-	     -o-transform-origin-x: 0;
-	        transform-origin-x: 0;
-
-    -webkit-transform: scale(0.6);
-       -moz-transform: scale(0.6);
-        -ms-transform: scale(0.6);
-         -o-transform: scale(0.6);
-            transform: scale(0.6);
+	-moz-transform-origin-x: 0;
+	-ms-transform-origin-x: 0;
+	-o-transform-origin-x: 0;
+	transform-origin-x: 0;
+	-webkit-transform: scale(0.6);
+	-ms-transform: scale(0.6);
+	transform: scale(0.6);
 }
 
 /**
@@ -76,15 +70,12 @@ body {
 	top: 0;
 	bottom: 0;
 	margin: auto;
-
 }
-
 
 .menu__link {
 	color: inherit;
 	text-decoration: none;
 }
-
 
 .imenu_state_desktop .menu__link:hover {
 	border-bottom: 2px solid #000;
@@ -107,7 +98,6 @@ body {
  * imenu_state_mobile
  */
 
-
 .imenu_state_mobile .menu__list,
 .imenu_state_mobile .menu__toggler {
 	display: block;
@@ -118,6 +108,7 @@ body {
 }
 
 /* States */
+
 .imenu_state_mobile-closed .menu__list {
 	height: auto;
 	max-height: 0;
@@ -132,7 +123,6 @@ body {
 }
 
 /* /States */
-
 
 .imenu_state_mobile .menu__list {
 	width: 100%;
@@ -154,6 +144,7 @@ body {
 	color: #fff;
 	background: #000;
 }
+
 /*
 */
 
@@ -197,7 +188,6 @@ body {
 	background: none;
 }
 
-
 /**
  * Физика колонок
  *
@@ -220,13 +210,13 @@ body {
 
  */
 
-
 .mosaicflow__column {
 	float: left;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	padding: 0 5px;
 }
-
 
 .post-preview {
 	font-family: 'PT Sans', sans-serif;
@@ -241,7 +231,6 @@ body {
 	display: block;
 	padding: 30px 35px;
 }
-
 
 .post-preview:before {
 	content: '';
@@ -264,8 +253,8 @@ body {
 .preview-post_visual-state_text:hover:before,
 .mosaicflow__column:nth-child(2n) .preview-post_visual-state_overlay:nth-child(2n):hover:before,
 .mosaicflow__column:nth-child(2n+1) .preview-post_visual-state_overlay:nth-child(2n+1):hover:before {
-/*.preview-post_visual-state_text.post_type_even .post-preview__link:hover,*/
-/*.preview-post_visual-state_overlay.post_type_even:hover::before {*/
+	/*.preview-post_visual-state_text.post_type_even .post-preview__link:hover,*/
+	/*.preview-post_visual-state_overlay.post_type_even:hover::before {*/
 	background: rgba(245, 222, 28, 0.90);
 	/*
 	background: #f5de1c;
@@ -274,16 +263,16 @@ body {
 }
 
 /*.preview-post_visual-state_text.post_type_odd .post-preview__link:hover,*/
+
 .mosaicflow__column:nth-child(2n) .preview-post_visual-state_overlay:nth-child(2n+1):hover:before,
 .mosaicflow__column:nth-child(2n+1) .preview-post_visual-state_overlay:nth-child(2n):hover:before {
-/*.preview-post_visual-state_overlay.post_type_odd:hover:before {*/
+	/*.preview-post_visual-state_overlay.post_type_odd:hover:before {*/
 	background: rgba(255, 255, 255, 0.90);
 	/*
 	background: #fff;
 	opacity: 0.95;
 	*/
 }
-
 
 .post-preview__img {
 	display: block;
@@ -306,8 +295,6 @@ body {
 	display: none;
 }
 
-
-
 .post-preview__title {
 	font-size: 17px;
 	line-height: 21px;
@@ -326,7 +313,6 @@ body {
 	opacity: 1;
 }
 
-
 .preview-post_visual-state_overlay .post-preview__title {
 	position: absolute;
 	left: 0;
@@ -335,12 +321,9 @@ body {
 	text-align: center;
 	top: 50%;
 	-webkit-transform: translate(0, -50%);
-	   -moz-transform: translate(0, -50%);
-	    -ms-transform: translate(0, -50%);
-	     -o-transform: translate(0, -50%);
-			transform: translate(0, -50%);
+	-ms-transform: translate(0, -50%);
+	transform: translate(0, -50%);
 }
-
 
 .post-preview__desc {
 	font-size: 14px;
@@ -383,7 +366,6 @@ body {
 	content: '';
 }
 
-
 .post-preview__tags {
 	/*margin-top: 5em;*/
 }
@@ -413,7 +395,6 @@ body {
 	font: inherit;
 }
 
-
 .post__desc,
 .post__tags {
 	/*margin-top: 1em;*/
@@ -436,7 +417,6 @@ body {
 }
 
 @media screen and (min-width: 0px) {
-	
 	.header,
 	.footer {
 		padding: 20px;
@@ -461,7 +441,6 @@ body {
 		height: auto;
 		display: block;
 	}
-
 }
 
 .js .is-hidden {
@@ -473,23 +452,20 @@ body {
 }
 
 @media screen and (min-width: 600px) {
-
 	.header,
 	.footer {
 		padding: 40px;
 	}
-	
+
 	.footer {
 		padding-top: 20px;
 		padding-bottom: 20px;
 		text-align: left;
 	}
-	
+
 	.content-wrap {
 		padding: 0 40px;
 	}
-	
-	
 }
 
 @media screen and (min-width: 1000px) {
@@ -498,7 +474,7 @@ body {
 		margin-right: 10%;
 		float: left;
 	}
-	
+
 	.post__images-wrap {
 		margin-top: 0;
 		float: right;
@@ -522,18 +498,6 @@ body {
 		/*padding: 0 4px;*/
 		margin-bottom: 10px;
 	}
-	
-	/*
-	.post__images-wrap .mosaicflow__column:nth-child(2n+2) .post__image {
-		padding-left: 0;
-	}
-	
-	.post__images-wrap .mosaicflow__column:nth-child(2n+1) .post__image {
-		padding-right: 0;
-	}
-	*/
-
-
 }
 
 .photoset-images {
@@ -547,11 +511,6 @@ body {
 .post-preview__title * {
 	display: inline;
 }
-/*
-.post-preview__img {
-	margin-bottom: 0.3em;
-}
-*/
 
 .index-page .post_type_audio .post-preview__link {
 	padding: 0;
@@ -563,12 +522,6 @@ body {
 	width: 100%;
 }
 
-
-.navigation {}
-
-.navigation_type_pagination {}
-.navigation_type_around {}
-
 .navigation__link {
 	display: inline-block;
 	padding: 1em;
@@ -578,6 +531,8 @@ body {
 	font-family: 'PT Sans', sans-serif;
 	text-decoration: none;
 	width: 50%;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
 	box-sizing: content-box;
 }
 
@@ -617,11 +572,9 @@ body {
 }
 
 @media screen and (min-width: 600px) {
-
 	.navigation__link-text {
 		display: inline;
 	}
-
 }
 
 .content-wrap_type_index {
@@ -631,7 +584,6 @@ body {
 .content-wrap_type_page + .content-wrap_type_index {
 	margin-top: 10px;
 }
-
 
 .heading_last_posts {
 	font-family: 'PT Sans', sans-serif;

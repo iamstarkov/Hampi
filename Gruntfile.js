@@ -1,4 +1,5 @@
 module.exports = function(grunt) {
+	"use strict";
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -16,6 +17,17 @@ module.exports = function(grunt) {
 					]
 				}
 			},
+		},
+		autoprefixer: {
+			options: {
+				browsers: ['last 3 version', 'android 4', 'bb 10', 'bb 7']
+			},
+			files: {
+		      expand: true,
+		      flatten: true,
+		      src: 'src/css/*.css', // -> src/css/file1.css, src/css/file2.css
+		      dest: 'src/css/' // -> dest/css/file1.css, dest/css/file2.css
+		    },
 		},
 		jade: {
 			locales: {
@@ -78,27 +90,15 @@ module.exports = function(grunt) {
 		}
 
 	});
-	
-	/*
-	
-	var asd = require('./src/filters.js');
 
-	console.log(asd.Date());
-	 */
-
-	grunt.loadNpmTasks('grunt-contrib-concat');
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-jade');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-clean');
+    require('matchdep').filter('grunt-*').forEach(grunt.loadNpmTasks);
 
 	grunt.registerTask('default', [
 		'clean',
 		'cssmin',
 		'jade:locales',
 		'jade:tumblr',
-		// 'copy'
+		'copy'
 		]
 	);
 	grunt.registerTask('dev', [

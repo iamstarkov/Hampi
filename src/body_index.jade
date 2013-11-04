@@ -7,6 +7,8 @@
 				a.post-preview.post_type_text.preview-post_visual-state_text(id="post{PostID}", class=post_class, href="{Permalink}")
 					+block('Title')
 						.post-preview__title: {PlaintextTitle}
+					.hidden(content="helper-title")
+						| {Body}
 
 
 
@@ -56,6 +58,13 @@
 				a.post-preview.post_type_chat.preview-post_visual-state_text(id="post{PostID}", class=post_class, href="{Permalink}")
 					+block('Title')
 						.post-preview__title: {PlaintextTitle}
+					.hidden(content="helper-title")
+						ul.unstyled
+							+block('Lines')
+								li.unstyle
+									+block('Label')
+										b: {Label} 
+									| {Line}
 
 			+block('Audio')
 				//- ифрейм

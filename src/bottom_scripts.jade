@@ -44,7 +44,7 @@ script.
 			$container = $('[content=photo_caption]'),
 			content = $container.html();
 
-		//- $container.remove();
+		$container.remove();
 		content = content.replace(/<!-- more -->/gim, placeholder).replace(/<[^<]+?>/gim, '').replace(/&nbsp;/gim, ' ').split(placeholder);
 
 		if (content[0]) {

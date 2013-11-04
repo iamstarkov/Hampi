@@ -471,6 +471,10 @@ body {
 	.content-wrap {
 		padding: 0 40px;
 	}
+
+	.content-wrap_type_index {
+		padding: 0 35px;
+	}
 }
 
 @media screen and (min-width: 1000px) {
@@ -580,10 +584,6 @@ body {
 	.navigation__link-text {
 		display: inline;
 	}
-}
-
-.content-wrap_type_index {
-	padding: 0 35px;
 }
 
 .content-wrap_type_page + .content-wrap_type_index {

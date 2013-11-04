@@ -432,6 +432,10 @@ body {
 		padding: 0 20px;
 	}
 
+	.content-wrap_type_index {
+		padding: 0 15px;
+	}
+
 	.post__images-wrap {
 		margin-top: 48px;
 	}
@@ -579,7 +583,7 @@ body {
 }
 
 .content-wrap_type_index {
-	margin: 0 -5px;
+	padding: 0 35px;
 }
 
 .content-wrap_type_page + .content-wrap_type_index {

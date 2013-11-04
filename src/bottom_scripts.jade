@@ -46,14 +46,21 @@ script.
 			title = $elem.find('.post-preview__title'),
 			desc = $elem.find('.post-preview__desc'),
 			helper = $elem.find('[content="helper-title"]');
-		if (title.length === 0 && helper.length !== 0 && desc.length !== 0 ) {
+		if (title.length === 0 && helper.length !== 0) {
 			var text = helper.text(); //replace with your string.
 			var maxLength = 140 // maximum number of characters to extract
 			var trimmedString = text.substr(0, maxLength);
-			trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" ")))
+			trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" "))) + '…';
 
-			console.log('trimmedString', trimmedString);
-			desc.text(trimmedString);
+			$elem.append($('<div/>', {
+				class: 'post-preview__desc',
+				text: trimmedString
+			});
+
+			title.hide();
+
+			//- console.log('trimmedString', trimmedString);
+			//- desc.text(trimmedString);
 		}
 	});
 

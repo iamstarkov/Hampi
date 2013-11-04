@@ -85,12 +85,6 @@
 							.post_title: {PlaintextTitle}
 						include helpers/blocks/Tags
 					.post__images-wrap
-						ul.unstyled
-							+block('Lines')
-								li.unstyle
-									+block('Label')
-										b: {Label} 
-									| {Line}
 
 			+block('Audio')
 				.post.post_type_audio.clearfix(id="post{PostID}", class=post_class)

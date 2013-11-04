@@ -8,7 +8,7 @@
 					+block('Title')
 						.post-preview__title: {PlaintextTitle}
 					.hidden(content="helper-title")
-						| {Body}
+						| {PlaintextBody}
 
 
 
@@ -63,8 +63,8 @@
 							+block('Lines')
 								li.unstyle
 									+block('Label')
-										b: {Label} 
-									| {Line}
+										b: {PlaintextLabel} 
+									| {PlaintextLine}
 
 			+block('Audio')
 				//- ифрейм

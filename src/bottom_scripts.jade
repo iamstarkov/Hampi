@@ -39,6 +39,9 @@ style.
 
 script.
 
+	// boolean constant described state in which there will be only one column
+	var ONE_COLUMN = $(window).width() < 732;
+
 	// handle optional caption or title
 	// text, link, chat
 	$('.content-wrap_type_index .post-preview').each(function(index, elem) {
@@ -101,10 +104,13 @@ script.
 		}
 	}
 
+
 	// handle photoset mosaic
 	if ($('.post_type_photoset .post__images-wrap').length !== 0) {
 		//- $('.post_type_photoset .post__images-wrap').fadeOut(0);
-		$('.post_type_photoset .post__images-wrap').mosaicflow(mosaic_options.photoset);
+		$('.post_type_photoset .post__images-wrap')
+			.addClass(ONE_COLUMN ? 'one_column' : 'multi_columns');
+		!ONE_COLUMN && $('.post_type_photoset .post__images-wrap').mosaicflow(mosaic_options.photoset);
 	}
 
 	// handle image duplicats in photosets
@@ -126,7 +132,8 @@ script.
 					mosaicflow_container.append($(value));
 				});
 
-				mosaicflow_container.mosaicflow(mosaic_options.index);
+				mosaicflow_container.addClass(ONE_COLUMN ? 'one_column' : 'multi_columns');
+				!ONE_COLUMN && mosaicflow_container.mosaicflow(mosaic_options.index);
 				mosaicflow_container.slideDown();
 				mosaicflow_container.fadeIn();
 			});
@@ -134,7 +141,10 @@ script.
 
 		// handle post feed in index page
 		if ($('body.index-page .content-wrap_type_index').length !== 0) {
-			mosaicflow_container.mosaicflow(mosaic_options.index).fadeIn();
+
+			mosaicflow_container.addClass(ONE_COLUMN ? 'one_column' : 'multi_columns');
+			!ONE_COLUMN && mosaicflow_container.mosaicflow(mosaic_options.index);
+			mosaicflow_container.fadeIn();
 			
 
 			// handle event for "no more posts"
@@ -170,7 +180,11 @@ script.
 				if (items.length) {
 					$.each(items, function(index, value) {
 						$(value).find('.post-preview__img').not(':first-of-type').remove();
-						mosaicflow_container.mosaicflow('add', $(value));
+						if (ONE_COLUMN) {
+							$(value).insertBefore(opts.loading.msg[0]);
+						} else {
+							mosaicflow_container.mosaicflow('add', $(value));
+						}
 					});
 
 					if (items.length < postsPerPage) {

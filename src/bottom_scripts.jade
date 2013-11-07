@@ -1,6 +1,7 @@
 script(src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js")
 script(src="http://rawgithub.com/sapegin/jquery.mosaicflow/master/jquery.mosaicflow.min.js")
 
+script(src="http://rawgithub.com/tuupola/jquery_lazyload/master/jquery.lazyload.min.js")
 script(src="http://rawgithub.com/matmuchrapna/jquery.imenu/master/jquery.imenu.min.js")
 script(src="http://rawgithub.com/paulirish/infinite-scroll/master/jquery.infinitescroll.min.js")
 
@@ -41,6 +42,11 @@ script.
 
 	// boolean constant described state in which there will be only one column
 	var ONE_COLUMN = $(window).width() < 732;
+
+	// handle image lazy loading
+	$('.content-wrap_type_index img').lazyload({
+		effect : "fadeIn"
+	});
 
 	// handle optional caption or title
 	// text, link, chat

@@ -420,7 +420,7 @@ body {
 		padding: 0 20px;
 	}
 
-	.content-wrap_type_index {
+	.content-wrap_type_index.multi_columns {
 		padding: 0 15px;
 	}
 
@@ -460,7 +460,7 @@ body {
 		padding: 0 40px;
 	}
 
-	.content-wrap_type_index {
+	.content-wrap_type_index.multi_columns {
 		padding: 0 35px;
 	}
 }

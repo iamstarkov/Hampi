@@ -9,27 +9,27 @@ include ../../mixins
 +block('PermalinkPage')
 	+block('Posts')
 		+block('Text')
-			+block('Title')
-				| {PlaintextTitle}
+			+block('PostSummary')
+				| {PlaintextPostSummary} – 
 		+block('Photo')
 			+block('Caption')
-				| {PlaintextCaption}
+				| {PlaintextCaption} – 
 		+block('Photoset')
 			+block('Caption')
-				| {PlaintextCaption}
+				| {PlaintextCaption} – 
 		+block('Panorama')
 			+block('Caption')
-				| {PlaintextCaption}
+				| {PlaintextCaption} – 
 		+block('Quote')
-			| {PlaintextQuote}
+			| {PlaintextQuote} – 
 		+block('Link')
-			| {PlaintextName}
+			| {PlaintextName} – 
 		+block('Chat')
-			+block('Title')
-				| {PlaintextTitle}
+			+block('PostSummary')
+				| {PlaintextPostSummary} – 
 		+block('Video')
-			+block('Caption')
-				| {PlaintextCaption}
+			+block('PostSummary')
+				| {PlaintextPostSummary} – 
 		+block('Answer')
-			| {PlaintextQuestion}
-	|  – {Title}
+			| {PlaintextQuestion} – 
+	| {Title}

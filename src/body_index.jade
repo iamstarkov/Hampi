@@ -7,7 +7,7 @@
 				a.post-preview.post_type_text.preview-post_visual-state_text(id="post{PostID}", class=post_class, href="{Permalink}")
 					+block('Title')
 						.post-preview__title: {PlaintextTitle}
-					.hidden(content="helper-title")
+					.hidden(content="helper-title")						
 						| {PlaintextBody}
 
 
@@ -24,9 +24,6 @@
 				a.post-preview.post_type_photoset.preview-post_visual-state_overlay(id="post{PostID}", class=post_class, href="{Permalink}")
 					+block('Photos')
 						img.post-preview__img(src="{PhotoURL-400}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
-						//- 
-							script.
-								pasteFirstImg("{PostId}", "{PhotoURL-400}", "{PhotoWidth-400}", "{PhotoHeight-400}");
 					+block('Caption')
 						.post-preview__title: {PlaintextCaption}
 

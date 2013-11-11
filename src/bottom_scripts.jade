@@ -14,57 +14,6 @@ if mode === 'production'
 	script(src="js/plugins.js")
 	script(src="js/main.js")
 
-style.
-
-	.content-wrap_type_index {
-		position: relative;
-	}
-	
-	#infscr-loading {
-		display: block;
-		margin: 0 5px;
-		text-align: center;
-		bottom: 0;
-		overflow: hidden;
-		color: #bdbdbd;
-		font-size: 20px;
-		line-height: 2;
-		font-family: 'PT Sans', sans-serif;
-		margin: 1em 0;
-		overflow: hidden;
-	}
-
-	#infscr-loading div {
-		display: inline-block;
-		postition: relative;
-	}
-	
-	#infscr-loading.no-more-posts div::before,
-	#infscr-loading.no-more-posts div::after {
-		content: '';
-		height: 1px;
-		background: #e6e6e6;
-		width: 2000px;
-		top: 50%;
-		position: absolute;
-	}
-
-	#infscr-loading.no-more-posts div::before {
-		right: 100%;
-		margin-right: 30px;
-	}
-
-	#infscr-loading.no-more-posts div::after {
-		left: 100%;
-		margin-left: 30px;
-	}
-
-	
-	#infscr-loading img {
-		display: none;
-	}
-
-
 script.
 
 
@@ -247,7 +196,8 @@ script.
 						$doc.scroll(function() {
 							if (!already && isBottom($win, $doc)) {
 								console.log('visible');
-								$(opts.loading.msg[0]).text(opts.loading.finishedMsg).slideDown().delay(2000).slideUp();
+								$(opts.loading.msg[0]).find('div').eq(0).text(opts.loading.finishedMsg)
+								$(opts.loading.msg[0]).slideDown().delay(2000).slideUp();
 								already = true;
 							}
 						});

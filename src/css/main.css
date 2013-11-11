@@ -640,3 +640,51 @@ body {
     border: 1px solid;
     border-color: inherit;
 }
+
+.content-wrap_type_index {
+	position: relative;
+}
+
+#infscr-loading {
+	display: block;
+	width: 100%;
+	text-align: center;
+	bottom: 0;
+	overflow: hidden;
+	color: #bdbdbd;
+	font-size: 20px;
+	line-height: 2;
+	font-family: 'PT Sans', sans-serif;
+	margin: 1em 5px;
+	overflow: hidden;
+}
+
+#infscr-loading div {
+	display: inline-block;
+	position: relative;
+}
+
+#infscr-loading.no-more-posts div::before,
+#infscr-loading.no-more-posts div::after {
+	content: '';
+	height: 1px;
+	background: #e6e6e6;
+	width: 2000px;
+	top: 50%;
+	position: absolute;
+}
+
+#infscr-loading.no-more-posts div::before {
+	right: 100%;
+	margin-right: 30px;
+}
+
+#infscr-loading.no-more-posts div::after {
+	left: 100%;
+	margin-left: 30px;
+}
+
+
+#infscr-loading img {
+	display: none;
+}

@@ -22,18 +22,43 @@ style.
 	
 	#infscr-loading {
 		display: block;
-		width: 100%;
-		padding: 5px 0;
 		margin: 0 5px;
 		text-align: center;
 		bottom: 0;
-		background: rgba(111, 111, 111, 0.03);
 		overflow: hidden;
-		color: #333;
+		color: #bdbdbd;
 		font-size: 20px;
 		line-height: 2;
-		font-style: italic;
+		font-family: 'PT Sans', sans-serif;
+		margin: 1em 0;
+		overflow: hidden;
 	}
+
+	#infscr-loading div {
+		display: inline-block;
+		postition: relative;
+	}
+	
+	#infscr-loading.no-more-posts div::before,
+	#infscr-loading.no-more-posts div::after {
+		content: '';
+		height: 1px;
+		background: #e6e6e6;
+		width: 2000px;
+		top: 50%;
+		position: absolute;
+	}
+
+	#infscr-loading.no-more-posts div::before {
+		right: 100%;
+		margin-right: 30px;
+	}
+
+	#infscr-loading.no-more-posts div::after {
+		left: 100%;
+		margin-left: 30px;
+	}
+
 	
 	#infscr-loading img {
 		display: none;
@@ -218,7 +243,7 @@ script.
 
 					if (items.length < postsPerPage) {
 						opts.state.isDone = true;
-
+						$(opts.loading.msg[0]).addClass('no-more-posts');
 						$doc.scroll(function() {
 							if (!already && isBottom($win, $doc)) {
 								console.log('visible');

@@ -533,8 +533,8 @@ body {
 
 .navigation__link .arrow {
 	border-color: #999;
-	margin-top: -7px;
 	/*
+	margin-top: -7px;
 	position: relative;
 	top: 50%;
 	margin-top: -20px;
@@ -579,7 +579,8 @@ body {
 
 @media screen and (min-width: 600px) {
 	.navigation__link-text {
-		display: inline;
+		display: inline-block;
+		margin-top: 8px;
 	}
 }
 

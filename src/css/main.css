@@ -384,14 +384,12 @@ body {
 
 .post__desc,
 .post__tags {
-	/*margin-top: 1em;*/
-	font-size: 14px;
-	line-height: 19px;
+	color: #999;
+	font-size: 16px;
+	line-height: 1.2;
+	margin-bottom: 0.8em;
 }
 
-.post__tags {
-	/*margin-top: 2em;*/
-}
 
 .footer,
 .footer * {

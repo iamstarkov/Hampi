@@ -511,6 +511,10 @@ body {
 	width: 100%;
 }
 
+.navigation {
+	margin-bottom: 1em;
+}
+
 .navigation__link {
 	display: inline-block;
 	color: #999;

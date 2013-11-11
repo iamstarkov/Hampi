@@ -382,6 +382,7 @@ body {
 	font: inherit;
 }
 
+.post_type_chat .post__images-wrap,
 .post__desc,
 .post__tags {
 	color: #999;

@@ -399,7 +399,7 @@ body {
 	color: #bbb;
 }
 
-.post_type_photoset .post__images-wrap {
+.post_type_photoset .post__images-wrap.multi_columns {
 	margin-left: -5px;
 	margin-right: -5px;
 }
@@ -434,14 +434,6 @@ body {
 		height: auto;
 		display: block;
 	}
-}
-
-.js .is-hidden {
-	opacity: 0;
-}
-
-.js .is-hidden[style] {
-	opacity: 1;
 }
 
 @media screen and (min-width: 600px) {

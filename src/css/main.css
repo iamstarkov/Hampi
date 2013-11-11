@@ -369,11 +369,10 @@ body {
 }
 
 .post__title {
-	margin-top: .2em;
 	font-size: 30px;
 	font-weight: bold;
 	line-height: 1;
-	margin-bottom: 5px;
+	margin-bottom: 1.3334em;
 }
 
 .post-preview__title *,

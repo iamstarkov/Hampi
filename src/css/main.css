@@ -428,6 +428,11 @@ body {
 
 	.post__images-wrap {
 		margin-top: 48px;
+	}
+	
+	.post_type_panorama .post__images-wrap,
+	.post_type_photoset .post__images-wrap,
+	.post_type_photo .post__images-wrap {
 		margin-bottom: -10px;
 	}
 

@@ -531,22 +531,29 @@ body {
 
 .navigation__link .arrow {
 	border-color: #999;
-	margin-top: -7px;
 	/*
+	margin-top: -7px;
+	*/
 	position: relative;
 	top: 50%;
 	margin-top: -20px;
-	*/
+}
+
+.navigation__link_type_prev {
+	padding-left: 40px;
+}
+
+.navigation__link_type_next {
+	padding-right: 40px;
 }
 
 .navigation__link_type_prev .arrow {
 	float: left;
-	margin-right: 20px;
 }
 
 .navigation__link_type_next .arrow {
 	float: right;
-	margin-left: 20px;
+	/*margin-left: 20px;*/
 }
 
 .navigation__link:hover {

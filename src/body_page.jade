@@ -26,7 +26,7 @@
 						+block('Caption')
 							.hidden(content="photo_caption"): {Caption}
 						include helpers/blocks/Tags
-					.post__images-wrap	
+					.post__images-wrap.is-hidden
 						+block('HighRes')
 							img.post__image.post__image_type_highres(alt="", src="{PhotoURL-HighRes}", width="{PhotoWidth-HighRes}", height="{PhotoHeight-HighRes}")
 						img.post__image.post__image_type_normal(alt="", src="{PhotoURL-500}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")

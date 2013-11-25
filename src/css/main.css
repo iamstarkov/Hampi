@@ -588,7 +588,12 @@ body {
 	width: auto;
 	padding: 0 5%;
 	position: absolute;
-	left: 0;
+	left: 50%;
+	top: 0;
+
+	-webkit-transform: translate(0, -50%);
+	-ms-transform: translate(0, -50%);
+	transform: translate(0, -50%);
 }
 
 .navigation__link-text {

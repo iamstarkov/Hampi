@@ -2,10 +2,10 @@
 
 	.content-wrap.content-wrap_type_page.clearfix
 
-
-
-
 		+block('Posts')
+
+
+
 
 			+block('Text')
 				.post.post_type_text.clearfix(id="post{PostID}", class=post_class)
@@ -89,7 +89,7 @@
 							+block('Lines')
 								li.unstyle
 									+block('Label')
-										b: {PlaintextLabel} 
+										b: {PlaintextLabel}
 									| {PlaintextLine}
 
 			+block('Audio')
@@ -124,11 +124,9 @@
 						b: {Question}
 						hr
 						| {Answer}
-	
-	//-
-		.content-wrap.content-wrap_type_index.clearfix
-			.heading_last_posts
-				| {lang:See more}
 
 	.content-wrap.content-wrap_type_page
 		include helpers/blocks/pagination
+
+	.content-wrap.content-wrap_type_index.clearfix
+

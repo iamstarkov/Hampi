@@ -191,7 +191,7 @@ body {
 /**
  * Физика колонок
  *
- * 
+ *
 одна
 384
 
@@ -404,9 +404,9 @@ body {
 	.footer {
 		padding: 20px;
 	}
-	
+
 	.post {
-		margin-bottom: 1em; 
+		margin-bottom: 1em;
 	}
 
 	.footer {
@@ -426,7 +426,7 @@ body {
 	.post__images-wrap {
 		margin-top: 48px;
 	}
-	
+
 	.post_type_panorama .post__images-wrap,
 	.post_type_photoset .post__images-wrap,
 	.post_type_photo .post__images-wrap {
@@ -493,7 +493,7 @@ body {
 	.post__images-wrap {
 		width: 71%;
 	}
-	
+
 	.post__image {
 		width: auto;
 	}
@@ -556,6 +556,10 @@ body {
 	margin-right: 20px;
 }
 
+.navigation__link-text_type_pseudo {
+	border-bottom: 1px dashed;
+}
+
 .navigation__link_type_next .arrow {
 	float: right;
 	margin-left: 20px;
@@ -577,6 +581,14 @@ body {
 .navigation__link_type_next {
 	text-align: right;
 	float: right;
+}
+
+.navigation__link_type_center {
+	float: none;
+	width: auto;
+	padding: 0 5%;
+	position: absolute;
+	left: 0;
 }
 
 .navigation__link-text {
@@ -628,14 +640,14 @@ body {
     position: absolute;
     top: 0; left: 0;
     width: 141.42%; height: 70.71%;
-    
+
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 
 	-webkit-transform: rotate(-45deg) translateY(29%);
 	-ms-transform: rotate(-45deg) translateY(29%);
-	transform: rotate(-45deg) translateY(29%);	
+	transform: rotate(-45deg) translateY(29%);
 
     border: 1px solid;
     border-color: inherit;

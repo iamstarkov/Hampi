@@ -2,7 +2,7 @@
 script(src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js")
 script(src="http://rawgithub.com/sapegin/jquery.mosaicflow/master/jquery.mosaicflow.min.js")
 
-//- 
+//-
 	script(src="http://rawgithub.com/tuupola/jquery_lazyload/master/jquery.lazyload.min.js")
 script(src="http://rawgithub.com/matmuchrapna/jquery.imenu/master/jquery.imenu.min.js")
 script(src="http://rawgithub.com/paulirish/infinite-scroll/master/jquery.infinitescroll.min.js")
@@ -18,7 +18,7 @@ script.
 
 	// boolean constant described DEMO state
 	var DEMO = ($('#post236').length === 1);
-	
+
 	// boolean constant described state in which there will be only one column
 	var ONE_COLUMN = !DEMO && $(window).width() < 732;
 
@@ -33,11 +33,11 @@ script.
 	// text, link, chat
 	function handleSeparatePostContent( $collection ) {
 		$collection.each(function(index, elem) {
-			var $elem = $(elem), 
+			var $elem = $(elem),
 				title = $elem.find('.post-preview__title'),
 				desc = $elem.find('.post-preview__desc'),
 				helper = $elem.find('[content="helper-title"]');
-			
+
 			/*
 			console.log(index);
 			console.log($elem);
@@ -86,7 +86,7 @@ script.
 	$(window).resize(function() {
 		$('iframe').prop('width', '100%');
 	});
-	
+
 	function getWidth() {
 		return ($(window).width() < 1600) ?  331 : 450;
 	}
@@ -120,25 +120,51 @@ script.
 	$('.content-wrap_type_index').fadeOut(0);
 
 	$(function() {
-		
-		// handle post feed in permalink page
-		/*
-		if ($('body.permalink-page .content-wrap_type_index').length !== 0) {
-			$.ajax({url:'/'}).done(function(data) {
-				
-				var items = $(data).find('.post-preview');
-				items.find('.post-preview__img').not(':first-of-type').remove();
-				$.each(items, function(index, value) {
-					mosaicflow_container.append($(value));
-				});
-				handleSeparatePostContent(items);
 
-				mosaicflow_container.addClass(ONE_COLUMN ? 'one_column' : 'multi_columns');
-				!ONE_COLUMN && mosaicflow_container.mosaicflow(mosaic_options.index);
-				mosaicflow_container.slideDown();
-				mosaicflow_container.fadeIn();
+		// handle post feed in permalink page
+		if ($('body.permalink-page .content-wrap_type_index').length !== 0) {
+			$('.js-more').on('click', function(event) {
+				console.log(1);
+				$('.js-more').remove();
+				console.log(2);
+				$.ajax({url:'/'}).done(function(data) {
+					console.log(3);
+					$(window).resize();
+					console.log(4);
+					var items = $(data).find('.post-preview');
+					items.find('.post-preview__img').not(':first-of-type').remove();
+					console.log(5);
+					mosaicflow_container.addClass(ONE_COLUMN ? 'one_column' : 'multi_columns');
+					!ONE_COLUMN && mosaicflow_container.mosaicflow(mosaic_options.index);
+
+					$.each(items, function(index, value) {
+						mosaicflow_container.append($(value));
+						console.log(51);
+						$(window).resize();
+					});
+					!ONE_COLUMN && mosaicflow_container.mosaicflow(mosaic_options.index);
+					console.log(6);
+					handleSeparatePostContent(items);
+					console.log(7);
+
+					$(window).resize();
+					console.log(8);
+					console.log(9);
+					console.log(10);
+					$(window).resize();
+					console.log(11);
+					mosaicflow_container.slideDown();
+					console.log(12);
+					mosaicflow_container.fadeIn();
+					console.log(13);
+				});
+				console.log(14);
+				$(window).resize();
+				console.log(15);
+				event.preventDefault();
 			});
 		}
+		/*
 		*/
 
 		// handle post feed in index page
@@ -147,7 +173,7 @@ script.
 			mosaicflow_container.addClass(ONE_COLUMN ? 'one_column' : 'multi_columns');
 			!ONE_COLUMN && mosaicflow_container.mosaicflow(mosaic_options.index);
 			mosaicflow_container.fadeIn();
-			
+
 
 			// handle event for "no more posts"
 			var $doc = $(document);
@@ -178,7 +204,7 @@ script.
 				appendCallback: false
 			}, function(items, opts) {
 				console.log('opts', opts);
-				
+
 				if (items.length) {
 					$.each(items, function(index, value) {
 						$(value).find('.post-preview__img').not(':first-of-type').remove();

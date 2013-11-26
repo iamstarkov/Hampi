@@ -659,6 +659,20 @@ body {
     border-color: inherit;
 }
 
+.arrow_type_more {
+	background: url('https://cdn3.iconfinder.com/data/icons/iconic-1/32/read_more-24.png') no-repeat 50% 50%;
+}
+
+.arrow_type_more::before {
+	display: none;
+}
+
+@media screen and (min-width: 600px) {
+	.arrow_type_more {
+		display: none;
+	}
+}
+
 .content-wrap_type_index {
 	position: relative;
 }

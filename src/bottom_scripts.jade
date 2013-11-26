@@ -3,231 +3,211 @@ script(src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js")
 script(src="http://rawgithub.com/sapegin/jquery.mosaicflow/master/jquery.mosaicflow.min.js")
 
 //-
-	script(src="http://rawgithub.com/tuupola/jquery_lazyload/master/jquery.lazyload.min.js")
+    script(src="http://rawgithub.com/tuupola/jquery_lazyload/master/jquery.lazyload.min.js")
 script(src="http://rawgithub.com/matmuchrapna/jquery.imenu/master/jquery.imenu.min.js")
 script(src="http://rawgithub.com/paulirish/infinite-scroll/master/jquery.infinitescroll.min.js")
 
 if mode === 'development'
-	script(src="http://rawgithub.com/matmuchrapna/Hampi/master/src/js/plugins.js")
-	script(src="http://rawgithub.com/matmuchrapna/Hampi/master/src/js/main.js")
+    script(src="http://rawgithub.com/matmuchrapna/Hampi/master/src/js/plugins.js")
+    script(src="http://rawgithub.com/matmuchrapna/Hampi/master/src/js/main.js")
 if mode === 'production'
-	script(src="js/plugins.js")
-	script(src="js/main.js")
+    script(src="js/plugins.js")
+    script(src="js/main.js")
 
 script.
 
-	// boolean constant described DEMO state
-	var DEMO = ($('#post236').length === 1);
+    // boolean constant described DEMO state
+    var DEMO = ($('#post236').length === 1);
 
-	// boolean constant described state in which there will be only one column
-	var ONE_COLUMN = !DEMO && $(window).width() < 732;
+    // boolean constant described state in which there will be only one column
+    var ONE_COLUMN = !DEMO && $(window).width() < 732;
 
-	// handle image lazy loading
-	/*
-	$('.content-wrap_type_index img').lazyload({
-		effect : "fadeIn"
-	});
-	*/
+    // handle image lazy loading
+    /*
+    $('.content-wrap_type_index img').lazyload({
+        effect : "fadeIn"
+    });
+    */
 
-	// handle optional caption or title
-	// text, link, chat
-	function handleSeparatePostContent( $collection ) {
-		$collection.each(function(index, elem) {
-			var $elem = $(elem),
-				title = $elem.find('.post-preview__title'),
-				desc = $elem.find('.post-preview__desc'),
-				helper = $elem.find('[content="helper-title"]');
+    // handle optional caption or title
+    // text, link, chat
+    function handleSeparatePostContent( $collection ) {
+        $collection.each(function(index, elem) {
+            var $elem = $(elem),
+                title = $elem.find('.post-preview__title'),
+                desc = $elem.find('.post-preview__desc'),
+                helper = $elem.find('[content="helper-title"]');
 
-			/*
-			console.log(index);
-			console.log($elem);
-			console.log(title, desc);
-			console.log(helper);
-			*/
+            /*
+            console.log(index);
+            console.log($elem);
+            console.log(title, desc);
+            console.log(helper);
+            */
 
-			if (title.length === 0 && helper.length !== 0) {
-				var text = helper.text(); //replace with your string.
-				var maxLength = 140 // maximum number of characters to extract
-				var trimmedString = text.substr(0, maxLength);
-				trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" "))) + '…';
+            if (title.length === 0 && helper.length !== 0) {
+                var text = helper.text(); //replace with your string.
+                var maxLength = 140 // maximum number of characters to extract
+                var trimmedString = text.substr(0, maxLength);
+                trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" "))) + '…';
 
-				$elem.append(
-					$('<div/>', {
-						class: 'post-preview__desc',
-						text: trimmedString
-						//- text: text
-					})
-				);
+                $elem.append(
+                    $('<div/>', {
+                        class: 'post-preview__desc',
+                        text: trimmedString
+                        //- text: text
+                    })
+                );
 
-			}
-		});
-	}
-	handleSeparatePostContent($('.content-wrap_type_index .post-preview'));
+            }
+        });
+    }
+    handleSeparatePostContent($('.content-wrap_type_index .post-preview'));
 
-	// separate title to title with description
-	if ($('[content=photo_caption]').length !== 0) {
-		var placeholder = '%MORE%',
-			$container = $('[content=photo_caption]'),
-			content = $container.html();
+    // separate title to title with description
+    if ($('[content=photo_caption]').length !== 0) {
+        var placeholder = '%MORE%',
+            $container = $('[content=photo_caption]'),
+            content = $container.html();
 
-		$container.remove();
-		content = content.replace(/<!-- more -->/gim, placeholder).replace(/<[^<]+?>/gim, '').replace(/&nbsp;/gim, ' ').split(placeholder);
+        $container.remove();
+        content = content.replace(/<!-- more -->/gim, placeholder).replace(/<[^<]+?>/gim, '').replace(/&nbsp;/gim, ' ').split(placeholder);
 
-		if (content[0]) {
-			$('.post__title').text(content[0].trim());
-		};
-		if (content[1]) {
-			$('.post__desc').text(content[1].trim());
-		}
-	}
+        if (content[0]) {
+            $('.post__title').text(content[0].trim());
+        };
+        if (content[1]) {
+            $('.post__desc').text(content[1].trim());
+        }
+    }
 
-	// handle iframes
-	$('iframe').prop('width', '100%');
-	$(window).resize(function() {
-		$('iframe').prop('width', '100%');
-	});
+    // handle iframes
+    $('iframe').prop('width', '100%');
+    $(window).resize(function() {
+        $('iframe').prop('width', '100%');
+    });
 
-	function getWidth() {
-		return ($(window).width() < 1600) ?  331 : 450;
-	}
+    function getWidth() {
+        return ($(window).width() < 1600) ?  331 : 450;
+    }
 
-	var mosaic_options = {
-		index: {
-			itemSelector: '.post-preview',
-			minItemWidth: getWidth()
-		},
-		photoset: {
-			itemSelector: 'img',
-			minItemWidth: 468,
-			itemHeightCalculation: 'attribute'
-		}
-	}
-
-
-	// handle photoset mosaic
-	if ($('.post_type_photoset .post__images-wrap').length !== 0) {
-		//- $('.post_type_photoset .post__images-wrap').fadeOut(0);
-		$('.post_type_photoset .post__images-wrap')
-			.addClass(ONE_COLUMN ? 'one_column' : 'multi_columns');
-		!ONE_COLUMN && $('.post_type_photoset .post__images-wrap').mosaicflow(mosaic_options.photoset);
-	}
-
-	// handle image duplicats in photosets
-	$('.content-wrap_type_index .post-preview__img').not(':first-of-type').remove();
-
-	// handle index mosaic visibillity
-	var mosaicflow_container = $('.content-wrap_type_index');
-	$('.content-wrap_type_index').fadeOut(0);
-
-	$(function() {
-
-		// handle post feed in permalink page
-		if ($('body.permalink-page .content-wrap_type_index').length !== 0) {
-			$('.js-more').on('click', function(event) {
-				console.log(1);
-				$('.js-more').remove();
-				console.log(2);
-				$.ajax({url:'/'}).done(function(data) {
-					console.log(3);
-					$(window).resize();
-					console.log(4);
-					var items = $(data).find('.post-preview');
-					items.find('.post-preview__img').not(':first-of-type').remove();
-					console.log(5);
-					mosaicflow_container.addClass(ONE_COLUMN ? 'one_column' : 'multi_columns');
-					!ONE_COLUMN && mosaicflow_container.mosaicflow(mosaic_options.index);
-
-					$.each(items, function(index, value) {
-						mosaicflow_container.append($(value));
-						console.log(51);
-						$(window).resize();
-					});
-					!ONE_COLUMN && mosaicflow_container.mosaicflow(mosaic_options.index);
-					console.log(6);
-					handleSeparatePostContent(items);
-					console.log(7);
-
-					$(window).resize();
-					console.log(8);
-					console.log(9);
-					console.log(10);
-					$(window).resize();
-					console.log(11);
-					mosaicflow_container.slideDown();
-					console.log(12);
-					mosaicflow_container.fadeIn();
-					console.log(13);
-				});
-				console.log(14);
-				$(window).resize();
-				console.log(15);
-				event.preventDefault();
-			});
-		}
-		/*
-		*/
-
-		// handle post feed in index page
-		if ($('body.index-page .content-wrap_type_index').length !== 0) {
-
-			mosaicflow_container.addClass(ONE_COLUMN ? 'one_column' : 'multi_columns');
-			!ONE_COLUMN && mosaicflow_container.mosaicflow(mosaic_options.index);
-			mosaicflow_container.fadeIn();
+    var mosaic_options = {
+        index: {
+            itemSelector: '.post-preview',
+            minItemWidth: getWidth()
+        },
+        photoset: {
+            itemSelector: 'img',
+            minItemWidth: 468,
+            itemHeightCalculation: 'attribute'
+        }
+    }
 
 
-			// handle event for "no more posts"
-			var $doc = $(document);
-			var $win = $(window);
-			var isBottom = function($win, $doc) { return $doc.scrollTop() === $doc.height() - $win.height(); }
-			var already = false;
+    // handle photoset mosaic
+    if ($('.post_type_photoset .post__images-wrap').length !== 0) {
+        //- $('.post_type_photoset .post__images-wrap').fadeOut(0);
+        $('.post_type_photoset .post__images-wrap')
+            .addClass(ONE_COLUMN ? 'one_column' : 'multi_columns');
+        !ONE_COLUMN && $('.post_type_photoset .post__images-wrap').mosaicflow(mosaic_options.photoset);
+    }
 
-			var postSelector =  '.post-preview';
-			var postsPerPage = $(postSelector).length;
-			console.log('postsPerPage', postsPerPage);
+    // handle image duplicats in photosets
+    $('.content-wrap_type_index .post-preview__img').not(':first-of-type').remove();
 
-			// handle infinite scroll
-			var infinitescroll_container = $('.content-wrap_type_index').infinitescroll({
-				loading: {
-					finishedMsg: '{lang:No more posts}',
-					img: 'http://mtrpl.ru/wp-content/uploads/2012/12/ajax-loader.gif',
-					msgText: '{lang:Loading}…',
-					speed: 'normal'
-				},
-				navSelector: '.navigation_type_pagination',
-				nextSelector: '.navigation_type_pagination [rel="next"]',
-				itemSelector: postSelector,
-				extraScrollPx: 1500,
-				bufferPx: 1500,
-				binder: $(window),
-				debug: true,
-				prefill: true,
-				appendCallback: false
-			}, function(items, opts) {
-				console.log('opts', opts);
+    // handle index mosaic visibillity
+    var mosaicflow_container = $('.content-wrap_type_index');
+    $('.content-wrap_type_index').fadeOut(0);
 
-				if (items.length) {
-					$.each(items, function(index, value) {
-						$(value).find('.post-preview__img').not(':first-of-type').remove();
-						if (ONE_COLUMN) {
-							$(value).insertBefore(opts.loading.msg[0]);
-						} else {
-							mosaicflow_container.mosaicflow('add', $(value));
-						}
-					});
+    $(function() {
 
-					if (items.length < postsPerPage) {
-						opts.state.isDone = true;
-						$(opts.loading.msg[0]).addClass('no-more-posts');
-						$doc.scroll(function() {
-							if (!already && isBottom($win, $doc)) {
-								console.log('visible');
-								$(opts.loading.msg[0]).find('div').eq(0).text(opts.loading.finishedMsg)
-								$(opts.loading.msg[0]).slideDown().delay(2000).slideUp();
-								already = true;
-							}
-						});
-					}
-				}
-			});
-		}
-	});
+        // handle post feed in permalink page
+        if ($('body.permalink-page .content-wrap_type_index').length !== 0) {
+            $('.js-more').on('click', function(event) {
+                $('.js-more').remove();
+
+                $.ajax({url:'/'}).done(function(data) {
+
+                    var items = $(data).find('.post-preview');
+                    items.find('.post-preview__img').not(':first-of-type').remove();
+                    $.each(items, function(index, value) {
+                        mosaicflow_container.append($(value));
+                    });
+                    handleSeparatePostContent(items);
+
+                    mosaicflow_container.addClass(ONE_COLUMN ? 'one_column' : 'multi_columns');
+                    !ONE_COLUMN && mosaicflow_container.mosaicflow(mosaic_options.index);
+                    mosaicflow_container.slideDown();
+                    mosaicflow_container.fadeIn();
+                    mosaicflow_container.mosaicflow('refill');
+                });
+                event.preventDefault();
+            });
+        }
+        /*
+        */
+
+        // handle post feed in index page
+        if ($('body.index-page .content-wrap_type_index').length !== 0) {
+
+            mosaicflow_container.addClass(ONE_COLUMN ? 'one_column' : 'multi_columns');
+            !ONE_COLUMN && mosaicflow_container.mosaicflow(mosaic_options.index);
+            mosaicflow_container.fadeIn();
+
+
+            // handle event for "no more posts"
+            var $doc = $(document);
+            var $win = $(window);
+            var isBottom = function($win, $doc) { return $doc.scrollTop() === $doc.height() - $win.height(); }
+            var already = false;
+
+            var postSelector =  '.post-preview';
+            var postsPerPage = $(postSelector).length;
+            console.log('postsPerPage', postsPerPage);
+
+            // handle infinite scroll
+            var infinitescroll_container = $('.content-wrap_type_index').infinitescroll({
+                loading: {
+                    finishedMsg: '{lang:No more posts}',
+                    img: 'http://mtrpl.ru/wp-content/uploads/2012/12/ajax-loader.gif',
+                    msgText: '{lang:Loading}…',
+                    speed: 'normal'
+                },
+                navSelector: '.navigation_type_pagination',
+                nextSelector: '.navigation_type_pagination [rel="next"]',
+                itemSelector: postSelector,
+                extraScrollPx: 1500,
+                bufferPx: 1500,
+                binder: $(window),
+                debug: true,
+                prefill: true,
+                appendCallback: false
+            }, function(items, opts) {
+                console.log('opts', opts);
+
+                if (items.length) {
+                    $.each(items, function(index, value) {
+                        $(value).find('.post-preview__img').not(':first-of-type').remove();
+                        if (ONE_COLUMN) {
+                            $(value).insertBefore(opts.loading.msg[0]);
+                        } else {
+                            mosaicflow_container.mosaicflow('add', $(value));
+                        }
+                    });
+
+                    if (items.length < postsPerPage) {
+                        opts.state.isDone = true;
+                        $(opts.loading.msg[0]).addClass('no-more-posts');
+                        $doc.scroll(function() {
+                            if (!already && isBottom($win, $doc)) {
+                                console.log('visible');
+                                $(opts.loading.msg[0]).find('div').eq(0).text(opts.loading.finishedMsg)
+                                $(opts.loading.msg[0]).slideDown().delay(2000).slideUp();
+                                already = true;
+                            }
+                        });
+                    }
+                }
+            });
+        }
+    });

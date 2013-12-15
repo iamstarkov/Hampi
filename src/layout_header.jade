@@ -3,14 +3,14 @@ header.header.clearfix
 	+block('IndexPage')
 		h1.logo(title="{Title}")
 			+block('ifLogoImage')
-				img(src="{image:Logo}").logo.logo_img
-			+block('ifNotImageLogo')
+				img(src="{image:Logo}").logo_img
+			+block('ifNotLogoImage')
 				| {Title}
 	+block('PermalinkPage')
-		a.logo(href="/", title="{Title}")
+		a.logo.logo_size_small(href="/", title="{Title}")
 			+block('ifLogoImage')
-				img(src="{image:Logo}").logo.logo_img.logo_size_small
-			+block('ifNotImageLogo')
+				img(src="{image:Logo}").logo_img
+			+block('ifNotLogoImage')
 				| {Title}
 
 

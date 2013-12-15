@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="{block:English}en{/block:English}{block:German}de{/block:German}{block:French}fr{/block:French}{block:Italian}it{/block:Italian}{block:Japanese}ja{/block:Japanese}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}{block:Portuguese}pt{/block:Portuguese}{block:Dutch}nl{/block:Dutch}" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{block:IndexPage}{block:SearchPage}{lang:Search results for SearchQuery} — {/block:SearchPage}{block:PostSummary}{PlaintextPostSummary} — {/block:PostSummary}{Title}{/block:IndexPage}{block:PermalinkPage}{block:Posts}{block:Text}{block:PostSummary}{PlaintextPostSummary} – {/block:PostSummary}{/block:Text}{block:Photo}{block:Caption}{PlaintextCaption} – {/block:Caption}{/block:Photo}{block:Photoset}{block:Caption}{PlaintextCaption} – {/block:Caption}{/block:Photoset}{block:Panorama}{block:Caption}{PlaintextCaption} – {/block:Caption}{/block:Panorama}{block:Quote}{PlaintextQuote} – {/block:Quote}{block:Link}{PlaintextName} – {/block:Link}{block:Chat}{block:PostSummary}{PlaintextPostSummary} – {/block:PostSummary}{/block:Chat}{block:Video}{block:PostSummary}{PlaintextPostSummary} – {/block:PostSummary}{/block:Video}{block:Answer}{PlaintextQuestion} – {/block:Answer}{/block:Posts}{Title}{/block:PermalinkPage}</title>
+    <meta name="description" content="{MetaDescription}">
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="apple-touch-icon" href="{PortraitURL-128}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    <!-- LINK TAGS FOR ACCESSIBILITY-->
+    <link rel="home" href="{BlogURL}">{block:Pagination}{block:PreviousPage}
+    <link rel="prev" href="{PreviousPage}">{/block:PreviousPage}{block:NextPage}
+    <link rel="next" href="{NextPage}">{/block:NextPage}{/block:Pagination}{block:PermalinkPagination}{block:PreviousPost}
+    <link rel="prev" href="{PreviousPost}">{/block:PreviousPost}{block:NextPost}
+    <link rel="next" href="{NextPost}">{/block:NextPost}{/block:PermalinkPagination}
+    <meta name="image:Logo" content="http://static.tumblr.com/4kzimp0/UMBmtu4pe/logo.png">
+    <meta name="if:Respectfull Footer" content="1">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&amp;subset=latin,cyrillic,cyrillic-ext">
+
+    <link rel="stylesheet" href="http://static.tumblr.com/4kzimp0/xjCmxtrxp/style.min.css">
+
+    <script src="http://static.tumblr.com/4kzimp0/rIKmwxtoc/modernizr-2.6.2.min.js"></script>
+
+  </head>
+  <body class="{block:IndexPage}index-page {/block:IndexPage}{block:DayPage}index-day-page {/block:DayPage}{block:TagPage}index-tag-page {/block:TagPage}{block:SearchPage}index-search-page {/block:SearchPage}{block:PermalinkPage}permalink-page {/block:PermalinkPage}">
+    <div class="wrap">
+      <header class="header clearfix">{block:IndexPage}
+        <h1 title="{Title}" class="logo">{block:ifLogoImage}<img src="{image:Logo}" class="logo logo_img">{/block:ifLogoImage}{block:ifNotImageLogo}{Title}{/block:ifNotImageLogo}
+        </h1>{/block:IndexPage}{block:PermalinkPage}<a href="/" title="{Title}" class="logo">{block:ifLogoImage}<img src="{image:Logo}" class="logo logo_img logo_size_small">{/block:ifLogoImage}{block:ifNotImageLogo}{Title}{/block:ifNotImageLogo}</a>{/block:PermalinkPage}{block:HasPages}
+        <div class="menu i-non-select clearfix imenu">
+          <div class="menu__toggler imenu__toggler"></div>
+          <ul class="menu__list unstyled i-smoothness clearfix">{block:Pages}
+            <li class="menu__item"><a href="{URL}" title="{Label}" class="menu__link">{Label}</a></li>{/block:Pages}
+          </ul>
+        </div>{/block:HasPages}
+      </header>{block:IndexPage}
+      <div style="opacity: 0;" class="content-wrap content-wrap_type_index clearfix i-smoothness">{block:Posts}{block:Text}<a id="post{PostID}" href="{Permalink}" class="post-preview post_type_text preview-post_visual-state_text post  {block:HighRes}post_type_highres {/block:HighRes}{block:PostNotes}post_type_hasnotes {/block:PostNotes}{block:More}post_type_hasmore {/block:More}{block:HasTags}post_type_hastags {/block:HasTags}{block:Odd}post_type_odd {/block:Odd}{block:Even}post_type_even {/block:Even}{block:Date}
+post_date_{AmPm}
+post_date_{ShortDayOfWeek}
+post_date_{ShortMonth}
+post_date_{DayOfMonthWithZero}
+post_date_{Year} {/block:Date}{TagsAsClasses} ">{block:Title}
+          <div class="post-preview__title">{PlaintextTitle}</div>{/block:Title}
+          <div content="helper-title" class="hidden">{PlaintextBody}</div></a>{/block:Text}{block:Photo}<a id="post{PostID}" href="{Permalink}" class="post-preview post_type_photo preview-post_visual-state_overlay post  {block:HighRes}post_type_highres {/block:HighRes}{block:PostNotes}post_type_hasnotes {/block:PostNotes}{block:More}post_type_hasmore {/block:More}{block:HasTags}post_type_hastags {/block:HasTags}{block:Odd}post_type_odd {/block:Odd}{block:Even}post_type_even {/block:Even}{block:Date}
+post_date_{AmPm}
+post_date_{ShortDayOfWeek}
+post_date_{ShortMonth}
+post_date_{DayOfMonthWithZero}
+post_date_{Year} {/block:Date}{TagsAsClasses} "><img alt="" src="{PhotoURL-400}" width="{PhotoWidth-400}" height="{PhotoHeight-400}" class="post-preview__img">{block:Caption}
+          <div class="post-preview__title">{PlaintextCaption}</div>{/block:Caption}</a>{/block:Photo}{block:Photoset}<a id="post{PostID}" href="{Permalink}" class="post-preview post_type_photoset preview-post_visual-state_overlay post  {block:HighRes}post_type_highres {/block:HighRes}{block:PostNotes}post_type_hasnotes {/block:PostNotes}{block:More}post_type_hasmore {/block:More}{block:HasTags}post_type_hastags {/block:HasTags}{block:Odd}post_type_odd {/block:Odd}{block:Even}post_type_even {/block:Even}{block:Date}
+post_date_{AmPm}
+post_date_{ShortDayOfWeek}
+post_date_{ShortMonth}
+post_date_{DayOfMonthWithZero}
+post_date_{Year} {/block:Date}{TagsAsClasses} ">{block:Photos}<img src="{PhotoURL-400}" width="{PhotoWidth-400}" height="{PhotoHeight-400}" class="post-preview__img">{/block:Photos}{block:Caption}
+          <div class="post-preview__title">{PlaintextCaption}</div>{/block:Caption}</a>{/block:Photoset}{block:Panorama}<a id="post{PostID}" href="{Permalink}" class="post-preview post_type_panorama preview-post_visual-state_overlay post  {block:HighRes}post_type_highres {/block:HighRes}{block:PostNotes}post_type_hasnotes {/block:PostNotes}{block:More}post_type_hasmore {/block:More}{block:HasTags}post_type_hastags {/block:HasTags}{block:Odd}post_type_odd {/block:Odd}{block:Even}post_type_even {/block:Even}{block:Date}
+post_date_{AmPm}
+post_date_{ShortDayOfWeek}
+post_date_{ShortMonth}
+post_date_{DayOfMonthWithZero}
+post_date_{Year} {/block:Date}{TagsAsClasses} ">{block:LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" width="{PhotoWidth-400}" height="{PhotoHeight-400}">{/block:LinkOpenTag}{block:Caption}
+          <div class="post-preview__title">{PlaintextCaption}</div>{/block:Caption}</a>{/block:Panorama}{block:Quote}<a id="post{PostID}" href="{Permalink}" class="post-preview post_type_quote preview-post_visual-state_text post  {block:HighRes}post_type_highres {/block:HighRes}{block:PostNotes}post_type_hasnotes {/block:PostNotes}{block:More}post_type_hasmore {/block:More}{block:HasTags}post_type_hastags {/block:HasTags}{block:Odd}post_type_odd {/block:Odd}{block:Even}post_type_even {/block:Even}{block:Date}
+post_date_{AmPm}
+post_date_{ShortDayOfWeek}
+post_date_{ShortMonth}
+post_date_{DayOfMonthWithZero}
+post_date_{Year} {/block:Date}{TagsAsClasses} ">
+          <div class="post-preview__desc">{PlaintextQuote}</div></a>{/block:Quote}{block:Link}<a id="post{PostID}" href="{URL}" class="post-preview post_type_link preview-post_visual-state_text post  {block:HighRes}post_type_highres {/block:HighRes}{block:PostNotes}post_type_hasnotes {/block:PostNotes}{block:More}post_type_hasmore {/block:More}{block:HasTags}post_type_hastags {/block:HasTags}{block:Odd}post_type_odd {/block:Odd}{block:Even}post_type_even {/block:Even}{block:Date}
+post_date_{AmPm}
+post_date_{ShortDayOfWeek}
+post_date_{ShortMonth}
+post_date_{DayOfMonthWithZero}
+post_date_{Year} {/block:Date}{TagsAsClasses} ">
+          <div class="post-preview__title">{PlaintextName}</div>{block:Description}
+          <div class="post-preview__desc">{PlaintextDescription}</div>{/block:Description}</a>{/block:Link}{block:Chat}<a id="post{PostID}" href="{Permalink}" class="post-preview post_type_chat preview-post_visual-state_text post  {block:HighRes}post_type_highres {/block:HighRes}{block:PostNotes}post_type_hasnotes {/block:PostNotes}{block:More}post_type_hasmore {/block:More}{block:HasTags}post_type_hastags {/block:HasTags}{block:Odd}post_type_odd {/block:Odd}{block:Even}post_type_even {/block:Even}{block:Date}
+post_date_{AmPm}
+post_date_{ShortDayOfWeek}
+post_date_{ShortMonth}
+post_date_{DayOfMonthWithZero}
+post_date_{Year} {/block:Date}{TagsAsClasses} ">{block:Title}
+          <div class="post-preview__title">{PlaintextTitle}</div>{/block:Title}
+          <div content="helper-title" class="hidden">
+            <ul class="unstyled">{block:Lines}
+              <li class="unstyle">{block:Label}<b>{PlaintextLabel}</b>{/block:Label}{PlaintextLine}
+              </li>{/block:Lines}
+            </ul>
+          </div></a>{/block:Chat}{block:Audio}
+        <div id="post{PostID}" class="post-preview post_type_audio preview-post_visual-state_iframe post  {block:HighRes}post_type_highres {/block:HighRes}{block:PostNotes}post_type_hasnotes {/block:PostNotes}{block:More}post_type_hasmore {/block:More}{block:HasTags}post_type_hastags {/block:HasTags}{block:Odd}post_type_odd {/block:Odd}{block:Even}post_type_even {/block:Even}{block:Date}
+post_date_{AmPm}
+post_date_{ShortDayOfWeek}
+post_date_{ShortMonth}
+post_date_{DayOfMonthWithZero}
+post_date_{Year} {/block:Date}{TagsAsClasses} ">{block:AudioEmbed}{AudioEmbed-400}{/block:AudioEmbed}
+        </div>{/block:Audio}{block:Video}<a id="post{PostID}" href="{Permalink}" class="post-preview post_type_video preview-post_visual-state_iframe post  {block:HighRes}post_type_highres {/block:HighRes}{block:PostNotes}post_type_hasnotes {/block:PostNotes}{block:More}post_type_hasmore {/block:More}{block:HasTags}post_type_hastags {/block:HasTags}{block:Odd}post_type_odd {/block:Odd}{block:Even}post_type_even {/block:Even}{block:Date}
+post_date_{AmPm}
+post_date_{ShortDayOfWeek}
+post_date_{ShortMonth}
+post_date_{DayOfMonthWithZero}
+post_date_{Year} {/block:Date}{TagsAsClasses} ">{VideoEmbed-400}{block:Caption}
+          <div class="post-preview__title">{PlaintextCaption}</div>{/block:Caption}</a>{/block:Video}{block:Answer}<a id="post{PostID}" href="{Permalink}" class="post-preview post_type_answer preview-post_visual-state_text post  {block:HighRes}post_type_highres {/block:HighRes}{block:PostNotes}post_type_hasnotes {/block:PostNotes}{block:More}post_type_hasmore {/block:More}{block:HasTags}post_type_hastags {/block:HasTags}{block:Odd}post_type_odd {/block:Odd}{block:Even}post_type_even {/block:Even}{block:Date}
+post_date_{AmPm}
+post_date_{ShortDayOfWeek}
+post_date_{ShortMonth}
+post_date_{DayOfMonthWithZero}
+post_date_{Year} {/block:Date}{TagsAsClasses} ">
+          <div class="post-preview__desc">{PlaintextQuestion}</div></a>{/block:Answer}{/block:Posts}
+      </div>
+      <div class="content-wrap">{block:Pagination}
+        <div class="navigation navigation_type_pagination clearfix">{block:PreviousPage}<a href="{PreviousPage}" rel="prev" title="{lang:Previous page}" class="navigation__link navigation__link_type_prev">
+            <div class="arrow arrow_type_left"></div><span class="navigation__link-text">{lang:Previous page}</span></a>{/block:PreviousPage}{block:NextPage}<a href="{NextPage}" rel="next" title="{lang:Next page}" class="navigation__link navigation__link_type_next">
+            <div class="arrow arrow_type_right"></div><span class="navigation__link-text">{lang:Next page}</span></a>{/block:NextPage}
+        </div>{/block:Pagination}{block:PermalinkPagination}
+        <div class="navigation navigation_type_around clearfix">{block:PreviousPost}<a href="{PreviousPost}" rel="prev" title="{lang:Previous post}" class="navigation__link navigation__link_type_prev">
+            <div class="arrow arrow_type_left"></div><span class="navigation__link-text">{lang:Previous post}</span></a>{/block:PreviousPost}{block:NextPost}<a href="{NextPost}" rel="next" title="{lang:Next post}" class="navigation__link navigation__link_type_next">
+            <div class="arrow arrow_type_right"></div><span class="navigation__link-text">{lang:Next post}</span></a>{/block:NextPost}{block:NextPost}<a href="#" title="{lang:See more}" class="navigation__link navigation__link_type_center">
+            <div class="arrow arrow_type_more"></div><span class="navigation__link-text navigation__link-text_type_pseudo js-more">{lang:See more}</span></a>{/block:NextPost}
+        </div>{/block:PermalinkPagination}
+      </div>{/block:IndexPage}{block:PermalinkPage}
+      <div class="content-wrap content-wrap_type_page clearfix">{block:Posts}{block:Text}
+        <div id="post{PostID}" class="post post_type_text clearfix post  {block:HighRes}post_type_highres {/block:HighRes}{block:PostNotes}post_type_hasnotes {/block:PostNotes}{block:More}post_type_hasmore {/block:More}{block:HasTags}post_type_hastags {/block:HasTags}{block:Odd}post_type_odd {/block:Odd}{block:Even}post_type_even {/block:Even}{block:Date}
+post_date_{AmPm}
+post_date_{ShortDayOfWeek}
+post_date_{ShortMonth}
+post_date_{DayOfMonthWithZero}
+post_date_{Year} {/block:Date}{TagsAsClasses} ">
+          <div class="post__content-wrap">{block:Title}
+            <div class="post__title">{PlaintextTitle}</div>{/block:Title}
+            <div class="post__desc">{Body}</div>{block:HasTags}
+            <ul class="post__tags i-tags unstyled clearfix">{block:Tags}
+              <li class="post-preview__tag i-tags__tag">{Tag}</li>{/block:Tags}
+            </ul>{/block:HasTags}
+          </div>
+        </div>{/block:Text}{block:Photo}
+        <div id="post{PostID}" class="post post_type_photo clearfix post  {block:HighRes}post_type_highres {/block:HighRes}{block:PostNotes}post_type_hasnotes {/block:PostNotes}{block:More}post_type_hasmore {/block:More}{block:HasTags}post_type_hastags {/block:HasTags}{block:Odd}post_type_odd {/block:Odd}{block:Even}post_type_even {/block:Even}{block:Date}
+post_date_{AmPm}
+post_date_{ShortDayOfWeek}
+post_date_{ShortMonth}
+post_date_{DayOfMonthWithZero}
+post_date_{Year} {/block:Date}{TagsAsClasses} ">
+          <div class="post__content-wrap">
+            <div class="post__title"></div>
+            <div class="post__desc"></div>{block:Caption}
+            <div content="photo_caption" class="hidden">{Caption}</div>{/block:Caption}{block:HasTags}
+            <ul class="post__tags i-tags unstyled clearfix">{block:Tags}
+              <li class="post-preview__tag i-tags__tag">{Tag}</li>{/block:Tags}
+            </ul>{/block:HasTags}
+          </div>
+          <div class="post__images-wrap is-hidden">{block:HighRes}<img alt="" src="{PhotoURL-HighRes}" width="{PhotoWidth-HighRes}" height="{PhotoHeight-HighRes}" class="post__image post__image_type_highres">{/block:HighRes}<img alt="" src="{PhotoURL-500}" width="{PhotoWidth-400}" height="{PhotoHeight-400}" class="post__image post__image_type_normal">
+          </div>
+        </div>{/block:Photo}{block:Photoset}
+        <div id="post{PostID}" class="post post_type_photoset clearfix post  {block:HighRes}post_type_highres {/block:HighRes}{block:PostNotes}post_type_hasnotes {/block:PostNotes}{block:More}post_type_hasmore {/block:More}{block:HasTags}post_type_hastags {/block:HasTags}{block:Odd}post_type_odd {/block:Odd}{block:Even}post_type_even {/block:Even}{block:Date}
+post_date_{AmPm}
+post_date_{ShortDayOfWeek}
+post_date_{ShortMonth}
+post_date_{DayOfMonthWithZero}
+post_date_{Year} {/block:Date}{TagsAsClasses} ">
+          <div class="post__content-wrap">
+            <div class="post__title"></div>
+            <div class="post__desc"></div>{block:Caption}
+            <div content="photo_caption" class="hidden">{Caption}</div>{/block:Caption}{block:HasTags}
+            <ul class="post__tags i-tags unstyled clearfix">{block:Tags}
+              <li class="post-preview__tag i-tags__tag">{Tag}</li>{/block:Tags}
+            </ul>{/block:HasTags}
+          </div>
+          <div style="opacity: 0;" class="post__images-wrap">{block:Photos}<img alt="" src="{PhotoURL-500}" width="{PhotoWidth-400}" height="{PhotoHeight-400}" class="post__image">{/block:Photos}
+          </div>
+        </div>{/block:Photoset}{block:Panorama}
+        <div id="post{PostID}" class="post post_type_panorama clearfix post  {block:HighRes}post_type_highres {/block:HighRes}{block:PostNotes}post_type_hasnotes {/block:PostNotes}{block:More}post_type_hasmore {/block:More}{block:HasTags}post_type_hastags {/block:HasTags}{block:Odd}post_type_odd {/block:Odd}{block:Even}post_type_even {/block:Even}{block:Date}
+post_date_{AmPm}
+post_date_{ShortDayOfWeek}
+post_date_{ShortMonth}
+post_date_{DayOfMonthWithZero}
+post_date_{Year} {/block:Date}{TagsAsClasses} ">
+          <div class="post__content-wrap">
+            <div class="post__title"></div>
+            <div class="post__desc"></div>{block:Caption}
+            <div content="photo_caption" class="hidden">{Caption}</div>{/block:Caption}{block:HasTags}
+            <ul class="post__tags i-tags unstyled clearfix">{block:Tags}
+              <li class="post-preview__tag i-tags__tag">{Tag}</li>{/block:Tags}
+            </ul>{/block:HasTags}
+          </div>{block:LinkOpenTag}
+          <div class="post__images-wrap"><img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" width="{PhotoWidth-400}" height="{PhotoHeight-400}" class="post__image"></div>{/block:LinkOpenTag}
+        </div>{/block:Panorama}{block:Quote}
+        <div id="post{PostID}" class="post post_type_quote clearfix post  {block:HighRes}post_type_highres {/block:HighRes}{block:PostNotes}post_type_hasnotes {/block:PostNotes}{block:More}post_type_hasmore {/block:More}{block:HasTags}post_type_hastags {/block:HasTags}{block:Odd}post_type_odd {/block:Odd}{block:Even}post_type_even {/block:Even}{block:Date}
+post_date_{AmPm}
+post_date_{ShortDayOfWeek}
+post_date_{ShortMonth}
+post_date_{DayOfMonthWithZero}
+post_date_{Year} {/block:Date}{TagsAsClasses} ">
+          <div class="post__content-wrap">
+            <div class="post__desc">{PlaintextQuote}</div>{block:HasTags}
+            <ul class="post__tags i-tags unstyled clearfix">{block:Tags}
+              <li class="post-preview__tag i-tags__tag">{Tag}</li>{/block:Tags}
+            </ul>{/block:HasTags}
+          </div>
+        </div>{/block:Quote}{block:Link}
+        <div id="post{PostID}" class="post post_type_link clearfix post  {block:HighRes}post_type_highres {/block:HighRes}{block:PostNotes}post_type_hasnotes {/block:PostNotes}{block:More}post_type_hasmore {/block:More}{block:HasTags}post_type_hastags {/block:HasTags}{block:Odd}post_type_odd {/block:Odd}{block:Even}post_type_even {/block:Even}{block:Date}
+post_date_{AmPm}
+post_date_{ShortDayOfWeek}
+post_date_{ShortMonth}
+post_date_{DayOfMonthWithZero}
+post_date_{Year} {/block:Date}{TagsAsClasses} ">
+          <div class="post__content-wrap">
+            <div class="post__title">{PlaintextName}</div>{block:Description}
+            <div class="post__desc">{PlaintextDescription}</div>{/block:Description}{block:HasTags}
+            <ul class="post__tags i-tags unstyled clearfix">{block:Tags}
+              <li class="post-preview__tag i-tags__tag">{Tag}</li>{/block:Tags}
+            </ul>{/block:HasTags}
+          </div>
+        </div>{/block:Link}{block:Chat}
+        <div id="post{PostID}" class="post post_type_chat clearfix post  {block:HighRes}post_type_highres {/block:HighRes}{block:PostNotes}post_type_hasnotes {/block:PostNotes}{block:More}post_type_hasmore {/block:More}{block:HasTags}post_type_hastags {/block:HasTags}{block:Odd}post_type_odd {/block:Odd}{block:Even}post_type_even {/block:Even}{block:Date}
+post_date_{AmPm}
+post_date_{ShortDayOfWeek}
+post_date_{ShortMonth}
+post_date_{DayOfMonthWithZero}
+post_date_{Year} {/block:Date}{TagsAsClasses} ">
+          <div class="post__content-wrap">{block:Title}
+            <div class="post_title">{PlaintextTitle}</div>{/block:Title}{block:HasTags}
+            <ul class="post__tags i-tags unstyled clearfix">{block:Tags}
+              <li class="post-preview__tag i-tags__tag">{Tag}</li>{/block:Tags}
+            </ul>{/block:HasTags}
+          </div>
+          <div class="post__images-wrap">
+            <ul class="unstyled">{block:Lines}
+              <li class="unstyle">{block:Label}<b>{PlaintextLabel}</b>{/block:Label}{PlaintextLine}
+              </li>{/block:Lines}
+            </ul>
+          </div>
+        </div>{/block:Chat}{block:Audio}
+        <div id="post{PostID}" class="post post_type_audio clearfix post  {block:HighRes}post_type_highres {/block:HighRes}{block:PostNotes}post_type_hasnotes {/block:PostNotes}{block:More}post_type_hasmore {/block:More}{block:HasTags}post_type_hastags {/block:HasTags}{block:Odd}post_type_odd {/block:Odd}{block:Even}post_type_even {/block:Even}{block:Date}
+post_date_{AmPm}
+post_date_{ShortDayOfWeek}
+post_date_{ShortMonth}
+post_date_{DayOfMonthWithZero}
+post_date_{Year} {/block:Date}{TagsAsClasses} ">
+          <div class="post__content-wrap">{block:Caption}
+            <div class="post__title">{PlaintextCaption}</div>{/block:Caption}{block:HasTags}
+            <ul class="post__tags i-tags unstyled clearfix">{block:Tags}
+              <li class="post-preview__tag i-tags__tag">{Tag}</li>{/block:Tags}
+            </ul>{/block:HasTags}
+          </div>{block:AudioEmbed}
+          <div class="post__images-wrap">{AudioEmbed-400}</div>{/block:AudioEmbed}
+        </div>{/block:Audio}{block:Video}
+        <div id="post{PostID}" class="post post_type_video clearfix post  {block:HighRes}post_type_highres {/block:HighRes}{block:PostNotes}post_type_hasnotes {/block:PostNotes}{block:More}post_type_hasmore {/block:More}{block:HasTags}post_type_hastags {/block:HasTags}{block:Odd}post_type_odd {/block:Odd}{block:Even}post_type_even {/block:Even}{block:Date}
+post_date_{AmPm}
+post_date_{ShortDayOfWeek}
+post_date_{ShortMonth}
+post_date_{DayOfMonthWithZero}
+post_date_{Year} {/block:Date}{TagsAsClasses} ">
+          <div class="post__content-wrap">{block:Caption}
+            <div class="post__title">{PlaintextCaption}</div>{/block:Caption}{block:HasTags}
+            <ul class="post__tags i-tags unstyled clearfix">{block:Tags}
+              <li class="post-preview__tag i-tags__tag">{Tag}</li>{/block:Tags}
+            </ul>{/block:HasTags}
+          </div>
+          <div class="post__images-wrap">{VideoEmbed-400}</div>
+        </div>{/block:Video}{block:Answer}
+        <div id="post{PostID}" class="post post_type_answer clearfix post  {block:HighRes}post_type_highres {/block:HighRes}{block:PostNotes}post_type_hasnotes {/block:PostNotes}{block:More}post_type_hasmore {/block:More}{block:HasTags}post_type_hastags {/block:HasTags}{block:Odd}post_type_odd {/block:Odd}{block:Even}post_type_even {/block:Even}{block:Date}
+post_date_{AmPm}
+post_date_{ShortDayOfWeek}
+post_date_{ShortMonth}
+post_date_{DayOfMonthWithZero}
+post_date_{Year} {/block:Date}{TagsAsClasses} ">
+          <div class="post__content-wrap">
+            <div class="post__desc">{Question}</div>{block:HasTags}
+            <ul class="post__tags i-tags unstyled clearfix">{block:Tags}
+              <li class="post-preview__tag i-tags__tag">{Tag}</li>{/block:Tags}
+            </ul>{/block:HasTags}
+          </div>
+          <div class="post__images-wrap"><b>{Question}</b>
+            <hr>{Answer}
+          </div>
+        </div>{/block:Answer}{/block:Posts}
+      </div>
+      <div class="content-wrap content-wrap_type_page">{block:Pagination}
+        <div class="navigation navigation_type_pagination clearfix">{block:PreviousPage}<a href="{PreviousPage}" rel="prev" title="{lang:Previous page}" class="navigation__link navigation__link_type_prev">
+            <div class="arrow arrow_type_left"></div><span class="navigation__link-text">{lang:Previous page}</span></a>{/block:PreviousPage}{block:NextPage}<a href="{NextPage}" rel="next" title="{lang:Next page}" class="navigation__link navigation__link_type_next">
+            <div class="arrow arrow_type_right"></div><span class="navigation__link-text">{lang:Next page}</span></a>{/block:NextPage}
+        </div>{/block:Pagination}{block:PermalinkPagination}
+        <div class="navigation navigation_type_around clearfix">{block:PreviousPost}<a href="{PreviousPost}" rel="prev" title="{lang:Previous post}" class="navigation__link navigation__link_type_prev">
+            <div class="arrow arrow_type_left"></div><span class="navigation__link-text">{lang:Previous post}</span></a>{/block:PreviousPost}{block:NextPost}<a href="{NextPost}" rel="next" title="{lang:Next post}" class="navigation__link navigation__link_type_next">
+            <div class="arrow arrow_type_right"></div><span class="navigation__link-text">{lang:Next post}</span></a>{/block:NextPost}{block:NextPost}<a href="#" title="{lang:See more}" class="navigation__link navigation__link_type_center">
+            <div class="arrow arrow_type_more"></div><span class="navigation__link-text navigation__link-text_type_pseudo js-more">{lang:See more}</span></a>{/block:NextPost}
+        </div>{/block:PermalinkPagination}
+      </div>
+      <div class="content-wrap content-wrap_type_index clearfix"></div>{/block:PermalinkPage}
+      <footer class="footer">{block:ifRespectfullFooter}{block:English}Excellent <a href="http://hampi-theme.tumblr.com/" title="Hampi">Hampi</a> delivered to you by <a href="http://vstarkov.com/" title="Vladimir Starkov">Vladimir Starkov</a> and <a href="http://iesys.tumblr.com/" title="Evgeny Elovsky">Evgeny Elovsky</a>{/block:English}{block:German}Ausgezeichnet <a href="http://hampi-theme.tumblr.com/" title="Hampi">Hampi</a> an Sie geliefert von <a href="http://vstarkov.com/" title="Vladimir Starkov">Vladimir Starkov</a> und <a href="http://iesys.tumblr.com/" title="Evgeny Elovsky">Evgeny Elovsky</a>{/block:German}{block:French}Excellente <a href="http://hampi-theme.tumblr.com/" title="Hampi">Hampi</a> livré par <a href="http://vstarkov.com/" title="Vladimir Starkov">Vladimir Starkov</a> et <a href="http://iesys.tumblr.com/" title="Evgeny Elovsky">Evgeny Elovsky</a>{/block:French}{block:Italian}Eccellente <a href="http://hampi-theme.tumblr.com/" title="Hampi">Hampi</a> consegnato a voi da <a href="http://vstarkov.com/" title="Vladimir Starkov">Vladimir Starkov</a> e <a href="http://iesys.tumblr.com/" title="Evgeny Elovsky">Evgeny Elovsky</a>{/block:Italian}{block:Japanese}優秀<a href="http://hampi-theme.tumblr.com/" title="Hampi">ハンピ</a><a href="http://vstarkov.com/" title="Vladimir Starkov">Starkov</a>と<a href="http://iesys.tumblr.com/" title="Evgeny Elovsky">Elovsky</a>によってあなたに配信{/block:Japanese}{block:Turkish}Mükemmel <a href="http://hampi-theme.tumblr.com/" title="Hampi">Hampi</a> <a href="http://vstarkov.com/" title="Vladimir Starkov">Vladimir Starkov</a> ve <a href="http://iesys.tumblr.com/" title="Evgeny Elovsky">Evgeny Elovsky</a> tarafından size teslim{/block:Turkish}{block:Spanish}Excelente <a href="http://hampi-theme.tumblr.com/" title="Hampi">Hampi</a> entregado a usted por <a href="http://vstarkov.com/" title="Vladimir Starkov">Vladimir Starkov</a> y <a href="http://iesys.tumblr.com/" title="Evgeny Elovsky">Evgeny Elovsky</a>{/block:Spanish}{block:Russian}<a href="http://vstarkov.ru/" title="Владимир Старков">Владимир Старков</a> и <a href="http://iesys.tumblr.com/" title="Евгений Еловский">Евгений Еловский</a> сделали для вас превосходную <a href="http://hampi-theme.tumblr.com/" title="Хампи">Хампи</a>{/block:Russian}{block:Polish}Doskonały <a href="http://hampi-theme.tumblr.com/" title="Hampi">Hampi</a> dostarczone do Ciebie przez <a href="http://vstarkov.com/" title="Władimira Starkov">Władimira Starkov</a> i <a href="http://iesys.tumblr.com/" title="Jewgienija Elovsky">Jewgienija Elovsky</a>{/block:Polish}{block:Portuguese}Excelente <a href="http://hampi-theme.tumblr.com/" title="Hampi">Hampi</a> entregue a você por <a href="http://vstarkov.com/" title="Vladimir Starkov">Vladimir Starkov</a> e <a href="http://iesys.tumblr.com/" title="Evgeny Elovsky">Evgeny Elovsky</a>{/block:Portuguese}{block:Dutch}Uitstekende <a href="http://hampi-theme.tumblr.com/" title="Hampi">Hampi</a> aan u geleverd door <a href="http://vstarkov.com/" title="Vladimir Starkov">Vladimir Starkov</a> en <a href="http://iesys.tumblr.com/" title="Evgeny Elovsky">Evgeny Elovsky</a>{/block:Dutch}{/block:ifRespectfullFooter}
+      </footer>
+    </div>
+
+    <script src="http://static.tumblr.com/4kzimp0/phdmwxtxe/jquery.min.js"></script> <!--2.0.3-->
+    <script src="http://static.tumblr.com/4kzimp0/V1kmxtrvq/jquery.mosaicflow.js"></script>
+    <script src="http://static.tumblr.com/4kzimp0/v2kmwxu0u/jquery.imenu.min.js"></script>
+    <script src="http://static.tumblr.com/4kzimp0/Pjzmwxu24/jquery.infinitescroll.min.js"></script>
+    <script src="http://static.tumblr.com/4kzimp0/7TRmwxu6m/plugins.js"></script>
+
+    <script>
+      // boolean constant described DEMO state
+      var DEMO = ($('#post236').length === 1);
+
+      // boolean constant described state in which there will be only one column
+      var ONE_COLUMN = !DEMO && $(window).width() < 732;
+
+      // handle image duplicats in photosets
+      $('.content-wrap_type_index .post-preview__img').not(':first-of-type').remove();
+
+      // handle optional caption or title
+      // text, link, chat
+      function handleSeparatePostContent( $collection ) {
+          $collection.each(function(index, elem) {
+              var $elem = $(elem),
+                  title = $elem.find('.post-preview__title'),
+                  desc = $elem.find('.post-preview__desc'),
+                  helper = $elem.find('[content="helper-title"]');
+
+              if (title.length === 0 && helper.length !== 0) {
+                  var text = helper.text(); //replace with your string.
+                  var maxLength = 140 // maximum number of characters to extract
+                  var trimmedString = text.substr(0, maxLength);
+                  trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" "))) + '…';
+
+                  $elem.append(
+                      $('<div/>', {
+                          class: 'post-preview__desc',
+                          text: trimmedString
+                      })
+                  );
+
+              }
+          });
+      }
+
+      handleSeparatePostContent($('.content-wrap_type_index .post-preview'));
+
+      // separate title to title with description
+      if ($('[content=photo_caption]').length !== 0) {
+          var placeholder = '%MORE%',
+              $container = $('[content=photo_caption]'),
+              content = $container.html();
+
+          $container.remove();
+          content = content.replace(/<!-- more -->/gim, placeholder).replace(/<[^<]+?>/gim, '').replace(/&nbsp;/gim, ' ').split(placeholder);
+
+          if (content[0]) {
+              $('.post__title').text(content[0].trim());
+          };
+          if (content[1]) {
+              $('.post__desc').text(content[1].trim());
+          }
+      }
+
+      // handle iframes
+      $('iframe').prop('width', '100%');
+      $(window).resize(function() {
+          $('iframe').prop('width', '100%');
+      });
+
+      function getWidth() {
+          return ($(window).width() < 1600) ?  331 : 450;
+      }
+
+      var mosaic_options = {
+          index: {
+              itemSelector: '.post-preview',
+              minItemWidth: getWidth()
+          },
+          photoset: {
+              itemSelector: 'img',
+              minItemWidth: 468,
+          }
+      }
+
+      // handle photoset mosaic
+      var inited = false;
+      photoset = $('.post_type_photoset .post__images-wrap');
+      if (photoset.length !== 0) {
+          photoset.addClass(ONE_COLUMN ? 'one_column' : 'multi_columns');
+          if (!ONE_COLUMN) {
+              photoset.mosaicflow(mosaic_options.photoset);
+              photoset.on('mosaicflow-layout', function() {
+                  if (!inited) {
+                      photoset.animate({opacity: 1}, 100);
+                      inited = true;
+                  }
+              });
+
+          }
+      }
+
+
+      // handle index mosaic visibillity
+      var feed = $('.content-wrap_type_index');
+
+      $(function() {
+
+          // handle post feed in permalink page
+          if ($('body.permalink-page .content-wrap_type_index').length !== 0) {
+              $('.js-more').on('click', function(event) {
+                  $('.js-more').remove();
+
+                  $.ajax({url:'/'}).done(function(data) {
+
+                      var items = $(data).find('.post-preview');
+                      items.find('.post-preview__img').not(':first-of-type').remove();
+                      $.each(items, function(index, value) {
+                          feed.append($(value));
+                      });
+                      handleSeparatePostContent(items);
+
+                      feed.addClass(ONE_COLUMN ? 'one_column' : 'multi_columns');
+                      !ONE_COLUMN && feed.mosaicflow(mosaic_options.index);
+                      feed.slideDown();
+                      feed.fadeIn();
+                      feed.mosaicflow('refill');
+                  });
+                  event.preventDefault();
+              });
+          }
+          /*
+          */
+
+
+
+          // handle post feed in index page
+          if ($('body.index-page .content-wrap_type_index').length !== 0) {
+
+              inited = false;
+              feed.addClass(ONE_COLUMN ? 'one_column' : 'multi_columns');
+              if (!ONE_COLUMN) {
+                  feed.mosaicflow(mosaic_options.index);
+                  feed.on('mosaicflow-layout', function() {
+                      if (!inited) {
+                          feed.animate({opacity: 1}, 100);
+                          inited = true;
+                      }
+                  });
+              }
+
+
+              // handle event for "no more posts"
+              var $doc = $(document);
+              var $win = $(window);
+              var isBottom = function($win, $doc) { return $doc.scrollTop() === $doc.height() - $win.height(); }
+              var already = false;
+
+              var postSelector =  '.post-preview';
+              var postsPerPage = $(postSelector).length;
+              console.log('postsPerPage', postsPerPage);
+
+              // handle infinite scroll
+              var infinitescroll_container = $('.content-wrap_type_index').infinitescroll({
+                  loading: {
+                      finishedMsg: '{lang:No more posts}',
+                      img: 'http://mtrpl.ru/wp-content/uploads/2012/12/ajax-loader.gif',
+                      msgText: '{lang:Loading}…',
+                      speed: 'normal'
+                  },
+                  navSelector: '.navigation_type_pagination',
+                  nextSelector: '.navigation_type_pagination [rel="next"]',
+                  itemSelector: postSelector,
+                  extraScrollPx: 1500,
+                  bufferPx: 1500,
+                  binder: $(window),
+                  debug: true,
+                  prefill: true,
+                  appendCallback: false
+              }, function(items, opts) {
+                  console.log('opts', opts);
+
+                  if (items.length) {
+                      $.each(items, function(index, value) {
+                          $(value).find('.post-preview__img').not(':first-of-type').remove();
+                          if (ONE_COLUMN) {
+                              $(value).insertBefore(opts.loading.msg[0]);
+                          } else {
+                              feed.mosaicflow('add', $(value));
+                          }
+                      });
+
+                      if (items.length < postsPerPage) {
+                          opts.state.isDone = true;
+                          $(opts.loading.msg[0]).addClass('no-more-posts');
+                          $doc.scroll(function() {
+                              if (!already && isBottom($win, $doc)) {
+                                  console.log('visible');
+                                  $(opts.loading.msg[0]).find('div').eq(0).text(opts.loading.finishedMsg)
+                                  $(opts.loading.msg[0]).slideDown().delay(2000).slideUp();
+                                  already = true;
+                              }
+                          });
+                      }
+                  }
+              });
+          }
+      });
+
+
+    </script>
+    <script>
+      var _gauges = _gauges || [];
+      (function() {
+        var t   = document.createElement('script');
+        t.type  = 'text/javascript';
+        t.async = true;
+        t.id    = 'gauges-tracker';
+        t.setAttribute('data-site-id', '52965182613f5d427f000096');
+        t.src = '//secure.gaug.es/track.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(t, s);
+      })();
+    </script>
+  </body>
+</html>

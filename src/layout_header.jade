@@ -18,6 +18,22 @@ header.header.clearfix
 		.menu.i-non-select.clearfix.imenu
 			div.menu__toggler.imenu__toggler
 			ul.menu__list.unstyled.i-smoothness.clearfix
+				+block('IfTwitter')
+					li.menu__item
+						a.menu__link(href="{text:Twitter}", title="Twitter")
+							| Twitter
+				+block('IfFacebook')
+					li.menu__item
+						a.menu__link(href="{text:Facebook}", title="Facebook")
+							| Facebook
+				+block('IfVKontakte')
+					li.menu__item
+						a.menu__link(href="{text:VKontakte}", title="VKontakte")
+							| VKontakte
+				+block('IfYouTube')
+					li.menu__item
+						a.menu__link(href="{text:YouTube}", title="YouTube")
+							| YouTube
 				+block('Pages')
 					li.menu__item
 						a.menu__link(href="{URL}", title="{Label}")

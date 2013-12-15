@@ -441,16 +441,6 @@ body {
 	}
 }
 
-/*
-.js .is-hidden {
-        opacity: 0;
-}
-
-.js .is-hidden[style] {
-        opacity: 1;
-}
-*/
-
 @media screen and (min-width: 600px) {
 	.header,
 	.footer {

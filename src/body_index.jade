@@ -1,5 +1,5 @@
 +block('IndexPage')
-	.content-wrap.content-wrap_type_index.clearfix.is-hidden.i-smoothness		
+	.content-wrap.content-wrap_type_index.clearfix.i-smoothness(style="opacity: 0;")
 		+block('Posts')
 
 			+block('Text')
@@ -7,7 +7,7 @@
 				a.post-preview.post_type_text.preview-post_visual-state_text(id="post{PostID}", class=post_class, href="{Permalink}")
 					+block('Title')
 						.post-preview__title: {PlaintextTitle}
-					.hidden(content="helper-title")						
+					.hidden(content="helper-title")
 						| {PlaintextBody}
 
 
@@ -60,7 +60,7 @@
 							+block('Lines')
 								li.unstyle
 									+block('Label')
-										b: {PlaintextLabel} 
+										b: {PlaintextLabel}
 									| {PlaintextLine}
 
 			+block('Audio')

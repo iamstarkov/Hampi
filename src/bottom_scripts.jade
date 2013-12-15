@@ -1,6 +1,7 @@
 
 script(src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js")
-script(src="http://rawgithub.com/sapegin/jquery.mosaicflow/master/jquery.mosaicflow.min.js")
+//- script(src="http://rawgithub.com/sapegin/jquery.mosaicflow/master/jquery.mosaicflow.min.js")
+script(src="http://rawgithub.com/sapegin/jquery.mosaicflow/development/jquery.mosaicflow.js?12")
 
 //-
     script(src="http://rawgithub.com/tuupola/jquery_lazyload/master/jquery.lazyload.min.js")
@@ -22,12 +23,8 @@ script.
     // boolean constant described state in which there will be only one column
     var ONE_COLUMN = !DEMO && $(window).width() < 732;
 
-    // handle image lazy loading
-    /*
-    $('.content-wrap_type_index img').lazyload({
-        effect : "fadeIn"
-    });
-    */
+    // handle image duplicats in photosets
+    $('.content-wrap_type_index .post-preview__img').not(':first-of-type').remove();
 
     // handle optional caption or title
     // text, link, chat
@@ -37,13 +34,6 @@ script.
                 title = $elem.find('.post-preview__title'),
                 desc = $elem.find('.post-preview__desc'),
                 helper = $elem.find('[content="helper-title"]');
-
-            /*
-            console.log(index);
-            console.log($elem);
-            console.log(title, desc);
-            console.log(helper);
-            */
 
             if (title.length === 0 && helper.length !== 0) {
                 var text = helper.text(); //replace with your string.
@@ -55,13 +45,13 @@ script.
                     $('<div/>', {
                         class: 'post-preview__desc',
                         text: trimmedString
-                        //- text: text
                     })
                 );
 
             }
         });
     }
+
     handleSeparatePostContent($('.content-wrap_type_index .post-preview'));
 
     // separate title to title with description
@@ -99,25 +89,29 @@ script.
         photoset: {
             itemSelector: 'img',
             minItemWidth: 468,
-            itemHeightCalculation: 'attribute'
+        }
+    }
+
+    // handle photoset mosaic
+    var inited = false;
+    photoset = $('.post_type_photoset .post__images-wrap');
+    if (photoset.length !== 0) {
+        photoset.addClass(ONE_COLUMN ? 'one_column' : 'multi_columns');
+        if (!ONE_COLUMN) {
+            photoset.mosaicflow(mosaic_options.photoset);
+            photoset.on('mosaicflow-layout', function() {
+                if (!inited) {
+                    photoset.animate({opacity: 1}, 100);
+                    inited = true;
+                }
+            });
+
         }
     }
 
 
-    // handle photoset mosaic
-    if ($('.post_type_photoset .post__images-wrap').length !== 0) {
-        //- $('.post_type_photoset .post__images-wrap').fadeOut(0);
-        $('.post_type_photoset .post__images-wrap')
-            .addClass(ONE_COLUMN ? 'one_column' : 'multi_columns');
-        !ONE_COLUMN && $('.post_type_photoset .post__images-wrap').mosaicflow(mosaic_options.photoset);
-    }
-
-    // handle image duplicats in photosets
-    $('.content-wrap_type_index .post-preview__img').not(':first-of-type').remove();
-
     // handle index mosaic visibillity
-    var mosaicflow_container = $('.content-wrap_type_index');
-    $('.content-wrap_type_index').fadeOut(0);
+    var feed = $('.content-wrap_type_index');
 
     $(function() {
 
@@ -131,15 +125,15 @@ script.
                     var items = $(data).find('.post-preview');
                     items.find('.post-preview__img').not(':first-of-type').remove();
                     $.each(items, function(index, value) {
-                        mosaicflow_container.append($(value));
+                        feed.append($(value));
                     });
                     handleSeparatePostContent(items);
 
-                    mosaicflow_container.addClass(ONE_COLUMN ? 'one_column' : 'multi_columns');
-                    !ONE_COLUMN && mosaicflow_container.mosaicflow(mosaic_options.index);
-                    mosaicflow_container.slideDown();
-                    mosaicflow_container.fadeIn();
-                    mosaicflow_container.mosaicflow('refill');
+                    feed.addClass(ONE_COLUMN ? 'one_column' : 'multi_columns');
+                    !ONE_COLUMN && feed.mosaicflow(mosaic_options.index);
+                    feed.slideDown();
+                    feed.fadeIn();
+                    feed.mosaicflow('refill');
                 });
                 event.preventDefault();
             });
@@ -147,12 +141,22 @@ script.
         /*
         */
 
+
+
         // handle post feed in index page
         if ($('body.index-page .content-wrap_type_index').length !== 0) {
 
-            mosaicflow_container.addClass(ONE_COLUMN ? 'one_column' : 'multi_columns');
-            !ONE_COLUMN && mosaicflow_container.mosaicflow(mosaic_options.index);
-            mosaicflow_container.fadeIn();
+            inited = false;
+            feed.addClass(ONE_COLUMN ? 'one_column' : 'multi_columns');
+            if (!ONE_COLUMN) {
+                feed.mosaicflow(mosaic_options.index);
+                feed.on('mosaicflow-layout', function() {
+                    if (!inited) {
+                        feed.animate({opacity: 1}, 100);
+                        inited = true;
+                    }
+                });
+            }
 
 
             // handle event for "no more posts"
@@ -191,7 +195,7 @@ script.
                         if (ONE_COLUMN) {
                             $(value).insertBefore(opts.loading.msg[0]);
                         } else {
-                            mosaicflow_container.mosaicflow('add', $(value));
+                            feed.mosaicflow('add', $(value));
                         }
                     });
 
@@ -211,3 +215,17 @@ script.
             });
         }
     });
+
+
+script.
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '52965182613f5d427f000096');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();

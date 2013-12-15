@@ -40,7 +40,7 @@
 						+block('Caption')
 							.hidden(content="photo_caption"): {Caption}
 						include helpers/blocks/Tags
-					.post__images-wrap
+					.post__images-wrap(style="opacity: 0;")
 						+block('Photos')
 							img.post__image(alt="", src="{PhotoURL-500}", width="{PhotoWidth-400}", height="{PhotoHeight-400}")
 

@@ -72,9 +72,17 @@ script.
     }
 
     // handle iframes
-    $('iframe').prop('width', '100%');
-    $(window).resize(function() {
-        $('iframe').prop('width', '100%');
+    var iframes = $('iframe');
+    $('body.permalink-page iframe').each(function(i, item) {
+        item = $(item);
+        var actualW = item.width(),
+            actualH = item.height(),
+            targetW = item.parent().width(),
+            targetH = actualH*targetW/actualW;
+        item.css({
+            width: targetW,
+            height: targetH
+        });
     });
 
     function getWidth() {

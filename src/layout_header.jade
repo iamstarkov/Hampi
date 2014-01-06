@@ -19,20 +19,24 @@ header.header.clearfix
 		ul.menu__list.unstyled.i-smoothness.clearfix
 			+block('IfTwitter')
 				li.menu__item
-					a.menu__link(href="{text:Twitter}", title="Twitter")
+					a.menu__link(href="http://twitter.com/{text:Twitter}", title="Twitter")
 						| Twitter
 			+block('IfFacebook')
 				li.menu__item
-					a.menu__link(href="{text:Facebook}", title="Facebook")
+					a.menu__link(href="http://www.facebook.com/{text:Facebook}", title="Facebook")
 						| Facebook
-			+block('IfVKontakte')
-				li.menu__item
-					a.menu__link(href="{text:VKontakte}", title="VKontakte")
-						| VKontakte
 			+block('IfYouTube')
 				li.menu__item
-					a.menu__link(href="{text:YouTube}", title="YouTube")
+					a.menu__link(href="http://www.youtube.com/user/{text:YouTube}", title="YouTube")
 						| YouTube
+			+block('IfInstagram')
+				li.menu__item
+					a.menu__link(href="http://instagram.com/{text:Instagram}", title="YouTube")
+						| Instagram
+			+block('IfVKontakte')
+				li.menu__item
+					a.menu__link(href="http://vk.com/{text:VKontakte}", title="VKontakte")
+						| VKontakte
 			+block('Pages')
 				li.menu__item
 					a.menu__link(href="{URL}", title="{Label}")

@@ -575,6 +575,7 @@ body {
 
 	display: inline-block;
 
+	position: relative;
 	width: 50%;
 	height: 40px;
 
@@ -586,15 +587,9 @@ body {
 
 .navigation__link .arrow {
 	border-color: #999;
-	/*
-	margin-top: -7px;
-	position: relative;
-	top: 50%;
-	margin-top: -20px;
-	*/
 }
 
-.navigation__link_type_prev .arrow {
+.navigation__link_type_prev .arrow__wrap {
 	float: left;
 
 	margin-right: 20px;
@@ -604,7 +599,7 @@ body {
 	border-bottom: 1px dashed;
 }
 
-.navigation__link_type_next .arrow {
+.navigation__link_type_next .arrow__wrap {
 	float: right;
 
 	margin-left: 20px;
@@ -676,13 +671,34 @@ body {
 	margin-left: 5px;
 }
 
-.arrow {
+.arrow__wrap {
+    width: 20px;
+    top: 0;
+    bottom: 0;
     position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.arrow {
+    position: absolute;
 
     overflow: hidden;
 
-    width: 20px;
-    height: 40px;
+	top: 50%;
+	margin-top: -40px;
+
+
+    width: 40px;
+    height: 80px;
+}
+
+.arrow_type_left {
+	left: 0;
+}
+
+.arrow_type_right {
+	right: 0;
 }
 
 .arrow_type_left::before {

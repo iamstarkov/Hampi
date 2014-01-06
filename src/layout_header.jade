@@ -14,7 +14,7 @@ header.header.clearfix
 				| {Title}
 
 
-	.menu.i-non-select.clearfix.imenu
+	.menu.i-non-select.clearfix.imenu(class="menu_pages{block:HasPages}_true{/block:HasPages}")
 		div.menu__toggler.imenu__toggler
 		ul.menu__list.unstyled.i-smoothness.clearfix
 			+block('IfTwitter')
@@ -31,7 +31,7 @@ header.header.clearfix
 						| YouTube
 			+block('IfInstagram')
 				li.menu__item
-					a.menu__link(href="http://instagram.com/{text:Instagram}", title="YouTube")
+					a.menu__link(href="http://instagram.com/{text:Instagram}", title="Instagram")
 						| Instagram
 			+block('IfVKontakte')
 				li.menu__item

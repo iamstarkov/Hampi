@@ -205,6 +205,9 @@ body {
 	background: none;
 }
 
+.menu_pages { display: none; }
+.menu_pages_true { display: block; }
+
 /**
  * Физика колонок
  *

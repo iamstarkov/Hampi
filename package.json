@@ -3,20 +3,22 @@
   "version": "0.0.1",
   "dependencies": {
     "casper": "*",
-    "grunt-contrib-copy": "*",
+    "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-jshint": "*",
     "grunt-contrib-nodeunit": "*",
     "grunt-contrib-uglify": "*",
-    "grunt": "~0.4.1",
+    "grunt": "~0.4.2",
     "grunt-cli": "~0.1.9",
     "grunt-css ": "*",
-    "grunt-contrib-jade": "*",
+    "grunt-contrib-jade": "~0.9.1",
     "grunt-contrib-watch": "*",
     "grunt-jade": "*",
     "matchdep": "~0.3.0",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-cssmin": "~0.6.2",
-    "grunt-autoprefixer": "~0.4.0",
-    "load-grunt-tasks": "~0.2.0"
+    "grunt-autoprefixer": "~0.4.2",
+    "load-grunt-tasks": "~0.2.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "uglify-js": "~2.4.11"
   }
 }

@@ -17,6 +17,25 @@ if mode === 'production'
 
 script.
 
+    /*
+    var App = (function() {
+
+        this.storage = '';
+        this.init = function() {
+        }
+
+        this.oneColumn = function() {
+            return this.isDemo() && $(window).width() < 732;
+        }
+
+        this.isDemo = function() {
+            return ($('#post236').length === 1);
+        }
+
+        return this;
+    })();
+    */
+
     // boolean constant described DEMO state
     var DEMO = ($('#post236').length === 1);
 
@@ -108,8 +127,8 @@ script.
         if (!ONE_COLUMN) {
             photoset.mosaicflow(mosaic_options.photoset);
             photoset.on('mosaicflow-layout', function() {
+                photoset.animate({opacity: 1}, 100);
                 if (!inited) {
-                    photoset.animate({opacity: 1}, 100);
                     inited = true;
                 }
             });
@@ -159,8 +178,8 @@ script.
             if (!ONE_COLUMN) {
                 feed.mosaicflow(mosaic_options.index);
                 feed.on('mosaicflow-layout', function() {
+                    feed.animate({opacity: 1}, 100);
                     if (!inited) {
-                        feed.animate({opacity: 1}, 100);
                         inited = true;
                     }
                 });

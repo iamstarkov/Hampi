@@ -56,7 +56,7 @@ module.exports = function(grunt) {
 					data: function(dest, src) {
 
 						var options = require('./src/options.json');
-						
+
 						// Including helpers locales
 						grunt.file.expand( {filter: 'isFile'}, './src/tmp/helpers/locales/*') .forEach(function(file) {
 												//  './src/tmp/helpers/locales/body_class.tumblr'
